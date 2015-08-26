@@ -1,12 +1,15 @@
 var webpack = require('webpack');
-var bower_dir = __dirname + '/bower_components';
+//var bower_dir = __dirname + '/bower_components';
 
 var config = {
   addVendor: function (name, path) {
     this.resolve.alias[name] = path;
     this.module.noParse.push(new RegExp('^' + name + '$'));
   },
-  entry: ['./app/main.js'],
+  entry: [
+    './app/main.js',
+    './app/main.css'
+  ],
   resolve: { alias: {} },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
@@ -39,5 +42,5 @@ var config = {
   }
 };
 
-config.addVendor('react', bower_dir + '/react/react.min.js');
+//config.addVendor('react', bower_dir + '/react/react.min.js');
 module.exports = config;
