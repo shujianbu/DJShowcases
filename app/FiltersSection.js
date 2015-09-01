@@ -1,22 +1,22 @@
 'use strict';
 
-var React = require('react');
-var injectTapEventPlugin = require('react-tap-event-plugin');
+import React from 'react';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import mui from 'material-ui';
+
 injectTapEventPlugin();
 
-var mui = require('material-ui');
-var ThemeManager = new mui.Styles.ThemeManager();
-
-var Paper = mui.Paper;
-var Toolbar = mui.Toolbar;
-var ToolbarGroup = mui.ToolbarGroup;
-var ToolbarTitle = mui.ToolbarTitle;
-var ToolbarSeparator = mui.ToolbarSeparator;
-var DropDownMenu = mui.DropDownMenu;
-var FontIcon = mui.FontIcon;
-var DropDownIcon = mui.DropDownIcon;
-var TextField = mui.TextField;
-var RaisedButton = mui.RaisedButton;
+const ThemeManager = new mui.Styles.ThemeManager();
+const Paper = mui.Paper;
+const Toolbar = mui.Toolbar;
+const ToolbarGroup = mui.ToolbarGroup;
+const ToolbarTitle = mui.ToolbarTitle;
+const ToolbarSeparator = mui.ToolbarSeparator;
+const DropDownMenu = mui.DropDownMenu;
+const FontIcon = mui.FontIcon;
+const DropDownIcon = mui.DropDownIcon;
+const TextField = mui.TextField;
+const RaisedButton = mui.RaisedButton;
 
 let topics = [
   { payload: '1', text: 'Politics' },
@@ -41,18 +41,14 @@ let years = [
   { payload: '2', text: '2014' }
 ];
 
-var FiltersSection = React.createClass({
-  childContextTypes: {
-    muiTheme: React.PropTypes.object
-  },
-
-  getChildContext: function() {
+class FiltersSection extends React.Component {
+  getChildContext() {
     return {
       muiTheme: ThemeManager.getCurrentTheme()
     };
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <Toolbar style={{background:'#fafafa'}}>
         <ToolbarGroup key={0} float="left">
@@ -68,6 +64,10 @@ var FiltersSection = React.createClass({
 
     );
   }
-});
+};
 
-module.exports = FiltersSection;
+FiltersSection.childContextTypes = {
+  muiTheme: React.PropTypes.object
+};
+
+export default FiltersSection;
