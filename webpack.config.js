@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-//var bower_dir = __dirname + '/bower_components';
 
 var config = {
   addVendor: function (name, path) {
@@ -42,5 +41,4 @@ var config = {
   }
 };
 
-//config.addVendor('react', bower_dir + '/react/react.min.js');
 module.exports = config;
