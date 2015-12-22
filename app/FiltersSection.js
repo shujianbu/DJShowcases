@@ -18,6 +18,7 @@ const DropDownIcon = mui.DropDownIcon;
 const TextField = mui.TextField;
 const RaisedButton = mui.RaisedButton;
 
+// TODO, load data
 let topics = [
   { payload: '1', text: 'Politics' },
   { payload: '2', text: 'Economy' },
@@ -42,32 +43,32 @@ let years = [
 ];
 
 class FiltersSection extends React.Component {
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    };
-  }
+    
+    getChildContext() {
+        return {
+            muiTheme: ThemeManager.getCurrentTheme()
+        };
+    }
 
-  render() {
-    return (
-      <Toolbar style={{background:'#fafafa'}}>
-        <ToolbarGroup key={0} float="left">
-          <DropDownMenu menuItems={topics} />
-          <DropDownMenu menuItems={organizations} />
-          <DropDownMenu menuItems={years} />
-        </ToolbarGroup>
-        <ToolbarGroup key={1} float="right">
-          <TextField hintText="Search" />
-          <FontIcon className="material-icons">search</FontIcon>
-        </ToolbarGroup>
-      </Toolbar>
-
-    );
-  }
+    render() {
+        return (
+        <Toolbar style={{background:'#fafafa'}}>
+            <ToolbarGroup key={0} float="left">
+                <DropDownMenu menuItems={topics} />
+                <DropDownMenu menuItems={organizations} />
+                <DropDownMenu menuItems={years} />
+            </ToolbarGroup>
+            <ToolbarGroup key={1} float="right">
+                <TextField hintText="Search" />
+                <FontIcon className="material-icons">search</FontIcon>
+            </ToolbarGroup>
+        </Toolbar>
+        );
+    }
 };
 
 FiltersSection.childContextTypes = {
-  muiTheme: React.PropTypes.object
+    muiTheme: React.PropTypes.object
 };
 
 export default FiltersSection;
