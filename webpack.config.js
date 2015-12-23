@@ -14,7 +14,7 @@ var config = {
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ],
   output: {
-    path: process.env.NODE_ENV === 'production' ? './dist' : './build',
+    path: './build',
     filename: 'bundle.js'
   },
   module: {
