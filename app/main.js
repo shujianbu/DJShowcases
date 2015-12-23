@@ -19,6 +19,7 @@ class BoardContainer extends React.Component {
 		    success: function(data) { 
 		        var entry = data.feed.entry;
 		        console.log(entry);
+		        // TODO: push data to this.props.storyboards
 		    },
 		    error: function() { 
 		        console.error('Failed to fetch data.');
@@ -31,7 +32,7 @@ class BoardContainer extends React.Component {
 		// TODO, get data in componentDidMount
 		var storyboards = [];
 		for (var i = 0; i < 3; i++) {
-		  storyboards.push(<StoryBoard key={i} />);
+		  storyboards.push(<StoryBoard key={i}/>);
 		}
 
 		return (
