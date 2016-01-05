@@ -19,6 +19,7 @@ const TextField = mui.TextField;
 const RaisedButton = mui.RaisedButton;
 
 // TODO, load data fetch local json function
+
 let topics = [
   { payload: '1', text: 'Politics' },
   { payload: '2', text: 'Economy' },
@@ -53,6 +54,11 @@ class FiltersSection extends React.Component {
         return {
             muiTheme: ThemeManager.getCurrentTheme()
         };
+    }
+
+    //TODO: fetch data
+    componentDidMount() {
+
     }
 
     render() {

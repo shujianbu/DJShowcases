@@ -18,6 +18,9 @@ const FlatButton = mui.FlatButton;
 
 class StoryBoard extends React.Component {
 
+    // TODO:
+    // get this.props.data
+
     getChildContext() {
         return {
             muiTheme: ThemeManager.getCurrentTheme()
