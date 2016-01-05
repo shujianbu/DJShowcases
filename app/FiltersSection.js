@@ -18,7 +18,7 @@ const DropDownIcon = mui.DropDownIcon;
 const TextField = mui.TextField;
 const RaisedButton = mui.RaisedButton;
 
-// TODO, load data
+// TODO, load data fetch local json function
 let topics = [
   { payload: '1', text: 'Politics' },
   { payload: '2', text: 'Economy' },
@@ -35,6 +35,11 @@ let organizations = [
   { payload: '4', text: 'ProPublica' },
   { payload: '5', text: 'The Wall Street Journal' },
   { payload: '6', text: 'Washington Post'}
+];
+
+let type = [
+  { payload: '1', text: 'map' },
+  { payload: '2', text: 'text' }
 ];
 
 let years = [
