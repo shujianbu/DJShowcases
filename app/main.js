@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import FiltersSection from './FiltersSection.js';
 import StoryBoard from './StoryBoard';
 
@@ -45,5 +46,5 @@ class BoardContainer extends React.Component {
 	}
 }
 
-React.render(<FiltersSection />, document.getElementById('nav'));
-React.render(<BoardContainer />, document.getElementById('body'));
+ReactDOM.render(<FiltersSection />, document.getElementById('nav'));
+ReactDOM.render(<BoardContainer />, document.getElementById('body'));
