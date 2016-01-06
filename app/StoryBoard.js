@@ -18,8 +18,12 @@ const FlatButton = mui.FlatButton;
 
 class StoryBoard extends React.Component {
 
-    // TODO:
-    // get this.props.data
+    constructor(props) {
+        super(props);
+        var data = this.props.data;
+        this.title = data['gsx$title']['$t'];
+        // TODO: finish other props
+    }
 
     getChildContext() {
         return {
@@ -29,9 +33,9 @@ class StoryBoard extends React.Component {
 
     render() {
         return (
-            <Card style={{width: '30%', float: 'left', 'marginLeft': '2%', 'marginTop': '50px'}}>
+            <Card className='storyBoard'>
                 <CardHeader
-                title="Title"
+                title={this.title}
                 subtitle="Subtitle"
                 avatar={<Avatar>A</Avatar>}/>
 

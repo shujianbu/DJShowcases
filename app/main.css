@@ -4,3 +4,10 @@ body {
 	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 20px;
 }
+
+.storyBoard {
+	width: 30%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 50px;
+}

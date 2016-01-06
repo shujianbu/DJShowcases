@@ -8,40 +8,44 @@ import FiltersSection from './FiltersSection.js';
 import StoryBoard from './StoryBoard';
 
 class BoardContainer extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			storyBoards : [],
+			filteredData: null,
+			filterBy: null
+		};
+	}
 
 	componentDidMount() {
-		var key = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
-		var url = 'https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json';
+		var self = this;
+		var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
+		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json';
 		$.ajax({
-		    url: url,
-		    type: 'GET',
-		    crossDomain: true,
-		    dataType: 'jsonp',
-		    success: function(data) { 
-		        var entry = data.feed.entry;
-		        console.log(entry);
-		        // TODO: push data to this.props.storyboards
+			url: url,
+			type: 'GET',
+			crossDomain: true,
+			dataType: 'jsonp',
+			success: function(data) {
+				var entry = data.feed.entry;
+				self.setState({
+					storyBoards: entry
+				});
 		    },
 		    error: function() { 
-		        console.error('Failed to fetch data.');
+				console.error('Failed to fetch data.');
 		    }
 		});		
 	}
 
 	render() {
 
-		// TODO, get data in componentDidMount
-		var storyboards = [];
-		for (var i = 0; i < 3; i++) {
-		  storyboards.push(<StoryBoard key={i}/>);
-		}
-
 		return (
-		   <div>
-		   	{storyboards.map(function(story, ind) {
-          		return <StoryBoard key={ind} classname="" />;
-        	})}
-		   </div>
+			<div>
+			{this.state.storyBoards.map(function(story, ind) {
+				return <StoryBoard key={ind} data={story} />;
+			})}
+			</div>
 		);
 	}
 }
