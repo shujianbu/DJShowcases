@@ -2,19 +2,18 @@
 
 import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import mui from 'material-ui';
+
+import Avatar from 'material-ui/lib/avatar';
+import Card from 'material-ui/lib/card/card';
+import CardActions from 'material-ui/lib/card/card-actions';
+import CardHeader from 'material-ui/lib/card/card-header';
+import CardMedia from 'material-ui/lib/card/card-media';
+import CardTitle from 'material-ui/lib/card/card-title';
+import FlatButton from 'material-ui/lib/flat-button';
+import CardText from 'material-ui/lib/card/card-text';
+import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
 injectTapEventPlugin();
-
-const ThemeManager = new mui.Styles.ThemeManager();
-const Card = mui.Card;
-const CardHeader = mui.CardHeader;
-const Avatar = mui.Avatar;
-const CardMedia = mui.CardMedia;
-const CardTitle = mui.CardTitle;
-const CardText = mui.CardText;
-const CardActions = mui.CardActions;
-const FlatButton = mui.FlatButton;
 
 class StoryBoard extends React.Component {
 
@@ -27,7 +26,7 @@ class StoryBoard extends React.Component {
 
     getChildContext() {
         return {
-            muiTheme: ThemeManager.getCurrentTheme()
+            muiTheme: ThemeManager.getMuiTheme()
         };
     }
 

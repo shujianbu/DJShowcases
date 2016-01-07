@@ -2,72 +2,66 @@
 
 import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import mui from 'material-ui';
+
+import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import DropDownMenu from 'material-ui/lib/DropDownMenu';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+import TextField from 'material-ui/lib/text-field';
+import FontIcon from 'material-ui/lib/font-icon';
+import Toolbar from 'material-ui/lib/toolbar/toolbar';
+import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
+import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
+import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
+
+import {TOPICS, ORGS, TYPES, YEARS} from './filtersConst';
 
 injectTapEventPlugin();
 
-const ThemeManager = new mui.Styles.ThemeManager();
-const Paper = mui.Paper;
-const Toolbar = mui.Toolbar;
-const ToolbarGroup = mui.ToolbarGroup;
-const ToolbarTitle = mui.ToolbarTitle;
-const ToolbarSeparator = mui.ToolbarSeparator;
-const DropDownMenu = mui.DropDownMenu; // TODO, problematic, react 1.5
-const FontIcon = mui.FontIcon;
-const DropDownIcon = mui.DropDownIcon;
-const TextField = mui.TextField;
-const RaisedButton = mui.RaisedButton;
-
-// TODO, load data fetch local json function
-
-let topics = [
-  { payload: '1', text: 'Politics' },
-  { payload: '2', text: 'Economy' },
-  { payload: '3', text: 'Business' },
-  { payload: '4', text: 'Tech' },
-  { payload: '5', text: 'Arts' },
-  { payload: '6', text: 'Sports'}
-];
-
-let organizations = [
-  { payload: '1', text: 'The New York Times' },
-  { payload: '2', text: 'The Guardian' },
-  { payload: '3', text: 'NPR' },
-  { payload: '4', text: 'ProPublica' },
-  { payload: '5', text: 'The Wall Street Journal' },
-  { payload: '6', text: 'Washington Post'}
-];
-
-let type = [
-  { payload: '1', text: 'map' },
-  { payload: '2', text: 'text' }
-];
-
-let years = [
-  { payload: '1', text: '2015' },
-  { payload: '2', text: '2014' }
-];
-
 class FiltersSection extends React.Component {
-    
+
+	constructor(props) {
+		super(props);
+
+		this.topics = populateMenus(TOPICS);
+		this.orgs = populateMenus(ORGS);
+		this.types = populateMenus(TYPES);
+		this.years = populateMenus(YEARS);
+
+		function populateMenus(data) {
+			let ret = [];
+			for (let i = 0; i < data.length; i++ ) {
+				ret.push(<MenuItem value={data[i].value} key={i} primaryText={data[i].label} />);
+			}
+			return ret;
+		}
+
+		this.state = {
+			topic : null,
+			org   : null,
+			type  : null,
+			year  : null
+		};
+	}
+
     getChildContext() {
         return {
-            muiTheme: ThemeManager.getCurrentTheme()
+            muiTheme: ThemeManager.getMuiTheme()
         };
     }
 
-    //TODO: fetch data
-    componentDidMount() {
-
+    handleChange (e, index, value) {
+      console.log(e, index, value);
+      // TODO: set state and propogate to parent
     }
 
     render() {
         return (
         <Toolbar style={{background:'#fafafa'}}>
             <ToolbarGroup key={0} float="left">
-                <DropDownMenu menuItems={topics} />
-                <DropDownMenu menuItems={organizations} />
-                <DropDownMenu menuItems={years} />
+                <DropDownMenu onChange={this.handleChange}>{this.topics}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange}>{this.orgs}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange}>{this.types}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange}>{this.years}</DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup key={1} float="right">
                 <TextField hintText="Search" />
