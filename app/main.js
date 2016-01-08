@@ -1,56 +1,30 @@
 'use strict';
 
-import $ from 'jquery';
-import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FiltersSection from './FiltersSection.js';
-import StoryBoard from './StoryBoard';
+import FiltersSection from './FiltersSection';
+import BoardContainer from './BoardContainer';
 
-class BoardContainer extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			storyBoards : [],
-			filteredData: null,
-			filterBy: null
-		};
+
+
+class APP extends React.Component {
+	constructor() {
+		super()
+		this.state = {filter: null};
 	}
 
-	componentDidMount() {
-		var self = this;
-		// var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
-		var key = '1NUM595ky5tMEqZ9lh5H-FVRhYPj6AmaWas_Zv584-CA/1'; // duan spreadsheet
-		// var key = '1UAPFPdeBPOqDSjzUww6Y2IzbtRWKNJQCEOn9o0t2Agg'; // copy
-		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/public/values?alt=json';
-		$.ajax({
-			url: url,
-			type: 'GET',
-			crossDomain: true,
-			dataType: 'jsonp',
-			success: function(data) {
-				var entry = data.feed.entry;
-				self.setState({
-					storyBoards: entry
-				});
-		    },
-		    error: function() { 
-				console.error('Failed to fetch data.');
-		    }
-		});		
+	handleFilterUpdate(obj) {
+		this.setState({filter: obj});
 	}
 
 	render() {
-
 		return (
 			<div>
-			{this.state.storyBoards.map(function(story, ind) {
-				return <StoryBoard key={ind} data={story} />;
-			})}
+				<FiltersSection updateFilter={this.handleFilterUpdate.bind(this)} />
+				<BoardContainer filter={this.state.filter} />
 			</div>
-		);
+			);
 	}
 }
 
-ReactDOM.render(<FiltersSection />, document.getElementById('nav'));
-ReactDOM.render(<BoardContainer />, document.getElementById('body'));
+ReactDOM.render(<APP />, document.getElementById('body'));

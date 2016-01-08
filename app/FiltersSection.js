@@ -13,7 +13,7 @@ import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
 import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
 import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 
-import {TOPICS, ORGS, TYPES, YEARS} from './filtersConst';
+import {TOPICS, ORGS, TYPES, YEARS} from './const';
 
 injectTapEventPlugin();
 
@@ -23,9 +23,9 @@ class FiltersSection extends React.Component {
 		super(props);
 
 		this.topics = populateMenus(TOPICS);
-		this.orgs = populateMenus(ORGS);
-		this.types = populateMenus(TYPES);
-		this.years = populateMenus(YEARS);
+		this.orgs   = populateMenus(ORGS);
+		this.types  = populateMenus(TYPES);
+		this.years  = populateMenus(YEARS);
 
 		function populateMenus(data) {
 			let ret = [];
@@ -36,10 +36,10 @@ class FiltersSection extends React.Component {
 		}
 
 		this.state = {
-			topic : null,
-			org   : null,
-			type  : null,
-			year  : null
+			topic : '1',
+			org   : '1',
+			type  : '1',
+			year  : '1'
 		};
 	}
 
@@ -49,19 +49,24 @@ class FiltersSection extends React.Component {
         };
     }
 
-    handleChange (e, index, value) {
-      console.log(e, index, value);
-      // TODO: set state and propogate to parent
+    handleChange (filter, e, index, value) {
+		// set state
+		let stateObj = Object.assign({}, this.state);
+		stateObj[filter] = value;
+		this.setState(stateObj);
+
+		// ropogate to parent
+		this.props.updateFilter(stateObj);
     }
 
     render() {
         return (
         <Toolbar style={{background:'#fafafa'}}>
             <ToolbarGroup key={0} float="left" className="dropdowns">
-                <DropDownMenu onChange={this.handleChange} value='1'>{this.topics}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange} value='1'>{this.orgs}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange} value='1'>{this.types}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange} value='1'>{this.years}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange.bind(this, 'org')} value={this.state.org}  >{this.orgs}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange.bind(this, 'type')} value={this.state.type} >{this.types}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange.bind(this, 'year')} value={this.state.year}>{this.years}</DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup key={1} float="right" className="searchbar">
                 <TextField hintText="Search" />

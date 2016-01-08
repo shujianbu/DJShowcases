@@ -13,8 +13,6 @@ import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
-import {TOPICS, ORGS, TYPES, YEARS} from './filtersConst';
-
 injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
@@ -22,7 +20,7 @@ class StoryBoard extends React.Component {
     constructor(props) {
         super(props);
         var data = this.props.data;
-        console.log(data);
+        // console.log(data);
         this.title = data['gsx$title']['$t'];
         this.url = data['gsx$url']['$t'];
         this.orgen = data['gsx$authororganizationen']['$t'];
@@ -40,9 +38,6 @@ class StoryBoard extends React.Component {
         this.shareby = data['gsx$sharedby']['$t'];
         this.source = data['gsx$source']['$t'];
         this.takeaways = data['gsx$takeaways']['$t'];
-
-
-        // TODO: finish other props
     }
 
     getChildContext() {
@@ -52,6 +47,7 @@ class StoryBoard extends React.Component {
     }
 
     render() {
+        // TODO 1: feature image 2: hyperlinks 3: texts
         return (
             <Card className='storyBoard'>
 
