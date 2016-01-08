@@ -19,8 +19,10 @@ class BoardContainer extends React.Component {
 
 	componentDidMount() {
 		var self = this;
-		var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
-		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/od6/public/values?alt=json';
+		// var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
+		var key = '1NUM595ky5tMEqZ9lh5H-FVRhYPj6AmaWas_Zv584-CA/1'; // duan spreadsheet
+		// var key = '1UAPFPdeBPOqDSjzUww6Y2IzbtRWKNJQCEOn9o0t2Agg'; // copy
+		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/public/values?alt=json';
 		$.ajax({
 			url: url,
 			type: 'GET',

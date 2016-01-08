@@ -33,7 +33,7 @@ const ORGS = [
 	{ value: '9',  label: 'Reuters',                 ch: '路透社' },
 	{ value: '10', label: 'National Geography',      ch: '国家地理' },
 	{ value: '11', label: 'Chicago Tribune',         ch: '' },
-	{ value: '12', label: 'The Huffington Post',     ch: '' },
+	{ value: '12', label: 'The Huffington Post',     ch: '赫芬顿邮报' },
 	{ value: '13', label: 'WNYC',                    ch: '' }
 ];
 
