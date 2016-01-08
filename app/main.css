@@ -19,4 +19,13 @@ body {
 	float: left;
 	margin-left: 2%;
 	margin-top: 50px;
+	height: 590px;
+}
+
+.titleText div{
+	max-width: 85%;
+}
+
+.imgOverlay span:first-child{
+	font-size: 14px !important;
 }

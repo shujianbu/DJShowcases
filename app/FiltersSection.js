@@ -57,13 +57,13 @@ class FiltersSection extends React.Component {
     render() {
         return (
         <Toolbar style={{background:'#fafafa'}}>
-            <ToolbarGroup key={0} float="left">
-                <DropDownMenu onChange={this.handleChange}>{this.topics}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange}>{this.orgs}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange}>{this.types}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange}>{this.years}</DropDownMenu>
+            <ToolbarGroup key={0} float="left" className="dropdowns">
+                <DropDownMenu onChange={this.handleChange} value='1'>{this.topics}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange} value='1'>{this.orgs}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange} value='1'>{this.types}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange} value='1'>{this.years}</DropDownMenu>
             </ToolbarGroup>
-            <ToolbarGroup key={1} float="right">
+            <ToolbarGroup key={1} float="right" className="searchbar">
                 <TextField hintText="Search" />
                 <FontIcon className="material-icons">search</FontIcon>
             </ToolbarGroup>

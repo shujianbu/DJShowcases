@@ -13,6 +13,8 @@ import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
+import {TOPICS, ORGS, TYPES, YEARS} from './filtersConst';
+
 injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
@@ -20,7 +22,26 @@ class StoryBoard extends React.Component {
     constructor(props) {
         super(props);
         var data = this.props.data;
+        console.log(data);
         this.title = data['gsx$title']['$t'];
+        this.url = data['gsx$url']['$t'];
+        this.orgen = data['gsx$authororganizationen']['$t'];
+        this.orgcn = data['gsx$authororganizationcn']['$t'];
+        this.region = data['gsx$authororganizationregion']['$t'];
+        this.cat = data['gsx$categories']['$t'];
+        this.cttregion = data['gsx$contentregion']['$t'];
+        this.ctttag = data['gsx$contenttag']['$t'];
+        this.dtsource = data['gsx$datasource']['$t'];
+        this.notes = data['gsx$editornotes']['$t'];
+        this.element = data['gsx$elementtag']['$t'];
+        this.img = data['gsx$images']['$t'];
+        this.ipdate = data['gsx$inputdate']['$t'];
+        this.lg = data['gsx$languagetag']['$t'];
+        this.shareby = data['gsx$sharedby']['$t'];
+        this.source = data['gsx$source']['$t'];
+        this.takeaways = data['gsx$takeaways']['$t'];
+
+
         // TODO: finish other props
     }
 
@@ -33,21 +54,18 @@ class StoryBoard extends React.Component {
     render() {
         return (
             <Card className='storyBoard'>
-                <CardHeader
-                title={this.title}
-                subtitle="Subtitle"
-                avatar={<Avatar>A</Avatar>}/>
 
                 <CardHeader
-                title="Demo Url Based Avatar"
-                subtitle="Subtitle"
+                title= {this.orgen}
+                subtitle= ''
+                className = "titleText"
                 avatar="http://lorempixel.com/100/100/nature/"/>
 
-                <CardMedia overlay={<CardTitle title="Title" subtitle="Subtitle"/>}>
+                <CardMedia overlay={<CardTitle className = 'imgOverlay' title={this.element} subtitle={this.cat}/>}>
                     <img src="http://lorempixel.com/600/337/nature/"/>
                 </CardMedia>
 
-                <CardTitle title="Title" subtitle="Subtitle"/>
+                <CardTitle title={this.title} subtitle={this.orgcn}/>
                     <CardActions>
                     <FlatButton label="Action1"/>
                     <FlatButton label="Action2"/>
