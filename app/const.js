@@ -27,7 +27,7 @@ const ORGS = [
 	{ value: '3',  label: 'NPR',                     ch: '' },
 	{ value: '4',  label: 'ProPublica',              ch: '' },
 	{ value: '5',  label: 'The Wall Street Journal', ch: '华尔街日报' },
-	{ value: '6',  label: 'Washington Post',         ch: '华盛顿邮报' },
+	{ value: '6',  label: 'The Washington Post',     ch: '华盛顿邮报' },
 	{ value: '7',  label: 'Bloomberg',               ch: '彭博社' },
 	{ value: '8',  label: 'Five Thirty Eight',       ch: '538' },
 	{ value: '9',  label: 'Reuters',                 ch: '路透社' },

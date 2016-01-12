@@ -38,6 +38,7 @@ class BoardContainer extends React.Component {
 
 	componentWillReceiveProps(nextProps) {
 		console.log(nextProps.filter);
+		console.log(this.props.filter);
 		// TODO, get filters in board containers, update states
 	}
 

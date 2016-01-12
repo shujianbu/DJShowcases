@@ -13,6 +13,8 @@ import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
+import {ORGS} from './const';
+
 injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
@@ -35,9 +37,19 @@ class StoryBoard extends React.Component {
         this.img = data['gsx$images']['$t'];
         this.ipdate = data['gsx$inputdate']['$t'];
         this.lg = data['gsx$languagetag']['$t'];
-        this.shareby = data['gsx$sharedby']['$t'];
-        this.source = data['gsx$source']['$t'];
+        // this.shareby = data['gsx$sharedby']['$t'];
+        // this.source = data['gsx$source']['$t'];
+        this.logo = getLogo(this.orgen);
         this.takeaways = data['gsx$takeaways']['$t'];
+
+        function getLogo(name) {
+            for(let i = 0; i < ORGS.length; i++) {
+                if(ORGS[i].label.indexOf(name) !== -1) {
+                    return './img/logo/' + ORGS[i].value + '.png';
+                }
+            }
+            return './img/logo/default.png';
+        }
     }
 
     getChildContext() {
@@ -48,6 +60,7 @@ class StoryBoard extends React.Component {
 
     render() {
         // TODO 1: feature image 2: hyperlinks 3: texts
+        // console.log(this);
         return (
             <Card className='storyBoard'>
 
@@ -55,7 +68,7 @@ class StoryBoard extends React.Component {
                 title= {this.orgen}
                 subtitle= ''
                 className = "titleText"
-                avatar="http://lorempixel.com/100/100/nature/"/>
+                avatar={this.logo} />
 
                 <CardMedia overlay={<CardTitle className = 'imgOverlay' title={this.element} subtitle={this.cat}/>}>
                     <img src="http://lorempixel.com/600/337/nature/"/>

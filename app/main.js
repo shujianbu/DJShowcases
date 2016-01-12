@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom';
 import FiltersSection from './FiltersSection';
 import BoardContainer from './BoardContainer';
 
-
-
 class APP extends React.Component {
 	constructor() {
 		super()
