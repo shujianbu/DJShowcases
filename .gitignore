@@ -1,3 +1,16 @@
-node_modules/
+### OSX ###
 .DS_Store
-npm-debug.log
+.AppleDouble
+.LSOverride
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+node_modules
+.npm
+.node_repl_history
+pids
+*.pid
+*.seed
