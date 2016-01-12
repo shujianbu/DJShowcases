@@ -37,9 +37,8 @@ class StoryBoard extends React.Component {
         this.img = data['gsx$images']['$t'];
         this.ipdate = data['gsx$inputdate']['$t'];
         this.lg = data['gsx$languagetag']['$t'];
-        // this.shareby = data['gsx$sharedby']['$t'];
-        // this.source = data['gsx$source']['$t'];
         this.logo = getLogo(this.orgen);
+        this.featureImage = getFeature();
         this.takeaways = data['gsx$takeaways']['$t'];
 
         function getLogo(name) {
@@ -49,6 +48,11 @@ class StoryBoard extends React.Component {
                 }
             }
             return './img/logo/default.png';
+        }
+
+        function getFeature(name) {
+
+            return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
         }
     }
 
@@ -60,32 +64,21 @@ class StoryBoard extends React.Component {
 
     render() {
         // TODO 1: feature image 2: hyperlinks 3: texts
-        // console.log(this);
+        console.log(this);
         return (
             <Card className='storyBoard'>
 
                 <CardHeader
-                title= {this.orgen}
-                subtitle= ''
-                className = "titleText"
-                avatar={this.logo} />
+                title = {this.orgen}
+                subtitle = {this.orgcn}
+                className = 'titleText'
+                avatar = {this.logo} />
 
-                <CardMedia overlay={<CardTitle className = 'imgOverlay' title={this.element} subtitle={this.cat}/>}>
-                    <img src="http://lorempixel.com/600/337/nature/"/>
+                <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.element} subtitle = {this.cat}/>}>
+                    <img src= {this.featureImage} />
                 </CardMedia>
 
-                <CardTitle title={this.title} subtitle={this.orgcn}/>
-                    <CardActions>
-                    <FlatButton label="Action1"/>
-                    <FlatButton label="Action2"/>
-                </CardActions>
-
-                <CardText>
-                Lorem dolor sit amet, consectetur adipiscing elit.
-                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-                </CardText>
+                <CardTitle title={this.title} />
             </Card>
         );
     }
