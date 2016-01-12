@@ -14,6 +14,7 @@ import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
 import {ORGS} from './const';
+import DJTheme from './theme';
 
 injectTapEventPlugin();
 
@@ -58,13 +59,12 @@ class StoryBoard extends React.Component {
 
     getChildContext() {
         return {
-            muiTheme: ThemeManager.getMuiTheme()
+            muiTheme: ThemeManager.getMuiTheme(DJTheme)
         };
     }
 
     render() {
-        // TODO 1: feature image 2: hyperlinks 3: texts
-        console.log(this);
+
         return (
             <Card className='storyBoard'>
 

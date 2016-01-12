@@ -14,6 +14,7 @@ import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
 import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 
 import {TOPICS, ORGS, TYPES, YEARS} from './const';
+import DJTheme from './theme';
 
 injectTapEventPlugin();
 
@@ -45,7 +46,7 @@ class FiltersSection extends React.Component {
 
     getChildContext() {
         return {
-            muiTheme: ThemeManager.getMuiTheme()
+            muiTheme: ThemeManager.getMuiTheme(DJTheme)
         };
     }
 
