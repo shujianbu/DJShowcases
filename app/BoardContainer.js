@@ -1,5 +1,4 @@
 
-import $ from 'jquery';
 import React from 'react';
 import StoryBoard from './StoryBoard';
 import {TOPICS, ORGS, TYPES, YEARS} from './const';
@@ -20,22 +19,21 @@ class BoardContainer extends React.Component {
 		var key = '1NUM595ky5tMEqZ9lh5H-FVRhYPj6AmaWas_Zv584-CA/1'; // duan spreadsheet
 		// var key = '1UAPFPdeBPOqDSjzUww6Y2IzbtRWKNJQCEOn9o0t2Agg'; // copy
 		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/public/values?alt=json';
-		$.ajax({
-			url: url,
-			type: 'GET',
-			crossDomain: true,
-			dataType: 'jsonp',
-			success: function(data) {
-				var entry = data.feed.entry;
-				self.setState({
-					storyBoards: entry.slice(),
-					filteredStoryBoards: entry.slice()
-				});
-		    },
-		    error: function() {
-				console.error('Failed to fetch data.');
-		    }
-		});
+
+		// AJAX call
+		var r = new XMLHttpRequest();
+		r.open("GET", url, true);
+		r.onreadystatechange = function () {
+			if (r.readyState != 4 || r.status != 200) return;
+			// console.log("Success: ", JSON.parse(r.responseText));
+			var data = JSON.parse(r.responseText);
+			var entry = data.feed.entry;
+			self.setState({
+				storyBoards: entry.slice(),
+				filteredStoryBoards: entry.slice()
+			});
+		};
+		r.send();
 	}
 
 	componentWillReceiveProps(nextProps) {
