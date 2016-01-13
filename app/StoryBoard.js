@@ -22,39 +22,9 @@ class StoryBoard extends React.Component {
 
     constructor(props) {
         super(props);
-        var data = this.props.data;
-        // console.log(data);
-        this.title = data['gsx$title']['$t'];
-        this.url = data['gsx$url']['$t'];
-        this.orgen = data['gsx$authororganizationen']['$t'];
-        this.orgcn = data['gsx$authororganizationcn']['$t'];
-        this.region = data['gsx$authororganizationregion']['$t'];
-        this.cat = data['gsx$categories']['$t'];
-        this.cttregion = data['gsx$contentregion']['$t'];
-        this.ctttag = data['gsx$contenttag']['$t'];
-        this.dtsource = data['gsx$datasource']['$t'];
-        this.notes = data['gsx$editornotes']['$t'];
-        this.element = data['gsx$elementtag']['$t'];
-        this.img = data['gsx$images']['$t'];
-        this.ipdate = data['gsx$inputdate']['$t'];
-        this.lg = data['gsx$languagetag']['$t'];
-        this.logo = getLogo(this.orgen);
-        this.featureImage = getFeature();
-        this.takeaways = data['gsx$takeaways']['$t'];
-
-        function getLogo(name) {
-            for(let i = 0; i < ORGS.length; i++) {
-                if(ORGS[i].label.indexOf(name) !== -1) {
-                    return './img/logo/' + ORGS[i].value + '.png';
-                }
-            }
-            return './img/logo/default.png';
-        }
-
-        function getFeature(name) {
-
-            return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
-        }
+        this.state = {
+            data: this.parseData(this.props.data)
+        };
     }
 
     getChildContext() {
@@ -63,22 +33,62 @@ class StoryBoard extends React.Component {
         };
     }
 
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({data: this.parseData(nextProps.data)});
+    }
+
+    getLogo(name) {
+        for(let i = 0; i < ORGS.length; i++) {
+            if(ORGS[i].label.indexOf(name) !== -1) {
+                return './img/logo/' + ORGS[i].value + '.png';
+            }
+        }
+        return './img/logo/default.png';
+    }
+
+    getFeature(name) {
+        return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
+    }
+
+    parseData(data) {
+        var ret = {};
+        ret.title = data['gsx$title']['$t'];
+        ret.url = data['gsx$url']['$t'];
+        ret.orgen = data['gsx$authororganizationen']['$t'];
+        ret.orgcn = data['gsx$authororganizationcn']['$t'];
+        ret.region = data['gsx$authororganizationregion']['$t'];
+        ret.cat = data['gsx$categories']['$t'];
+        ret.cttregion = data['gsx$contentregion']['$t'];
+        ret.ctttag = data['gsx$contenttag']['$t'];
+        ret.dtsource = data['gsx$datasource']['$t'];
+        ret.notes = data['gsx$editornotes']['$t'];
+        ret.element = data['gsx$elementtag']['$t'];
+        ret.img = data['gsx$images']['$t'];
+        ret.ipdate = data['gsx$inputdate']['$t'];
+        ret.lg = data['gsx$languagetag']['$t'];
+        ret.logo = this.getLogo(ret.orgen);
+        ret.featureImage = this.getFeature();
+        ret.takeaways = data['gsx$takeaways']['$t'];
+        return ret;
+    }
+
     render() {
 
         return (
             <Card className='storyBoard'>
 
                 <CardHeader
-                title = {this.orgen}
-                subtitle = {this.orgcn}
+                title = {this.state.data.orgen}
+                subtitle = {this.state.data.orgcn}
                 className = 'titleText'
-                avatar = {this.logo} />
+                avatar = {this.state.data.logo} />
 
-                <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.element} subtitle = {this.cat}/>}>
-                    <img src= {this.featureImage} />
+                <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.state.data.element} subtitle = {this.state.data.cat}/>}>
+                    <img src= {this.state.data.featureImage} />
                 </CardMedia>
 
-                <CardTitle title={this.title} />
+                <CardTitle title={this.state.data.title} />
             </Card>
         );
     }

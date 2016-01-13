@@ -2,13 +2,14 @@
 import $ from 'jquery';
 import React from 'react';
 import StoryBoard from './StoryBoard';
+import {TOPICS, ORGS, TYPES, YEARS} from './const';
 
 class BoardContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			storyBoards : [],
-			filteredData: null,
+			filteredStoryBoards: [],
 			filterBy: null
 		};
 	}
@@ -27,7 +28,8 @@ class BoardContainer extends React.Component {
 			success: function(data) {
 				var entry = data.feed.entry;
 				self.setState({
-					storyBoards: entry
+					storyBoards: entry.slice(),
+					filteredStoryBoards: entry.slice()
 				});
 		    },
 		    error: function() {
@@ -37,15 +39,29 @@ class BoardContainer extends React.Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		console.log(nextProps.filter);
-		console.log(this.props.filter);
-		// TODO, get filters in board containers, update states
+
+		if(JSON.stringify(this.props.filter) !== JSON.stringify(nextProps.filter)) {
+			console.log('value changed');
+			var filter = nextProps.filter;
+			var temp = [];
+			this.state.storyBoards.forEach(function(sb) {
+				var topic = sb['gsx$categories']['$t'];
+				var org   = sb['gsx$authororganizationen']['$t'];
+				var type  = sb['gsx$elementtag']['$t'];
+				var year  = '';
+				if(topic == TOPICS[filter.topic - 1].label && org == ORGS[filter.org - 1].label) {
+					temp.push(sb);
+				}
+			});
+			console.log(temp);
+			this.setState({filteredStoryBoards: temp});
+		}
 	}
 
 	render() {
 		return (
 			<div>
-			{this.state.storyBoards.map(function(story, ind) {
+			{this.state.filteredStoryBoards.map(function(story, ind) {
 				return <StoryBoard key={ind} data={story} />;
 			})}
 			</div>

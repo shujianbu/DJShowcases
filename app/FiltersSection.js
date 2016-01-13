@@ -50,7 +50,7 @@ class FiltersSection extends React.Component {
         };
     }
 
-    handleChange (filter, e, index, value) {
+    handleChange(filter, e, index, value) {
 		// set state
 		let stateObj = Object.assign({}, this.state);
 		stateObj[filter] = value;
@@ -60,18 +60,24 @@ class FiltersSection extends React.Component {
 		this.props.updateFilter(stateObj);
     }
 
+    handleSearch(event) {
+    	console.log('search:', this);
+    	console.log('event: ', arguments);
+    	console.log(this.refs['search'].getValue());
+    }
+
     render() {
         return (
         <Toolbar style={{background:'#fafafa'}}>
-            <ToolbarGroup key={0} float="left" className="dropdowns">
-                <DropDownMenu onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
+            <ToolbarGroup key={0} float='left' className='dropdowns'>
+                <DropDownMenu ref='topic' onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
                 <DropDownMenu onChange={this.handleChange.bind(this, 'org')} value={this.state.org}  >{this.orgs}</DropDownMenu>
                 <DropDownMenu onChange={this.handleChange.bind(this, 'type')} value={this.state.type} >{this.types}</DropDownMenu>
                 <DropDownMenu onChange={this.handleChange.bind(this, 'year')} value={this.state.year}>{this.years}</DropDownMenu>
             </ToolbarGroup>
-            <ToolbarGroup key={1} float="right" className="searchbar">
-                <TextField hintText="Search" />
-                <FontIcon className="material-icons">search</FontIcon>
+            <ToolbarGroup key={1} float='right' className='searchbar'>
+                <TextField hintText='Search' ref='search' onChange={this.handleSearch.bind(this)} value={this.state.searchValue}/>
+                <FontIcon className='material-icons'>search</FontIcon>
             </ToolbarGroup>
         </Toolbar>
         );
