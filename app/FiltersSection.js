@@ -76,8 +76,7 @@ class FiltersSection extends React.Component {
                 <DropDownMenu onChange={this.handleChange.bind(this, 'year')} value={this.state.year}>{this.years}</DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup key={1} float='right' className='searchbar'>
-                <TextField hintText='Search' ref='search' onChange={this.handleSearch.bind(this)} value={this.state.searchValue}/>
-                <FontIcon className='material-icons'>search</FontIcon>
+                <TextField hintText='输入案例名' ref='search' onChange={this.handleSearch.bind(this)} value={this.state.searchValue}/>
             </ToolbarGroup>
         </Toolbar>
         );

@@ -1,7 +1,7 @@
 'use strict';
 
 const TOPICS = [
-	{ value: '0',  label: 'none',        ch: ''    },
+	{ value: '0',  label: 'all',         ch: ''    },
 	{ value: '1',  label: 'Politics',    ch: '政治' },
 	{ value: '2',  label: 'Economy',     ch: '经济' },
 	{ value: '3',  label: 'Business',    ch: '商业' },
@@ -23,7 +23,7 @@ const TOPICS = [
 ];
 
 const ORGS = [
-	{ value: '0',  label: 'none',                    ch: '' },
+	{ value: '0',  label: 'all',                     ch: '' },
 	{ value: '1',  label: 'The New York Times',      ch: '纽约时报' },
 	{ value: '2',  label: 'The Guardian',            ch: '英国卫报' },
 	{ value: '3',  label: 'NPR',                     ch: '国家公共电台' },
@@ -40,7 +40,7 @@ const ORGS = [
 ];
 
 const TYPES = [
-	{ value: '0',  label: 'none' },
+	{ value: '0',  label: 'all' },
 	{ value: '1',  label: 'map' },
 	{ value: '2',  label: 'bar' },
 	{ value: '3',  label: 'line' },
@@ -58,7 +58,7 @@ const TYPES = [
 ];
 
 const YEARS = [
-	{ value: '0', label: 'none' },
+	{ value: '0', label: 'all' },
 	{ value: '1', label: '2008' },
 	{ value: '2', label: '2009' },
 	{ value: '3', label: '2010' },
