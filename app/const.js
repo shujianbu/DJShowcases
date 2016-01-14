@@ -1,6 +1,7 @@
 'use strict';
 
 const TOPICS = [
+	{ value: '0',  label: 'none',        ch: ''    },
 	{ value: '1',  label: 'Politics',    ch: '政治' },
 	{ value: '2',  label: 'Economy',     ch: '经济' },
 	{ value: '3',  label: 'Business',    ch: '商业' },
@@ -22,6 +23,7 @@ const TOPICS = [
 ];
 
 const ORGS = [
+	{ value: '0',  label: 'none',                    ch: '' },
 	{ value: '1',  label: 'The New York Times',      ch: '纽约时报' },
 	{ value: '2',  label: 'The Guardian',            ch: '英国卫报' },
 	{ value: '3',  label: 'NPR',                     ch: '国家公共电台' },
@@ -38,15 +40,25 @@ const ORGS = [
 ];
 
 const TYPES = [
-	{ value: '1', label: 'map' },
-	{ value: '2', label: 'bar' },
-	{ value: '3', label: 'line' },
-	{ value: '4', label: 'tree' },
-	{ value: '5', label: 'bubble' },
-	{ value: '6', label: '3D' }
+	{ value: '0',  label: 'none' },
+	{ value: '1',  label: 'map' },
+	{ value: '2',  label: 'bar' },
+	{ value: '3',  label: 'line' },
+	{ value: '4',  label: 'tree' },
+	{ value: '5',  label: 'bubble' },
+	{ value: '6',  label: '3D' },
+	{ value: '7',  label: 'pie' },
+	{ value: '8',  label: 'photo' },
+	{ value: '9',  label: 'real-time' },
+	{ value: '10', label: 'multi-media' },
+	{ value: '11', label: 'animation' },
+	{ value: '12', label: 'interactive' },
+	{ value: '13', label: 'timeline' }
+
 ];
 
 const YEARS = [
+	{ value: '0', label: 'none' },
 	{ value: '1', label: '2008' },
 	{ value: '2', label: '2009' },
 	{ value: '3', label: '2010' },

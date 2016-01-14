@@ -39,7 +39,6 @@ class BoardContainer extends React.Component {
 	componentWillReceiveProps(nextProps) {
 
 		if(JSON.stringify(this.props.filter) !== JSON.stringify(nextProps.filter)) {
-			console.log('value changed');
 			var filter = nextProps.filter;
 			var temp = [];
 			this.state.storyBoards.forEach(function(sb) {
@@ -47,11 +46,21 @@ class BoardContainer extends React.Component {
 				var org   = sb['gsx$authororganizationen']['$t'];
 				var type  = sb['gsx$elementtag']['$t'];
 				var year  = '';
-				if(topic == TOPICS[filter.topic - 1].label && org == ORGS[filter.org - 1].label) {
+				var flag  = true;
+				if(filter.topic !== '0' && TOPICS[filter.topic].label !== topic) {
+					flag = false;
+				}
+				if(flag && filter.org !== '0' && ORGS[filter.org].label !== org) {
+					flag = false;
+				}
+				if(flag && filter.type !== '0' && type.indexOf(TYPES[filter.type].label) == -1) {
+					flag = false;
+				}
+				if(flag) {
 					temp.push(sb);
 				}
 			});
-			console.log(temp);
+
 			this.setState({filteredStoryBoards: temp});
 		}
 	}

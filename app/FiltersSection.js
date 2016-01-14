@@ -37,10 +37,10 @@ class FiltersSection extends React.Component {
 		}
 
 		this.state = {
-			topic : '1',
-			org   : '1',
-			type  : '1',
-			year  : '1'
+			topic : '0',
+			org   : '0',
+			type  : '0',
+			year  : '0'
 		};
 	}
 
