@@ -19759,10 +19759,10 @@ webpackJsonp([0,1],[
 	        }
 
 	        this.state = {
-	            topic: '1',
-	            org: '1',
-	            type: '1',
-	            year: '1'
+	            topic: '0',
+	            org: '0',
+	            type: '0',
+	            year: '0'
 	        };
 	    }
 
@@ -19824,12 +19824,7 @@ webpackJsonp([0,1],[
 	                _react2['default'].createElement(
 	                    _materialUiLibToolbarToolbarGroup2['default'],
 	                    { key: 1, float: 'right', className: 'searchbar' },
-	                    _react2['default'].createElement(_materialUiLibTextField2['default'], { hintText: 'Search', ref: 'search', onChange: this.handleSearch.bind(this), value: this.state.searchValue }),
-	                    _react2['default'].createElement(
-	                        _materialUiLibFontIcon2['default'],
-	                        { className: 'material-icons' },
-	                        'search'
-	                    )
+	                    _react2['default'].createElement(_materialUiLibTextField2['default'], { hintText: '输入案例名', ref: 'search', onChange: this.handleSearch.bind(this), value: this.state.searchValue })
 	                )
 	            );
 	        }
@@ -32882,13 +32877,13 @@ webpackJsonp([0,1],[
 	Object.defineProperty(exports, '__esModule', {
 		value: true
 	});
-	var TOPICS = [{ value: '1', label: 'Politics', ch: '政治' }, { value: '2', label: 'Economy', ch: '经济' }, { value: '3', label: 'Business', ch: '商业' }, { value: '4', label: 'Media', ch: '媒体' }, { value: '5', label: 'Arts', ch: '艺术' }, { value: '6', label: 'Sports', ch: '体育' }, { value: '7', label: 'Security', ch: '安全' }, { value: '8', label: 'Disaster', ch: '灾害' }, { value: '9', label: 'Environment', ch: '环境' }, { value: '10', label: 'Technology', ch: '技术' }, { value: '11', label: 'Science', ch: '科学' }, { value: '12', label: 'Culture', ch: '文化' }, { value: '13', label: 'Religion', ch: '宗教' }, { value: '14', label: 'Education', ch: '教育' }, { value: '15', label: 'Lifestyle', ch: '生活' }, { value: '16', label: 'Fashion', ch: '时尚' }, { value: '17', label: 'Travel', ch: '旅行' }, { value: '18', label: 'Opinion', ch: '观点' }];
+	var TOPICS = [{ value: '0', label: 'all', ch: '' }, { value: '1', label: 'Politics', ch: '政治' }, { value: '2', label: 'Economy', ch: '经济' }, { value: '3', label: 'Business', ch: '商业' }, { value: '4', label: 'Media', ch: '媒体' }, { value: '5', label: 'Arts', ch: '艺术' }, { value: '6', label: 'Sports', ch: '体育' }, { value: '7', label: 'Security', ch: '安全' }, { value: '8', label: 'Disaster', ch: '灾害' }, { value: '9', label: 'Environment', ch: '环境' }, { value: '10', label: 'Technology', ch: '技术' }, { value: '11', label: 'Science', ch: '科学' }, { value: '12', label: 'Culture', ch: '文化' }, { value: '13', label: 'Religion', ch: '宗教' }, { value: '14', label: 'Education', ch: '教育' }, { value: '15', label: 'Lifestyle', ch: '生活' }, { value: '16', label: 'Fashion', ch: '时尚' }, { value: '17', label: 'Travel', ch: '旅行' }, { value: '18', label: 'Opinion', ch: '观点' }];
 
-	var ORGS = [{ value: '1', label: 'The New York Times', ch: '纽约时报' }, { value: '2', label: 'The Guardian', ch: '英国卫报' }, { value: '3', label: 'NPR', ch: '国家公共电台' }, { value: '4', label: 'ProPublica', ch: '' }, { value: '5', label: 'The Wall Street Journal', ch: '华尔街日报' }, { value: '6', label: 'The Washington Post', ch: '华盛顿邮报' }, { value: '7', label: 'Bloomberg', ch: '彭博社' }, { value: '8', label: 'Five Thirty Eight', ch: '538' }, { value: '9', label: 'Reuters', ch: '路透社' }, { value: '10', label: 'National Geography', ch: '国家地理' }, { value: '11', label: 'Chicago Tribune', ch: '芝加哥论坛报' }, { value: '12', label: 'The Huffington Post', ch: '赫芬顿邮报' }, { value: '13', label: 'WNYC', ch: '纽约公共广播电台' }];
+	var ORGS = [{ value: '0', label: 'all', ch: '' }, { value: '1', label: 'The New York Times', ch: '纽约时报' }, { value: '2', label: 'The Guardian', ch: '英国卫报' }, { value: '3', label: 'NPR', ch: '国家公共电台' }, { value: '4', label: 'ProPublica', ch: '' }, { value: '5', label: 'The Wall Street Journal', ch: '华尔街日报' }, { value: '6', label: 'The Washington Post', ch: '华盛顿邮报' }, { value: '7', label: 'Bloomberg', ch: '彭博社' }, { value: '8', label: 'Five Thirty Eight', ch: '538' }, { value: '9', label: 'Reuters', ch: '路透社' }, { value: '10', label: 'National Geography', ch: '国家地理' }, { value: '11', label: 'Chicago Tribune', ch: '芝加哥论坛报' }, { value: '12', label: 'The Huffington Post', ch: '赫芬顿邮报' }, { value: '13', label: 'WNYC', ch: '纽约公共广播电台' }];
 
-	var TYPES = [{ value: '1', label: 'map' }, { value: '2', label: 'bar' }, { value: '3', label: 'line' }, { value: '4', label: 'tree' }, { value: '5', label: 'bubble' }, { value: '6', label: '3D' }];
+	var TYPES = [{ value: '0', label: 'all' }, { value: '1', label: 'map' }, { value: '2', label: 'bar' }, { value: '3', label: 'line' }, { value: '4', label: 'tree' }, { value: '5', label: 'bubble' }, { value: '6', label: '3D' }, { value: '7', label: 'pie' }, { value: '8', label: 'photo' }, { value: '9', label: 'real-time' }, { value: '10', label: 'multi-media' }, { value: '11', label: 'animation' }, { value: '12', label: 'interactive' }, { value: '13', label: 'timeline' }];
 
-	var YEARS = [{ value: '1', label: '2008' }, { value: '2', label: '2009' }, { value: '3', label: '2010' }, { value: '4', label: '2011' }, { value: '5', label: '2012' }, { value: '6', label: '2013' }, { value: '7', label: '2014' }, { value: '8', label: '2015' }];
+	var YEARS = [{ value: '0', label: 'all' }, { value: '1', label: '2008' }, { value: '2', label: '2009' }, { value: '3', label: '2010' }, { value: '4', label: '2011' }, { value: '5', label: '2012' }, { value: '6', label: '2013' }, { value: '7', label: '2014' }, { value: '8', label: '2015' }];
 
 	exports.TOPICS = TOPICS;
 	exports.ORGS = ORGS;
@@ -33017,7 +33012,6 @@ webpackJsonp([0,1],[
 			value: function componentWillReceiveProps(nextProps) {
 
 				if (JSON.stringify(this.props.filter) !== JSON.stringify(nextProps.filter)) {
-					console.log('value changed');
 					var filter = nextProps.filter;
 					var temp = [];
 					this.state.storyBoards.forEach(function (sb) {
@@ -33025,11 +33019,21 @@ webpackJsonp([0,1],[
 						var org = sb['gsx$authororganizationen']['$t'];
 						var type = sb['gsx$elementtag']['$t'];
 						var year = '';
-						if (topic == _const.TOPICS[filter.topic - 1].label && org == _const.ORGS[filter.org - 1].label) {
+						var flag = true;
+						if (filter.topic !== '0' && _const.TOPICS[filter.topic].label !== topic) {
+							flag = false;
+						}
+						if (flag && filter.org !== '0' && _const.ORGS[filter.org].label !== org) {
+							flag = false;
+						}
+						if (flag && filter.type !== '0' && type.indexOf(_const.TYPES[filter.type].label) == -1) {
+							flag = false;
+						}
+						if (flag) {
 							temp.push(sb);
 						}
 					});
-					console.log(temp);
+
 					this.setState({ filteredStoryBoards: temp });
 				}
 			}
@@ -33151,7 +33155,7 @@ webpackJsonp([0,1],[
 	    }, {
 	        key: 'getLogo',
 	        value: function getLogo(name) {
-	            for (var i = 0; i < _const.ORGS.length; i++) {
+	            for (var i = 1; i < _const.ORGS.length; i++) {
 	                if (_const.ORGS[i].label.indexOf(name) !== -1) {
 	                    return './img/logo/' + _const.ORGS[i].value + '.png';
 	                }
