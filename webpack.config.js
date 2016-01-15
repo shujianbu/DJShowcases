@@ -20,10 +20,14 @@ var config = {
   module: {
     noParse: [],
     loaders: [
-      { 
+      {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel'
+      },
+      {
+        test: /\.csv?$/,
+        loader: 'dsv-loader'
       },
       {
         test: /\.css$/,
