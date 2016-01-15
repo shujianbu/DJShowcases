@@ -3,7 +3,7 @@ webpackJsonp([0,1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(292);
+	module.exports = __webpack_require__(296);
 
 
 /***/ },
@@ -34,9 +34,13 @@ webpackJsonp([0,1],[
 
 	var _FiltersSection2 = _interopRequireDefault(_FiltersSection);
 
-	var _BoardContainer = __webpack_require__(274);
+	var _BoardContainer = __webpack_require__(277);
 
 	var _BoardContainer2 = _interopRequireDefault(_BoardContainer);
+
+	var _dataCsv = __webpack_require__(295);
+
+	var _dataCsv2 = _interopRequireDefault(_dataCsv);
 
 	var APP = (function (_React$Component) {
 		_inherits(APP, _React$Component);
@@ -45,7 +49,13 @@ webpackJsonp([0,1],[
 			_classCallCheck(this, APP);
 
 			_get(Object.getPrototypeOf(APP.prototype), 'constructor', this).call(this);
-			this.state = { filter: null };
+			this.state = { filter: null, search: '' };
+
+			var autoCompleteData = [];
+			_dataCsv2['default'].forEach(function (d) {
+				autoCompleteData.push(d['Title']);
+			});
+			this.autoCompleteData = autoCompleteData;
 		}
 
 		_createClass(APP, [{
@@ -54,13 +64,18 @@ webpackJsonp([0,1],[
 				this.setState({ filter: obj });
 			}
 		}, {
+			key: 'handleSearch',
+			value: function handleSearch(str) {
+				this.setState({ search: str });
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2['default'].createElement(
 					'div',
 					null,
-					_react2['default'].createElement(_FiltersSection2['default'], { updateFilter: this.handleFilterUpdate.bind(this) }),
-					_react2['default'].createElement(_BoardContainer2['default'], { filter: this.state.filter })
+					_react2['default'].createElement(_FiltersSection2['default'], { autoCompleteData: this.autoCompleteData, updateFilter: this.handleFilterUpdate.bind(this), updateSearch: this.handleSearch.bind(this) }),
+					_react2['default'].createElement(_BoardContainer2['default'], { data: _dataCsv2['default'], filter: this.state.filter, search: this.state.search })
 				);
 			}
 		}]);
@@ -19709,29 +19724,33 @@ webpackJsonp([0,1],[
 
 	var _materialUiLibTextField2 = _interopRequireDefault(_materialUiLibTextField);
 
+	var _materialUiLibAutoComplete = __webpack_require__(268);
+
+	var _materialUiLibAutoComplete2 = _interopRequireDefault(_materialUiLibAutoComplete);
+
 	var _materialUiLibFontIcon = __webpack_require__(251);
 
 	var _materialUiLibFontIcon2 = _interopRequireDefault(_materialUiLibFontIcon);
 
-	var _materialUiLibToolbarToolbar = __webpack_require__(268);
+	var _materialUiLibToolbarToolbar = __webpack_require__(271);
 
 	var _materialUiLibToolbarToolbar2 = _interopRequireDefault(_materialUiLibToolbarToolbar);
 
-	var _materialUiLibToolbarToolbarGroup = __webpack_require__(269);
+	var _materialUiLibToolbarToolbarGroup = __webpack_require__(272);
 
 	var _materialUiLibToolbarToolbarGroup2 = _interopRequireDefault(_materialUiLibToolbarToolbarGroup);
 
-	var _materialUiLibToolbarToolbarSeparator = __webpack_require__(270);
+	var _materialUiLibToolbarToolbarSeparator = __webpack_require__(273);
 
 	var _materialUiLibToolbarToolbarSeparator2 = _interopRequireDefault(_materialUiLibToolbarToolbarSeparator);
 
-	var _materialUiLibToolbarToolbarTitle = __webpack_require__(271);
+	var _materialUiLibToolbarToolbarTitle = __webpack_require__(274);
 
 	var _materialUiLibToolbarToolbarTitle2 = _interopRequireDefault(_materialUiLibToolbarToolbarTitle);
 
-	var _const = __webpack_require__(272);
+	var _const = __webpack_require__(275);
 
-	var _theme = __webpack_require__(273);
+	var _theme = __webpack_require__(276);
 
 	var _theme2 = _interopRequireDefault(_theme);
 
@@ -19748,7 +19767,6 @@ webpackJsonp([0,1],[
 	        this.topics = populateMenus(_const.TOPICS);
 	        this.orgs = populateMenus(_const.ORGS);
 	        this.types = populateMenus(_const.TYPES);
-	        this.years = populateMenus(_const.YEARS);
 
 	        function populateMenus(data) {
 	            var ret = [];
@@ -19761,8 +19779,7 @@ webpackJsonp([0,1],[
 	        this.state = {
 	            topic: '0',
 	            org: '0',
-	            type: '0',
-	            year: '0'
+	            type: '0'
 	        };
 	    }
 
@@ -19786,10 +19803,13 @@ webpackJsonp([0,1],[
 	        }
 	    }, {
 	        key: 'handleSearch',
-	        value: function handleSearch(event) {
-	            console.log('search:', this);
-	            console.log('event: ', arguments);
-	            console.log(this.refs['search'].getValue());
+	        value: function handleSearch(str) {
+	            this.props.updateSearch(str.toLocaleLowerCase());
+	        }
+	    }, {
+	        key: 'clearSearch',
+	        value: function clearSearch(str) {
+	            if (str.length === 0) this.props.updateSearch('');
 	        }
 	    }, {
 	        key: 'render',
@@ -19802,7 +19822,7 @@ webpackJsonp([0,1],[
 	                    { key: 0, float: 'left', className: 'dropdowns' },
 	                    _react2['default'].createElement(
 	                        _materialUiLibDropDownMenu2['default'],
-	                        { ref: 'topic', onChange: this.handleChange.bind(this, 'topic'), value: this.state.topic },
+	                        { onChange: this.handleChange.bind(this, 'topic'), value: this.state.topic },
 	                        this.topics
 	                    ),
 	                    _react2['default'].createElement(
@@ -19814,17 +19834,12 @@ webpackJsonp([0,1],[
 	                        _materialUiLibDropDownMenu2['default'],
 	                        { onChange: this.handleChange.bind(this, 'type'), value: this.state.type },
 	                        this.types
-	                    ),
-	                    _react2['default'].createElement(
-	                        _materialUiLibDropDownMenu2['default'],
-	                        { onChange: this.handleChange.bind(this, 'year'), value: this.state.year },
-	                        this.years
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    _materialUiLibToolbarToolbarGroup2['default'],
 	                    { key: 1, float: 'right', className: 'searchbar' },
-	                    _react2['default'].createElement(_materialUiLibTextField2['default'], { hintText: '输入案例名', ref: 'search', onChange: this.handleSearch.bind(this), value: this.state.searchValue })
+	                    _react2['default'].createElement(_materialUiLibAutoComplete2['default'], { hintText: '输入案例名', filter: _materialUiLibAutoComplete2['default'].caseInsensitiveFilter, dataSource: this.props.autoCompleteData, onNewRequest: this.handleSearch.bind(this), onUpdateInput: this.clearSearch.bind(this) })
 	                )
 	            );
 	        }
@@ -32282,6 +32297,528 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(159);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _stylePropable = __webpack_require__(200);
+
+	var _stylePropable2 = _interopRequireDefault(_stylePropable);
+
+	var _keyCode = __webpack_require__(222);
+
+	var _keyCode2 = _interopRequireDefault(_keyCode);
+
+	var _textField = __webpack_require__(260);
+
+	var _textField2 = _interopRequireDefault(_textField);
+
+	var _menu = __webpack_require__(217);
+
+	var _menu2 = _interopRequireDefault(_menu);
+
+	var _menuItem = __webpack_require__(227);
+
+	var _menuItem2 = _interopRequireDefault(_menuItem);
+
+	var _divider = __webpack_require__(269);
+
+	var _divider2 = _interopRequireDefault(_divider);
+
+	var _popover = __webpack_require__(228);
+
+	var _popover2 = _interopRequireDefault(_popover);
+
+	var _propTypes = __webpack_require__(223);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	var AutoComplete = _react2.default.createClass({
+	  displayName: 'AutoComplete',
+
+	  propTypes: {
+	    anchorOrigin: _propTypes2.default.origin,
+	    animated: _react2.default.PropTypes.bool,
+	    dataSource: _react2.default.PropTypes.array,
+	    disableFocusRipple: _react2.default.PropTypes.bool,
+	    errorStyle: _react2.default.PropTypes.object,
+	    errorText: _react2.default.PropTypes.string,
+	    filter: _react2.default.PropTypes.func,
+	    floatingLabelText: _react2.default.PropTypes.string,
+	    fullWidth: _react2.default.PropTypes.bool,
+	    hintText: _react2.default.PropTypes.string,
+	    listStyle: _react2.default.PropTypes.object,
+	    menuCloseDelay: _react2.default.PropTypes.number,
+	    menuProps: _react2.default.PropTypes.object,
+	    menuStyle: _react2.default.PropTypes.object,
+	    onNewRequest: _react2.default.PropTypes.func,
+	    onUpdateInput: _react2.default.PropTypes.func,
+	    open: _react2.default.PropTypes.bool,
+	    searchText: _react2.default.PropTypes.string,
+	    showAllItems: _react2.default.PropTypes.bool,
+	    style: _react2.default.PropTypes.object,
+	    targetOrigin: _propTypes2.default.origin,
+	    touchTapCloseDelay: _react2.default.PropTypes.number,
+	    updateWhenFocused: _react2.default.PropTypes.bool
+	  },
+
+	  contextTypes: {
+	    muiTheme: _react2.default.PropTypes.object
+	  },
+
+	  mixins: [_stylePropable2.default],
+
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      anchorOrigin: {
+	        vertical: 'bottom',
+	        horizontal: 'left'
+	      },
+	      targetOrigin: {
+	        vertical: 'top',
+	        horizontal: 'left'
+	      },
+	      animated: true,
+	      fullWidth: false,
+	      open: false,
+	      showAllItems: false,
+	      searchText: '',
+	      menuCloseDelay: 100,
+	      disableFocusRipple: true,
+	      updateWhenFocused: false,
+	      onUpdateInput: function onUpdateInput() {},
+	      onNewRequest: function onNewRequest() {},
+	      filter: function filter(searchText, key) {
+	        return key.includes(searchText);
+	      }
+	    };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      searchText: this.props.searchText,
+	      open: this.props.open,
+	      anchorEl: null
+	    };
+	  },
+	  componentWillMount: function componentWillMount() {
+	    this.focusOnInput = false;
+	    this.requestsList = [];
+	  },
+
+	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+	    if (this.props.searchText !== nextProps.searchText) {
+	      this.setState({
+	        searchText: nextProps.searchText
+	      });
+	    }
+	  },
+
+	  componentClickAway: function componentClickAway() {
+	    this._close();
+	    this.focusOnInput = false;
+	  },
+	  _open: function _open() {
+	    this.setState({
+	      open: true,
+	      anchorEl: _reactDom2.default.findDOMNode(this.refs.searchTextField)
+	    });
+	  },
+	  _close: function _close() {
+	    this.setState({
+	      open: false,
+	      anchorEl: null
+	    });
+	  },
+	  setValue: function setValue(textValue) {
+	    this.setState({
+	      searchText: textValue
+	    });
+	  },
+	  getValue: function getValue() {
+	    return this.state.searchText;
+	  },
+	  _updateRequests: function _updateRequests(searchText) {
+
+	    this.setState({
+	      searchText: searchText,
+	      open: true,
+	      anchorEl: _reactDom2.default.findDOMNode(this.refs.searchTextField)
+	    });
+
+	    this.focusOnInput = true;
+
+	    this.props.onUpdateInput(searchText, this.props.dataSource);
+	  },
+	  _handleItemTouchTap: function _handleItemTouchTap(e, child) {
+	    var _this = this;
+
+	    setTimeout(function () {
+	      _this._close();
+	    }, this.props.touchTapCloseDelay);
+
+	    var dataSource = this.props.dataSource;
+
+	    var chosenRequest = undefined,
+	        index = undefined,
+	        searchText = undefined;
+	    if (typeof dataSource[0] === 'string') {
+	      chosenRequest = this.requestsList[parseInt(child.key, 10)];
+	      index = dataSource.indexOf(chosenRequest);
+	      searchText = dataSource[index];
+	    } else {
+	      chosenRequest = child.key;
+	      index = dataSource.indexOf(dataSource.filter(function (item) {
+	        return chosenRequest === item.text;
+	      })[0]);
+	      searchText = chosenRequest;
+	    }
+
+	    this.setState({ searchText: searchText });
+
+	    this.props.onNewRequest(chosenRequest, index, dataSource);
+	  },
+	  _handleKeyDown: function _handleKeyDown(e) {
+	    switch (e.keyCode) {
+	      case _keyCode2.default.ESC:
+	        this._close();
+	        break;
+	      case _keyCode2.default.DOWN:
+	        if (this.focusOnInput && this.state.open) {
+	          e.preventDefault();
+	          this.focusOnInput = false;
+	          this._open();
+	        }
+	        break;
+	      default:
+	        break;
+	    }
+	  },
+	  render: function render() {
+	    var _this2 = this;
+
+	    var _props = this.props;
+	    var anchorOrigin = _props.anchorOrigin;
+	    var animated = _props.animated;
+	    var style = _props.style;
+	    var errorStyle = _props.errorStyle;
+	    var floatingLabelText = _props.floatingLabelText;
+	    var hintText = _props.hintText;
+	    var fullWidth = _props.fullWidth;
+	    var menuStyle = _props.menuStyle;
+	    var menuProps = _props.menuProps;
+	    var listStyle = _props.listStyle;
+	    var showAllItems = _props.showAllItems;
+	    var targetOrigin = _props.targetOrigin;
+
+	    var other = _objectWithoutProperties(_props, ['anchorOrigin', 'animated', 'style', 'errorStyle', 'floatingLabelText', 'hintText', 'fullWidth', 'menuStyle', 'menuProps', 'listStyle', 'showAllItems', 'targetOrigin']);
+
+	    var _state = this.state;
+	    var open = _state.open;
+	    var anchorEl = _state.anchorEl;
+
+	    var styles = {
+	      root: {
+	        display: 'inline-block',
+	        position: 'relative',
+	        width: this.props.fullWidth ? '100%' : 256
+	      },
+	      input: {},
+	      error: {},
+	      menu: {
+	        width: '100%'
+	      },
+	      list: {
+	        display: 'block',
+	        width: this.props.fullWidth ? '100%' : 256
+	      }
+	    };
+
+	    var textFieldProps = {
+	      style: this.mergeAndPrefix(styles.input, style),
+	      floatingLabelText: floatingLabelText,
+	      hintText: !hintText && !floatingLabelText ? '' : hintText,
+	      fullWidth: true,
+	      multiLine: false,
+	      errorStyle: this.mergeAndPrefix(styles.error, errorStyle)
+	    };
+
+	    var mergedRootStyles = this.mergeAndPrefix(styles.root, style);
+	    var mergedMenuStyles = this.mergeStyles(styles.menu, menuStyle);
+
+	    var displayFilter = showAllItems ? function () {
+	      return true;
+	    } : this.props.filter;
+	    var requestsList = [];
+
+	    this.props.dataSource.map(function (item) {
+	      switch (typeof item === 'undefined' ? 'undefined' : _typeof(item)) {
+	        case 'string':
+	          if (displayFilter(_this2.state.searchText, item, item)) {
+	            requestsList.push(item);
+	          }
+	          break;
+	        case 'object':
+	          if (typeof item.text === 'string') {
+	            if (displayFilter(_this2.state.searchText, item.text, item.value)) {
+	              requestsList.push(item);
+	            } else if (item.display) {
+	              requestsList.push(item);
+	            }
+	          }
+	          break;
+	      }
+	    });
+
+	    this.requestsList = requestsList;
+
+	    var menu = open && (this.state.searchText !== '' || showAllItems) && requestsList.length > 0 ? _react2.default.createElement(
+	      _menu2.default,
+	      _extends({}, menuProps, {
+	        ref: 'menu',
+	        key: 'dropDownMenu',
+	        autoWidth: false,
+	        onEscKeyDown: this._close,
+	        initiallyKeyboardFocused: false,
+	        onItemTouchTap: this._handleItemTouchTap,
+	        listStyle: this.mergeAndPrefix(styles.list, listStyle),
+	        style: mergedMenuStyles }),
+	      requestsList.map(function (request, index) {
+	        switch (typeof request === 'undefined' ? 'undefined' : _typeof(request)) {
+	          case 'string':
+	            return _react2.default.createElement(_menuItem2.default, {
+	              disableFocusRipple: _this2.props.disableFocusRipple,
+	              innerDivStyle: { overflow: 'hidden' },
+	              key: index,
+	              value: request,
+	              primaryText: request
+	            });
+	          case 'object':
+	            if (typeof request.text === 'string') {
+	              return _react2.default.cloneElement(request.value, {
+	                key: request.text,
+	                disableFocusRipple: _this2.props.disableFocusRipple
+	              });
+	            }
+	            return _react2.default.cloneElement(request, {
+	              key: index,
+	              disableFocusRipple: _this2.props.disableFocusRipple
+	            });
+	          default:
+	            return null;
+	        }
+	      })
+	    ) : null;
+
+	    var popoverStyle = undefined;
+	    if (anchorEl && fullWidth) {
+	      popoverStyle = { width: anchorEl.clientWidth };
+	    }
+
+	    return _react2.default.createElement(
+	      'div',
+	      { style: mergedRootStyles,
+	        onKeyDown: this._handleKeyDown },
+	      _react2.default.createElement(
+	        'div',
+	        {
+	          style: {
+	            width: '100%'
+	          } },
+	        _react2.default.createElement(_textField2.default, _extends({}, other, {
+	          ref: 'searchTextField',
+	          value: this.state.searchText,
+	          onEnterKeyDown: function onEnterKeyDown() {
+	            setTimeout(function () {
+	              _this2._close();
+	            }, _this2.props.touchTapCloseDelay);
+	            _this2.props.onNewRequest(_this2.state.searchText);
+	          },
+	          onChange: function onChange(e) {
+	            var searchText = e.target.value;
+	            _this2._updateRequests(searchText);
+	          },
+	          onBlur: function onBlur() {
+	            if (_this2.focusOnInput && open) _this2.refs.searchTextField.focus();
+	          },
+	          onFocus: function onFocus() {
+	            if (!open && (showAllItems || _this2.props.updateWhenFocused || _this2.state.searchText !== '')) {
+	              _this2._updateRequests(_this2.state.searchText);
+	            }
+	            _this2.focusOnInput = true;
+	          }
+
+	        }, textFieldProps))
+	      ),
+	      _react2.default.createElement(
+	        _popover2.default,
+	        {
+	          style: popoverStyle,
+	          anchorOrigin: anchorOrigin,
+	          targetOrigin: targetOrigin,
+	          open: open,
+	          anchorEl: anchorEl,
+	          useLayerForClickAway: false,
+	          onRequestClose: this._close },
+	        menu
+	      )
+	    );
+	  }
+	});
+
+	AutoComplete.Item = _menuItem2.default;
+	AutoComplete.Divider = _divider2.default;
+
+	exports.default = AutoComplete;
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _muiThemeable = __webpack_require__(270);
+
+	var _muiThemeable2 = _interopRequireDefault(_muiThemeable);
+
+	var _styles = __webpack_require__(202);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	var propTypes = {
+	  /**
+	   * CSS class that will be added to the divider's root element
+	   */
+	  className: _react2.default.PropTypes.string,
+
+	  /**
+	   * If true, the divider will be indented 72px
+	   */
+	  inset: _react2.default.PropTypes.bool,
+
+	  /**
+	   * Override the inline-styles of the list divider's root element
+	   */
+	  style: _react2.default.PropTypes.object
+	};
+
+	var defaultProps = {
+	  inset: false
+	};
+
+	var Divider = function Divider(_ref) {
+	  var inset = _ref.inset;
+	  var muiTheme = _ref.muiTheme;
+	  var style = _ref.style;
+
+	  var other = _objectWithoutProperties(_ref, ['inset', 'muiTheme', 'style']);
+
+	  var styles = {
+	    root: {
+	      margin: 0,
+	      marginTop: -1,
+	      marginLeft: inset ? 72 : 0,
+	      height: 1,
+	      border: 'none',
+	      backgroundColor: muiTheme.rawTheme.palette.borderColor
+	    }
+	  };
+
+	  return _react2.default.createElement('hr', _extends({}, other, { style: _styles2.default.prepareStyles(muiTheme, styles.root, style) }));
+	};
+
+	Divider.displayName = 'Divider';
+	Divider.propTypes = propTypes;
+	Divider.defaultProps = defaultProps;
+	Divider = (0, _muiThemeable2.default)(Divider);
+
+	exports.default = Divider;
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = muiThemeable;
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lightRawTheme = __webpack_require__(216);
+
+	var _lightRawTheme2 = _interopRequireDefault(_lightRawTheme);
+
+	var _themeManager = __webpack_require__(165);
+
+	var _themeManager2 = _interopRequireDefault(_themeManager);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getDisplayName(WrappedComponent) {
+	  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+	}
+
+	function muiThemeable(WrappedComponent) {
+	  var MuiComponent = function MuiComponent(props, _ref) {
+	    var _ref$muiTheme = _ref.muiTheme;
+	    var muiTheme = _ref$muiTheme === undefined ? _themeManager2.default.getMuiTheme(_lightRawTheme2.default) : _ref$muiTheme;
+
+	    return _react2.default.createElement(WrappedComponent, _extends({}, props, { muiTheme: muiTheme }));
+	  };
+
+	  MuiComponent.displayName = getDisplayName(WrappedComponent);
+	  MuiComponent.contextTypes = {
+	    muiTheme: _react2.default.PropTypes.object
+	  };
+	  MuiComponent.childContextTypes = {
+	    muiTheme: _react2.default.PropTypes.object
+	  };
+
+	  return MuiComponent;
+	}
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	var _stylePropable = __webpack_require__(200);
 
 	var _stylePropable2 = _interopRequireDefault(_stylePropable);
@@ -32394,7 +32931,7 @@ webpackJsonp([0,1],[
 	exports.default = Toolbar;
 
 /***/ },
-/* 269 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32643,7 +33180,7 @@ webpackJsonp([0,1],[
 	exports.default = ToolbarGroup;
 
 /***/ },
-/* 270 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32752,7 +33289,7 @@ webpackJsonp([0,1],[
 	exports.default = ToolbarSeparator;
 
 /***/ },
-/* 271 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32869,7 +33406,7 @@ webpackJsonp([0,1],[
 	exports.default = ToolbarTitle;
 
 /***/ },
-/* 272 */
+/* 275 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -32879,19 +33416,16 @@ webpackJsonp([0,1],[
 	});
 	var TOPICS = [{ value: '0', label: 'all', ch: '' }, { value: '1', label: 'Politics', ch: '政治' }, { value: '2', label: 'Economy', ch: '经济' }, { value: '3', label: 'Business', ch: '商业' }, { value: '4', label: 'Media', ch: '媒体' }, { value: '5', label: 'Arts', ch: '艺术' }, { value: '6', label: 'Sports', ch: '体育' }, { value: '7', label: 'Security', ch: '安全' }, { value: '8', label: 'Disaster', ch: '灾害' }, { value: '9', label: 'Environment', ch: '环境' }, { value: '10', label: 'Technology', ch: '技术' }, { value: '11', label: 'Science', ch: '科学' }, { value: '12', label: 'Culture', ch: '文化' }, { value: '13', label: 'Religion', ch: '宗教' }, { value: '14', label: 'Education', ch: '教育' }, { value: '15', label: 'Lifestyle', ch: '生活' }, { value: '16', label: 'Fashion', ch: '时尚' }, { value: '17', label: 'Travel', ch: '旅行' }, { value: '18', label: 'Opinion', ch: '观点' }];
 
-	var ORGS = [{ value: '0', label: 'all', ch: '' }, { value: '1', label: 'The New York Times', ch: '纽约时报' }, { value: '2', label: 'The Guardian', ch: '英国卫报' }, { value: '3', label: 'NPR', ch: '国家公共电台' }, { value: '4', label: 'ProPublica', ch: '' }, { value: '5', label: 'The Wall Street Journal', ch: '华尔街日报' }, { value: '6', label: 'The Washington Post', ch: '华盛顿邮报' }, { value: '7', label: 'Bloomberg', ch: '彭博社' }, { value: '8', label: 'Five Thirty Eight', ch: '538' }, { value: '9', label: 'Reuters', ch: '路透社' }, { value: '10', label: 'National Geography', ch: '国家地理' }, { value: '11', label: 'Chicago Tribune', ch: '芝加哥论坛报' }, { value: '12', label: 'The Huffington Post', ch: '赫芬顿邮报' }, { value: '13', label: 'WNYC', ch: '纽约公共广播电台' }];
+	var ORGS = [{ value: '0', label: 'all', ch: '' }, { value: '1', label: 'The New York Times', ch: '纽约时报' }, { value: '2', label: 'The Guardian', ch: '英国卫报' }, { value: '3', label: 'NPR', ch: '国家公共电台' }, { value: '4', label: 'ProPublica', ch: '' }, { value: '5', label: 'The Wall Street Journal', ch: '华尔街日报' }, { value: '6', label: 'The Washington Post', ch: '华盛顿邮报' }, { value: '7', label: 'Bloomberg', ch: '彭博社' }, { value: '8', label: 'Five Thirty Eight', ch: '538' }, { value: '9', label: 'Reuters', ch: '路透社' }, { value: '10', label: 'National Geography', ch: '国家地理' }, { value: '11', label: 'Chicago Tribune', ch: '芝加哥论坛报' }, { value: '12', label: 'The Huffington Post', ch: '赫芬顿邮报' }, { value: '13', label: 'WNYC', ch: '纽约公共广播电台' }, { value: '14', label: 'Popular Science', ch: '大众科学' }, { value: '15', label: 'Scientific American', ch: '科学美国人' }];
 
 	var TYPES = [{ value: '0', label: 'all' }, { value: '1', label: 'map' }, { value: '2', label: 'bar' }, { value: '3', label: 'line' }, { value: '4', label: 'tree' }, { value: '5', label: 'bubble' }, { value: '6', label: '3D' }, { value: '7', label: 'pie' }, { value: '8', label: 'photo' }, { value: '9', label: 'real-time' }, { value: '10', label: 'multi-media' }, { value: '11', label: 'animation' }, { value: '12', label: 'interactive' }, { value: '13', label: 'timeline' }];
-
-	var YEARS = [{ value: '0', label: 'all' }, { value: '1', label: '2008' }, { value: '2', label: '2009' }, { value: '3', label: '2010' }, { value: '4', label: '2011' }, { value: '5', label: '2012' }, { value: '6', label: '2013' }, { value: '7', label: '2014' }, { value: '8', label: '2015' }];
 
 	exports.TOPICS = TOPICS;
 	exports.ORGS = ORGS;
 	exports.TYPES = TYPES;
-	exports.YEARS = YEARS;
 
 /***/ },
-/* 273 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32940,7 +33474,7 @@ webpackJsonp([0,1],[
 	module.exports = exports['default'];
 
 /***/ },
-/* 274 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32963,11 +33497,11 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _StoryBoard = __webpack_require__(275);
+	var _StoryBoard = __webpack_require__(278);
 
 	var _StoryBoard2 = _interopRequireDefault(_StoryBoard);
 
-	var _const = __webpack_require__(272);
+	var _const = __webpack_require__(275);
 
 	var BoardContainer = (function (_React$Component) {
 		_inherits(BoardContainer, _React$Component);
@@ -32977,57 +33511,39 @@ webpackJsonp([0,1],[
 
 			_get(Object.getPrototypeOf(BoardContainer.prototype), 'constructor', this).call(this, props);
 			this.state = {
-				storyBoards: [],
-				filteredStoryBoards: [],
-				filterBy: null
+				storyBoards: this.props.data.slice(),
+				filteredStoryBoards: this.props.data.slice()
 			};
 		}
 
 		_createClass(BoardContainer, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var self = this;
-				// var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
-				var key = '1NUM595ky5tMEqZ9lh5H-FVRhYPj6AmaWas_Zv584-CA/1'; // duan spreadsheet
-				// var key = '1UAPFPdeBPOqDSjzUww6Y2IzbtRWKNJQCEOn9o0t2Agg'; // copy
-				var url = 'https://spreadsheets.google.com/feeds/list/' + key + '/public/values?alt=json';
-
-				// AJAX call
-				var r = new XMLHttpRequest();
-				r.open("GET", url, true);
-				r.onreadystatechange = function () {
-					if (r.readyState != 4 || r.status != 200) return;
-					// console.log("Success: ", JSON.parse(r.responseText));
-					var data = JSON.parse(r.responseText);
-					var entry = data.feed.entry;
-					self.setState({
-						storyBoards: entry.slice(),
-						filteredStoryBoards: entry.slice()
-					});
-				};
-				r.send();
-			}
-		}, {
 			key: 'componentWillReceiveProps',
 			value: function componentWillReceiveProps(nextProps) {
+				var self = this;
 
-				if (JSON.stringify(this.props.filter) !== JSON.stringify(nextProps.filter)) {
+				if (JSON.stringify(self.props.filter) !== JSON.stringify(nextProps.filter) || nextProps.search !== self.props.search) {
 					var filter = nextProps.filter;
 					var temp = [];
-					this.state.storyBoards.forEach(function (sb) {
-						var topic = sb['gsx$categories']['$t'];
-						var org = sb['gsx$authororganizationen']['$t'];
-						var type = sb['gsx$elementtag']['$t'];
-						var year = '';
+					self.state.storyBoards.forEach(function (sb) {
+						var topic = sb['Topic'];
+						var org = sb['Organization'];
+						var type = sb['Type'];
+						var title = sb['Title'].toLocaleLowerCase();
 						var flag = true;
-						if (filter.topic !== '0' && _const.TOPICS[filter.topic].label !== topic) {
+
+						if (filter !== null && filter.topic !== '0' && _const.TOPICS[filter.topic].label !== topic) {
 							flag = false;
 						}
-						if (flag && filter.org !== '0' && _const.ORGS[filter.org].label !== org) {
+						if (flag && filter !== null && filter.org !== '0' && _const.ORGS[filter.org].label !== org) {
 							flag = false;
 						}
-						if (flag && filter.type !== '0' && type.indexOf(_const.TYPES[filter.type].label) == -1) {
+						if (flag && filter !== null && filter.type !== '0' && type.indexOf(_const.TYPES[filter.type].label) == -1) {
 							flag = false;
+						}
+						if (flag && (nextProps.search !== self.props.search || nextProps.search !== '')) {
+							if (title.indexOf(nextProps.search) == -1) {
+								flag = false;
+							}
 						}
 						if (flag) {
 							temp.push(sb);
@@ -33057,7 +33573,7 @@ webpackJsonp([0,1],[
 	module.exports = exports['default'];
 
 /***/ },
-/* 275 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33084,35 +33600,35 @@ webpackJsonp([0,1],[
 
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-	var _materialUiLibAvatar = __webpack_require__(276);
+	var _materialUiLibAvatar = __webpack_require__(279);
 
 	var _materialUiLibAvatar2 = _interopRequireDefault(_materialUiLibAvatar);
 
-	var _materialUiLibCardCard = __webpack_require__(277);
+	var _materialUiLibCardCard = __webpack_require__(280);
 
 	var _materialUiLibCardCard2 = _interopRequireDefault(_materialUiLibCardCard);
 
-	var _materialUiLibCardCardActions = __webpack_require__(281);
+	var _materialUiLibCardCardActions = __webpack_require__(284);
 
 	var _materialUiLibCardCardActions2 = _interopRequireDefault(_materialUiLibCardCardActions);
 
-	var _materialUiLibCardCardHeader = __webpack_require__(282);
+	var _materialUiLibCardCardHeader = __webpack_require__(285);
 
 	var _materialUiLibCardCardHeader2 = _interopRequireDefault(_materialUiLibCardCardHeader);
 
-	var _materialUiLibCardCardMedia = __webpack_require__(287);
+	var _materialUiLibCardCardMedia = __webpack_require__(290);
 
 	var _materialUiLibCardCardMedia2 = _interopRequireDefault(_materialUiLibCardCardMedia);
 
-	var _materialUiLibCardCardTitle = __webpack_require__(288);
+	var _materialUiLibCardCardTitle = __webpack_require__(291);
 
 	var _materialUiLibCardCardTitle2 = _interopRequireDefault(_materialUiLibCardCardTitle);
 
-	var _materialUiLibFlatButton = __webpack_require__(289);
+	var _materialUiLibFlatButton = __webpack_require__(292);
 
 	var _materialUiLibFlatButton2 = _interopRequireDefault(_materialUiLibFlatButton);
 
-	var _materialUiLibCardCardText = __webpack_require__(291);
+	var _materialUiLibCardCardText = __webpack_require__(294);
 
 	var _materialUiLibCardCardText2 = _interopRequireDefault(_materialUiLibCardCardText);
 
@@ -33120,9 +33636,9 @@ webpackJsonp([0,1],[
 
 	var _materialUiLibStylesThemeManager2 = _interopRequireDefault(_materialUiLibStylesThemeManager);
 
-	var _const = __webpack_require__(272);
+	var _const = __webpack_require__(275);
 
-	var _theme = __webpack_require__(273);
+	var _theme = __webpack_require__(276);
 
 	var _theme2 = _interopRequireDefault(_theme);
 
@@ -33171,23 +33687,15 @@ webpackJsonp([0,1],[
 	        key: 'parseData',
 	        value: function parseData(data) {
 	            var ret = {};
-	            ret.title = data['gsx$title']['$t'];
-	            ret.url = data['gsx$url']['$t'];
-	            ret.orgen = data['gsx$authororganizationen']['$t'];
-	            ret.orgcn = data['gsx$authororganizationcn']['$t'];
-	            ret.region = data['gsx$authororganizationregion']['$t'];
-	            ret.cat = data['gsx$categories']['$t'];
-	            ret.cttregion = data['gsx$contentregion']['$t'];
-	            ret.ctttag = data['gsx$contenttag']['$t'];
-	            ret.dtsource = data['gsx$datasource']['$t'];
-	            ret.notes = data['gsx$editornotes']['$t'];
-	            ret.element = data['gsx$elementtag']['$t'];
-	            ret.img = data['gsx$images']['$t'];
-	            ret.ipdate = data['gsx$inputdate']['$t'];
-	            ret.lg = data['gsx$languagetag']['$t'];
+	            ret.title = data['Title'];
+	            ret.url = data['URL'];
+	            ret.orgen = data['Organization'];
+	            ret.orgcn = data['Organization_CN'];
+	            ret.cat = data['Topic'];
+	            ret.element = data['Type'];
+	            ret.img = data['Images'];
 	            ret.logo = this.getLogo(ret.orgen);
 	            ret.featureImage = this.getFeature();
-	            ret.takeaways = data['gsx$takeaways']['$t'];
 	            return ret;
 	        }
 	    }, {
@@ -33225,7 +33733,7 @@ webpackJsonp([0,1],[
 	module.exports = exports['default'];
 
 /***/ },
-/* 276 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33412,7 +33920,7 @@ webpackJsonp([0,1],[
 	exports.default = Avatar;
 
 /***/ },
-/* 277 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33435,7 +33943,7 @@ webpackJsonp([0,1],[
 
 	var _stylePropable2 = _interopRequireDefault(_stylePropable);
 
-	var _cardExpandable = __webpack_require__(278);
+	var _cardExpandable = __webpack_require__(281);
 
 	var _cardExpandable2 = _interopRequireDefault(_cardExpandable);
 
@@ -33562,7 +34070,7 @@ webpackJsonp([0,1],[
 	exports.default = Card;
 
 /***/ },
-/* 278 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33579,11 +34087,11 @@ webpackJsonp([0,1],[
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _keyboardArrowUp = __webpack_require__(279);
+	var _keyboardArrowUp = __webpack_require__(282);
 
 	var _keyboardArrowUp2 = _interopRequireDefault(_keyboardArrowUp);
 
-	var _keyboardArrowDown = __webpack_require__(280);
+	var _keyboardArrowDown = __webpack_require__(283);
 
 	var _keyboardArrowDown2 = _interopRequireDefault(_keyboardArrowDown);
 
@@ -33702,7 +34210,7 @@ webpackJsonp([0,1],[
 	exports.default = CardExpandable;
 
 /***/ },
-/* 279 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33742,7 +34250,7 @@ webpackJsonp([0,1],[
 	exports.default = HardwareKeyboardArrowUp;
 
 /***/ },
-/* 280 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33782,7 +34290,7 @@ webpackJsonp([0,1],[
 	exports.default = HardwareKeyboardArrowDown;
 
 /***/ },
-/* 281 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33884,7 +34392,7 @@ webpackJsonp([0,1],[
 	exports.default = CardActions;
 
 /***/ },
-/* 282 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33899,11 +34407,11 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(283);
+	var _styles = __webpack_require__(286);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
-	var _avatar = __webpack_require__(276);
+	var _avatar = __webpack_require__(279);
 
 	var _avatar2 = _interopRequireDefault(_avatar);
 
@@ -34048,7 +34556,7 @@ webpackJsonp([0,1],[
 	exports.default = CardHeader;
 
 /***/ },
-/* 283 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34090,15 +34598,15 @@ webpackJsonp([0,1],[
 
 	var _lightBaseTheme2 = _interopRequireDefault(_lightBaseTheme);
 
-	var _darkRawTheme = __webpack_require__(284);
+	var _darkRawTheme = __webpack_require__(287);
 
 	var _darkRawTheme2 = _interopRequireDefault(_darkRawTheme);
 
-	var _darkBaseTheme = __webpack_require__(285);
+	var _darkBaseTheme = __webpack_require__(288);
 
 	var _darkBaseTheme2 = _interopRequireDefault(_darkBaseTheme);
 
-	var _themeDecorator = __webpack_require__(286);
+	var _themeDecorator = __webpack_require__(289);
 
 	var _themeDecorator2 = _interopRequireDefault(_themeDecorator);
 
@@ -34141,7 +34649,7 @@ webpackJsonp([0,1],[
 	};
 
 /***/ },
-/* 284 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34150,7 +34658,7 @@ webpackJsonp([0,1],[
 	  value: true
 	});
 
-	var _darkBaseTheme = __webpack_require__(285);
+	var _darkBaseTheme = __webpack_require__(288);
 
 	Object.defineProperty(exports, 'default', {
 	  enumerable: true,
@@ -34160,7 +34668,7 @@ webpackJsonp([0,1],[
 	});
 
 /***/ },
-/* 285 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34204,7 +34712,7 @@ webpackJsonp([0,1],[
 	};
 
 /***/ },
-/* 286 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34242,7 +34750,7 @@ webpackJsonp([0,1],[
 	};
 
 /***/ },
-/* 287 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34257,7 +34765,7 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(283);
+	var _styles = __webpack_require__(286);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -34412,7 +34920,7 @@ webpackJsonp([0,1],[
 	exports.default = CardMedia;
 
 /***/ },
-/* 288 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34427,7 +34935,7 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(283);
+	var _styles = __webpack_require__(286);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -34548,7 +35056,7 @@ webpackJsonp([0,1],[
 	exports.default = CardTitle;
 
 /***/ },
-/* 289 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34591,7 +35099,7 @@ webpackJsonp([0,1],[
 
 	var _enhancedButton2 = _interopRequireDefault(_enhancedButton);
 
-	var _flatButtonLabel = __webpack_require__(290);
+	var _flatButtonLabel = __webpack_require__(293);
 
 	var _flatButtonLabel2 = _interopRequireDefault(_flatButtonLabel);
 
@@ -34803,7 +35311,7 @@ webpackJsonp([0,1],[
 	exports.default = FlatButton;
 
 /***/ },
-/* 290 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34907,7 +35415,7 @@ webpackJsonp([0,1],[
 	exports.default = FlatButtonLabel;
 
 /***/ },
-/* 291 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35004,16 +35512,22 @@ webpackJsonp([0,1],[
 	exports.default = CardText;
 
 /***/ },
-/* 292 */
+/* 295 */
+/***/ function(module, exports) {
+
+	module.exports = [{"Input date":"20151105","Title":"Connected China","URL":"http://china.fathom.info/","Images":"","Organization":"Reuters","Organization_CN":"路透社","Topic":"Politics","Content tag":"connected china","Type":"app, visualization, multimedia","Language tag":"eng","Data tag":"media coverage, open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"http://djchina.org/2013/08/25/resource-cases/","editor_info":"shujian.bu@gmail.com","tutorial_links":"https://github.com/timelyportfolio/rCharts_512paths","additional_notes":""},{"Input date":"20151105","Title":"Mapping the Dead: Gun Deaths Since Sandy Hook","URL":"http://data.huffingtonpost.com/2013/03/gun-deaths","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Social issue","Content tag":"gun shot","Type":"interactive, map, bubble chart, bar chart","Language tag":"eng","Data tag":"media coverage","Data source":"http://data.huffingtonpost.com/2013/03/gun-deaths\n downloadable dataset in csv format","Takeaways":"","Editor notes":"","showcase_in_depth":"http://djchina.org/2013/08/25/resource-cases/","editor_info":"shujian.bu@gmail.com","tutorial_links":"https://github.com/timelyportfolio/rCharts_512paths","additional_notes":""},{"Input date":"20151105","Title":"Oscar Predictions 2013","URL":"http://data.huffingtonpost.com/2013/01/oscar-predictions","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Culture and religion","Content tag":"oscar prediction","Type":"chart","Language tag":"eng","Data tag":"institute data","Data source":"Box Office Mojo, Rotten Tomatoes, Metacritic, Intrade, Betfair, Hollywood Stock Exchange","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Relatives Of Vets Who Died By Suicide Tell Their Stories (AUDIO)","URL":"http://www.huffingtonpost.com/2013/09/04/vets-suicide_n_3861728.html","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Social issue","Content tag":"suicide","Type":"multi-media","Language tag":"eng","Data tag":"interview","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"风雨中概股","URL":"http://special.caixin.com/2013/zgg/index.html","Images":"","Organization":"Caixin","Organization_CN":"财新","Topic":"Business","Content tag":"ipo, stock market","Type":"search bar, interactve, bubble chart,","Language tag":"chi","Data tag":"biz data service","Data source":"Wind__","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Small Arms and Ammunition-Imports and Exports","URL":"http://armsglobe.chromeexperiments.com/","Images":"","Organization":"Google","Organization_CN":"谷歌","Topic":"Security","Content tag":"ammunition trade","Type":"timeline, bar chart, animation, search bar, interactive, line chart, 3D","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Find out about crime on your block, in your community, along your commute, and more","URL":"http://crime.chicagotribune.com/","Images":"","Organization":"Chicagotribune","Organization_CN":"芝加哥论坛报","Topic":"Social issue","Content tag":"crime","Type":"search bar, interactive, line chart, ranking","Language tag":"eng","Data tag":"gov open data","Data source":"The Chicago Police Department\n 1, http://crime.chicagotribune.com/chicago/community\n 2, http://crime.chicagotribune.com/suburbs/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"512 Paths to the White House","URL":"http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"interactive","Language tag":"eng","Data tag":"modeling","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Facebook Offering: How It Compares","URL":"http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"ipo, stock market","Type":"search bar, interactive, bubble chart,","Language tag":"eng","Data tag":"biz data service","Data source":"Jay Ritter, University of Florida; Bloomberg","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How the Recession Reshaped the Economy, in 255 Charts","URL":"http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"economic recession","Type":"interactive, table-like, chart","Language tag":"eng","Data tag":"gov open data","Data source":"Burearu of Labor Stats portal: http://www.bls.gov/ces/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Who Will Win The Senate?","URL":"http://www.nytimes.com/newsgraphics/2014/senate-model/","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"interactive, chart","Language tag":"eng","Data tag":"modeling, open poll info and predictions","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Most Detailed Maps You’ll See From the Midterm Elections","URL":"http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"map, visualization,","Language tag":"eng","Data tag":"gov open data","Data source":"Virginia data comes from the Virginia State Board of Elections. Most Virginia map shapes are from the Virginia Public Access Project\n North Carolina data comes from North Carolina State Board of Elections.\n Georgia data comes from the Georgia Secretary of State.\n Iowa data comes from the Iowa Secretary of State.\n Arkansas data comes from the Arkansas Secretary of State.\n Louisiana data comes from the Louisiana Secretary of State.\n Minnesota data comes from the Minnesota Secretary of State.\n Streets data by OpenStreetMap contributors.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Four Ways to Slice Obama’s 2013 Budget Proposal","URL":"http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"gov budget","Type":"bubble chart, interactive, table-like","Language tag":"eng","Data tag":"gov open data","Data source":"Office of Management and Budget https://www.whitehouse.gov/sites/default/files/omb/budget/fy2013/assets/ccs.pdf","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Back and Forth Over the Shutdown and Debt Ceiling","URL":"http://www.nytimes.com/interactive/2013/09/30/us/politics/the-back-and-forth-over-the-shutdown.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"government debt","Type":"timeline, profile pic,","Language tag":"eng","Data tag":"media coverage","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The 9/11 Tapes: The Story in the Air","URL":"http://www.nytimes.com/interactive/2011/09/08/nyregion/911-tapes.html?hp","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Security","Content tag":"911","Type":"timeline, map, conversation","Language tag":"eng","Data tag":"","Data source":"Audio files were provided by John J. Farmer Jr., the Dean of Rutgers Law School-Newark and a senior counsel to the 9/11 Commission. Transcripts were edited from text provided by Miles L. Kara, Sr., a professional staff member of the 9/11 Commission. The call from Betty Ong was retrieved from an exhibit presented by the prosecution in United States v. Zacarias Moussaoui in United States District Court in Alexandria, Va.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Snow Fall: The Avalanche at Tunnel Creek","URL":"http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"16 skiers met avalanche","Type":"multi-media,map","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Mapping the Spread of Drought Across the U.S.","URL":"http://www.nytimes.com/interactive/2014/upshot/mapping-the-spread-of-drought-across-the-us.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"drought","Type":"map, timeline, chart","Language tag":"eng","Data tag":"gov open data","Data source":"National Climatic Data Center, \n National Drought Mitigation Center, \n U.S. Department of Agriculture, \n National Oceanic and Atmospheric Administration\n 1.http://droughtmonitor.unl.edu/\n 2.http://www.ncdc.noaa.gov/oa/climate/research/prelim/drought/palmer.html\n 3.http://www.nytimes.com/interactive/2012/08/11/sunday-review/drought-history.html","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Hurricane Sandy","URL":"http://www.nytimes.com/interactive/2012/10/26/us/hurricane-sandy-map.html?_r=2&","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"forecast hurricane","Type":"map, satellite, line chart, search bar","Language tag":"eng","Data tag":"gov open data","Data source":"National Weather Service","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Is It Better to Rent or Buy?","URL":"http://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"investment","Type":"bar chart, interactive, modelling(calculator)","Language tag":"eng","Data tag":"institute data, gov data","Data source":"Mark Zandi, Chief Economist, Moody's Analytics; Federal Reserve Economic Data, Federal Reserve Bank of St. Louis; Jonathan J. Miller, Miller Samuel Inc.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Where are the hardest places to live in the U.S.?","URL":"http://www.nytimes.com/2014/06/26/upshot/where-are-the-hardest-places-to-live-in-the-us.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Social issue","Content tag":"living","Type":"map, interactive, multi-media, modelling","Language tag":"eng","Data tag":"gov open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Jobless Rate for People Like You","URL":"http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Social issue","Content tag":"unemployment","Type":"line chart, interactive, sorting","Language tag":"eng","Data tag":"gov open data, survey","Data source":"Bureau of Labor Statistics","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How the Chicago Public School District Compares","URL":"http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Education","Content tag":"school compares","Type":"chart","Language tag":"eng","Data tag":"news coverage, institute data","Data source":"National Council on Teacher Quality(http://www.nctq.org/siteHome.do)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How Birth Year Influences Political Views","URL":"http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"political view and birth year","Type":"interactive, visualization, chart","Language tag":"eng","Data tag":"modeling, survey response","Data source":"The model, by researchers at Catalist, the Democratic data firm, and Columbia University, uses hundreds of thousands of survey responses and new statistical software to estimate how people’s preferences change at different stages of their lives.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Which Team Do You Cheer For? An N.B.A. Fan Map","URL":"http://www.nytimes.com/interactive/2014/05/12/upshot/12-upshot-nba-basketball.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"basketball","Type":"map, interactive","Language tag":"eng","Data tag":"facebook \"likes\"","Data source":"these were created using estimates of team support based on each team’s share of Facebook “likes” in a ZIP code (or census division in Canada). We then applied an algorithm to deal with statistical noisiness and to fill in gaps where data was missing.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"N.C.A.A. Fan Map: How the Country Roots for College Football","URL":"http://www.nytimes.com/interactive/2014/10/03/upshot/ncaa-football-fan-map.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"college football","Type":"map, interactive","Language tag":"eng","Data tag":"facebook \"likes\"","Data source":"these were created using estimates of team support based on each team’s share of Facebook “likes” in a ZIP code. We then applied an algorithm to deal with statistical noise and fill in gaps where data was missing","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Why Peyton Manning's Record Will Be Hard to Beat","URL":"http://www.nytimes.com/interactive/2014/10/19/upshot/peyton-manning-breaks-touchdown-passing-record.html?_r=0&abt=0002&abg=1","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"Peyton Manning, football","Type":"line chart, interactive","Language tag":"eng","Data tag":"National Football League history","Data source":"http://www.pro-football-reference.com/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Racing Against History","URL":"http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html?_r=0","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"men 100-meter freestyle","Type":"animation, chart, interactive","Language tag":"eng","Data tag":"book, institute data","Data source":"\"The Complete Book of the Olympics\" by David Wallechinsky and Jaime Loucky, International Olympic Committee, Hungarian Olympic Committee, Bill Mallon","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"One Race, Every Medalist Ever","URL":"http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"men 100-meter sprint","Type":"animation, chart, interactive","Language tag":"eng","Data tag":"book, institute data","Data source":"\"The Complete Book of the Olympics\" by David Wallechinsky and Jaime Loucky, International Olympic Committee; Amateur Athletic Assocation","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Lolo Jones, Cleared for takeoff","URL":"http://www.nytimes.com/interactive/2012/07/18/sports/olympics/lolo-jones-cleared-for-takeoff.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"Jones's 100-meter hurdles","Type":"animation, interactive","Language tag":"eng","Data tag":"institute data, sport technpogist","Data source":"Motion-capture data from Red Bull; Richard Kirby, sport technologist;\n Ralph V. Mann, Ph.D., author of \"The Mechanics of Sprinting and Hurdling\"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Connecting Music and Gesture","URL":"http://www.nytimes.com/interactive/2012/04/06/arts/music/the-connection-between-gesture-and-music.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Culture and religion","Content tag":"music","Type":"multi-media","Language tag":"eng","Data tag":"institute data","Data source":"Motion Capture Data By New York University Movement Lab","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Inside the Quartet","URL":"http://www.nytimes.com/interactive/2014/09/22/arts/music/kronos-quartet.html?_r=2","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Culture and religion","Content tag":"music","Type":"multi-media, 3D point capture","Language tag":"eng","Data tag":"interview","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A Cultrue of Bidding\n Forging an Art Market in China","URL":"http://www.nytimes.com/projects/2013/china-art-fraud/","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"art and auction market","Type":"multi-media, line chart, interactive, map","Language tag":"eng","Data tag":"interview, institute data","Data source":"China Association of Auctioneers (Payment status as of April 15, 2012)\n http://www.artprice.com/\n ARTS ECONOMICS FOR THE EUROPEAN FINE ART FOUNDATION","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Kepler’s Tally of Planets","URL":"http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Science","Content tag":"planet","Type":"animation, interactive, sorting","Language tag":"eng","Data tag":"gov open data","Data source":"NASA’s Kepler mission\n Mikulski Archive for Space Telescopes","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Deepwater Horizon Oil Spill: An Interactive Look at What Happened","URL":"http://www.nytimes.com/interactive/us/spill_index.html?ref=us","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Case collection","Content tag":"oil spill","Type":"multi-media, interactive, map, graphic, animation","Language tag":"eng","Data tag":"gov data, interview, survey","Data source":"U.S. Fish and Wildlife Service; National Oceanic and Atmospheric Administration; National Park Service; state and local officials","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"America's Election HQ","URL":"http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/","Images":"","Organization":"Fox News","Organization_CN":"福克斯","Topic":"Politics","Content tag":"election","Type":"table-like, profile-picuture, map, interactive, video","Language tag":"eng","Data tag":"media coverage, open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Bloomberg Billionaires","URL":"http://www.bloomberg.com/billionaires/2013-11-08/cya","Images":"","Organization":"Bloomberg","Organization_CN":"彭博社","Topic":"Business","Content tag":"billionaires","Type":"real-time, interactive, illustration, table-like, ranking","Language tag":"eng","Data tag":"biz data service","Data source":"Bloomberg","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Senate Election Results","URL":"http://www.bloomberg.com/politics/data/2014-11-05/senate-election-results","Images":"","Organization":"Bloomberg","Organization_CN":"彭博社","Topic":"Politics","Content tag":"election","Type":"map, interactive","Language tag":"eng","Data tag":"media coverage, open data","Data source":"AP Elections","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Killing Kennedy","URL":"http://kennedyandoswald.com/#!/premiere-screen","Images":"","Organization":"National Geographic","Organization_CN":"国家地理","Topic":"Politics","Content tag":"killing kennedy","Type":"interactive, multi-media","Language tag":"eng","Data tag":"documents","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"What the world eats","URL":"http://www.nationalgeographic.com/what-the-world-eats/","Images":"","Organization":"National Geographic Channel","Organization_CN":"国家地理","Topic":"Social issue","Content tag":"food","Type":"timeline, pie chart, interactive, sorting,","Language tag":"eng","Data tag":"gov open data","Data source":"FAOSTAT\n http://faostat3.fao.org/download/FB/FBS/E","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Public spending by UK government department: an interactive guide","URL":"http://www.theguardian.com/news/datablog/interactive/2011/oct/26/public-spending-uk-government-department","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Politics","Content tag":"gov budget","Type":"bubble chart, interactive","Language tag":"eng","Data tag":"gov open data","Data source":"https://docs.google.com/spreadsheets/d/1v1Rap-u5H5n7CQD1EIJ_yguJhDAwhFZ_SRu8uvU2bCg/edit?hl=en_GB#gid=0&vpid=A4","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"NSA files Decoded: what the relations mean for you","URL":"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Security","Content tag":"digital surveillance","Type":"interactive, multi-media","Language tag":"eng","Data tag":"interview, documents, research paper, survey response, institution data","Data source":"1, http://arxiv.org/pdf/1111.4503v1.pdf\n 2, https://www.epic.org/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The first Guardian data journalism: May 5, 1821","URL":"http://www.theguardian.com/news/datablog/2011/sep/26/data-journalism-guardian?INTCMP=SRCH","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Education","Content tag":"school in Manchester","Type":"table","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"March Madness: do the tallest teams always win the NCAA championship?","URL":"http://www.theguardian.com/sport/interactive/2013/mar/18/ncaa-tournament-team-matchups-height#g=Top%2025","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Sports","Content tag":"relationship between height & win","Type":"search bar, sorting, chart, interactive","Language tag":"eng","Data tag":"institute data(NCAA Division I basketball teams)","Data source":"The Guardian analysed the average height of NCAA Division I basketball teams over the course of more than 5,000 games during the 2012 season","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"NFL salaries by team and position _ interactive","URL":"http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Sports","Content tag":"NFL salary","Type":"bar chart, interactive, bubble chart","Language tag":"eng","Data tag":"institute data","Data source":"NFL and Spotrac http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position#baltimore-ravens,san-francisco-49ers","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Gay rights in the US, state by state","URL":"http://www.theguardian.com/world/interactive/2012/may/08/gay-rights-united-states","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Social issue","Content tag":"LGBT rights","Type":"pie chart, interactive, sorting","Language tag":"eng","Data tag":"court public info","Data source":"supreme court: gay marriage legal across the US(URL 404)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The state of our union is … dumber:\n How the linguistic standard of the presidential address has declined","URL":"http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Politics","Content tag":"reading level of US presidents","Type":"interactive, scatter diagram, modelling(Flesch_Kincaid readability tests)","Language tag":"eng","Data tag":"research data","Data source":"1. Gerhard Peters(http://www.presidency.ucsb.edu/sou.php)\n 2. Brad Borevitz(http://stateoftheunion.onetwothree.net/texts/)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A global look at cardiac risk factors","URL":"http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/","Images":"","Organization":"The Washington Post","Organization_CN":"华盛顿邮报","Topic":"Social issue","Content tag":"health","Type":"animation, timeline, sorting, chart","Language tag":"eng","Data tag":"institute data","Data source":"Global Burden of Metabolic Risk Factors of Chronic Diseases Collaborating Group","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Results from the 2014 Midterm Election","URL":"http://graphics.wsj.com/midterm-election-results-2014/","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Politics","Content tag":"election","Type":"map, interactive, table-like, search bar","Language tag":"eng","Data tag":"media coverage, open data","Data source":"Associated Press","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"TRIALS","URL":"http://projects.wsj.com/trials/#chapter=1","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Social issue","Content tag":"medical trials to save kids with genetic disease","Type":"multi-media, animation, sorting","Language tag":"eng","Data tag":"interview, advisory committee hearing","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"U.S. Unemployment: A Historical View","URL":"http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Social issue","Content tag":"unemployment","Type":"chart, interactive","Language tag":"eng","Data tag":"gov data, survey","Data source":"Bureau of Labor Statistics, Current Population Survey","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A Model of Breast Cancer Causation","URL":"http://www.cabreastcancer.org/causes/#","Images":"","Organization":"University of California","Organization_CN":"加州大学","Topic":"Social issue","Content tag":"health","Type":"modelling, interactive, sorting","Language tag":"eng","Data tag":"university and institute research","Data source":"University of California San Francisco, California Breast Cancer Research Program, Periscopic（an industry-leading information visualization firm）","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Flooding & Flood Zones","URL":"http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702","Images":"","Organization":"WNYC","Organization_CN":"纽约公共广播电台","Topic":"Natural disaster","Content tag":"actual and predicted flooding","Type":"map, search bar, sorting","Language tag":"eng","Data tag":"gov open data, survey","Data source":"Flooding Survey\n Based on Nov. 11, 2012 interim data from the FEMA Modeling Task Force Hurricane Sandy Impact Analysis（http://fema.maps.arcgis.com/home/item.html?id=307dd522499d4a44a33d7296a5da5ea0), which combines detailed elevation data with U.S. Geological Survey inspections of high water marks.(http://www.usgs.gov/blogs/features/usgs_top_story/sandy/)\n Flood Zones\n Coastline inundation zones calculated by the U.S. Army Corps of Engineers using worst-case storm, wave and tide calculations together with elevation data. View the New Jersey hurricane evacuation studies, and the New York state evacuation studies. In New York City, the state zones are superseded by the city's own evacuation zones, which draw from the USACE surveys.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"China Global Investment Tracker","URL":"http://www.aei.org/china-global-investment-tracker/","Images":"","Organization":"THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION","Organization_CN":"THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION","Topic":"Business","Content tag":"investment","Type":"interactive, map","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Government Lends to Rebuild in Flood Zones","URL":"http://projects.propublica.org/sandy-sba/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"loans rebuliding flood zones","Type":"map, search bar, interactive, sorting","Language tag":"eng","Data tag":"gov open data","Data source":"SBA\n FEMA(Federal Emergency Management Agency)\n http://www.fema.gov/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Opportunity Gap","URL":"http://projects.propublica.org/schools/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Education","Content tag":"relationship between states & education","Type":"search bar, chart","Language tag":"eng","Data tag":"survey by gov","Data source":"1.U.S. Department of Education Office for Civil Rights(http://www2.ed.gov/about/offices/list/ocr/index.html)\n 2. National Center for Education Statistics(http://nces.ed.gov/)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Dollars for Docs\n How Industry Dollars Reach Your Doctors","URL":"https://projects.propublica.org/docdollars/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"company payments to doctors","Type":"search bar, sorting, chart","Language tag":"eng","Data tag":"gov open data","Data source":"The Centers for Medicare and Medicaid Services Open Payments data\n https://www.cms.gov/openpayments/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Nursing Home Inspect\n Find Nursing Home Problems in Your State","URL":"http://projects.propublica.org/nursing-homes/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"health","Type":"map, bar chart, search bar, interactive","Language tag":"eng","Data tag":"gov open data","Data source":"the U.S. Centers for Medicare and Medicaid Services. \n 1. https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/downloads/sfflist.pdf\n 2. http://projects.propublica.org/nursing-homes/summary","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Election Party!","URL":"http://elections.npr.org/#","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Politics","Content tag":"election","Type":"broadcast, table-like, real-time,","Language tag":"eng","Data tag":"open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Fire Forecast","URL":"http://apps.npr.org/fire-forecast/","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Natural disaster","Content tag":"forecast fire","Type":"map, search bar","Language tag":"eng","Data tag":"gov open data","Data source":"U.S. Forest Service","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Visualizing How A Population Grows To 7 Billion","URL":"http://www.npr.org/2011/10/31/141816460/visualizing-how-a-population-grows-to-7-billion","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Social issue","Content tag":"population","Type":"multi-media, line chart, animation","Language tag":"eng","Data tag":"gov open data","Data source":"U.N. Population Division","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Playgrounds For Everyone","URL":"http://www.playgroundsforeveryone.com/","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Social issue","Content tag":"playground","Type":"map, search bar","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Poisoned Places Map","URL":"http://www.npr.org/news/graphics/2011/10/toxic-air/#4.00/39.00/-84.00","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Environment","Content tag":"air pollution","Type":"map, search bar, interactive","Language tag":"eng","Data tag":"gov data","Data source":"The Poisoned Places series relied on analysis of four datasets relating to sources of air pollution regulated by the U.S. Environmental Protection Agency: the Clean Air Act watch list, the Air Facility System (AFS), the Toxics Release Inventory (TRI) and the Risk Screening Environmental Indicators model (RSEI).\n http://www.npr.org/2011/11/07/142024951/poisoned-places-about-the-data","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Explore China's Global Reach","URL":"http://www.npr.org/2011/06/10/136930746/explore-chinas-global-reach","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Business","Content tag":"investment","Type":"table, interactive","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"government shutdown 2013","URL":"http://labs.enigma.io/shutdown2013/","Images":"","Organization":"Enigma","Organization_CN":"Enigma","Topic":"Politics","Content tag":"government debt","Type":"treemap, interactive, real-time","Language tag":"eng","Data tag":"gov open data","Data source":"Furloughed employee data from agency contingency plans submitted to OMB (https://www.whitehouse.gov/omb/contingency-plans), compiled in Google Spreadsheet.\n Average employee salary data from Asbury Park Press federal salaries dataset (22MB .zip, https://t.co/MUblpcU2Qb)\n Archived WIC Program food cost data (http://web.archive.org/web/20130705090557/http://www.fns.usda.gov/pd/24wicfood$.htm)\n Source code and data available on Github (https://github.com/dandelany/shutdown2013)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Election Night: Special Coverage: The 2014 Midterms","URL":"http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/","Images":"","Organization":"Five Thirty Eight Live","Organization_CN":"538","Topic":"Politics","Content tag":"election","Type":"live feed, chart, photo, map","Language tag":"eng","Data tag":"interview and gov open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Flight Patterns","URL":"http://www.aaronkoblin.com/work/flightpatterns/","Images":"","Organization":"Aaron Koblin","Organization_CN":"Aaron Koblin","Topic":"Science","Content tag":"flight path","Type":"3D, interactive","Language tag":"eng","Data tag":"gov data, research","Data source":"This work was originally developed as a series of experiments for the project \"Celestial Mechanics\" by colleagues Scott Hessels and Gabriel Dunne at UCLA. FAA data was parsed and plotted using the Processing programming environment.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Codebases: Millions Lines of Code","URL":"http://www.informationisbeautiful.net/visualizations/million-lines-of-code/","Images":"","Organization":"Information is beautiful","Organization_CN":"Information is beautiful","Topic":"Science","Content tag":"codebase","Type":"","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Audubon's Birds and Climate Change Report\n 314 Species on the Brink","URL":"http://climate.audubon.org/","Images":"","Organization":"National Audubon Society","Organization_CN":"National Audubon Society","Topic":"Environment","Content tag":"animal protection","Type":"search bar, map, sorting","Language tag":"eng","Data tag":"report, observation, survey","Data source":"the Audubon Christmas Bird Count and the North American Breeding Bird Survey\n http://climate.audubon.org/article/audubon-report-glance","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Bear 71","URL":"http://bear71.nfb.ca/#/bear71","Images":"","Organization":"NBF","Organization_CN":"NBF","Topic":"Environment","Content tag":"animal","Type":"animation, multi-media, interactive","Language tag":"eng","Data tag":"monitor, documentary","Data source":"a true story of a bear monitored by wildlife conservation officers from 2001 to 2009","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"U.S. Gun Deaths in 2013","URL":"http://guns.periscopic.com/?year=2013","Images":"","Organization":"Periscopic","Organization_CN":"Periscopic","Topic":"","Content tag":"","Type":"","Language tag":"","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Exploring the Reach, Frequency and Impact of Terrorism Around the World","URL":"http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world","Images":"","Organization":"Periscopic","Organization_CN":"Periscopic","Topic":"Security","Content tag":"terrorism","Type":"timeline, map, interactive, barchart, sorting","Language tag":"eng","Data tag":"institute open data, gov open data","Data source":"1, National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2013). Global Terrorism Database [Data file]. Retrieved from http://www.start.umd.edu/gtd\n 2. United States Department of State, Bureau of Counterterrorism, Country Reports on Terrorism 2013\n 3. United States Department of State, Bureau of Public Affairs, http://www.state.gov/r/pa/prs/index.htm","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Out of Sight, Out of Mind.","URL":"http://drones.pitchinteractive.com/","Images":"","Organization":"pitchinc","Organization_CN":"pitchinc","Topic":"Social issue","Content tag":"death by drone strike","Type":"timeline, bar chart, annimation","Language tag":"eng","Data tag":"institution data, media coverage","Data source":"The bureau of investigative journalism https://www.thebureauinvestigates.com/category/projects/drones/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?","URL":"http://www.popsci.com/science/article/2013-05/energy-gap","Images":"","Organization":"Popular Science","Organization_CN":"Popular Science","Topic":"Science","Content tag":"energy","Type":"infographic(chart), modelling(computer program)","Language tag":"eng","Data tag":"gov open data, survey","Data source":"U.S. Energy Information Administration","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Poverty Tracker","URL":"http://povertytracker.robinhood.org/","Images":"","Organization":"Robin Hood","Organization_CN":"Robin Hood","Topic":"Social issue","Content tag":"poverty in NY","Type":"interactive, bubble chart, sorting","Language tag":"eng","Data tag":"survey","Data source":"These statistics emerge from a survey developed by Columbia University and Robin Hood to provide a more accurate picture of poverty in New York City. The survey pool came from a fixed panel of approximately 2,300 residents from the five boroughs, many from families living in poverty (those with an annual income of less than $11,722 per year for individuals and $23,497 for a family of four).","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook","URL":"http://techcrunch.com/2014/02/25/the-age-of-acquisitions/","Images":"","Organization":"Tech Crunch","Organization_CN":"Tech Crunch","Topic":"Business","Content tag":"acquisitions of tech giants","Type":"interactive, sorting, visualization, bar chart, table","Language tag":"eng","Data tag":"institute data","Data source":"Business insurance provider Simply Business created this infographic","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001_2012","URL":"http://www.thenation.com/afghanistan-database/","Images":"","Organization":"The Nation","Organization_CN":"The Nation","Topic":"Security","Content tag":"fatalities due to war","Type":"interactive,bar chart, map","Language tag":"eng","Data tag":"media coverage, institute data,","Data source":"relies on an extensive survey of reliable media accounts for its raw data, and when no media account is available, on the casualty reports of NGOs, human rights organizations and ISAF (the International Security Assistance Force) http://www.thenation.com/article/civilian-casualties-afghanistan-2001-2012-guide/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"China's overseas investment","URL":"http://multimedia.scmp.com/china-overseas-investments/","Images":"","Organization":"","Organization_CN":"","Topic":"Business","Content tag":"investment","Type":"interactive, table-like,","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":""}]
+
+/***/ },
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(293);
+	var content = __webpack_require__(297);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(295)(content, {});
+	var update = __webpack_require__(299)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35030,10 +35544,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 293 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(294)();
+	exports = module.exports = __webpack_require__(298)();
 	// imports
 	exports.push([module.id, "@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);", ""]);
 
@@ -35044,7 +35558,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 294 */
+/* 298 */
 /***/ function(module, exports) {
 
 	/*
@@ -35100,7 +35614,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 295 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
