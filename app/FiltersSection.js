@@ -7,6 +7,8 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
 import TextField from 'material-ui/lib/text-field';
+import AutoComplete from 'material-ui/lib/auto-complete';
+
 import FontIcon from 'material-ui/lib/font-icon';
 import Toolbar from 'material-ui/lib/toolbar/toolbar';
 import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
@@ -58,10 +60,13 @@ class FiltersSection extends React.Component {
 		this.props.updateFilter(stateObj);
     }
 
-    handleSearch(event) {
-    	console.log('search:', this);
-    	console.log('event: ', arguments);
-    	console.log(this.refs['search'].getValue());
+    handleSearch(str) {
+        this.props.updateSearch(str.toLocaleLowerCase());
+    }
+
+    clearSearch(str) {
+        if(str.length === 0)
+            this.props.updateSearch('');
     }
 
     render() {
@@ -73,7 +78,7 @@ class FiltersSection extends React.Component {
                 <DropDownMenu onChange={this.handleChange.bind(this, 'type')} value={this.state.type} >{this.types}</DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup key={1} float='right' className='searchbar'>
-                <TextField hintText='输入案例名' ref='search' onChange={this.handleSearch.bind(this)} value={this.state.searchValue}/>
+                <AutoComplete hintText='输入案例名' filter={AutoComplete.caseInsensitiveFilter} dataSource={this.props.autoCompleteData} onNewRequest={this.handleSearch.bind(this)} onUpdateInput={this.clearSearch.bind(this)} />
             </ToolbarGroup>
         </Toolbar>
         );
