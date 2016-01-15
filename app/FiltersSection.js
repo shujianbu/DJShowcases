@@ -13,7 +13,7 @@ import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
 import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
 import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 
-import {TOPICS, ORGS, TYPES, YEARS} from './const';
+import { TOPICS, ORGS, TYPES } from './const';
 import DJTheme from './theme';
 
 injectTapEventPlugin();
@@ -26,7 +26,6 @@ class FiltersSection extends React.Component {
 		this.topics = populateMenus(TOPICS);
 		this.orgs   = populateMenus(ORGS);
 		this.types  = populateMenus(TYPES);
-		this.years  = populateMenus(YEARS);
 
 		function populateMenus(data) {
 			let ret = [];
@@ -39,8 +38,7 @@ class FiltersSection extends React.Component {
 		this.state = {
 			topic : '0',
 			org   : '0',
-			type  : '0',
-			year  : '0'
+			type  : '0'
 		};
 	}
 
@@ -70,10 +68,9 @@ class FiltersSection extends React.Component {
         return (
         <Toolbar style={{background:'#fafafa'}}>
             <ToolbarGroup key={0} float='left' className='dropdowns'>
-                <DropDownMenu ref='topic' onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
+                <DropDownMenu onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
                 <DropDownMenu onChange={this.handleChange.bind(this, 'org')} value={this.state.org}  >{this.orgs}</DropDownMenu>
                 <DropDownMenu onChange={this.handleChange.bind(this, 'type')} value={this.state.type} >{this.types}</DropDownMenu>
-                <DropDownMenu onChange={this.handleChange.bind(this, 'year')} value={this.state.year}>{this.years}</DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup key={1} float='right' className='searchbar'>
                 <TextField hintText='输入案例名' ref='search' onChange={this.handleSearch.bind(this)} value={this.state.searchValue}/>

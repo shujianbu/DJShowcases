@@ -53,23 +53,15 @@ class StoryBoard extends React.Component {
 
     parseData(data) {
         var ret = {};
-        ret.title = data['gsx$title']['$t'];
-        ret.url = data['gsx$url']['$t'];
-        ret.orgen = data['gsx$authororganizationen']['$t'];
-        ret.orgcn = data['gsx$authororganizationcn']['$t'];
-        ret.region = data['gsx$authororganizationregion']['$t'];
-        ret.cat = data['gsx$categories']['$t'];
-        ret.cttregion = data['gsx$contentregion']['$t'];
-        ret.ctttag = data['gsx$contenttag']['$t'];
-        ret.dtsource = data['gsx$datasource']['$t'];
-        ret.notes = data['gsx$editornotes']['$t'];
-        ret.element = data['gsx$elementtag']['$t'];
-        ret.img = data['gsx$images']['$t'];
-        ret.ipdate = data['gsx$inputdate']['$t'];
-        ret.lg = data['gsx$languagetag']['$t'];
+        ret.title = data['Title'];
+        ret.url = data['URL'];
+        ret.orgen = data['Organization'];
+        ret.orgcn = data['Organization_CN'];
+        ret.cat = data['Topic'];
+        ret.element = data['Type'];
+        ret.img = data['Images'];
         ret.logo = this.getLogo(ret.orgen);
         ret.featureImage = this.getFeature();
-        ret.takeaways = data['gsx$takeaways']['$t'];
         return ret;
     }
 

@@ -36,7 +36,9 @@ const ORGS = [
 	{ value: '10', label: 'National Geography',      ch: '国家地理' },
 	{ value: '11', label: 'Chicago Tribune',         ch: '芝加哥论坛报' },
 	{ value: '12', label: 'The Huffington Post',     ch: '赫芬顿邮报' },
-	{ value: '13', label: 'WNYC',                    ch: '纽约公共广播电台' }
+	{ value: '13', label: 'WNYC',                    ch: '纽约公共广播电台' },
+	{ value: '14', label: 'Popular Science',         ch: '大众科学'},
+	{ value: '15', label: 'Scientific American',     ch: '科学美国人'}
 ];
 
 const TYPES = [
@@ -57,16 +59,4 @@ const TYPES = [
 
 ];
 
-const YEARS = [
-	{ value: '0', label: 'all' },
-	{ value: '1', label: '2008' },
-	{ value: '2', label: '2009' },
-	{ value: '3', label: '2010' },
-	{ value: '4', label: '2011' },
-	{ value: '5', label: '2012' },
-	{ value: '6', label: '2013' },
-	{ value: '7', label: '2014' },
-	{ value: '8', label: '2015' }
-];
-
-export {TOPICS, ORGS, TYPES, YEARS};
+export {TOPICS, ORGS, TYPES};

@@ -1,7 +1,8 @@
 
 import React from 'react';
 import StoryBoard from './StoryBoard';
-import {TOPICS, ORGS, TYPES, YEARS} from './const';
+import {TOPICS, ORGS, TYPES} from './const';
+import data from './data.csv';
 
 class BoardContainer extends React.Component {
 	constructor(props) {
@@ -14,26 +15,11 @@ class BoardContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		var self = this;
-		// var key  = '14mhS79MAeQo09RFYR-qabU9kK_KDvEX43t08H82aZ7k';
-		var key = '1NUM595ky5tMEqZ9lh5H-FVRhYPj6AmaWas_Zv584-CA/1'; // duan spreadsheet
-		// var key = '1UAPFPdeBPOqDSjzUww6Y2IzbtRWKNJQCEOn9o0t2Agg'; // copy
-		var url  = 'https://spreadsheets.google.com/feeds/list/' + key + '/public/values?alt=json';
+		this.setState({
+			storyBoards: data.slice(),
+			filteredStoryBoards: data.slice()
+		});
 
-		// AJAX call
-		var r = new XMLHttpRequest();
-		r.open("GET", url, true);
-		r.onreadystatechange = function () {
-			if (r.readyState != 4 || r.status != 200) return;
-			// console.log("Success: ", JSON.parse(r.responseText));
-			var data = JSON.parse(r.responseText);
-			var entry = data.feed.entry;
-			self.setState({
-				storyBoards: entry.slice(),
-				filteredStoryBoards: entry.slice()
-			});
-		};
-		r.send();
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -42,10 +28,10 @@ class BoardContainer extends React.Component {
 			var filter = nextProps.filter;
 			var temp = [];
 			this.state.storyBoards.forEach(function(sb) {
-				var topic = sb['gsx$categories']['$t'];
-				var org   = sb['gsx$authororganizationen']['$t'];
-				var type  = sb['gsx$elementtag']['$t'];
-				var year  = '';
+				var topic = sb['Topic'];
+				var org   = sb['Organization'];
+				var type  = sb['Type'];
+
 				var flag  = true;
 				if(filter.topic !== '0' && TOPICS[filter.topic].label !== topic) {
 					flag = false;
