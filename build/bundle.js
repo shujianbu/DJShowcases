@@ -3,7 +3,7 @@ webpackJsonp([0,1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(296);
+	module.exports = __webpack_require__(293);
 
 
 /***/ },
@@ -38,7 +38,7 @@ webpackJsonp([0,1],[
 
 	var _BoardContainer2 = _interopRequireDefault(_BoardContainer);
 
-	var _dataCsv = __webpack_require__(295);
+	var _dataCsv = __webpack_require__(292);
 
 	var _dataCsv2 = _interopRequireDefault(_dataCsv);
 
@@ -20175,6 +20175,8 @@ webpackJsonp([0,1],[
 	//  'material-ui/lib/styles/themeManager'
 	//);
 
+	module.exports = exports['default'];
+
 /***/ },
 /* 166 */
 /***/ function(module, exports, __webpack_require__) {
@@ -20300,12 +20302,11 @@ webpackJsonp([0,1],[
 
 	'use strict';
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
-
 	function isObject(obj) {
 	  return (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' && obj !== null;
 	}
@@ -20353,6 +20354,7 @@ webpackJsonp([0,1],[
 	};
 
 	exports.default = extend;
+	module.exports = exports['default'];
 
 /***/ },
 /* 169 */
@@ -20556,7 +20558,8 @@ webpackJsonp([0,1],[
 	      stripeColor: _colorManipulator2.default.lighten(palette.primary1Color, 0.55),
 	      selectedColor: palette.borderColor,
 	      textColor: palette.textColor,
-	      borderColor: palette.borderColor
+	      borderColor: palette.borderColor,
+	      height: 48
 	    },
 	    tableRowColumn: {
 	      height: 48,
@@ -20609,6 +20612,7 @@ webpackJsonp([0,1],[
 	    }
 	  }, muiTheme);
 	}
+	module.exports = exports['default'];
 
 /***/ },
 /* 170 */
@@ -21298,40 +21302,37 @@ webpackJsonp([0,1],[
 /* 177 */
 /***/ function(module, exports) {
 
-	/**
-	 * lodash 3.0.4 (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modern modularize exports="npm" -o ./`
-	 * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
+	/* WEBPACK VAR INJECTION */(function(global) {/**
+	 * lodash 3.0.5 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
 	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
 
-	/**
-	 * Checks if `value` is object-like.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
+	/** Used as references for various `Number` constants. */
+	var MAX_SAFE_INTEGER = 9007199254740991;
 
-	/** Used for native method references. */
-	var objectProto = Object.prototype;
+	/** `Object#toString` result references. */
+	var argsTag = '[object Arguments]',
+	    funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]';
+
+	/** Used for built-in method references. */
+	var objectProto = global.Object.prototype;
 
 	/** Used to check objects for own properties. */
 	var hasOwnProperty = objectProto.hasOwnProperty;
 
-	/** Native method references. */
-	var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-
 	/**
-	 * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
-	 * of an array-like value.
+	 * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
 	 */
-	var MAX_SAFE_INTEGER = 9007199254740991;
+	var objectToString = objectProto.toString;
+
+	/** Built-in value references. */
+	var propertyIsEnumerable = objectProto.propertyIsEnumerable;
 
 	/**
 	 * The base implementation of `_.property` without support for deep paths.
@@ -21359,31 +21360,7 @@ webpackJsonp([0,1],[
 	var getLength = baseProperty('length');
 
 	/**
-	 * Checks if `value` is array-like.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
-	 */
-	function isArrayLike(value) {
-	  return value != null && isLength(getLength(value));
-	}
-
-	/**
-	 * Checks if `value` is a valid array-like length.
-	 *
-	 * **Note:** This function is based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
-	 */
-	function isLength(value) {
-	  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-	}
-
-	/**
-	 * Checks if `value` is classified as an `arguments` object.
+	 * Checks if `value` is likely an `arguments` object.
 	 *
 	 * @static
 	 * @memberOf _
@@ -21399,12 +21376,181 @@ webpackJsonp([0,1],[
 	 * // => false
 	 */
 	function isArguments(value) {
-	  return isObjectLike(value) && isArrayLike(value) &&
-	    hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+	  // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+	  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+	    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+	}
+
+	/**
+	 * Checks if `value` is array-like. A value is considered array-like if it's
+	 * not a function and has a `value.length` that's an integer greater than or
+	 * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @type Function
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+	 * @example
+	 *
+	 * _.isArrayLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLike(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLike('abc');
+	 * // => true
+	 *
+	 * _.isArrayLike(_.noop);
+	 * // => false
+	 */
+	function isArrayLike(value) {
+	  return value != null &&
+	    !(typeof value == 'function' && isFunction(value)) && isLength(getLength(value));
+	}
+
+	/**
+	 * This method is like `_.isArrayLike` except that it also checks if `value`
+	 * is an object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @type Function
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array-like object, else `false`.
+	 * @example
+	 *
+	 * _.isArrayLikeObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject('abc');
+	 * // => false
+	 *
+	 * _.isArrayLikeObject(_.noop);
+	 * // => false
+	 */
+	function isArrayLikeObject(value) {
+	  return isObjectLike(value) && isArrayLike(value);
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8 which returns 'object' for typed array constructors, and
+	  // PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+
+	/**
+	 * Checks if `value` is a valid array-like length.
+	 *
+	 * **Note:** This function is loosely based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+	 * @example
+	 *
+	 * _.isLength(3);
+	 * // => true
+	 *
+	 * _.isLength(Number.MIN_VALUE);
+	 * // => false
+	 *
+	 * _.isLength(Infinity);
+	 * // => false
+	 *
+	 * _.isLength('3');
+	 * // => false
+	 */
+	function isLength(value) {
+	  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+	}
+
+	/**
+	 * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
+	 * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  // Avoid a V8 JIT bug in Chrome 19-20.
+	  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
 	}
 
 	module.exports = isArguments;
 
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 178 */
@@ -21706,11 +21852,11 @@ webpackJsonp([0,1],[
 /***/ function(module, exports) {
 
 	/**
-	 * lodash 3.0.2 (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modern modularize exports="npm" -o ./`
-	 * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
+	 * lodash 3.0.3 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
 	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
 
@@ -21729,7 +21875,7 @@ webpackJsonp([0,1],[
 	var baseFor = createBaseFor();
 
 	/**
-	 * Creates a base function for `_.forIn` or `_.forInRight`.
+	 * Creates a base function for methods like `_.forIn`.
 	 *
 	 * @private
 	 * @param {boolean} [fromRight] Specify iterating from right to left.
@@ -21737,57 +21883,19 @@ webpackJsonp([0,1],[
 	 */
 	function createBaseFor(fromRight) {
 	  return function(object, iteratee, keysFunc) {
-	    var iterable = toObject(object),
+	    var index = -1,
+	        iterable = Object(object),
 	        props = keysFunc(object),
-	        length = props.length,
-	        index = fromRight ? length : -1;
+	        length = props.length;
 
-	    while ((fromRight ? index-- : ++index < length)) {
-	      var key = props[index];
+	    while (length--) {
+	      var key = props[fromRight ? length : ++index];
 	      if (iteratee(iterable[key], key, iterable) === false) {
 	        break;
 	      }
 	    }
 	    return object;
 	  };
-	}
-
-	/**
-	 * Converts `value` to an object if it's not one.
-	 *
-	 * @private
-	 * @param {*} value The value to process.
-	 * @returns {Object} Returns the object.
-	 */
-	function toObject(value) {
-	  return isObject(value) ? value : Object(value);
-	}
-
-	/**
-	 * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
-	 * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-	 *
-	 * @static
-	 * @memberOf _
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-	 * @example
-	 *
-	 * _.isObject({});
-	 * // => true
-	 *
-	 * _.isObject([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObject(1);
-	 * // => false
-	 */
-	function isObject(value) {
-	  // Avoid a V8 JIT bug in Chrome 19-20.
-	  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
-	  var type = typeof value;
-	  return !!value && (type == 'object' || type == 'function');
 	}
 
 	module.exports = baseFor;
@@ -21935,14 +22043,17 @@ webpackJsonp([0,1],[
 /* 182 */
 /***/ function(module, exports) {
 
-	/**
-	 * lodash 3.0.2 (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modern modularize exports="npm" -o ./`
-	 * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
+	/* WEBPACK VAR INJECTION */(function(global) {/**
+	 * lodash 3.0.3 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
 	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Copyright 2009-2016 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
+
+	/** Used as references for various `Number` constants. */
+	var MAX_SAFE_INTEGER = 9007199254740991;
 
 	/** `Object#toString` result references. */
 	var argsTag = '[object Arguments]',
@@ -21985,43 +22096,68 @@ webpackJsonp([0,1],[
 	typedArrayTags[regexpTag] = typedArrayTags[setTag] =
 	typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
 
-	/**
-	 * Checks if `value` is object-like.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
-
-	/** Used for native method references. */
-	var objectProto = Object.prototype;
+	/** Used for built-in method references. */
+	var objectProto = global.Object.prototype;
 
 	/**
-	 * Used to resolve the [`toStringTag`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.prototype.tostring)
+	 * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
 	 * of values.
 	 */
-	var objToString = objectProto.toString;
-
-	/**
-	 * Used as the [maximum length](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.max_safe_integer)
-	 * of an array-like value.
-	 */
-	var MAX_SAFE_INTEGER = 9007199254740991;
+	var objectToString = objectProto.toString;
 
 	/**
 	 * Checks if `value` is a valid array-like length.
 	 *
-	 * **Note:** This function is based on [`ToLength`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength).
+	 * **Note:** This function is loosely based on [`ToLength`](http://ecma-international.org/ecma-262/6.0/#sec-tolength).
 	 *
-	 * @private
+	 * @static
+	 * @memberOf _
+	 * @category Lang
 	 * @param {*} value The value to check.
 	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+	 * @example
+	 *
+	 * _.isLength(3);
+	 * // => true
+	 *
+	 * _.isLength(Number.MIN_VALUE);
+	 * // => false
+	 *
+	 * _.isLength(Infinity);
+	 * // => false
+	 *
+	 * _.isLength('3');
+	 * // => false
 	 */
 	function isLength(value) {
 	  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+	}
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
 	}
 
 	/**
@@ -22041,11 +22177,12 @@ webpackJsonp([0,1],[
 	 * // => false
 	 */
 	function isTypedArray(value) {
-	  return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[objToString.call(value)];
+	  return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
 	}
 
 	module.exports = isTypedArray;
 
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 183 */
@@ -22811,6 +22948,7 @@ webpackJsonp([0,1],[
 	  darkWhite: 'rgba(255, 255, 255, 0.87)',
 	  lightWhite: 'rgba(255, 255, 255, 0.54)'
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 188 */
@@ -22993,6 +23131,7 @@ webpackJsonp([0,1],[
 	    }
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 189 */
@@ -23043,6 +23182,7 @@ webpackJsonp([0,1],[
 	    clockCircleColor: _colorManipulator2.default.fade(_colors2.default.darkBlack, 0.07)
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 190 */
@@ -23067,6 +23207,7 @@ webpackJsonp([0,1],[
 	  desktopSubheaderHeight: 48,
 	  desktopToolbarHeight: 56
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 191 */
@@ -23089,6 +23230,7 @@ webpackJsonp([0,1],[
 	  snackbar: 2900,
 	  tooltip: 3000
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 192 */
@@ -23107,6 +23249,7 @@ webpackJsonp([0,1],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _DropDownMenu2.default;
+	module.exports = exports['default'];
 
 /***/ },
 /* 193 */
@@ -23587,6 +23730,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = DropDownMenu;
+	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
@@ -23628,6 +23772,7 @@ webpackJsonp([0,1],[
 	    return property + ' ' + duration + ' ' + easeFunction + ' ' + delay;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 195 */
@@ -23668,6 +23813,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = NavigationArrowDropDown;
+	module.exports = exports['default'];
 
 /***/ },
 /* 196 */
@@ -23795,16 +23941,46 @@ webpackJsonp([0,1],[
 	  displayName: 'SvgIcon',
 
 	  propTypes: {
+	    /**
+	     * Elements passed into the SVG Icon.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * This is the fill color of the svg icon.
+	     * If not specified, this component will default
+	     * to muiTheme.palette.textColor.
+	     */
 	    color: _react2.default.PropTypes.string,
+
+	    /**
+	     * This is the icon color when the mouse hovers over the icon.
+	     */
 	    hoverColor: _react2.default.PropTypes.string,
+
+	    /**
+	     * Function called when mouse enters this element.
+	     */
 	    onMouseEnter: _react2.default.PropTypes.func,
+
+	    /**
+	     * Function called when mouse leaves this element.
+	     */
 	    onMouseLeave: _react2.default.PropTypes.func,
 
 	    /**
 	     * Override the inline-styles of the root element.
 	     */
 	    style: _react2.default.PropTypes.object,
+
+	    /**
+	     * Allows you to redifine what the coordinates
+	     * without units mean inside an svg element. For example,
+	     * if the SVG element is 500(width) by 200(height), and you
+	     * pass viewBox="0 0 50 20", this means that the coordinates inside
+	     * the svg will go from the top left corner (0,0) to bottom right (50,20)
+	     * and each unit will be worth 10px.
+	     */
 	    viewBox: _react2.default.PropTypes.string
 	  },
 
@@ -23894,6 +24070,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = SvgIcon;
+	module.exports = exports['default'];
 
 /***/ },
 /* 200 */
@@ -23953,6 +24130,7 @@ webpackJsonp([0,1],[
 	    return _styles2.default.prepareStyles.apply(_styles2.default, [this.state && this.state.muiTheme || this.context.muiTheme].concat([].slice.apply(arguments)));
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 201 */
@@ -24001,6 +24179,7 @@ webpackJsonp([0,1],[
 	    return (0, _reactAddonsUpdate2.default)(array, { $splice: [[0, 1]] });
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 202 */
@@ -24121,6 +24300,7 @@ webpackJsonp([0,1],[
 	    return _autoPrefix2.default.all(flipped);
 	  }
 	};
+	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
@@ -24201,6 +24381,7 @@ webpackJsonp([0,1],[
 	    return prefixes ? prefixes[0] : key;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 204 */
@@ -25197,12 +25378,21 @@ webpackJsonp([0,1],[
 
 	var _lightBaseTheme = __webpack_require__(189);
 
-	Object.defineProperty(exports, 'default', {
-	  enumerable: true,
-	  get: function get() {
-	    return _lightBaseTheme.default;
-	  }
-	});
+	var _lightBaseTheme2 = _interopRequireDefault(_lightBaseTheme);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _lightBaseTheme2.default;
+
+	// import deprecatedExport from '../../utils/deprecatedExport';
+
+	// export default deprecatedExport(
+	//   lightBaseTheme,
+	//   'material-ui/lib/styles/raw-themes/light-raw-theme',
+	//   'material-ui/lib/styles/baseThemes/lightBaseTheme'
+	// );
+
+	module.exports = exports['default'];
 
 /***/ },
 /* 217 */
@@ -25280,27 +25470,113 @@ webpackJsonp([0,1],[
 	  displayName: 'Menu',
 
 	  propTypes: {
+	    /**
+	     * If true, the menu will apply transitions when added it
+	     * gets added to the DOM. In order for transitions to
+	     * work, wrap the menu inside a ReactTransitionGroup.
+	     */
 	    animated: _react2.default.PropTypes.bool,
+
+	    /**
+	     * If true, the width will automatically be
+	     * set according to the items inside the menu
+	     * using the proper keyline increment.
+	     */
 	    autoWidth: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Children for the Menu. Usually MenuItems.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * Indicates if the menu should render with compact desktop styles.
+	     */
 	    desktop: _react2.default.PropTypes.bool,
+
+	    /**
+	     * True if this item should be focused by the keyboard initially.
+	     */
 	    initiallyKeyboardFocused: _react2.default.PropTypes.bool,
+
+	    /**
+	     * The style object to use to override underlying list style.
+	     */
 	    listStyle: _react2.default.PropTypes.object,
+
+	    /**
+	     * The maxHeight of the menu in pixels. If
+	     * specified, the menu will scroll if larger than the maxHeight.
+	     */
 	    maxHeight: _react2.default.PropTypes.number,
+
+	    /**
+	     * If true, the value can an array and allow the menu to be a multi-select.
+	     */
 	    multiple: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Fired when a menu item is touchTapped and the menu item
+	     * value is not equal to the current menu value.
+	     */
+	    onChange: _react2.default.PropTypes.func,
+
+	    /**
+	     * Fired when an Esc key is keyed down.
+	     */
 	    onEscKeyDown: _react2.default.PropTypes.func,
+
+	    /**
+	     * Fired when a menu item is touchTapped.
+	     */
 	    onItemTouchTap: _react2.default.PropTypes.func,
+
+	    /**
+	     * Fired when a key is pressed.
+	     */
 	    onKeyDown: _react2.default.PropTypes.func,
+
+	    /**
+	     * This is the placement of the menu relative to the IconButton.
+	     */
 	    openDirection: _propTypes2.default.corners,
+
+	    /**
+	     * Style for the selected Menu Item.
+	     */
 	    selectedMenuItemStyle: _react2.default.PropTypes.object,
 
 	    /**
 	     * Override the inline-styles of the root element.
 	     */
 	    style: _react2.default.PropTypes.object,
+
+	    /**
+	     * The value of the selected menu item. If passed in,
+	     * this will make the menu a controlled component.
+	     * This component also supports valueLink.
+	     */
 	    value: _react2.default.PropTypes.any,
+
+	    /**
+	     * ValueLink for this component when controlled.
+	     */
 	    valueLink: _react2.default.PropTypes.object,
+
+	    /**
+	     * Sets the width of the menu. If not specified, the menu
+	     * width will be dictated by its children. The rendered
+	     * width will always be a keyline increment
+	     * (64px for desktop, 56px otherwise).
+	     */
 	    width: _propTypes2.default.stringOrNumber,
+
+	    /**
+	     * Sets the width of the menu. If not specified,
+	     * the menu width will be dictated by its children.
+	     * The rendered width will always be a keyline increment
+	     * (64px for desktop, 56px otherwise).
+	     */
 	    zDepth: _propTypes2.default.zDepth
 	  },
 
@@ -25319,7 +25595,10 @@ webpackJsonp([0,1],[
 	    return {
 	      animated: false,
 	      autoWidth: true,
+	      desktop: false,
+	      initiallyKeyboardFocused: false,
 	      maxHeight: null,
+	      multiple: false,
 	      onEscKeyDown: function onEscKeyDown() {},
 	      onItemTouchTap: function onItemTouchTap() {},
 	      onKeyDown: function onKeyDown() {},
@@ -25739,6 +26018,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Menu;
+	module.exports = exports['default'];
 
 /***/ },
 /* 218 */
@@ -25779,6 +26059,7 @@ webpackJsonp([0,1],[
 	    };
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 219 */
@@ -25837,6 +26118,7 @@ webpackJsonp([0,1],[
 	    _events2.default.off(document, 'touchend', this._checkClickAway);
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 220 */
@@ -25881,6 +26163,7 @@ webpackJsonp([0,1],[
 	    return ['keydown', 'keypress', 'keyup'].indexOf(e.type) !== -1;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 221 */
@@ -25957,6 +26240,7 @@ webpackJsonp([0,1],[
 	    el.style.transition = originalTransition;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 222 */
@@ -25977,6 +26261,7 @@ webpackJsonp([0,1],[
 	  TAB: 9,
 	  UP: 38
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 223 */
@@ -26017,6 +26302,7 @@ webpackJsonp([0,1],[
 	  zDepth: _react2.default.PropTypes.oneOf([0, 1, 2, 3, 4, 5])
 
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 224 */
@@ -26070,15 +26356,35 @@ webpackJsonp([0,1],[
 	  displayName: 'List',
 
 	  propTypes: {
+	    /**
+	     * These are usually ListItems that are passed to
+	     * be part of the list.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * If true, the subheader will be indented by 72px.
+	     */
 	    insetSubheader: _react2.default.PropTypes.bool,
 
 	    /**
 	     * Override the inline-styles of the root element.
 	     */
 	    style: _react2.default.PropTypes.object,
+
+	    /**
+	     * The subheader string that will be displayed at the top of the list.
+	     */
 	    subheader: _react2.default.PropTypes.node,
+
+	    /**
+	     * The style object to override subheader styles.
+	     */
 	    subheaderStyle: _react2.default.PropTypes.object,
+
+	    /**
+	     * The zDepth prop passed to the Paper element inside list.
+	     */
 	    zDepth: _propTypes2.default.zDepth
 	  },
 
@@ -26095,6 +26401,7 @@ webpackJsonp([0,1],[
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
+	      insetSubheader: false,
 	      zDepth: 0
 	    };
 	  },
@@ -26164,6 +26471,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = List;
+	module.exports = exports['default'];
 
 /***/ },
 /* 225 */
@@ -26204,6 +26512,7 @@ webpackJsonp([0,1],[
 	};
 
 	exports.default = new Typography();
+	module.exports = exports['default'];
 
 /***/ },
 /* 226 */
@@ -26253,15 +26562,35 @@ webpackJsonp([0,1],[
 	  displayName: 'Paper',
 
 	  propTypes: {
+	    /**
+	     * Children passed into the paper element.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * Set to true to generate a circlular paper container.
+	     */
 	    circle: _react2.default.PropTypes.bool,
+
+	    /**
+	     * By default, the paper container will have a border radius.
+	     * Set this to false to generate a container with sharp corners.
+	     */
 	    rounded: _react2.default.PropTypes.bool,
 
 	    /**
 	     * Override the inline-styles of the root element.
 	     */
 	    style: _react2.default.PropTypes.object,
+
+	    /**
+	     * Set to false to disable CSS transitions for the paper element.
+	     */
 	    transitionEnabled: _react2.default.PropTypes.bool,
+
+	    /**
+	     * This number represents the zDepth of the paper shadow.
+	     */
 	    zDepth: _propTypes2.default.zDepth
 	  },
 
@@ -26336,6 +26665,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Paper;
+	module.exports = exports['default'];
 
 /***/ },
 /* 227 */
@@ -26405,23 +26735,76 @@ webpackJsonp([0,1],[
 	  displayName: 'MenuItem',
 
 	  propTypes: {
+	    /**
+	     * If true, a left check mark will be rendered.
+	     */
 	    checked: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Elements passed as children to inner ListItem.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * Indicates if the menu should render with compact desktop styles.
+	     */
 	    desktop: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Disables a menu item.
+	     */
 	    disabled: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Prop passed down to ListItem that tells it what kind of focus it has.
+	     */
 	    focusState: _react2.default.PropTypes.oneOf(['none', 'focused', 'keyboard-focused']),
+
+	    /**
+	     * Style overrides for the inner div.
+	     */
 	    innerDivStyle: _react2.default.PropTypes.object,
+
+	    /**
+	     * If true, the children will be indented.
+	     * Only needed when there is no leftIcon.
+	     */
 	    insetChildren: _react2.default.PropTypes.bool,
+
+	    /**
+	     * This is the SvgIcon or FontIcon to be displayed on the left side.
+	     */
 	    leftIcon: _react2.default.PropTypes.element,
+
+	    /**
+	     * Nested MenuItems for this MenuItem. Used to make nested menus.
+	     */
 	    menuItems: _react2.default.PropTypes.node,
+
+	    /**
+	     * Fired when the element is touchTapped.
+	     */
 	    onTouchTap: _react2.default.PropTypes.func,
+
+	    /**
+	     * This is the SvgIcon or FontIcon to be displayed on the right side.
+	     */
 	    rightIcon: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the block element that contains the secondary text.
+	     * If a string is passed in, a div tag will be rendered.
+	     */
 	    secondaryText: _react2.default.PropTypes.node,
 
 	    /**
 	     * Override the inline-styles of the root element.
 	     */
 	    style: _react2.default.PropTypes.object,
+
+	    /**
+	     * The value of the menu item.
+	     */
 	    value: _react2.default.PropTypes.any
 	  },
 
@@ -26438,7 +26821,11 @@ webpackJsonp([0,1],[
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      focusState: 'none'
+	      checked: false,
+	      desktop: false,
+	      disabled: false,
+	      focusState: 'none',
+	      insetChildren: false
 	    };
 	  },
 	  getInitialState: function getInitialState() {
@@ -26635,6 +27022,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = MenuItem;
+	module.exports = exports['default'];
 
 /***/ },
 /* 228 */
@@ -27003,11 +27391,13 @@ webpackJsonp([0,1],[
 	      ref: 'layer',
 	      open: this.state.open,
 	      componentClickAway: this.componentClickAway,
+	      useLayerForClickAway: this.props.useLayerForClickAway,
 	      render: this.renderLayer });
 	  }
 	});
 
 	exports.default = Popover;
+	module.exports = exports['default'];
 
 /***/ },
 /* 229 */
@@ -27043,6 +27433,7 @@ webpackJsonp([0,1],[
 	    }
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 230 */
@@ -27221,6 +27612,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = RenderToLayer;
+	module.exports = exports['default'];
 
 /***/ },
 /* 231 */
@@ -27741,6 +28133,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = PopoverDefaultAnimation;
+	module.exports = exports['default'];
 
 /***/ },
 /* 234 */
@@ -27781,6 +28174,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = NavigationCheck;
+	module.exports = exports['default'];
 
 /***/ },
 /* 235 */
@@ -27862,32 +28256,151 @@ webpackJsonp([0,1],[
 	  displayName: 'ListItem',
 
 	  propTypes: {
+	    /**
+	     * Generate a nested list indicator icon when
+	     * nested list items are detected. Set to false
+	     * if you do not want an indicator auto-generated.
+	     * Note that an indicator will not be created if a
+	     * rightIcon/Button has been specified.
+	     */
 	    autoGenerateNestedIndicator: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Children passed into the ListItem.
+	     */
 	    children: _react2.default.PropTypes.node,
+
+	    /**
+	     * Does not allow the element to be focused by the keyboard.
+	     */
 	    disableKeyboardFocus: _react2.default.PropTypes.bool,
+
+	    /**
+	     * If true, the list-item will not be clickable
+	     * and will not display hover affects.
+	     * This is automatically disabled if leftCheckbox
+	     * or rightToggle is set.
+	     */
 	    disabled: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Controls whether or not the child ListItems are initially displayed.
+	     */
 	    initiallyOpen: _react2.default.PropTypes.bool,
+
+	    /**
+	     * Style prop for the innder div element.
+	     */
 	    innerDivStyle: _react2.default.PropTypes.object,
-	    innerStyle: _react2.default.PropTypes.object,
+
+	    /**
+	     * If true, the children will be indented by 72px.
+	     * Only needed if there is no left avatar or left icon.
+	     */
 	    insetChildren: _react2.default.PropTypes.bool,
+
+	    /**
+	     * This is the Avatar element to be displayed on the left side.
+	     */
 	    leftAvatar: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the Checkbox element to be displayed on the left side.
+	     */
 	    leftCheckbox: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the SvgIcon or FontIcon to be displayed on the left side.
+	     */
 	    leftIcon: _react2.default.PropTypes.element,
+
+	    /**
+	     * An array of ListItems to nest underneath the current ListItem.
+	     */
 	    nestedItems: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.element),
+
+	    /**
+	     * Controls how deep a ListItem appears.
+	     * This property is automatically managed so modify at your own risk.
+	     */
 	    nestedLevel: _react2.default.PropTypes.number,
+
+	    /**
+	     * Called when the ListItem has keyboard focus.
+	     */
 	    onKeyboardFocus: _react2.default.PropTypes.func,
+
+	    /**
+	     * Called when the mouse is over the ListItem.
+	     */
 	    onMouseEnter: _react2.default.PropTypes.func,
+
+	    /**
+	     * Called when the mouse is no longer over the ListItem.
+	     */
 	    onMouseLeave: _react2.default.PropTypes.func,
+
+	    /**
+	     * Called when the ListItem toggles its nested ListItems.
+	     */
 	    onNestedListToggle: _react2.default.PropTypes.func,
+
+	    /**
+	     * Called when touches start.
+	     */
 	    onTouchStart: _react2.default.PropTypes.func,
+
+	    /**
+	     * Called when a touch tap event occures on the component.
+	     */
 	    onTouchTap: _react2.default.PropTypes.func,
+
+	    /**
+	     * This is the block element that contains the primary text.
+	     * If a string is passed in, a div tag will be rendered.
+	     */
 	    primaryText: _react2.default.PropTypes.node,
+
+	    /**
+	     * If provided, tapping on the primary text
+	     * of the item toggles the nested list.
+	     */
 	    primaryTogglesNestedList: _react2.default.PropTypes.bool,
+
+	    /**
+	     * This is the avatar element to be displayed on the right side.
+	     */
 	    rightAvatar: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the SvgIcon or FontIcon to be displayed on the right side.
+	     */
 	    rightIcon: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the IconButton to be displayed on the right side.
+	     * Hovering over this button will remove the ListItem hover.
+	     * Also, clicking on this button will not trigger a
+	     * ListItem ripple. The event will be stopped and prevented
+	     * from bubbling up to cause a ListItem click.
+	     */
 	    rightIconButton: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the Toggle element to display on the right side.
+	     */
 	    rightToggle: _react2.default.PropTypes.element,
+
+	    /**
+	     * This is the block element that contains the secondary text.
+	     * If a string is passed in, a div tag will be rendered.
+	     */
 	    secondaryText: _react2.default.PropTypes.node,
+
+	    /**
+	     * Can be 1 or 2. This is the number of secondary
+	     * text lines before ellipsis will show.
+	     */
 	    secondaryTextLines: _react2.default.PropTypes.oneOf([1, 2]),
 
 	    /**
@@ -27910,7 +28423,10 @@ webpackJsonp([0,1],[
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      autoGenerateNestedIndicator: true,
+	      disableKeyboardFocus: false,
+	      disabled: false,
 	      initiallyOpen: false,
+	      insetChildren: false,
 	      nestedItems: [],
 	      nestedLevel: 0,
 	      onKeyboardFocus: function onKeyboardFocus() {},
@@ -28305,6 +28821,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ListItem;
+	module.exports = exports['default'];
 
 /***/ },
 /* 236 */
@@ -28643,6 +29160,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = EnhancedButton;
+	module.exports = exports['default'];
 
 /***/ },
 /* 237 */
@@ -28697,6 +29215,7 @@ webpackJsonp([0,1],[
 	    }) : children;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 238 */
@@ -28930,6 +29449,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = FocusRipple;
+	module.exports = exports['default'];
 
 /***/ },
 /* 241 */
@@ -29065,6 +29585,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ScaleIn;
+	module.exports = exports['default'];
 
 /***/ },
 /* 242 */
@@ -29552,6 +30073,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ScaleInChild;
+	module.exports = exports['default'];
 
 /***/ },
 /* 246 */
@@ -29746,6 +30268,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = TouchRipple;
+	module.exports = exports['default'];
 
 /***/ },
 /* 247 */
@@ -29872,6 +30395,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CircleRipple;
+	module.exports = exports['default'];
 
 /***/ },
 /* 248 */
@@ -30210,6 +30734,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = IconButton;
+	module.exports = exports['default'];
 
 /***/ },
 /* 249 */
@@ -30279,6 +30804,7 @@ webpackJsonp([0,1],[
 	    return true;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 250 */
@@ -30286,13 +30812,12 @@ webpackJsonp([0,1],[
 
 	'use strict';
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = shallowEqual;
-
-	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
-
 	function shallowEqual(objA, objB) {
 	  if (objA === objB) {
 	    return true;
@@ -30319,6 +30844,7 @@ webpackJsonp([0,1],[
 
 	  return true;
 	}
+	module.exports = exports['default'];
 
 /***/ },
 /* 251 */
@@ -30360,9 +30886,25 @@ webpackJsonp([0,1],[
 	  displayName: 'FontIcon',
 
 	  propTypes: {
+	    /**
+	     * This is the font color of the font icon. If not specified,
+	     * this component will default to muiTheme.palette.textColor.
+	     */
 	    color: _react2.default.PropTypes.string,
+
+	    /**
+	     * This is the icon color when the mouse hovers over the icon.
+	     */
 	    hoverColor: _react2.default.PropTypes.string,
+
+	    /**
+	     * Function called when mouse enters this element.
+	     */
 	    onMouseEnter: _react2.default.PropTypes.func,
+
+	    /**
+	     * Function called when mouse leaves this element.
+	     */
 	    onMouseLeave: _react2.default.PropTypes.func,
 
 	    /**
@@ -30382,6 +30924,12 @@ webpackJsonp([0,1],[
 
 	  mixins: [_stylePropable2.default],
 
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      onMouseEnter: function onMouseEnter() {},
+	      onMouseLeave: function onMouseLeave() {}
+	    };
+	  },
 	  getInitialState: function getInitialState() {
 	    return {
 	      hovered: false,
@@ -30446,6 +30994,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = FontIcon;
+	module.exports = exports['default'];
 
 /***/ },
 /* 252 */
@@ -30654,6 +31203,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Tooltip;
+	module.exports = exports['default'];
 
 /***/ },
 /* 253 */
@@ -30694,6 +31244,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = NavigationArrowDropUp;
+	module.exports = exports['default'];
 
 /***/ },
 /* 254 */
@@ -30765,6 +31316,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = NestedList;
+	module.exports = exports['default'];
 
 /***/ },
 /* 255 */
@@ -30830,6 +31382,7 @@ webpackJsonp([0,1],[
 	};
 
 	exports.default = ClearFix;
+	module.exports = exports['default'];
 
 /***/ },
 /* 256 */
@@ -30986,6 +31539,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = BeforeAfterWrapper;
+	module.exports = exports['default'];
 
 /***/ },
 /* 257 */
@@ -31130,6 +31684,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = PopoverAnimationFromTop;
+	module.exports = exports['default'];
 
 /***/ },
 /* 258 */
@@ -31224,6 +31779,7 @@ webpackJsonp([0,1],[
 	    return propType(props, propName, componentName);
 	  };
 	}
+	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
@@ -31243,6 +31799,7 @@ webpackJsonp([0,1],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _TextField2.default;
+	module.exports = exports['default'];
 
 /***/ },
 /* 261 */
@@ -31261,6 +31818,7 @@ webpackJsonp([0,1],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _TextField2.default;
+	module.exports = exports['default'];
 
 /***/ },
 /* 262 */
@@ -31723,6 +32281,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = TextField;
+	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
@@ -31741,6 +32300,7 @@ webpackJsonp([0,1],[
 	    return 'mui-id-' + index++;
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 264 */
@@ -31948,6 +32508,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = EnhancedTextarea;
+	module.exports = exports['default'];
 
 /***/ },
 /* 265 */
@@ -32028,6 +32589,7 @@ webpackJsonp([0,1],[
 	TextFieldHint.defaultProps = defaultProps;
 
 	exports.default = TextFieldHint;
+	module.exports = exports['default'];
 
 /***/ },
 /* 266 */
@@ -32141,6 +32703,7 @@ webpackJsonp([0,1],[
 	TextFieldLabel.defaultProps = defaultProps;
 
 	exports.default = TextFieldLabel;
+	module.exports = exports['default'];
 
 /***/ },
 /* 267 */
@@ -32280,6 +32843,7 @@ webpackJsonp([0,1],[
 	TextFieldUnderline.defaultProps = defaultProps;
 
 	exports.default = TextFieldUnderline;
+	module.exports = exports['default'];
 
 /***/ },
 /* 268 */
@@ -32288,6 +32852,8 @@ webpackJsonp([0,1],[
 	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -32333,9 +32899,11 @@ webpackJsonp([0,1],[
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _deprecatedPropType = __webpack_require__(259);
 
-	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	var _deprecatedPropType2 = _interopRequireDefault(_deprecatedPropType);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -32361,11 +32929,12 @@ webpackJsonp([0,1],[
 	    onUpdateInput: _react2.default.PropTypes.func,
 	    open: _react2.default.PropTypes.bool,
 	    searchText: _react2.default.PropTypes.string,
-	    showAllItems: _react2.default.PropTypes.bool,
+	    showAllItems: (0, _deprecatedPropType2.default)(_react2.default.PropTypes.bool, 'showAllItems is deprecated, use noFilter instead'),
 	    style: _react2.default.PropTypes.object,
 	    targetOrigin: _propTypes2.default.origin,
 	    touchTapCloseDelay: _react2.default.PropTypes.number,
-	    updateWhenFocused: _react2.default.PropTypes.bool
+	    triggerUpdateOnFocus: _react2.default.PropTypes.bool,
+	    updateWhenFocused: (0, _deprecatedPropType2.default)(_react2.default.PropTypes.bool, 'updateWhenFocused has been renamed to triggerUpdateOnFocus')
 	  },
 
 	  contextTypes: {
@@ -32387,16 +32956,15 @@ webpackJsonp([0,1],[
 	      animated: true,
 	      fullWidth: false,
 	      open: false,
-	      showAllItems: false,
 	      searchText: '',
 	      menuCloseDelay: 100,
 	      disableFocusRipple: true,
-	      updateWhenFocused: false,
 	      onUpdateInput: function onUpdateInput() {},
 	      onNewRequest: function onNewRequest() {},
 	      filter: function filter(searchText, key) {
-	        return key.includes(searchText);
-	      }
+	        return searchText !== '' && key.includes(searchText);
+	      },
+	      triggerUpdateOnFocus: false
 	    };
 	  },
 	  getInitialState: function getInitialState() {
@@ -32513,10 +33081,9 @@ webpackJsonp([0,1],[
 	    var menuStyle = _props.menuStyle;
 	    var menuProps = _props.menuProps;
 	    var listStyle = _props.listStyle;
-	    var showAllItems = _props.showAllItems;
 	    var targetOrigin = _props.targetOrigin;
 
-	    var other = _objectWithoutProperties(_props, ['anchorOrigin', 'animated', 'style', 'errorStyle', 'floatingLabelText', 'hintText', 'fullWidth', 'menuStyle', 'menuProps', 'listStyle', 'showAllItems', 'targetOrigin']);
+	    var other = _objectWithoutProperties(_props, ['anchorOrigin', 'animated', 'style', 'errorStyle', 'floatingLabelText', 'hintText', 'fullWidth', 'menuStyle', 'menuProps', 'listStyle', 'targetOrigin']);
 
 	    var _state = this.state;
 	    var open = _state.open;
@@ -32551,23 +33118,24 @@ webpackJsonp([0,1],[
 	    var mergedRootStyles = this.mergeAndPrefix(styles.root, style);
 	    var mergedMenuStyles = this.mergeStyles(styles.menu, menuStyle);
 
-	    var displayFilter = showAllItems ? function () {
-	      return true;
-	    } : this.props.filter;
 	    var requestsList = [];
 
 	    this.props.dataSource.map(function (item) {
+	      //showAllItems is deprecated, will be removed in the future
+	      if (_this2.props.showAllItems) {
+	        requestsList.push(item);
+	        return;
+	      }
+
 	      switch (typeof item === 'undefined' ? 'undefined' : _typeof(item)) {
 	        case 'string':
-	          if (displayFilter(_this2.state.searchText, item, item)) {
+	          if (_this2.props.filter(_this2.state.searchText, item, item)) {
 	            requestsList.push(item);
 	          }
 	          break;
 	        case 'object':
 	          if (typeof item.text === 'string') {
-	            if (displayFilter(_this2.state.searchText, item.text, item.value)) {
-	              requestsList.push(item);
-	            } else if (item.display) {
+	            if (_this2.props.filter(_this2.state.searchText, item.text, item)) {
 	              requestsList.push(item);
 	            }
 	          }
@@ -32577,7 +33145,7 @@ webpackJsonp([0,1],[
 
 	    this.requestsList = requestsList;
 
-	    var menu = open && (this.state.searchText !== '' || showAllItems) && requestsList.length > 0 ? _react2.default.createElement(
+	    var menu = open && requestsList.length > 0 ? _react2.default.createElement(
 	      _menu2.default,
 	      _extends({}, menuProps, {
 	        ref: 'menu',
@@ -32647,7 +33215,8 @@ webpackJsonp([0,1],[
 	            if (_this2.focusOnInput && open) _this2.refs.searchTextField.focus();
 	          },
 	          onFocus: function onFocus() {
-	            if (!open && (showAllItems || _this2.props.updateWhenFocused || _this2.state.searchText !== '')) {
+	            if (!open && (_this2.props.triggerUpdateOnFocus || _this2.props.updateWhenFocused //this line will be removed in the future
+	             || _this2.requestsList > 0)) {
 	              _this2._updateRequests(_this2.state.searchText);
 	            }
 	            _this2.focusOnInput = true;
@@ -32671,10 +33240,57 @@ webpackJsonp([0,1],[
 	  }
 	});
 
+	AutoComplete.levenshteinDistance = function (searchText, key) {
+	  var current = [],
+	      prev = undefined,
+	      value = undefined;
+	  for (var i = 0; i <= key.length; i++) {
+	    for (var j = 0; j <= searchText.length; j++) {
+	      if (i && j) {
+	        if (searchText.charAt(j - 1) === key.charAt(i - 1)) value = prev;else value = Math.min(current[j], current[j - 1], prev) + 1;
+	      } else {
+	        value = i + j;
+	      }
+	      prev = current[j];
+	      current[j] = value;
+	    }
+	  }
+	  return current.pop();
+	};
+
+	AutoComplete.noFilter = function () {
+	  return true;
+	};
+
+	AutoComplete.defaultFilter = AutoComplete.caseSensitiveFilter = function (searchText, key) {
+	  return searchText !== '' && key.includes(searchText);
+	};
+
+	AutoComplete.caseInsensitiveFilter = function (searchText, key) {
+	  return key.toLowerCase().includes(searchText.toLowerCase());
+	};
+
+	AutoComplete.levenshteinDistanceFilter = function (distanceLessThan) {
+	  if (distanceLessThan === undefined) return AutoComplete.levenshteinDistance;else if (typeof distanceLessThan !== 'number') {
+	    throw 'Error: AutoComplete.levenshteinDistanceFilter is a filter generator, not a filter!';
+	  }
+	  return function (s, k) {
+	    return AutoComplete.levenshteinDistance(s, k) < distanceLessThan;
+	  };
+	};
+
+	AutoComplete.fuzzyFilter = function (searchText, key) {
+	  if (searchText.length === 0) return false;
+	  var subMatchKey = key.substring(0, searchText.length);
+	  var distance = AutoComplete.levenshteinDistance(searchText.toLowerCase(), subMatchKey.toLowerCase());
+	  return searchText.length > 3 ? distance < 2 : distance === 0;
+	};
+
 	AutoComplete.Item = _menuItem2.default;
 	AutoComplete.Divider = _divider2.default;
 
 	exports.default = AutoComplete;
+	module.exports = exports['default'];
 
 /***/ },
 /* 269 */
@@ -32752,6 +33368,7 @@ webpackJsonp([0,1],[
 	Divider = (0, _muiThemeable2.default)(Divider);
 
 	exports.default = Divider;
+	module.exports = exports['default'];
 
 /***/ },
 /* 270 */
@@ -32802,6 +33419,7 @@ webpackJsonp([0,1],[
 
 	  return MuiComponent;
 	}
+	module.exports = exports['default'];
 
 /***/ },
 /* 271 */
@@ -32929,6 +33547,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Toolbar;
+	module.exports = exports['default'];
 
 /***/ },
 /* 272 */
@@ -33178,6 +33797,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ToolbarGroup;
+	module.exports = exports['default'];
 
 /***/ },
 /* 273 */
@@ -33287,6 +33907,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ToolbarSeparator;
+	module.exports = exports['default'];
 
 /***/ },
 /* 274 */
@@ -33404,6 +34025,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = ToolbarTitle;
+	module.exports = exports['default'];
 
 /***/ },
 /* 275 */
@@ -33608,27 +34230,19 @@ webpackJsonp([0,1],[
 
 	var _materialUiLibCardCard2 = _interopRequireDefault(_materialUiLibCardCard);
 
-	var _materialUiLibCardCardActions = __webpack_require__(284);
-
-	var _materialUiLibCardCardActions2 = _interopRequireDefault(_materialUiLibCardCardActions);
-
-	var _materialUiLibCardCardHeader = __webpack_require__(285);
+	var _materialUiLibCardCardHeader = __webpack_require__(284);
 
 	var _materialUiLibCardCardHeader2 = _interopRequireDefault(_materialUiLibCardCardHeader);
 
-	var _materialUiLibCardCardMedia = __webpack_require__(290);
+	var _materialUiLibCardCardMedia = __webpack_require__(289);
 
 	var _materialUiLibCardCardMedia2 = _interopRequireDefault(_materialUiLibCardCardMedia);
 
-	var _materialUiLibCardCardTitle = __webpack_require__(291);
+	var _materialUiLibCardCardTitle = __webpack_require__(290);
 
 	var _materialUiLibCardCardTitle2 = _interopRequireDefault(_materialUiLibCardCardTitle);
 
-	var _materialUiLibFlatButton = __webpack_require__(292);
-
-	var _materialUiLibFlatButton2 = _interopRequireDefault(_materialUiLibFlatButton);
-
-	var _materialUiLibCardCardText = __webpack_require__(294);
+	var _materialUiLibCardCardText = __webpack_require__(291);
 
 	var _materialUiLibCardCardText2 = _interopRequireDefault(_materialUiLibCardCardText);
 
@@ -33918,6 +34532,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Avatar;
+	module.exports = exports['default'];
 
 /***/ },
 /* 280 */
@@ -34068,6 +34683,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = Card;
+	module.exports = exports['default'];
 
 /***/ },
 /* 281 */
@@ -34208,6 +34824,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CardExpandable;
+	module.exports = exports['default'];
 
 /***/ },
 /* 282 */
@@ -34248,6 +34865,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = HardwareKeyboardArrowUp;
+	module.exports = exports['default'];
 
 /***/ },
 /* 283 */
@@ -34288,6 +34906,7 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = HardwareKeyboardArrowDown;
+	module.exports = exports['default'];
 
 /***/ },
 /* 284 */
@@ -34305,109 +34924,7 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _stylePropable = __webpack_require__(200);
-
-	var _stylePropable2 = _interopRequireDefault(_stylePropable);
-
-	var _themeManager = __webpack_require__(165);
-
-	var _themeManager2 = _interopRequireDefault(_themeManager);
-
-	var _lightRawTheme = __webpack_require__(216);
-
-	var _lightRawTheme2 = _interopRequireDefault(_lightRawTheme);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var CardActions = _react2.default.createClass({
-	  displayName: 'CardActions',
-
-	  propTypes: {
-	    actAsExpander: _react2.default.PropTypes.bool,
-	    children: _react2.default.PropTypes.node,
-	    expandable: _react2.default.PropTypes.bool,
-	    showExpandableButton: _react2.default.PropTypes.bool,
-
-	    /**
-	     * Override the inline-styles of the root element.
-	     */
-	    style: _react2.default.PropTypes.object
-	  },
-
-	  contextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  //for passing default theme context to children
-	  childContextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  mixins: [_stylePropable2.default],
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      muiTheme: this.context.muiTheme ? this.context.muiTheme : _themeManager2.default.getMuiTheme(_lightRawTheme2.default)
-	    };
-	  },
-	  getChildContext: function getChildContext() {
-	    return {
-	      muiTheme: this.state.muiTheme
-	    };
-	  },
-
-	  //to update theme inside state whenever a new theme is passed down
-	  //from the parent / owner using context
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext) {
-	    var newMuiTheme = nextContext.muiTheme ? nextContext.muiTheme : this.state.muiTheme;
-	    this.setState({ muiTheme: newMuiTheme });
-	  },
-	  getStyles: function getStyles() {
-	    return {
-	      root: {
-	        padding: 8,
-	        position: 'relative'
-	      }
-	    };
-	  },
-	  render: function render() {
-	    var _this = this;
-
-	    var styles = this.getStyles();
-
-	    var children = _react2.default.Children.map(this.props.children, function (child) {
-	      return _react2.default.cloneElement(child, {
-	        style: _this.mergeStyles({ marginRight: 8 }, child.props.style)
-	      });
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      _extends({}, this.props, { style: this.prepareStyles(styles.root, this.props.style) }),
-	      children
-	    );
-	  }
-	});
-
-	exports.default = CardActions;
-
-/***/ },
-/* 285 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _styles = __webpack_require__(286);
+	var _styles = __webpack_require__(285);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -34554,9 +35071,10 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CardHeader;
+	module.exports = exports['default'];
 
 /***/ },
-/* 286 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34598,15 +35116,15 @@ webpackJsonp([0,1],[
 
 	var _lightBaseTheme2 = _interopRequireDefault(_lightBaseTheme);
 
-	var _darkRawTheme = __webpack_require__(287);
+	var _darkRawTheme = __webpack_require__(286);
 
 	var _darkRawTheme2 = _interopRequireDefault(_darkRawTheme);
 
-	var _darkBaseTheme = __webpack_require__(288);
+	var _darkBaseTheme = __webpack_require__(287);
 
 	var _darkBaseTheme2 = _interopRequireDefault(_darkBaseTheme);
 
-	var _themeDecorator = __webpack_require__(289);
+	var _themeDecorator = __webpack_require__(288);
 
 	var _themeDecorator2 = _interopRequireDefault(_themeDecorator);
 
@@ -34649,7 +35167,7 @@ webpackJsonp([0,1],[
 	};
 
 /***/ },
-/* 287 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34658,17 +35176,26 @@ webpackJsonp([0,1],[
 	  value: true
 	});
 
-	var _darkBaseTheme = __webpack_require__(288);
+	var _darkBaseTheme = __webpack_require__(287);
 
-	Object.defineProperty(exports, 'default', {
-	  enumerable: true,
-	  get: function get() {
-	    return _darkBaseTheme.default;
-	  }
-	});
+	var _darkBaseTheme2 = _interopRequireDefault(_darkBaseTheme);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _darkBaseTheme2.default;
+
+	// import deprecatedExport from '../../utils/deprecatedExport';
+
+	// export default deprecatedExport(
+	//   darkBaseTheme,
+	//   'material-ui/lib/styles/raw-themes/dark-raw-theme',
+	//   'material-ui/lib/styles/baseThemes/darkBaseTheme'
+	// );
+
+	module.exports = exports['default'];
 
 /***/ },
-/* 288 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34710,9 +35237,10 @@ webpackJsonp([0,1],[
 	    clockCircleColor: _colorManipulator2.default.fade(_colors2.default.fullWhite, 0.12)
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
-/* 289 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34749,8 +35277,10 @@ webpackJsonp([0,1],[
 	  };
 	};
 
+	module.exports = exports['default'];
+
 /***/ },
-/* 290 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34765,7 +35295,7 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(286);
+	var _styles = __webpack_require__(285);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -34918,9 +35448,10 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CardMedia;
+	module.exports = exports['default'];
 
 /***/ },
-/* 291 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34935,7 +35466,7 @@ webpackJsonp([0,1],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(286);
+	var _styles = __webpack_require__(285);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -35054,368 +35585,10 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CardTitle;
+	module.exports = exports['default'];
 
 /***/ },
-/* 292 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _contextPure = __webpack_require__(249);
-
-	var _contextPure2 = _interopRequireDefault(_contextPure);
-
-	var _transitions = __webpack_require__(194);
-
-	var _transitions2 = _interopRequireDefault(_transitions);
-
-	var _children = __webpack_require__(237);
-
-	var _children2 = _interopRequireDefault(_children);
-
-	var _colorManipulator = __webpack_require__(188);
-
-	var _colorManipulator2 = _interopRequireDefault(_colorManipulator);
-
-	var _immutabilityHelper = __webpack_require__(201);
-
-	var _immutabilityHelper2 = _interopRequireDefault(_immutabilityHelper);
-
-	var _typography = __webpack_require__(225);
-
-	var _typography2 = _interopRequireDefault(_typography);
-
-	var _enhancedButton = __webpack_require__(236);
-
-	var _enhancedButton2 = _interopRequireDefault(_enhancedButton);
-
-	var _flatButtonLabel = __webpack_require__(293);
-
-	var _flatButtonLabel2 = _interopRequireDefault(_flatButtonLabel);
-
-	var _lightRawTheme = __webpack_require__(216);
-
-	var _lightRawTheme2 = _interopRequireDefault(_lightRawTheme);
-
-	var _themeManager = __webpack_require__(165);
-
-	var _themeManager2 = _interopRequireDefault(_themeManager);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-	function validateLabel(props, propName, componentName) {
-	  if (!props.children && !props.label) {
-	    return new Error('Required prop label or children was not ' + 'specified in ' + componentName + '.');
-	  }
-	}
-
-	var FlatButton = _react2.default.createClass({
-	  displayName: 'FlatButton',
-
-	  propTypes: {
-	    backgroundColor: _react2.default.PropTypes.string,
-	    children: _react2.default.PropTypes.node,
-	    disabled: _react2.default.PropTypes.bool,
-	    hoverColor: _react2.default.PropTypes.string,
-	    label: validateLabel,
-	    labelPosition: _react2.default.PropTypes.oneOf(['before', 'after']),
-	    labelStyle: _react2.default.PropTypes.object,
-	    onKeyboardFocus: _react2.default.PropTypes.func,
-	    onMouseEnter: _react2.default.PropTypes.func,
-	    onMouseLeave: _react2.default.PropTypes.func,
-	    onTouchStart: _react2.default.PropTypes.func,
-	    primary: _react2.default.PropTypes.bool,
-	    rippleColor: _react2.default.PropTypes.string,
-	    secondary: _react2.default.PropTypes.bool,
-
-	    /**
-	     * Override the inline-styles of the root element.
-	     */
-	    style: _react2.default.PropTypes.object
-	  },
-
-	  contextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  //for passing default theme context to children
-	  childContextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  mixins: [_contextPure2.default],
-
-	  statics: {
-	    getRelevantContextKeys: function getRelevantContextKeys(muiTheme) {
-	      var buttonTheme = muiTheme.button;
-	      var flatButtonTheme = muiTheme.flatButton;
-
-	      return {
-	        buttonColor: flatButtonTheme.color,
-	        buttonFilterColor: flatButtonTheme.buttonFilterColor,
-	        buttonHeight: buttonTheme.height,
-	        buttonMinWidth: buttonTheme.minWidth,
-	        disabledTextColor: flatButtonTheme.disabledTextColor,
-	        primaryTextColor: flatButtonTheme.primaryTextColor,
-	        secondaryTextColor: flatButtonTheme.secondaryTextColor,
-	        textColor: flatButtonTheme.textColor,
-	        textTransform: flatButtonTheme.textTransform ? flatButtonTheme.textTransform : buttonTheme.textTransform ? buttonTheme.textTransform : 'uppercase'
-	      };
-	    },
-	    getChildrenClasses: function getChildrenClasses() {
-	      return [_enhancedButton2.default, _flatButtonLabel2.default];
-	    }
-	  },
-
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      labelStyle: {},
-	      labelPosition: 'before', // Should be after but we keep it like for now (prevent breaking changes)
-	      onKeyboardFocus: function onKeyboardFocus() {},
-	      onMouseEnter: function onMouseEnter() {},
-	      onMouseLeave: function onMouseLeave() {},
-	      onTouchStart: function onTouchStart() {}
-	    };
-	  },
-	  getInitialState: function getInitialState() {
-	    return {
-	      hovered: false,
-	      isKeyboardFocused: false,
-	      touch: false,
-	      muiTheme: this.context.muiTheme ? this.context.muiTheme : _themeManager2.default.getMuiTheme(_lightRawTheme2.default)
-	    };
-	  },
-	  getChildContext: function getChildContext() {
-	    return {
-	      muiTheme: this.state.muiTheme
-	    };
-	  },
-
-	  //to update theme inside state whenever a new theme is passed down
-	  //from the parent / owner using context
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext) {
-	    var newMuiTheme = nextContext.muiTheme ? nextContext.muiTheme : this.state.muiTheme;
-	    this.setState({ muiTheme: newMuiTheme });
-	  },
-	  _handleKeyboardFocus: function _handleKeyboardFocus(e, isKeyboardFocused) {
-	    this.setState({ isKeyboardFocused: isKeyboardFocused });
-	    this.props.onKeyboardFocus(e, isKeyboardFocused);
-	  },
-	  _handleMouseEnter: function _handleMouseEnter(e) {
-	    //Cancel hover styles for touch devices
-	    if (!this.state.touch) this.setState({ hovered: true });
-	    this.props.onMouseEnter(e);
-	  },
-	  _handleMouseLeave: function _handleMouseLeave(e) {
-	    this.setState({ hovered: false });
-	    this.props.onMouseLeave(e);
-	  },
-	  _handleTouchStart: function _handleTouchStart(e) {
-	    this.setState({ touch: true });
-	    this.props.onTouchStart(e);
-	  },
-	  render: function render() {
-	    var _props = this.props;
-	    var children = _props.children;
-	    var disabled = _props.disabled;
-	    var hoverColor = _props.hoverColor;
-	    var backgroundColor = _props.backgroundColor;
-	    var label = _props.label;
-	    var labelStyle = _props.labelStyle;
-	    var labelPosition = _props.labelPosition;
-	    var primary = _props.primary;
-	    var rippleColor = _props.rippleColor;
-	    var secondary = _props.secondary;
-	    var style = _props.style;
-
-	    var other = _objectWithoutProperties(_props, ['children', 'disabled', 'hoverColor', 'backgroundColor', 'label', 'labelStyle', 'labelPosition', 'primary', 'rippleColor', 'secondary', 'style']);
-
-	    var _constructor$getRelev = this.constructor.getRelevantContextKeys(this.state.muiTheme);
-
-	    var buttonColor = _constructor$getRelev.buttonColor;
-	    var buttonHeight = _constructor$getRelev.buttonHeight;
-	    var buttonMinWidth = _constructor$getRelev.buttonMinWidth;
-	    var disabledTextColor = _constructor$getRelev.disabledTextColor;
-	    var buttonFilterColor = _constructor$getRelev.buttonFilterColor;
-	    var primaryTextColor = _constructor$getRelev.primaryTextColor;
-	    var secondaryTextColor = _constructor$getRelev.secondaryTextColor;
-	    var textColor = _constructor$getRelev.textColor;
-	    var textTransform = _constructor$getRelev.textTransform;
-
-	    var defaultTextColor = disabled ? disabledTextColor : primary ? primaryTextColor : secondary ? secondaryTextColor : textColor;
-
-	    var defaultHoverColor = _colorManipulator2.default.fade(buttonFilterColor, 0.2);
-	    var defaultRippleColor = buttonFilterColor;
-	    var buttonHoverColor = hoverColor || defaultHoverColor;
-	    var buttonRippleColor = rippleColor || defaultRippleColor;
-	    var buttonBackgroundColor = backgroundColor || buttonColor;
-	    var hovered = (this.state.hovered || this.state.isKeyboardFocused) && !disabled;
-
-	    var mergedRootStyles = _immutabilityHelper2.default.merge({
-	      color: defaultTextColor,
-	      transition: _transitions2.default.easeOut(),
-	      fontSize: _typography2.default.fontStyleButtonFontSize,
-	      letterSpacing: 0,
-	      textTransform: textTransform,
-	      fontWeight: _typography2.default.fontWeightMedium,
-	      borderRadius: 2,
-	      userSelect: 'none',
-	      position: 'relative',
-	      overflow: 'hidden',
-	      backgroundColor: hovered ? buttonHoverColor : buttonBackgroundColor,
-	      lineHeight: buttonHeight + 'px',
-	      minWidth: buttonMinWidth,
-	      padding: 0,
-	      margin: 0,
-	      //This is need so that ripples do not bleed past border radius.
-	      //See: http://stackoverflow.com/questions/17298739
-	      transform: 'translate3d(0, 0, 0)'
-	    }, style);
-
-	    var labelElement = label ? _react2.default.createElement(_flatButtonLabel2.default, { label: label, style: labelStyle }) : undefined;
-
-	    // Place label before or after children.
-	    var childrenFragment = labelPosition === 'before' ? { labelElement: labelElement, children: children } : { children: children, labelElement: labelElement };
-	    var enhancedButtonChildren = _children2.default.create(childrenFragment);
-
-	    return _react2.default.createElement(
-	      _enhancedButton2.default,
-	      _extends({}, other, {
-	        disabled: disabled,
-	        focusRippleColor: buttonRippleColor,
-	        focusRippleOpacity: 0.3,
-	        onKeyboardFocus: this._handleKeyboardFocus,
-	        onMouseLeave: this._handleMouseLeave,
-	        onMouseEnter: this._handleMouseEnter,
-	        onTouchStart: this._handleTouchStart,
-	        style: mergedRootStyles,
-	        touchRippleColor: buttonRippleColor,
-	        touchRippleOpacity: 0.3 }),
-	      enhancedButtonChildren
-	    );
-	  }
-	});
-
-	exports.default = FlatButton;
-
-/***/ },
-/* 293 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _contextPure = __webpack_require__(249);
-
-	var _contextPure2 = _interopRequireDefault(_contextPure);
-
-	var _stylePropable = __webpack_require__(200);
-
-	var _stylePropable2 = _interopRequireDefault(_stylePropable);
-
-	var _lightRawTheme = __webpack_require__(216);
-
-	var _lightRawTheme2 = _interopRequireDefault(_lightRawTheme);
-
-	var _themeManager = __webpack_require__(165);
-
-	var _themeManager2 = _interopRequireDefault(_themeManager);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var FlatButtonLabel = _react2.default.createClass({
-	  displayName: 'FlatButtonLabel',
-
-	  propTypes: {
-	    label: _react2.default.PropTypes.node,
-
-	    /**
-	     * Override the inline-styles of the root element.
-	     */
-	    style: _react2.default.PropTypes.object
-	  },
-
-	  contextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  //for passing default theme context to children
-	  childContextTypes: {
-	    muiTheme: _react2.default.PropTypes.object
-	  },
-
-	  mixins: [_contextPure2.default, _stylePropable2.default],
-
-	  statics: {
-	    getRelevantContextKeys: function getRelevantContextKeys(muiTheme) {
-	      return {
-	        spacingDesktopGutterLess: muiTheme.rawTheme.spacing.desktopGutterLess
-	      };
-	    }
-	  },
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      muiTheme: this.context.muiTheme ? this.context.muiTheme : _themeManager2.default.getMuiTheme(_lightRawTheme2.default)
-	    };
-	  },
-	  getChildContext: function getChildContext() {
-	    return {
-	      muiTheme: this.state.muiTheme
-	    };
-	  },
-
-	  //to update theme inside state whenever a new theme is passed down
-	  //from the parent / owner using context
-	  componentWillReceiveProps: function componentWillReceiveProps(nextProps, nextContext) {
-	    var newMuiTheme = nextContext.muiTheme ? nextContext.muiTheme : this.state.muiTheme;
-	    this.setState({ muiTheme: newMuiTheme });
-	  },
-
-	  render: function render() {
-	    var _props = this.props;
-	    var label = _props.label;
-	    var style = _props.style;
-
-	    var contextKeys = this.constructor.getRelevantContextKeys(this.state.muiTheme);
-
-	    var mergedRootStyles = this.mergeStyles({
-	      position: 'relative',
-	      padding: '0 ' + contextKeys.spacingDesktopGutterLess + 'px'
-	    }, style);
-
-	    return _react2.default.createElement(
-	      'span',
-	      { style: this.prepareStyles(mergedRootStyles) },
-	      label
-	    );
-	  }
-
-	});
-
-	exports.default = FlatButtonLabel;
-
-/***/ },
-/* 294 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35510,24 +35683,25 @@ webpackJsonp([0,1],[
 	});
 
 	exports.default = CardText;
+	module.exports = exports['default'];
 
 /***/ },
-/* 295 */
+/* 292 */
 /***/ function(module, exports) {
 
 	module.exports = [{"Input date":"20151105","Title":"Connected China","URL":"http://china.fathom.info/","Images":"","Organization":"Reuters","Organization_CN":"路透社","Topic":"Politics","Content tag":"connected china","Type":"app, visualization, multimedia","Language tag":"eng","Data tag":"media coverage, open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"http://djchina.org/2013/08/25/resource-cases/","editor_info":"shujian.bu@gmail.com","tutorial_links":"https://github.com/timelyportfolio/rCharts_512paths","additional_notes":""},{"Input date":"20151105","Title":"Mapping the Dead: Gun Deaths Since Sandy Hook","URL":"http://data.huffingtonpost.com/2013/03/gun-deaths","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Social issue","Content tag":"gun shot","Type":"interactive, map, bubble chart, bar chart","Language tag":"eng","Data tag":"media coverage","Data source":"http://data.huffingtonpost.com/2013/03/gun-deaths\n downloadable dataset in csv format","Takeaways":"","Editor notes":"","showcase_in_depth":"http://djchina.org/2013/08/25/resource-cases/","editor_info":"shujian.bu@gmail.com","tutorial_links":"https://github.com/timelyportfolio/rCharts_512paths","additional_notes":""},{"Input date":"20151105","Title":"Oscar Predictions 2013","URL":"http://data.huffingtonpost.com/2013/01/oscar-predictions","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Culture and religion","Content tag":"oscar prediction","Type":"chart","Language tag":"eng","Data tag":"institute data","Data source":"Box Office Mojo, Rotten Tomatoes, Metacritic, Intrade, Betfair, Hollywood Stock Exchange","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Relatives Of Vets Who Died By Suicide Tell Their Stories (AUDIO)","URL":"http://www.huffingtonpost.com/2013/09/04/vets-suicide_n_3861728.html","Images":"","Organization":"Huffington Post","Organization_CN":"赫芬顿邮报","Topic":"Social issue","Content tag":"suicide","Type":"multi-media","Language tag":"eng","Data tag":"interview","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"风雨中概股","URL":"http://special.caixin.com/2013/zgg/index.html","Images":"","Organization":"Caixin","Organization_CN":"财新","Topic":"Business","Content tag":"ipo, stock market","Type":"search bar, interactve, bubble chart,","Language tag":"chi","Data tag":"biz data service","Data source":"Wind__","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Small Arms and Ammunition-Imports and Exports","URL":"http://armsglobe.chromeexperiments.com/","Images":"","Organization":"Google","Organization_CN":"谷歌","Topic":"Security","Content tag":"ammunition trade","Type":"timeline, bar chart, animation, search bar, interactive, line chart, 3D","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Find out about crime on your block, in your community, along your commute, and more","URL":"http://crime.chicagotribune.com/","Images":"","Organization":"Chicagotribune","Organization_CN":"芝加哥论坛报","Topic":"Social issue","Content tag":"crime","Type":"search bar, interactive, line chart, ranking","Language tag":"eng","Data tag":"gov open data","Data source":"The Chicago Police Department\n 1, http://crime.chicagotribune.com/chicago/community\n 2, http://crime.chicagotribune.com/suburbs/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"512 Paths to the White House","URL":"http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"interactive","Language tag":"eng","Data tag":"modeling","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Facebook Offering: How It Compares","URL":"http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"ipo, stock market","Type":"search bar, interactive, bubble chart,","Language tag":"eng","Data tag":"biz data service","Data source":"Jay Ritter, University of Florida; Bloomberg","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How the Recession Reshaped the Economy, in 255 Charts","URL":"http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"economic recession","Type":"interactive, table-like, chart","Language tag":"eng","Data tag":"gov open data","Data source":"Burearu of Labor Stats portal: http://www.bls.gov/ces/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Who Will Win The Senate?","URL":"http://www.nytimes.com/newsgraphics/2014/senate-model/","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"interactive, chart","Language tag":"eng","Data tag":"modeling, open poll info and predictions","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Most Detailed Maps You’ll See From the Midterm Elections","URL":"http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"election","Type":"map, visualization,","Language tag":"eng","Data tag":"gov open data","Data source":"Virginia data comes from the Virginia State Board of Elections. Most Virginia map shapes are from the Virginia Public Access Project\n North Carolina data comes from North Carolina State Board of Elections.\n Georgia data comes from the Georgia Secretary of State.\n Iowa data comes from the Iowa Secretary of State.\n Arkansas data comes from the Arkansas Secretary of State.\n Louisiana data comes from the Louisiana Secretary of State.\n Minnesota data comes from the Minnesota Secretary of State.\n Streets data by OpenStreetMap contributors.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Four Ways to Slice Obama’s 2013 Budget Proposal","URL":"http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"gov budget","Type":"bubble chart, interactive, table-like","Language tag":"eng","Data tag":"gov open data","Data source":"Office of Management and Budget https://www.whitehouse.gov/sites/default/files/omb/budget/fy2013/assets/ccs.pdf","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Back and Forth Over the Shutdown and Debt Ceiling","URL":"http://www.nytimes.com/interactive/2013/09/30/us/politics/the-back-and-forth-over-the-shutdown.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"government debt","Type":"timeline, profile pic,","Language tag":"eng","Data tag":"media coverage","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The 9/11 Tapes: The Story in the Air","URL":"http://www.nytimes.com/interactive/2011/09/08/nyregion/911-tapes.html?hp","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Security","Content tag":"911","Type":"timeline, map, conversation","Language tag":"eng","Data tag":"","Data source":"Audio files were provided by John J. Farmer Jr., the Dean of Rutgers Law School-Newark and a senior counsel to the 9/11 Commission. Transcripts were edited from text provided by Miles L. Kara, Sr., a professional staff member of the 9/11 Commission. The call from Betty Ong was retrieved from an exhibit presented by the prosecution in United States v. Zacarias Moussaoui in United States District Court in Alexandria, Va.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Snow Fall: The Avalanche at Tunnel Creek","URL":"http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"16 skiers met avalanche","Type":"multi-media,map","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Mapping the Spread of Drought Across the U.S.","URL":"http://www.nytimes.com/interactive/2014/upshot/mapping-the-spread-of-drought-across-the-us.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"drought","Type":"map, timeline, chart","Language tag":"eng","Data tag":"gov open data","Data source":"National Climatic Data Center, \n National Drought Mitigation Center, \n U.S. Department of Agriculture, \n National Oceanic and Atmospheric Administration\n 1.http://droughtmonitor.unl.edu/\n 2.http://www.ncdc.noaa.gov/oa/climate/research/prelim/drought/palmer.html\n 3.http://www.nytimes.com/interactive/2012/08/11/sunday-review/drought-history.html","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Hurricane Sandy","URL":"http://www.nytimes.com/interactive/2012/10/26/us/hurricane-sandy-map.html?_r=2&","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Natural disaster","Content tag":"forecast hurricane","Type":"map, satellite, line chart, search bar","Language tag":"eng","Data tag":"gov open data","Data source":"National Weather Service","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Is It Better to Rent or Buy?","URL":"http://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"investment","Type":"bar chart, interactive, modelling(calculator)","Language tag":"eng","Data tag":"institute data, gov data","Data source":"Mark Zandi, Chief Economist, Moody's Analytics; Federal Reserve Economic Data, Federal Reserve Bank of St. Louis; Jonathan J. Miller, Miller Samuel Inc.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Where are the hardest places to live in the U.S.?","URL":"http://www.nytimes.com/2014/06/26/upshot/where-are-the-hardest-places-to-live-in-the-us.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Social issue","Content tag":"living","Type":"map, interactive, multi-media, modelling","Language tag":"eng","Data tag":"gov open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Jobless Rate for People Like You","URL":"http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Social issue","Content tag":"unemployment","Type":"line chart, interactive, sorting","Language tag":"eng","Data tag":"gov open data, survey","Data source":"Bureau of Labor Statistics","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How the Chicago Public School District Compares","URL":"http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Education","Content tag":"school compares","Type":"chart","Language tag":"eng","Data tag":"news coverage, institute data","Data source":"National Council on Teacher Quality(http://www.nctq.org/siteHome.do)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"How Birth Year Influences Political Views","URL":"http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Politics","Content tag":"political view and birth year","Type":"interactive, visualization, chart","Language tag":"eng","Data tag":"modeling, survey response","Data source":"The model, by researchers at Catalist, the Democratic data firm, and Columbia University, uses hundreds of thousands of survey responses and new statistical software to estimate how people’s preferences change at different stages of their lives.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Which Team Do You Cheer For? An N.B.A. Fan Map","URL":"http://www.nytimes.com/interactive/2014/05/12/upshot/12-upshot-nba-basketball.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"basketball","Type":"map, interactive","Language tag":"eng","Data tag":"facebook \"likes\"","Data source":"these were created using estimates of team support based on each team’s share of Facebook “likes” in a ZIP code (or census division in Canada). We then applied an algorithm to deal with statistical noisiness and to fill in gaps where data was missing.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"N.C.A.A. Fan Map: How the Country Roots for College Football","URL":"http://www.nytimes.com/interactive/2014/10/03/upshot/ncaa-football-fan-map.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"college football","Type":"map, interactive","Language tag":"eng","Data tag":"facebook \"likes\"","Data source":"these were created using estimates of team support based on each team’s share of Facebook “likes” in a ZIP code. We then applied an algorithm to deal with statistical noise and fill in gaps where data was missing","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Why Peyton Manning's Record Will Be Hard to Beat","URL":"http://www.nytimes.com/interactive/2014/10/19/upshot/peyton-manning-breaks-touchdown-passing-record.html?_r=0&abt=0002&abg=1","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"Peyton Manning, football","Type":"line chart, interactive","Language tag":"eng","Data tag":"National Football League history","Data source":"http://www.pro-football-reference.com/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Racing Against History","URL":"http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html?_r=0","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"men 100-meter freestyle","Type":"animation, chart, interactive","Language tag":"eng","Data tag":"book, institute data","Data source":"\"The Complete Book of the Olympics\" by David Wallechinsky and Jaime Loucky, International Olympic Committee, Hungarian Olympic Committee, Bill Mallon","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"One Race, Every Medalist Ever","URL":"http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"men 100-meter sprint","Type":"animation, chart, interactive","Language tag":"eng","Data tag":"book, institute data","Data source":"\"The Complete Book of the Olympics\" by David Wallechinsky and Jaime Loucky, International Olympic Committee; Amateur Athletic Assocation","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Lolo Jones, Cleared for takeoff","URL":"http://www.nytimes.com/interactive/2012/07/18/sports/olympics/lolo-jones-cleared-for-takeoff.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Sports","Content tag":"Jones's 100-meter hurdles","Type":"animation, interactive","Language tag":"eng","Data tag":"institute data, sport technpogist","Data source":"Motion-capture data from Red Bull; Richard Kirby, sport technologist;\n Ralph V. Mann, Ph.D., author of \"The Mechanics of Sprinting and Hurdling\"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Connecting Music and Gesture","URL":"http://www.nytimes.com/interactive/2012/04/06/arts/music/the-connection-between-gesture-and-music.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Culture and religion","Content tag":"music","Type":"multi-media","Language tag":"eng","Data tag":"institute data","Data source":"Motion Capture Data By New York University Movement Lab","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Inside the Quartet","URL":"http://www.nytimes.com/interactive/2014/09/22/arts/music/kronos-quartet.html?_r=2","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Culture and religion","Content tag":"music","Type":"multi-media, 3D point capture","Language tag":"eng","Data tag":"interview","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A Cultrue of Bidding\n Forging an Art Market in China","URL":"http://www.nytimes.com/projects/2013/china-art-fraud/","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Business","Content tag":"art and auction market","Type":"multi-media, line chart, interactive, map","Language tag":"eng","Data tag":"interview, institute data","Data source":"China Association of Auctioneers (Payment status as of April 15, 2012)\n http://www.artprice.com/\n ARTS ECONOMICS FOR THE EUROPEAN FINE ART FOUNDATION","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Kepler’s Tally of Planets","URL":"http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Science","Content tag":"planet","Type":"animation, interactive, sorting","Language tag":"eng","Data tag":"gov open data","Data source":"NASA’s Kepler mission\n Mikulski Archive for Space Telescopes","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Deepwater Horizon Oil Spill: An Interactive Look at What Happened","URL":"http://www.nytimes.com/interactive/us/spill_index.html?ref=us","Images":"","Organization":"The New York Times","Organization_CN":"纽约时报","Topic":"Case collection","Content tag":"oil spill","Type":"multi-media, interactive, map, graphic, animation","Language tag":"eng","Data tag":"gov data, interview, survey","Data source":"U.S. Fish and Wildlife Service; National Oceanic and Atmospheric Administration; National Park Service; state and local officials","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"America's Election HQ","URL":"http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/","Images":"","Organization":"Fox News","Organization_CN":"福克斯","Topic":"Politics","Content tag":"election","Type":"table-like, profile-picuture, map, interactive, video","Language tag":"eng","Data tag":"media coverage, open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Bloomberg Billionaires","URL":"http://www.bloomberg.com/billionaires/2013-11-08/cya","Images":"","Organization":"Bloomberg","Organization_CN":"彭博社","Topic":"Business","Content tag":"billionaires","Type":"real-time, interactive, illustration, table-like, ranking","Language tag":"eng","Data tag":"biz data service","Data source":"Bloomberg","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Senate Election Results","URL":"http://www.bloomberg.com/politics/data/2014-11-05/senate-election-results","Images":"","Organization":"Bloomberg","Organization_CN":"彭博社","Topic":"Politics","Content tag":"election","Type":"map, interactive","Language tag":"eng","Data tag":"media coverage, open data","Data source":"AP Elections","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Killing Kennedy","URL":"http://kennedyandoswald.com/#!/premiere-screen","Images":"","Organization":"National Geographic","Organization_CN":"国家地理","Topic":"Politics","Content tag":"killing kennedy","Type":"interactive, multi-media","Language tag":"eng","Data tag":"documents","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"What the world eats","URL":"http://www.nationalgeographic.com/what-the-world-eats/","Images":"","Organization":"National Geographic Channel","Organization_CN":"国家地理","Topic":"Social issue","Content tag":"food","Type":"timeline, pie chart, interactive, sorting,","Language tag":"eng","Data tag":"gov open data","Data source":"FAOSTAT\n http://faostat3.fao.org/download/FB/FBS/E","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Public spending by UK government department: an interactive guide","URL":"http://www.theguardian.com/news/datablog/interactive/2011/oct/26/public-spending-uk-government-department","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Politics","Content tag":"gov budget","Type":"bubble chart, interactive","Language tag":"eng","Data tag":"gov open data","Data source":"https://docs.google.com/spreadsheets/d/1v1Rap-u5H5n7CQD1EIJ_yguJhDAwhFZ_SRu8uvU2bCg/edit?hl=en_GB#gid=0&vpid=A4","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"NSA files Decoded: what the relations mean for you","URL":"http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Security","Content tag":"digital surveillance","Type":"interactive, multi-media","Language tag":"eng","Data tag":"interview, documents, research paper, survey response, institution data","Data source":"1, http://arxiv.org/pdf/1111.4503v1.pdf\n 2, https://www.epic.org/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The first Guardian data journalism: May 5, 1821","URL":"http://www.theguardian.com/news/datablog/2011/sep/26/data-journalism-guardian?INTCMP=SRCH","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Education","Content tag":"school in Manchester","Type":"table","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"March Madness: do the tallest teams always win the NCAA championship?","URL":"http://www.theguardian.com/sport/interactive/2013/mar/18/ncaa-tournament-team-matchups-height#g=Top%2025","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Sports","Content tag":"relationship between height & win","Type":"search bar, sorting, chart, interactive","Language tag":"eng","Data tag":"institute data(NCAA Division I basketball teams)","Data source":"The Guardian analysed the average height of NCAA Division I basketball teams over the course of more than 5,000 games during the 2012 season","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"NFL salaries by team and position _ interactive","URL":"http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Sports","Content tag":"NFL salary","Type":"bar chart, interactive, bubble chart","Language tag":"eng","Data tag":"institute data","Data source":"NFL and Spotrac http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position#baltimore-ravens,san-francisco-49ers","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Gay rights in the US, state by state","URL":"http://www.theguardian.com/world/interactive/2012/may/08/gay-rights-united-states","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Social issue","Content tag":"LGBT rights","Type":"pie chart, interactive, sorting","Language tag":"eng","Data tag":"court public info","Data source":"supreme court: gay marriage legal across the US(URL 404)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The state of our union is … dumber:\n How the linguistic standard of the presidential address has declined","URL":"http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level","Images":"","Organization":"The Guardian","Organization_CN":"卫报","Topic":"Politics","Content tag":"reading level of US presidents","Type":"interactive, scatter diagram, modelling(Flesch_Kincaid readability tests)","Language tag":"eng","Data tag":"research data","Data source":"1. Gerhard Peters(http://www.presidency.ucsb.edu/sou.php)\n 2. Brad Borevitz(http://stateoftheunion.onetwothree.net/texts/)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A global look at cardiac risk factors","URL":"http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/","Images":"","Organization":"The Washington Post","Organization_CN":"华盛顿邮报","Topic":"Social issue","Content tag":"health","Type":"animation, timeline, sorting, chart","Language tag":"eng","Data tag":"institute data","Data source":"Global Burden of Metabolic Risk Factors of Chronic Diseases Collaborating Group","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Results from the 2014 Midterm Election","URL":"http://graphics.wsj.com/midterm-election-results-2014/","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Politics","Content tag":"election","Type":"map, interactive, table-like, search bar","Language tag":"eng","Data tag":"media coverage, open data","Data source":"Associated Press","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"TRIALS","URL":"http://projects.wsj.com/trials/#chapter=1","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Social issue","Content tag":"medical trials to save kids with genetic disease","Type":"multi-media, animation, sorting","Language tag":"eng","Data tag":"interview, advisory committee hearing","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"U.S. Unemployment: A Historical View","URL":"http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522","Images":"","Organization":"WSJ","Organization_CN":"华尔街日报","Topic":"Social issue","Content tag":"unemployment","Type":"chart, interactive","Language tag":"eng","Data tag":"gov data, survey","Data source":"Bureau of Labor Statistics, Current Population Survey","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"A Model of Breast Cancer Causation","URL":"http://www.cabreastcancer.org/causes/#","Images":"","Organization":"University of California","Organization_CN":"加州大学","Topic":"Social issue","Content tag":"health","Type":"modelling, interactive, sorting","Language tag":"eng","Data tag":"university and institute research","Data source":"University of California San Francisco, California Breast Cancer Research Program, Periscopic（an industry-leading information visualization firm）","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Flooding & Flood Zones","URL":"http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702","Images":"","Organization":"WNYC","Organization_CN":"纽约公共广播电台","Topic":"Natural disaster","Content tag":"actual and predicted flooding","Type":"map, search bar, sorting","Language tag":"eng","Data tag":"gov open data, survey","Data source":"Flooding Survey\n Based on Nov. 11, 2012 interim data from the FEMA Modeling Task Force Hurricane Sandy Impact Analysis（http://fema.maps.arcgis.com/home/item.html?id=307dd522499d4a44a33d7296a5da5ea0), which combines detailed elevation data with U.S. Geological Survey inspections of high water marks.(http://www.usgs.gov/blogs/features/usgs_top_story/sandy/)\n Flood Zones\n Coastline inundation zones calculated by the U.S. Army Corps of Engineers using worst-case storm, wave and tide calculations together with elevation data. View the New Jersey hurricane evacuation studies, and the New York state evacuation studies. In New York City, the state zones are superseded by the city's own evacuation zones, which draw from the USACE surveys.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"China Global Investment Tracker","URL":"http://www.aei.org/china-global-investment-tracker/","Images":"","Organization":"THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION","Organization_CN":"THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION","Topic":"Business","Content tag":"investment","Type":"interactive, map","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Government Lends to Rebuild in Flood Zones","URL":"http://projects.propublica.org/sandy-sba/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"loans rebuliding flood zones","Type":"map, search bar, interactive, sorting","Language tag":"eng","Data tag":"gov open data","Data source":"SBA\n FEMA(Federal Emergency Management Agency)\n http://www.fema.gov/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Opportunity Gap","URL":"http://projects.propublica.org/schools/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Education","Content tag":"relationship between states & education","Type":"search bar, chart","Language tag":"eng","Data tag":"survey by gov","Data source":"1.U.S. Department of Education Office for Civil Rights(http://www2.ed.gov/about/offices/list/ocr/index.html)\n 2. National Center for Education Statistics(http://nces.ed.gov/)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Dollars for Docs\n How Industry Dollars Reach Your Doctors","URL":"https://projects.propublica.org/docdollars/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"company payments to doctors","Type":"search bar, sorting, chart","Language tag":"eng","Data tag":"gov open data","Data source":"The Centers for Medicare and Medicaid Services Open Payments data\n https://www.cms.gov/openpayments/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Nursing Home Inspect\n Find Nursing Home Problems in Your State","URL":"http://projects.propublica.org/nursing-homes/","Images":"","Organization":"ProPublica","Organization_CN":"ProPublica","Topic":"Social issue","Content tag":"health","Type":"map, bar chart, search bar, interactive","Language tag":"eng","Data tag":"gov open data","Data source":"the U.S. Centers for Medicare and Medicaid Services. \n 1. https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/downloads/sfflist.pdf\n 2. http://projects.propublica.org/nursing-homes/summary","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Election Party!","URL":"http://elections.npr.org/#","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Politics","Content tag":"election","Type":"broadcast, table-like, real-time,","Language tag":"eng","Data tag":"open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Fire Forecast","URL":"http://apps.npr.org/fire-forecast/","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Natural disaster","Content tag":"forecast fire","Type":"map, search bar","Language tag":"eng","Data tag":"gov open data","Data source":"U.S. Forest Service","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Visualizing How A Population Grows To 7 Billion","URL":"http://www.npr.org/2011/10/31/141816460/visualizing-how-a-population-grows-to-7-billion","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Social issue","Content tag":"population","Type":"multi-media, line chart, animation","Language tag":"eng","Data tag":"gov open data","Data source":"U.N. Population Division","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Playgrounds For Everyone","URL":"http://www.playgroundsforeveryone.com/","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Social issue","Content tag":"playground","Type":"map, search bar","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Poisoned Places Map","URL":"http://www.npr.org/news/graphics/2011/10/toxic-air/#4.00/39.00/-84.00","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Environment","Content tag":"air pollution","Type":"map, search bar, interactive","Language tag":"eng","Data tag":"gov data","Data source":"The Poisoned Places series relied on analysis of four datasets relating to sources of air pollution regulated by the U.S. Environmental Protection Agency: the Clean Air Act watch list, the Air Facility System (AFS), the Toxics Release Inventory (TRI) and the Risk Screening Environmental Indicators model (RSEI).\n http://www.npr.org/2011/11/07/142024951/poisoned-places-about-the-data","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Explore China's Global Reach","URL":"http://www.npr.org/2011/06/10/136930746/explore-chinas-global-reach","Images":"","Organization":"NPR","Organization_CN":"国家公共电台","Topic":"Business","Content tag":"investment","Type":"table, interactive","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"government shutdown 2013","URL":"http://labs.enigma.io/shutdown2013/","Images":"","Organization":"Enigma","Organization_CN":"Enigma","Topic":"Politics","Content tag":"government debt","Type":"treemap, interactive, real-time","Language tag":"eng","Data tag":"gov open data","Data source":"Furloughed employee data from agency contingency plans submitted to OMB (https://www.whitehouse.gov/omb/contingency-plans), compiled in Google Spreadsheet.\n Average employee salary data from Asbury Park Press federal salaries dataset (22MB .zip, https://t.co/MUblpcU2Qb)\n Archived WIC Program food cost data (http://web.archive.org/web/20130705090557/http://www.fns.usda.gov/pd/24wicfood$.htm)\n Source code and data available on Github (https://github.com/dandelany/shutdown2013)","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Election Night: Special Coverage: The 2014 Midterms","URL":"http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/","Images":"","Organization":"Five Thirty Eight Live","Organization_CN":"538","Topic":"Politics","Content tag":"election","Type":"live feed, chart, photo, map","Language tag":"eng","Data tag":"interview and gov open data","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Flight Patterns","URL":"http://www.aaronkoblin.com/work/flightpatterns/","Images":"","Organization":"Aaron Koblin","Organization_CN":"Aaron Koblin","Topic":"Science","Content tag":"flight path","Type":"3D, interactive","Language tag":"eng","Data tag":"gov data, research","Data source":"This work was originally developed as a series of experiments for the project \"Celestial Mechanics\" by colleagues Scott Hessels and Gabriel Dunne at UCLA. FAA data was parsed and plotted using the Processing programming environment.","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Codebases: Millions Lines of Code","URL":"http://www.informationisbeautiful.net/visualizations/million-lines-of-code/","Images":"","Organization":"Information is beautiful","Organization_CN":"Information is beautiful","Topic":"Science","Content tag":"codebase","Type":"","Language tag":"eng","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Audubon's Birds and Climate Change Report\n 314 Species on the Brink","URL":"http://climate.audubon.org/","Images":"","Organization":"National Audubon Society","Organization_CN":"National Audubon Society","Topic":"Environment","Content tag":"animal protection","Type":"search bar, map, sorting","Language tag":"eng","Data tag":"report, observation, survey","Data source":"the Audubon Christmas Bird Count and the North American Breeding Bird Survey\n http://climate.audubon.org/article/audubon-report-glance","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Bear 71","URL":"http://bear71.nfb.ca/#/bear71","Images":"","Organization":"NBF","Organization_CN":"NBF","Topic":"Environment","Content tag":"animal","Type":"animation, multi-media, interactive","Language tag":"eng","Data tag":"monitor, documentary","Data source":"a true story of a bear monitored by wildlife conservation officers from 2001 to 2009","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"U.S. Gun Deaths in 2013","URL":"http://guns.periscopic.com/?year=2013","Images":"","Organization":"Periscopic","Organization_CN":"Periscopic","Topic":"","Content tag":"","Type":"","Language tag":"","Data tag":"","Data source":"","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Exploring the Reach, Frequency and Impact of Terrorism Around the World","URL":"http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world","Images":"","Organization":"Periscopic","Organization_CN":"Periscopic","Topic":"Security","Content tag":"terrorism","Type":"timeline, map, interactive, barchart, sorting","Language tag":"eng","Data tag":"institute open data, gov open data","Data source":"1, National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2013). Global Terrorism Database [Data file]. Retrieved from http://www.start.umd.edu/gtd\n 2. United States Department of State, Bureau of Counterterrorism, Country Reports on Terrorism 2013\n 3. United States Department of State, Bureau of Public Affairs, http://www.state.gov/r/pa/prs/index.htm","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Out of Sight, Out of Mind.","URL":"http://drones.pitchinteractive.com/","Images":"","Organization":"pitchinc","Organization_CN":"pitchinc","Topic":"Social issue","Content tag":"death by drone strike","Type":"timeline, bar chart, annimation","Language tag":"eng","Data tag":"institution data, media coverage","Data source":"The bureau of investigative journalism https://www.thebureauinvestigates.com/category/projects/drones/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?","URL":"http://www.popsci.com/science/article/2013-05/energy-gap","Images":"","Organization":"Popular Science","Organization_CN":"Popular Science","Topic":"Science","Content tag":"energy","Type":"infographic(chart), modelling(computer program)","Language tag":"eng","Data tag":"gov open data, survey","Data source":"U.S. Energy Information Administration","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Poverty Tracker","URL":"http://povertytracker.robinhood.org/","Images":"","Organization":"Robin Hood","Organization_CN":"Robin Hood","Topic":"Social issue","Content tag":"poverty in NY","Type":"interactive, bubble chart, sorting","Language tag":"eng","Data tag":"survey","Data source":"These statistics emerge from a survey developed by Columbia University and Robin Hood to provide a more accurate picture of poverty in New York City. The survey pool came from a fixed panel of approximately 2,300 residents from the five boroughs, many from families living in poverty (those with an annual income of less than $11,722 per year for individuals and $23,497 for a family of four).","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook","URL":"http://techcrunch.com/2014/02/25/the-age-of-acquisitions/","Images":"","Organization":"Tech Crunch","Organization_CN":"Tech Crunch","Topic":"Business","Content tag":"acquisitions of tech giants","Type":"interactive, sorting, visualization, bar chart, table","Language tag":"eng","Data tag":"institute data","Data source":"Business insurance provider Simply Business created this infographic","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001_2012","URL":"http://www.thenation.com/afghanistan-database/","Images":"","Organization":"The Nation","Organization_CN":"The Nation","Topic":"Security","Content tag":"fatalities due to war","Type":"interactive,bar chart, map","Language tag":"eng","Data tag":"media coverage, institute data,","Data source":"relies on an extensive survey of reliable media accounts for its raw data, and when no media account is available, on the casualty reports of NGOs, human rights organizations and ISAF (the International Security Assistance Force) http://www.thenation.com/article/civilian-casualties-afghanistan-2001-2012-guide/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":"","additional_notes":""},{"Input date":"20151105","Title":"China's overseas investment","URL":"http://multimedia.scmp.com/china-overseas-investments/","Images":"","Organization":"","Organization_CN":"","Topic":"Business","Content tag":"investment","Type":"interactive, table-like,","Language tag":"eng","Data tag":"institute open data","Data source":"American Enterprise Institute http://www.aei.org/china-global-investment-tracker/","Takeaways":"","Editor notes":"","showcase_in_depth":"","editor_info":"","tutorial_links":""}]
 
 /***/ },
-/* 296 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(297);
+	var content = __webpack_require__(294);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(299)(content, {});
+	var update = __webpack_require__(296)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35544,10 +35718,10 @@ webpackJsonp([0,1],[
 	}
 
 /***/ },
-/* 297 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(298)();
+	exports = module.exports = __webpack_require__(295)();
 	// imports
 	exports.push([module.id, "@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);", ""]);
 
@@ -35558,7 +35732,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 298 */
+/* 295 */
 /***/ function(module, exports) {
 
 	/*
@@ -35614,7 +35788,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 299 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

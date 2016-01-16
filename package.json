@@ -30,7 +30,7 @@
     "eslint-plugin-react": "^3.3.0",
     "material-ui": "^0.14.1",
     "react-tap-event-plugin": "^0.2.1",
-    "webpack": "^1.12.9",
+    "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
