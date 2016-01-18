@@ -11,7 +11,8 @@ var config = {
   ],
   resolve: { alias: {} },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
   ],
   output: {
     path: './build',
