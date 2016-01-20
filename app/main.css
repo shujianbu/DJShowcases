@@ -37,3 +37,9 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.feature {
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}

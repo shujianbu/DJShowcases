@@ -39,6 +39,7 @@
     "react": "^0.14.6",
     "react-addons": "^0.9.0",
     "react-dom": "^0.14.5",
+    "react-lazy-load": "^2.0.2",
     "style-loader": "^0.12.4",
     "url-loader": "^0.5.7"
   }
