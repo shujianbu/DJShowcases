@@ -14,6 +14,8 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import {ORGS} from './const';
 import DJTheme from './theme';
 
+import LazyLoad from 'react-lazy-load'; // TODO: evaluate if needed.
+
 injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
@@ -38,7 +40,7 @@ class StoryBoard extends React.Component {
 
     getLogo(name) {
         for(let i = 1; i < ORGS.length; i++) {
-            if(ORGS[i].label.indexOf(name) !== -1) {
+            if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
                 return './img/logo/' + ORGS[i].value + '.png';
             }
         }
@@ -75,7 +77,9 @@ class StoryBoard extends React.Component {
                 avatar = {this.state.data.logo} />
 
                 <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.state.data.element} subtitle = {this.state.data.cat}/>}>
-                    <img src= {this.state.data.featureImage} />
+                    <LazyLoad height={220}>
+                    <img src= {this.state.data.featureImage} className = 'feature'/>
+                    </LazyLoad>
                 </CardMedia>
 
                 <CardTitle title={this.state.data.title} />
