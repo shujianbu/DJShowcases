@@ -17,7 +17,7 @@
     "journalism",
     "visualization"
   ],
-  "author": "Shujian Bu, Yue Qiu",
+  "author": "Shujian Bu, Yue Qiu, Youyou Zhou",
   "bugs": {
     "url": "https://github.com/shujianbu/DJShowcases/issues"
   },
@@ -26,20 +26,20 @@
     "babel": "^5.8.34",
     "babel-core": "^5.8.34",
     "babel-loader": "^5.3.2",
-    "dsv-loader": "^1.0.3",
     "eslint-plugin-react": "^3.3.0",
-    "material-ui": "^0.14.1",
-    "react-tap-event-plugin": "^0.2.1",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
     "css-loader": "^0.16.0",
+    "dsv-loader": "^1.0.3",
     "file-loader": "^0.8.5",
+    "material-ui": "^0.14.1",
     "react": "^0.14.6",
     "react-addons": "^0.9.0",
     "react-dom": "^0.14.5",
     "react-lazy-load": "^2.0.2",
+    "react-tap-event-plugin": "^0.2.1",
     "style-loader": "^0.12.4",
     "url-loader": "^0.5.7"
   }

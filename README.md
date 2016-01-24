@@ -7,7 +7,8 @@
 npm install
 npm run dev
 ```
+
 ## TODO
-* store images locally
-* styling, responsive based on main site, filters, reset, %, colors (Youyou)
-* data aggreagation, topics -> chinese, add label -> category, add date, hyperlink (Yue)
+* add scripts to resizing
+* styling, responsive based on main site, filters, reset, %, colors
+* data aggreagation, topics -> chinese, add label -> category, add date and hyperlink
