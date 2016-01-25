@@ -14,32 +14,107 @@ body {
   font-size: 20px;
 }
 
-.storyBoard {
-  width: 30%;
-  float: left;
-  margin-left: 2%;
-  margin-top: 50px;
-  height: 400px;
+
+/*STORYBOARDS*/
+
+
+.story-board {
+	position: relative;
+	width: 30%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 50px;
 }
 
-.titleText div{
-  max-width: 85%;
+.story-board .card-title {
+	background:rgba(255,255,255,0.9);
+	padding:10px 16px 16px 16px !important;
+	height: 50px !important;
 }
 
-.imgOverlay {
-  padding: 0 16px 10px 16px !important;
+.story-board .card-title span {
+	font-size:1.1em !important;
+	line-height: 1.4 !important;
 }
 
-.imgOverlay span:first-child{
-  font-size: 14px !important;
-    width: 345px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.story-board .card-header {
+	/*position: absolute!important;*/
+	/*bottom: 0;*/
+	z-index: 1;
+	height:60px !important;
+	width:100%;
+	background:rgba(250,250,250,0.9);
+	border-top: 1px solid #eee;
+	padding:12px !important;
+}
+.story-board .card-header img {
+	width:25px !important;
+	height:25px !important;
+	vertical-align: middle !important;
+	margin-right: 12px !important;
+
+}
+.story-board .card-header span {
+	vertical-align: middle !important;
 }
 
-.feature {
-  height: 100%;
-  display: block;
-  margin: 0 auto;
+.story-board .feature {
+	position: relative;
+	width:100%;
+	height:auto;
+	display: block;
+	margin: 0 auto;
 }
+
+.story-board .image-overlay > div:nth-of-type(2) > div > div {
+	height:14px;
+	padding:5px 8px !important;
+	background:rgba(120,120,120,0.95)!important;
+}
+.story-board .image-overlay > div:nth-of-type(2) > div > div > div {
+	padding:0 !important;
+}
+.story-board .image-overlay > div:nth-of-type(2) > div > div > div span {
+	font-size:0.6em !important;
+	line-height: 1.4 !important;
+}
+
+
+.lazy-load-visible {
+	overflow-y: hidden;
+	height: 220px;
+}
+
+
+/*NAVIGATION BAR*/
+.nav-bar {
+	overflow-y:hidden; 
+}
+
+
+
+/*BREAKPOINTS: 850PX */
+@media (max-width: 850px) and (min-width: 480px) {
+	.story-board {
+		width: 47%;
+	}
+}
+@media (max-width: 479px) {
+	.story-board {
+		width: 97%;
+	}
+}
+
+
+@media (max-width: 600px) and (min-width: 480px) {
+	.lazy-load-visible {
+		height: 180px;
+	}
+}
+@media (max-width: 1000px) and (min-width: 851px) {
+	.lazy-load-visible {
+		height: 180px;
+	}
+}
+
+

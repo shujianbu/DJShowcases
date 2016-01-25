@@ -70,8 +70,9 @@ class FiltersSection extends React.Component {
     }
 
     render() {
+
       return (
-        <Toolbar style={{background:'#fafafa'}}>
+        <Toolbar className='nav-bar' style={{background:'#fafafa'}}>
           <ToolbarGroup key={0} float='left' className='dropdowns'>
             <DropDownMenu onChange={this.handleChange.bind(this, 'topic')} value={this.state.topic}>{this.topics}</DropDownMenu>
             <DropDownMenu onChange={this.handleChange.bind(this, 'org')} value={this.state.org}  >{this.orgs}</DropDownMenu>
@@ -82,6 +83,7 @@ class FiltersSection extends React.Component {
           </ToolbarGroup>
       </Toolbar>
       );
+
     }
 };
 
