@@ -10,28 +10,28 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
 body {
-	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 20px;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
 }
 
 .storyBoard {
-	width: 30%;
-	float: left;
-	margin-left: 2%;
-	margin-top: 50px;
-	height: 400px;
+  width: 30%;
+  float: left;
+  margin-left: 2%;
+  margin-top: 50px;
+  height: 400px;
 }
 
 .titleText div{
-	max-width: 85%;
+  max-width: 85%;
 }
 
 .imgOverlay {
-	padding: 0 16px 10px 16px !important;
+  padding: 0 16px 10px 16px !important;
 }
 
 .imgOverlay span:first-child{
-	font-size: 14px !important;
+  font-size: 14px !important;
     width: 345px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -39,7 +39,7 @@ body {
 }
 
 .feature {
-	height: 100%;
-	display: block;
-	margin: 0 auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }

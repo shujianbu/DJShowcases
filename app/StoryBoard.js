@@ -20,73 +20,70 @@ injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: this.parseData(this.props.data)
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: this.parseData(this.props.data)
+    };
+  }
+
+  getChildContext() {
+    return {
+      muiTheme: ThemeManager.getMuiTheme(DJTheme)
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({data: this.parseData(nextProps.data)});
+  }
+
+  getLogo(name) {
+    for(let i = 1; i < ORGS.length; i++) {
+      if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
+        return './img/logo/' + ORGS[i].value + '.png';
+      }
+    }
+    return './img/logo/default.png';
     }
 
-    getChildContext() {
-        return {
-            muiTheme: ThemeManager.getMuiTheme(DJTheme)
-        };
-    }
+  getFeature(id) {
+    return './img/features/' + id + '.png';
+    // return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
+  }
 
+  parseData(data) {
+    var ret = {};
+    ret.id = data['ID'];
+    ret.title = data['Title'];
+    ret.url = data['URL'];
+    ret.orgen = data['Organizationen'];
+    ret.cat = data['Topic'];
+    ret.element = data['Type'];
+    ret.img = data['Images'];
+    ret.logo = this.getLogo(ret.orgen);
+    ret.featureImage = this.getFeature(ret.id);
+    return ret;
+  }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({data: this.parseData(nextProps.data)});
-    }
+  render() {
+    return (
+      <Card className='storyBoard'>
+        <CardHeader
+          title = {this.state.data.orgen}
+          subtitle = {this.state.data.orgcn}
+          className = 'titleText'
+          avatar = {this.state.data.logo} />
 
-    getLogo(name) {
-        for(let i = 1; i < ORGS.length; i++) {
-            if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
-                return './img/logo/' + ORGS[i].value + '.png';
-            }
-        }
-        return './img/logo/default.png';
-    }
+          <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.state.data.element} subtitle = {this.state.data.cat}/>}>
+            <LazyLoad height={220}>
+              <img src= {this.state.data.featureImage} className = 'feature'/>
+            </LazyLoad>
+          </CardMedia>
 
-    getFeature(id) {
-        return './img/features/' + id + '.png';
-        // return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
-    }
-
-    parseData(data) {
-        var ret = {};
-        ret.id = data['ID'];
-        ret.title = data['Title'];
-        ret.url = data['URL'];
-        ret.orgen = data['Organizationen'];
-        ret.cat = data['Topic'];
-        ret.element = data['Type'];
-        ret.img = data['Images'];
-        ret.logo = this.getLogo(ret.orgen);
-        ret.featureImage = this.getFeature(ret.id);
-        return ret;
-    }
-
-    render() {
-
-        return (
-            <Card className='storyBoard'>
-
-                <CardHeader
-                title = {this.state.data.orgen}
-                subtitle = {this.state.data.orgcn}
-                className = 'titleText'
-                avatar = {this.state.data.logo} />
-
-                <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.state.data.element} subtitle = {this.state.data.cat}/>}>
-                    <LazyLoad height={220}>
-                    <img src= {this.state.data.featureImage} className = 'feature'/>
-                    </LazyLoad>
-                </CardMedia>
-
-                <CardTitle title={this.state.data.title} />
-            </Card>
-        );
-    }
+          <CardTitle title={this.state.data.title} />
+      </Card>
+    );
+  }
 };
 
 StoryBoard.childContextTypes = {
