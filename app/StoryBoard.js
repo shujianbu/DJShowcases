@@ -47,21 +47,22 @@ class StoryBoard extends React.Component {
         return './img/logo/default.png';
     }
 
-    getFeature(name) {
-        return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
+    getFeature(id) {
+        return './img/features/' + id + '.png';
+        // return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
     }
 
     parseData(data) {
         var ret = {};
+        ret.id = data['ID'];
         ret.title = data['Title'];
         ret.url = data['URL'];
-        ret.orgen = data['Organization'];
-        ret.orgcn = data['Organization_CN'];
+        ret.orgen = data['Organizationen'];
         ret.cat = data['Topic'];
         ret.element = data['Type'];
         ret.img = data['Images'];
         ret.logo = this.getLogo(ret.orgen);
-        ret.featureImage = this.getFeature();
+        ret.featureImage = this.getFeature(ret.id);
         return ret;
     }
 
