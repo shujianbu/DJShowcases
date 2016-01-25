@@ -10,8 +10,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
 body {
-	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 20px;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
 }
 
 
@@ -52,11 +52,11 @@ body {
 	height:25px !important;
 	vertical-align: middle !important;
 	margin-right: 12px !important;
+
 }
 .story-board .card-header span {
 	vertical-align: middle !important;
 }
-
 
 .story-board .feature {
 	position: relative;
@@ -116,6 +116,5 @@ body {
 		height: 180px;
 	}
 }
-
 
 
