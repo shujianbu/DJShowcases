@@ -59,7 +59,7 @@ class StoryBoard extends React.Component {
         ret.url = data['URL'];
         ret.orgen = data['Organizationen'];
         ret.cat = data['Topic'];
-        ret.element = data['Type'];
+        ret.element = data['Categories'];
         ret.img = data['Images'];
         ret.logo = this.getLogo(ret.orgen);
         ret.featureImage = this.getFeature(ret.id);
@@ -69,21 +69,20 @@ class StoryBoard extends React.Component {
     render() {
 
         return (
-            <Card className='storyBoard'>
+            <Card className='story-board'>
 
-                <CardHeader
-                title = {this.state.data.orgen}
-                subtitle = {this.state.data.orgcn}
-                className = 'titleText'
-                avatar = {this.state.data.logo} />
+                <CardTitle className="card-title" title={this.state.data.title} />
 
-                <CardMedia overlay={<CardTitle className = 'imgOverlay' title= {this.state.data.element} subtitle = {this.state.data.cat}/>}>
-                    <LazyLoad height={220}>
+                <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.element} subtitle = {this.state.data.cat}/>}>
+                    <LazyLoad>
                     <img src= {this.state.data.featureImage} className = 'feature'/>
                     </LazyLoad>
                 </CardMedia>
+                <CardHeader className='card-header'
+                title = {this.state.data.orgen}
+                subtitle = '媒体名字'
+                avatar = {this.state.data.logo} />
 
-                <CardTitle title={this.state.data.title} />
             </Card>
         );
     }
