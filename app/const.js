@@ -45,7 +45,8 @@ const ORGS = [
   { value: '18', label: 'Los Angeles Times Data Desk', ch: '洛杉矶时报'},
   { value: '19', label: 'BuzzFeed',                    ch: '' },
   { value: '20', label: 'Al Jazeera America',          ch: '半岛电台美国' },
-  { value: '21', label: 'Vox Media',                   ch: '' }
+  { value: '21', label: 'Vox Media',                   ch: '' },
+  { value: '22', label: 'Associated Press',            ch: '美联社' },
 ];
 
 const TYPES = [

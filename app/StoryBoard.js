@@ -44,12 +44,19 @@ class StoryBoard extends React.Component {
       }
     }
     return './img/logo/default.png';
-    }
+  }
 
+    getCN(name) {
+      for(let i = 1; i < ORGS.length; i++) {
+        if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
+          return ORGS[i].ch;
+        }
+      }
+      return '';
+    }
 
   getFeature(id) {
     return './img/features/' + id + '.png';
-    // return './img/features/default' + Math.ceil(Math.random() * 5) + '.png';
   }
 
   parseData(data) {
@@ -58,6 +65,7 @@ class StoryBoard extends React.Component {
     ret.title = data['Title'];
     ret.url = data['URL'];
     ret.orgen = data['Organizationen'];
+    ret.orgcn = this.getCN(ret.orgen);
     ret.cat = data['Topic'];
     // ret.element = data['Type'];
     ret.element = data['Categories'];
@@ -69,21 +77,18 @@ class StoryBoard extends React.Component {
 
   render() {
     return (
-        <Card className='story-board'>
-
-            <CardTitle className="card-title" title={this.state.data.title} />
-
-            <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.element} subtitle = {this.state.data.cat}/>}>
-                <LazyLoad>
-                <img src= {this.state.data.featureImage} className = 'feature'/>
-                </LazyLoad>
-            </CardMedia>
-            <CardHeader className='card-header'
-            title = {this.state.data.orgen}
-            subtitle = '媒体名字'
-            avatar = {this.state.data.logo} />
-
-        </Card>
+      <Card className='story-board'>
+        <CardTitle className="card-title" title={this.state.data.title} />
+        <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.element} subtitle = {this.state.data.cat}/>}>
+            <LazyLoad>
+            <img src= {this.state.data.featureImage} className = 'feature'/>
+            </LazyLoad>
+        </CardMedia>
+        <CardHeader className='card-header'
+        title = {this.state.data.orgen}
+        subtitle = {this.state.data.orgcn}
+        avatar = {this.state.data.logo} />
+      </Card>
     );
   }
 };
