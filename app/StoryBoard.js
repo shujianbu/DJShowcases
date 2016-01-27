@@ -37,41 +37,18 @@ class StoryBoard extends React.Component {
     this.setState({data: this.parseData(nextProps.data)});
   }
 
-  getLogo(name) {
-    for(let i = 1; i < ORGS.length; i++) {
-      if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
-        return './img/logo/' + ORGS[i].value + '.png';
-      }
-    }
-    return './img/logo/default.png';
-  }
-
-    getCN(name) {
-      for(let i = 1; i < ORGS.length; i++) {
-        if(ORGS[i].label.toLowerCase().indexOf(name.toLowerCase()) !== -1 || name.toLowerCase().indexOf(ORGS[i].label.toLowerCase()) !== -1) {
-          return ORGS[i].ch;
-        }
-      }
-      return '';
-    }
-
-  getFeature(id) {
-    return './img/features/' + id + '.png';
-  }
-
   parseData(data) {
     var ret = {};
     ret.id = data['ID'];
     ret.title = data['Title'];
     ret.url = data['URL'];
-    ret.orgen = data['Organizationen'];
-    ret.orgcn = this.getCN(ret.orgen);
-    ret.cat = data['Topic'];
-    // ret.element = data['Type'];
-    ret.element = data['Categories'];
-    ret.img = data['Images'];
-    ret.logo = this.getLogo(ret.orgen);
-    ret.featureImage = this.getFeature(ret.id);
+    ret.topic = data['Categories'];
+    ret.elements = data['Element tag'];
+    ret.orgId = data['OrgId'];
+    ret.orgen = ORGS[ret.orgId] ? ORGS[ret.orgId]['en'] : data['Organizationen'];
+    ret.orgcn = ORGS[ret.orgId] ? ORGS[ret.orgId]['ch'] : '';
+    ret.logo = ORGS[ret.orgId] ? ('./img/logo/' + ret.orgId + '.png') : './img/logo/default.png';
+    ret.featureImage = './img/features/' + ret.id + '.png';
     return ret;
   }
 
@@ -79,7 +56,7 @@ class StoryBoard extends React.Component {
     return (
       <Card className='story-board'>
         <CardTitle className="card-title" title={this.state.data.title} />
-        <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.element} subtitle = {this.state.data.cat}/>}>
+        <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.topic} subtitle = {this.state.data.elements}/>}>
             <LazyLoad>
             <img src= {this.state.data.featureImage} className = 'feature'/>
             </LazyLoad>

@@ -25,14 +25,14 @@ class FiltersSection extends React.Component {
   constructor(props) {
     super(props);
 
-    this.topics = populateMenus(TOPICS);
     this.orgs   = populateMenus(ORGS);
+    this.topics = populateMenus(TOPICS);
     this.types  = populateMenus(TYPES);
 
     function populateMenus(data) {
       let ret = [];
-      for (let i = 0; i < data.length; i++ ) {
-        ret.push(<MenuItem value={data[i].value} key={i} primaryText={data[i].label} />);
+      for(var ind in data) {
+        ret.push(<MenuItem value={ind} key={ind} primaryText={data[ind].ch} />);
       }
       return ret;
     }

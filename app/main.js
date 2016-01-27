@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FiltersSection from './FiltersSection';
 import BoardContainer from './BoardContainer';
-import data from './sample.csv';
+import data from './data.csv';
 
 class APP extends React.Component {
   constructor() {

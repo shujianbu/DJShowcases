@@ -17,7 +17,6 @@ body {
 
 /*STORYBOARDS*/
 
-
 .story-board {
 	position: relative;
 	width: 30%;
@@ -67,31 +66,28 @@ body {
 }
 
 .story-board .image-overlay > div:nth-of-type(2) > div > div {
-	height:14px;
+	height:30px;
 	padding:5px 8px !important;
-	background:rgba(120,120,120,0.95)!important;
+	background:rgba(120,120,120,0.9)!important;
 }
 .story-board .image-overlay > div:nth-of-type(2) > div > div > div {
 	padding:0 !important;
 }
+
 .story-board .image-overlay > div:nth-of-type(2) > div > div > div span {
 	font-size:0.6em !important;
 	line-height: 1.4 !important;
 }
-
 
 .lazy-load-visible {
 	overflow-y: hidden;
 	height: 220px;
 }
 
-
 /*NAVIGATION BAR*/
 .nav-bar {
 	overflow-y:hidden;
 }
-
-
 
 /*BREAKPOINTS: 850PX */
 @media (max-width: 850px) and (min-width: 480px) {
@@ -99,18 +95,19 @@ body {
 		width: 47%;
 	}
 }
+
 @media (max-width: 479px) {
 	.story-board {
 		width: 97%;
 	}
 }
 
-
 @media (max-width: 600px) and (min-width: 480px) {
 	.lazy-load-visible {
 		height: 180px;
 	}
 }
+
 @media (max-width: 1000px) and (min-width: 851px) {
 	.lazy-load-visible {
 		height: 180px;
