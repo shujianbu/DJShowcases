@@ -1,25 +1,24 @@
-## About
 ![Overview](https://raw.githubusercontent.com/shujianbu/DJShowcases/master/overview.png)
+
+## About
 
 ## Data
 
 ## Install
-```
+```sh
 npm install
 npm run dev
 ```
 
 ## TODO
-* filtering bug
-* state do not rerender
-* modal of info and methodology
-* redesign -> check isb site
-* add scripts to resizing ?
-* add readme
-* styling, responsive based on main site, filters, reset, %, colors
-* data aggreagation, topics -> chinese, add label -> category, add date and hyperlink
 
-### Todos for Styling
-* Nav bar
+### functional
+* state should not rerender
+* add readme
+* data aggreagation, add date and hyperlink
+
+### styling
+* modal -> information
+* Nav bar, redesign ?
 * Overall theme (fonts, colors)
 * Event animations
