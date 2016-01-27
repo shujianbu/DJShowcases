@@ -1,74 +1,255 @@
 'use strict';
 
-const TOPICS = [
-  { value: '0',  label: '所有话题',     ch: '所有话题' },
-  { value: '1',  label: 'Politics',    ch: '政治' },
-  { value: '2',  label: 'Economy',     ch: '经济' },
-  { value: '3',  label: 'Business',    ch: '商业' },
-  { value: '4',  label: 'Media',       ch: '媒体' },
-  { value: '5',  label: 'Arts',        ch: '艺术' },
-  { value: '6',  label: 'Sports',      ch: '体育' },
-  { value: '7',  label: 'Security',    ch: '安全' },
-  { value: '8',  label: 'Disaster',    ch: '灾害' },
-  { value: '9',  label: 'Environment', ch: '环境' },
-  { value: '10', label: 'Technology',  ch: '技术' },
-  { value: '11', label: 'Science',     ch: '科学' },
-  { value: '12', label: 'Culture',     ch: '文化' },
-  { value: '13', label: 'Religion',    ch: '宗教' },
-  { value: '14', label: 'Education',   ch: '教育' },
-  { value: '15', label: 'Lifestyle',   ch: '生活' },
-  { value: '16', label: 'Fashion',     ch: '时尚' },
-  { value: '17', label: 'Travel',      ch: '旅行' },
-  { value: '18', label: 'Opinion',     ch: '观点' },
-  { value: '19', label: 'Health',      ch: '医疗' }
-];
+const TOPICS = {
+  '0': {
+    en: 'All',
+    ch: '所有类别'
+   },
+  '1': {
+    en: 'Politics',
+    ch: '政治'
+   },
+  '2': {
+    en: 'Economy',
+    ch: '经济'
+   },
+  '3': {
+    en: 'Business',
+    ch: '商业'
+   },
+  '4': {
+    en: 'Media',
+    ch: '媒体'
+   },
+  '5': {
+    en: 'Arts',
+    ch: '艺术'
+   },
+  '6': {
+    en: 'Sports',
+    ch: '体育'
+   },
+  '7': {
+    en: 'Security',
+    ch: '安全'
+   },
+  '8': {
+    en: 'Disaster',
+    ch: '灾害'
+   },
+  '9': {
+    en: 'Environment',
+    ch: '环境'
+   },
+  '10': {
+    en: 'Technology',
+    ch: '技术'
+   },
+  '11': {
+    en: 'Science',
+    ch: '科学'
+   },
+  '12': {
+    en: 'Culture',
+    ch: '文化'
+   },
+  '13': {
+    en: 'Religion',
+    ch: '宗教'
+   },
+  '14': {
+    en: 'Education',
+    ch: '教育'
+   },
+  '15': {
+    en: 'Lifestyle',
+    ch: '生活'
+   },
+  '16': {
+    en: 'Fashion',
+    ch: '时尚'
+   },
+  '17': {
+    en: 'Travel',
+    ch: '旅行'
+   },
+  '18': {
+    en: 'Opinion',
+    ch: '观点'
+   },
+  '19': {
+    en: 'Health',
+    ch: '医疗'
+  }
+};
 
-const ORGS = [
-  { value: '0',  label: '所有媒体',                     ch: '所有媒体' },
-  { value: '1',  label: 'The New York Times',          ch: '纽约时报' },
-  { value: '2',  label: 'The Guardian',                ch: '英国卫报' },
-  { value: '3',  label: 'NPR',                         ch: '国家公共电台' },
-  { value: '4',  label: 'ProPublica',                  ch: '' },
-  { value: '5',  label: 'The Wall Street Journal',     ch: '华尔街日报' },
-  { value: '6',  label: 'The Washington Post',         ch: '华盛顿邮报' },
-  { value: '7',  label: 'Bloomberg',                   ch: '彭博社' },
-  { value: '8',  label: 'Five Thirty Eight',           ch: '538' },
-  { value: '9',  label: 'Reuters',                     ch: '路透社' },
-  { value: '10', label: 'National Geographic',         ch: '国家地理' },
-  { value: '11', label: 'Chicago Tribune',             ch: '芝加哥论坛报' },
-  { value: '12', label: 'The Huffington Post',         ch: '赫芬顿邮报' },
-  { value: '13', label: 'WNYC',                        ch: '纽约公共广播电台' },
-  { value: '14', label: 'Popular Science',             ch: '大众科学'},
-  { value: '15', label: 'Scientific American',         ch: '科学美国人'},
-  { value: '16', label: 'Caixin',                ch: '财新'},
-  { value: '17', label: 'South China Morning Post',    ch: '南华早报'},
-  { value: '18', label: 'Los Angeles Times Data Desk', ch: '洛杉矶时报'},
-  { value: '19', label: 'BuzzFeed',                    ch: '' },
-  { value: '20', label: 'Al Jazeera America',          ch: '半岛电台美国' },
-  { value: '21', label: 'Vox Media',                   ch: '' },
-  { value: '22', label: 'Associated Press',            ch: '美联社' },
-];
+const ORGS = {
+  '0': {
+    'en': 'All',
+    'ch': '所有媒体'
+  },
+  '1': {
+    'en': 'The New York Times',
+    'ch': '纽约时报'
+  },
+  '2': {
+    'en': 'The Guardian',
+    'ch': '英国卫报'
+  },
+  '3': {
+    'en': 'NPR',
+    'ch': '国家公共电台'
+  },
+  '4': {
+    'en': 'ProPublica',
+    'ch': ''
+  },
+  '5': {
+    'en': 'The Wall Street Journal',
+    'ch': '华尔街日报'
+  },
+  '6': {
+    'en': 'The Washington Post',
+    'ch': '华盛顿邮报'
+  },
+  '7': {
+    'en': 'Bloomberg',
+    'ch': '彭博社'
+  },
+  '8': {
+    'en': 'Five Thirty Eight',
+    'ch': '538'
+  },
+  '9': {
+    'en': 'Reuters',
+    'ch': '路透社'
+  },
+  '10': {
+    'en': 'National Geographic',
+    'ch': '国家地理'
+  },
+  '11': {
+    'en': 'Chicago Tribune',
+    'ch': '芝加哥论坛报'
+  },
+  '12': {
+    'en': 'The Huffington Post',
+    'ch': '赫芬顿邮报'
+  },
+  '13': {
+    'en': 'WNYC',
+    'ch': '纽约公共广播电台'
+  },
+  '14': {
+    'en': 'Popular Science',
+    'ch': '大众科学'
+  },
+  '15': {
+    'en': 'Scientific American',
+    'ch': '科学美国人'
+  },
+  '16': {
+    'en': 'Caixin',
+    'ch': '财新'
+  },
+  '17': {
+    'en': 'South China Morning Post',
+    'ch': '南华早报'
+  },
+  '18': {
+    'en': 'Los Angeles Times',
+    'ch': '洛杉矶时报'
+  },
+  '19': {
+    'en': 'BuzzFeed',
+    'ch': ''
+  },
+  '20': {
+    'en': 'Al Jazeera',
+    'ch': '半岛电台'
+  },
+  '21': {
+    'en': 'Vox Media',
+    'ch': ''
+  },
+  '22': {
+    'en': 'Associated Press',
+    'ch': '美联社'
+  }
+};
 
-const TYPES = [
-  { value: '0',  label: '所有元素' },
-  { value: '1',  label: 'map' },
-  { value: '2',  label: 'bar' },
-  { value: '3',  label: 'line' },
-  { value: '4',  label: 'tree' },
-  { value: '5',  label: 'bubble' },
-  { value: '6',  label: '3D' },
-  { value: '7',  label: 'pie' },
-  { value: '8',  label: 'photo' },
-  { value: '9',  label: 'real-time' },
-  { value: '10', label: 'multi-media' },
-  { value: '11', label: 'animation' },
-  { value: '12', label: 'interactive' },
-  { value: '13', label: 'timeline' },
-  { value: '14', label: 'hierarchy' },
-  { value: '15', label: 'satellite imagery' },
-  { value: '16', label: 'database' },
-  { value: '17', label: 'game' }
-
-];
+const TYPES = {
+  '0': {
+    en: 'All',
+    ch: '可视类型'},
+  '1': {
+    en: 'map',
+    ch: '地图'
+  },
+  '2': {
+    en: 'bar',
+    ch: '柱状图'
+  },
+  '3': {
+    en: 'line',
+    ch: '线图'
+  },
+  '4': {
+    en: 'tree',
+    ch: '树图'
+  },
+  '5': {
+    en: 'bubble',
+    ch: '气泡图'
+  },
+  '6': {
+    en: '3D',
+    ch: '3D'
+  },
+  '7': {
+    en: 'pie',
+    ch: '饼图'
+  },
+  '8': {
+    en: 'photo',
+    ch: '照片'
+  },
+  '9': {
+    en: 'real-time',
+    ch: '实时'
+  },
+  '10': {
+    en: 'multi-media',
+    ch: '多媒体'
+  },
+  '11': {
+    en: 'animation',
+    ch: '动画'
+  },
+  '12': {
+    en: 'interactive',
+    ch: '交互'
+  },
+  '13': {
+    en: 'timeline',
+    ch: '时间轴'
+  },
+  '14': {
+    en: 'hierarchy',
+    ch: '层次'
+  },
+  '15': {
+    en: 'satellite imagery',
+    ch: '卫星'
+  },
+  '16': {
+    en: 'database',
+    ch: '数据库'
+  },
+  '17': {
+    en: 'game',
+    ch: '游戏'
+  }
+};
 
 export {TOPICS, ORGS, TYPES};
