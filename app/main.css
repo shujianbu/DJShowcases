@@ -60,7 +60,7 @@ body {
 .story-board .feature {
 	position: relative;
 	width:100%;
-	height:auto;
+	height: auto;
 	display: block;
 	margin: 0 auto;
 }
@@ -79,7 +79,7 @@ body {
 	line-height: 1.4 !important;
 }
 
-.lazy-load-visible {
+.feature-cont {
 	overflow-y: hidden;
 	height: 220px;
 }
