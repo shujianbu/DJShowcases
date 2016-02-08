@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/shujianbu/DJShowcases/issues"
   },
-  "homepage": "https://github.com/shujianbu/DJShowcases",
+  "homepage": "http://shujianbu.github.io/DJShowcases",
   "devDependencies": {
     "babel": "^5.8.34",
     "babel-core": "^5.8.34",
