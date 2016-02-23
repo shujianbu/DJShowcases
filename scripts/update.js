@@ -1,19 +1,64 @@
-var fs    = require('fs')
-  , path  = require('path')
-  , csv   = require('fast-csv')
-  , GsAPI = require('google-spreadsheet');
+var fs    = require('fs'),
+    path  = require('path'),
+    csv   = require('fast-csv'),
+    GsAPI = require('google-spreadsheet');
 
-var showcaseSheet = new GsAPI('1OamR5bdhiZ8V_AfHlnz9YetKQgMUyhgThq37rLcN9AA');
+var ws;
+var showcaseSheet = new GsAPI('1OamR5bdhiZ8V_AfHlnz9YetKQgMUyhgThq37rLcN9AA'),
+    outFile = 'app/testdata.csv',
+    outdata = [];
 
-showcaseSheet.getInfo(function(err, sheet_info){
 
-  console.log( sheet_info.title + ' is loaded' );
+var init = function () {
 
-  var sheet1 = sheet_info.worksheets[0];
-  console.log('sheet 1 title:', sheet1.title);
+  ws = fs.createWriteStream(outFile);
+  getGdata(0,0); 
 
-  sheet1.getRows( function( err, rows ){
-    console.log('sheet 1 length: ', rows.length);
-  });
+};
 
-});
+var numSheet, rowLen;
+var getGdata = function(sheetID, rowID) {
+	console.log(sheetID + "?" + numSheet + "," + rowID + "?" + rowLen);
+	if(sheetID == numSheet){
+    	save();
+    	return;
+    };
+
+	showcaseSheet.getInfo(function(err, sheet_info){
+		numSheet = sheet_info.worksheets.length;
+		curSheet = sheet_info.worksheets[sheetID];
+		sheetTitle = curSheet.title;
+		console.log(sheetTitle);
+		console.log('');
+		curSheet.getRows(function(err, row_data){
+			rowLen = row_data.length;
+			data = row_data[rowID];
+			var entry = {};
+		    entry['ID'] = data.id;
+		    entry['Title'] = data.title;
+		    entry['URL'] = data.url
+		    entry['Categories'] = data.categories;
+		    entry['Element tag'] = data.elementtag;
+		    entry['Author'] = data.author;
+		    entry['Organizationen'] = data.organizationen;
+		    outdata.push(entry);
+		    rowID++;
+	    	if(rowID == rowLen ){
+		    	rowID = 0;
+		    	sheetID++;
+		    };
+		    
+		    getGdata(sheetID, rowID);
+		});
+
+	});
+
+};
+
+var save = function() {
+	console.log('save');
+	csv.write(outdata, {headers: true}).pipe(ws);
+
+};
+
+init();
