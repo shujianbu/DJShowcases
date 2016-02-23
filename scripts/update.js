@@ -5,7 +5,7 @@ var fs    = require('fs'),
 
 var ws;
 var showcaseSheet = new GsAPI('1OamR5bdhiZ8V_AfHlnz9YetKQgMUyhgThq37rLcN9AA'),
-    outFile = 'app/testdata.csv',
+    outFile = 'app/data.csv',
     outdata = [];
 
 
@@ -18,7 +18,6 @@ var init = function () {
 
 var numSheet, rowLen;
 var getGdata = function(sheetID, rowID) {
-	console.log(sheetID + "?" + numSheet + "," + rowID + "?" + rowLen);
 	if(sheetID == numSheet){
     	save();
     	return;
@@ -35,12 +34,14 @@ var getGdata = function(sheetID, rowID) {
 			data = row_data[rowID];
 			var entry = {};
 		    entry['ID'] = data.id;
+		    entry['OrgId'] = data.orgid;
 		    entry['Title'] = data.title;
 		    entry['URL'] = data.url
 		    entry['Categories'] = data.categories;
 		    entry['Element tag'] = data.elementtag;
 		    entry['Author'] = data.author;
 		    entry['Organizationen'] = data.organizationen;
+		    entry["Publication Date"] = data.Publicationdate;
 		    outdata.push(entry);
 		    rowID++;
 	    	if(rowID == rowLen ){
