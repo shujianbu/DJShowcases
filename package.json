@@ -5,8 +5,10 @@
   "main": "app/main.js",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --devtool eval --progress --colors",
+    "build": "webpack",
+    "validate": "npm ls",
+    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +28,13 @@
     "babel": "^5.8.34",
     "babel-core": "^5.8.34",
     "babel-loader": "^5.3.2",
+    "chai": "^3.5.0",
     "eslint-plugin-react": "^3.3.0",
     "fast-csv": "^1.0.0",
     "google-spreadsheet": "^1.1.4",
+    "jsdom": "^8.0.4",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.7",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.0"
   },
