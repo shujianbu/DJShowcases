@@ -1,153 +1,253 @@
-OrgId,Organizationen,ID,Title,URL,Images,Author,Categories,Country,Element tag,Language tag,Publication Date
-1,New York Times,0010001,512 Paths to the White House,http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0,"ID + "".jpg/.png""",,政治,US,,eng,tk
-1,New York Times,0010002,The Facebook Offering: How It Compares,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,"ID + "".jpg/.png""",,经济,US,interactive,eng,tk
-1,New York Times,0010003,"How the Recession Reshaped the Economy, in 255 Charts",http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html,"ID + "".jpg/.png""",,经济,US,interactive,eng,tk
-1,New York Times,0010004,Who Will Win The Senate?,http://www.nytimes.com/newsgraphics/2014/senate-model/,"ID + "".jpg/.png""",,政治,US,interactive,eng,tk
-1,New York Times,0010005,The Most Detailed Maps You’ll See From the Midterm Elections,http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html,"ID + "".jpg/.png""",,政治,US,map,eng,tk
-1,New York Times,0010006,Four Ways to Slice Obama’s 2013 Budget Proposal,http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html,"ID + "".jpg/.png""",,政治,US,"bubble, interactive",eng,tk
-1,New York Times,0010007,The Back and Forth Over the Shutdown and Debt Ceiling,http://www.nytimes.com/interactive/2013/09/30/us/politics/the-back-and-forth-over-the-shutdown.html,"ID + "".jpg/.png""",,政治,US,timeline,eng,tk
-1,New York Times,0010009,Snow Fall: The Avalanche at Tunnel Creek,http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek,"ID + "".jpg/.png""",,灾害,US,"multi-media,map",eng,tk
-1,New York Times,0010010,Mapping the Spread of Drought Across the U.S.,http://www.nytimes.com/interactive/2014/upshot/mapping-the-spread-of-drought-across-the-us.html,"ID + "".jpg/.png""",,灾害,US,"map, timeline",eng,tk
-1,New York Times,0010012,Is It Better to Rent or Buy?,http://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html,"ID + "".jpg/.png""",,经济,US,"bar, interactive",eng,tk
-1,New York Times,0010013,Where are the hardest places to live in the U.S.?,http://www.nytimes.com/2014/06/26/upshot/where-are-the-hardest-places-to-live-in-the-us.html,"ID + "".jpg/.png""",,环境,US,"map, interactive, multi-media",eng,tk
-1,New York Times,0010014,The Jobless Rate for People Like You,http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html,"ID + "".jpg/.png""",,经济,US,interactive,eng,tk
-1,New York Times,0010015,How the Chicago Public School District Compares,http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html,"ID + "".jpg/.png""",,教育,US,,eng,tk
-1,New York Times,0010016,How Birth Year Influences Political Views,http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html,"ID + "".jpg/.png""",,政治,US,"interactive, visualization",eng,tk
-1,New York Times,0010017,Which Team Do You Cheer For? An N.B.A. Fan Map,http://www.nytimes.com/interactive/2014/05/12/upshot/12-upshot-nba-basketball.html,"ID + "".jpg/.png""",,体育,US,"map, interactive",eng,tk
-1,New York Times,0010019,Why Peyton Manning's Record Will Be Hard to Beat,http://www.nytimes.com/interactive/2014/10/19/upshot/peyton-manning-breaks-touchdown-passing-record.html?_r=0&abt=0002&abg=1,"ID + "".jpg/.png""",,体育,US,interactive,eng,tk
-1,New York Times,0010020,Racing Against History,http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html?_r=0,"ID + "".jpg/.png""",,体育,US,interactive,eng,tk
-1,New York Times,0010021,"One Race, Every Medalist Ever",http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html,"ID + "".jpg/.png""",,体育,US,interactive,eng,tk
-1,New York Times,0010022,"Lolo Jones, Cleared for takeoff",http://www.nytimes.com/interactive/2012/07/18/sports/olympics/lolo-jones-cleared-for-takeoff.html,"ID + "".jpg/.png""",,体育,US,interactive,eng,tk
-1,New York Times,0010023,Connecting Music and Gesture,http://www.nytimes.com/interactive/2012/04/06/arts/music/the-connection-between-gesture-and-music.html,"ID + "".jpg/.png""",,文化,US,multi-media,eng,tk
-1,New York Times,0010024,Inside the Quartet,http://www.nytimes.com/interactive/2014/09/22/arts/music/kronos-quartet.html?_r=2,"ID + "".jpg/.png""",,文化,US,multi-media,eng,tk
-1,New York Times,0010025,"A Cultrue of Bidding
-Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-fraud/,"ID + "".jpg/.png""",,经济,US,"multi-media, interactive, map",eng,tk
-1,New York Times,0010026,Kepler’s Tally of Planets,http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html,"ID + "".jpg/.png""",,科学,US,interactive,eng,tk
-1,New York Times,0010027,Deepwater Horizon Oil Spill: An Interactive Look at What Happened,http://www.nytimes.com/interactive/us/spill_index.html?ref=us,"ID + "".jpg/.png""",,环境,US,"multi-media, interactive, map",eng,tk
-1,New York Times,0010028,The Dawn Wall: El Capitan’s Most Unwelcoming Route,http://www.nytimes.com/interactive/2015/01/09/sports/the-dawn-wall-el-capitan.html,"ID + "".jpg/.png""",,体育,US,3D,eng,
-1,New York Times,0010029,What China Has Been Building in the South China Sea,http://www.nytimes.com/interactive/2015/07/30/world/asia/what-china-has-been-building-in-the-south-china-sea.html,"ID + "".jpg/.png""",,政治,US,"map, multimedia",eng,
-1,New York Times,0010030,Desperate crossing,http://www.nytimes.com/interactive/2015/09/03/magazine/migrants.html,"ID + "".jpg/.png""",,政治,US,multimedia,eng,
-1,New York Times,0010031,"A gift to New York, in time for the Pope",http://www.nytimes.com/interactive/2015/09/17/nyregion/st-patricks-cathedral-pope-francis-visit.html,"ID + "".jpg/.png""",,宗教,US,illustration,eng,
-1,New York Times,0010032,A New Whitney,http://www.nytimes.com/interactive/2015/04/19/arts/artsspecial/new-whitney-museum.html,"ID + "".jpg/.png""",,艺术,US,3D,eng,
-1,New York Times,0010033,The Families Funding the 2016 Presidential Election,http://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html,"ID + "".jpg/.png""",,政治,US,long form,eng,
-1,New York Times,0010034,Greenland is melting away,http://www.nytimes.com/interactive/2015/10/27/world/greenland-is-melting-away.html,"ID + "".jpg/.png""",,环境,US,"multi-media, long form",eng,
-1,New York Times,0010035,"Dear Architects, sound matters",http://www.nytimes.com/interactive/2015/12/29/arts/design/sound-architecture.html,"ID + "".jpg/.png""",,技术,US,"multi-media, long form",eng,
-1,New York Times,0010036,Stream of Foreign Wealth Flows to Elite New York Real Estate,http://www.nytimes.com/2015/02/08/nyregion/stream-of-foreign-wealth-flows-to-time-warner-condos.html,"ID + "".jpg/.png""",,商业,US,"3D, multi-media",eng,
-1,New York Times,0010037,Ten years after Katrina,http://www.nytimes.com/interactive/2015/08/26/us/ten-years-after-katrina.html,"ID + "".jpg/.png""",,灾害,US,"map, long form",eng,
-1,New York Times,0010038,The Best and Worst Places to Grow Up: How Your Area Compares,http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html,"ID + "".jpg/.png""",,政治,US,"map, interactive",eng,
-1,New York Times,0010039,Are you receiving a marriage bonus or penalty,http://www.nytimes.com/interactive/2015/04/16/upshot/marriage-penalty-couples-income.html,"ID + "".jpg/.png""",,经济,US,interactive,eng,
-1,New York Times,0010040,How gun trafficking gets around state laws,http://www.nytimes.com/interactive/2015/11/12/us/gun-traffickers-smuggling-state-gun-laws.html,"ID + "".jpg/.png""",,政治,US,map,eng,
-1,New York Times,0010041,You draw it: how family income predicts children's college chances,http://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html,"ID + "".jpg/.png""",,经济,US,game,eng,
-1,New York Times,0010042,A quick puzzle to test your problem solving,http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html,"ID + "".jpg/.png""",,文化,US,game,eng,
-1,New York Times,0010043,"In Other Countries, You’re as Likely to Be Killed by a Falling Object as by a Gun",http://www.nytimes.com/2015/12/05/upshot/in-other-countries-youre-as-likely-to-be-killed-by-a-falling-object-as-a-gun.html,"ID + "".jpg/.png""",,政治,US,other,eng,
-1,New York Times,0010044,"Bieber, Diplo & Skrillex Make A Hit",http://www.nytimes.com/interactive/2015/08/25/arts/music/justin-bieber-diplo-skrillex-make-a-hit-song.html,"ID + "".jpg/.png""",,文化,US,multi-media,eng,
-1,New York Times,0010045,How we changed our thinking on gay marriage,http://www.nytimes.com/interactive/2015/06/26/us/changed-thinking-on-gay-marriage.html,"ID + "".jpg/.png""",,观点,US,multi-media,eng,
-1,New York Times,0010046,The Walk,http://www.nytimes.com/interactive/2015/08/22/world/middleeast/gaza-israel-walk-war-anniversary.html,"ID + "".jpg/.png""",,政治,US,multi-media,eng,
-1,New York Times,0010047,"What Happens When the Fed Raises Rates, In One Rube Goldberg Machine",http://www.nytimes.com/interactive/2015/12/16/upshot/fed-interest-rates-rube-goldberg-machine.html,"ID + "".jpg/.png""",,经济,US,multi-media,eng,
-1,New York Times,0010048,The yield curve,http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html,"ID + "".jpg/.png""",,经济,US,3D,eng,
-1,New York Times,0010049,How the U.S. and OPEC drive Oil Prices,http://www.nytimes.com/interactive/2015/09/30/business/how-the-us-and-opec-drive-oil-prices.html,"ID + "".jpg/.png""",,经济,US,scatterplot,eng,
-1,New York Times,0010050,Stacking up the presidential fields,http://www.nytimes.com/interactive/2015/06/04/us/politics/stacking-up-the-presidential-fields.html,"ID + "".jpg/.png""",,政治,US,other,eng,
-1,New York Times,0010051,What North Dakota Would Look Like if Its Oil Drilling Lines Were Aboveground,http://www.nytimes.com/interactive/2014/11/24/upshot/nd-oil-well-illustration.html,"ID + "".jpg/.png""",,环境,US,3D,eng,
-1,New York Times,0010052,"Where We Came From and Where We Went, State by State",http://www.nytimes.com/interactive/2014/08/13/upshot/where-people-in-each-state-were-born.html,"ID + "".jpg/.png""",,生活,US,interactive,eng,
-1,New York Times,0010053,The Changing Nature of Middle-Class Jobs,http://www.nytimes.com/interactive/2015/02/23/business/economy/the-changing-nature-of-middle-class-jobs.html,"ID + "".jpg/.png""",,经济,US,line,eng,
-1,New York Times,0010054,A fairer World Cup draw,http://www.nytimes.com/interactive/2014/06/03/upshot/world-cup-draw-simulation.html,"ID + "".jpg/.png""",,体育,US,simulation,eng,
-1,New York Times,0010055,The Clubs That Connect The World Cup,http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html,"ID + "".jpg/.png""",,体育,US,network,eng,
-18,Associated Press,0180001,Migration of Hollywood moviemaking,http://interactives.ap.org/2015/oscars-migration/,,,文化,US,interactive,eng,
-18,Associated Press,0180002,Seven years in one speech,http://interactives.ap.org/2015/sotu-2015/,,,政治,US,interactive,eng,
-18,Associated Press,0180003,Gulf Oil: five years later,http://interactives.ap.org/2015/gulf-health/,,,安全,US,illustration,eng,
-18,Associated Press,0180004,2016 Candidate tracker,http://interactives.ap.org/2015/2016-candidate-tracker/,,,政治,US,bubbles,eng,
-18,Associated Press,0180005,Where do you stand on issues,http://interactives.ap.org/2015/2016-issue-standings/,,,政治,US,game,eng,
-2,The Guardian,0020001,Public spending by UK government department: an interactive guide,http://www.theguardian.com/news/datablog/interactive/2011/oct/26/public-spending-uk-government-department,0020001.png,TK,政治,US,"bubble, interactive",eng,tk
-2,The Guardian,0020002,NSA files Decoded: what the relations mean for you,http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1,0020002.png,TK,安全,US,"interactive, multi-media",eng,tk
-2,The Guardian,0020003,"The first Guardian data journalism: May 5, 1821",http://www.theguardian.com/news/datablog/2011/sep/26/data-journalism-guardian?INTCMP=SRCH,0020003.png,TK,教育,US,,eng,tk
-2,The Guardian,0020004,March Madness: do the tallest teams always win the NCAA championship?,http://www.theguardian.com/sport/interactive/2013/mar/18/ncaa-tournament-team-matchups-height#g=Top%2025,0020004.png,TK,体育,US,interactive,eng,tk
-2,The Guardian,0020005,NFL salaries by team and position,http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position,0020005.png,TK,体育,US,"interactive, bubble",eng,tk
-2,The Guardian,0020006,"Gay rights in the US, state by state",http://www.theguardian.com/world/interactive/2012/may/08/gay-rights-united-states,0020006.png,TK,政治,US,interactive,eng,tk
-2,The Guardian,0020007,"The state of our union is … dumber:
-How the linguistic standard of the presidential address has declined",http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level,0020007.png,TK,政治,US,interactive,eng,tk
-2,The Guardian,0020008,Homan Square — A portrait of Chicago’s detainees,http://www.theguardian.com/us-news/ng-interactive/2015/oct/19/homan-square-chicago-police-detainees,0020008.png,TK,观点,US,multimedia,eng,tk
-2,The Guardian,0020009,"The Counted
- — People killed by police in the US",http://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-map-us-police-killings,0020009.png,TK,政治,US,"map, database",eng,tk
-2,The Guardian,0020010,Watch how the measles outbreak spreads when kids get vaccinated – and when they don't,http://www.theguardian.com/society/ng-interactive/2015/feb/05/-sp-watch-how-measles-outbreak-spreads-when-kids-get-vaccinated,0020010.png,TK,医疗,US,animation,eng,tk
-2,The Guardian,0020011,Gun deaths in your district: what have your elected representatives done?,http://www.theguardian.com/us-news/ng-interactive/2015/dec/14/gun-control-laws-congress-shooting-deaths-nra-lobby-campaign-donations#06-21,0020011.png,TK,政治,US,"map, database",eng,tk
-2,The Guardian,0020012,Battle of the sexes: charting how women in tennis achieved equal pay,http://www.theguardian.com/sport/2015/sep/11/how-women-in-tennis-achieved-equal-pay-us-open,0020012.png,TK,体育,US,bar,eng,tk
-2,The Guardian,0020013,"As the Oscars age, so do the nominees",http://www.theguardian.com/film/interactive/2014/mar/02/oscars-award-nominees-age-best-actress-actor,0020013.png,TK,文化,US,line,eng,tk
-2,The Guardian,0020014,Live map of flights in the past 24 hours (and 100 years),http://www.theguardian.com/world/ng-interactive/2014/aviation-100-years,0020014.png,TK,旅行,World,map,eng,tk
-2,The Guardian,0020015,America's Climate Refugees,http://www.theguardian.com/environment/interactive/2013/may/14/alaska-villages-frontline-global-warming,0020015.png,TK,环境,US,multimedia,eng,tk
-2,The Guardian,0020016,Are you reflected in the new Congress?,http://www.theguardian.com/us-news/ng-interactive/2014/nov/06/-sp-congress-diversity-women-race-lgbt-are-you-represented,0020016.png,TK,政治,US,map,eng,tk
-2,The Guardian,0020017,World Cup: which domestic league is best represented?,http://www.theguardian.com/sport/ng-interactive/2015/jan/31/mega-beast-mode-marshawn-lynch-is-this-good,0020017.png,TK,体育,World,bar,eng,tk
-4,ProPublica,0040002,The Opportunity Gap,http://projects.propublica.org/schools/,"ID + "".jpg/.png""",TK,教育,US,"database, map, interactive",eng,24/01/2013
-4,ProPublica,0040003,"Dollars for Docs
-How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdollars/,"ID + "".jpg/.png""","Lena Groeger, Charles Ornstein, Mike Tigas, Ryann Grochowski Jones",医疗,US,"database, map, interactive",eng,01/07/2015
-4,ProPublica,0040004,Nursing Home Inspect:Find Nursing Home Problems in Your State,http://projects.propublica.org/nursing-homes/,"ID + "".jpg/.png""","Charles Ornstein, Lena Groeger",医疗,US,"map,  interactive, database",eng,01/11/2015
-4,ProPublica,0040005,Treatment Tracker,https://projects.propublica.org/treatment/,"ID + "".jpg/.png""","Lena Groeger, Charles Ornstein, and Ryann Grochowski Jones",医疗,US,interactive,eng,29/08/2014
-4,ProPublica,0040006,Cruise Control,https://projects.propublica.org/cruises/,"ID + "".jpg/.png""","Lena Groeger, Michael Grabell",旅行,US,"illustration, interactive",eng,01/05/2015
-4,ProPublica,0040007,Worker's comp benefits: how much is a limb worth?,http://projects.propublica.org/graphics/workers-compensation-benefits-by-limb,"ID + "".jpg/.png""",Lena Groeger,政治,US,"illustration, interactive",eng,05/03/2015
-4,ProPublica,0040008,Worker's compensation reforms by state,http://projects.propublica.org/graphics/workers-comp-reform-by-state,"ID + "".jpg/.png""","Yue Qiu, Michael Grabell",政治,US,"map, interactive",eng,04/03/2015
-4,ProPublica,0040009,Inside the firewall:tracking the news that China blocks,https://projects.propublica.org/firewall/,"ID + "".jpg/.png""",Sisi Wei,政治,US,interactive,eng,17/12/2014
-4,ProPublica,0040010,A Disappearing Planet,http://projects.propublica.org/extinctions/,"ID + "".jpg/.png""",Anna Flagg,环境,US,"interactive, bar",eng,NA
-4,ProPublica,0040011,Loosing Ground,http://projects.propublica.org/louisiana/,"ID + "".jpg/.png""","Brain Jacobs, Al Shaw, Bob Marshall",环境,US,"map, interactive, satellite imagery",eng,28/08/2014
-4,ProPublica,0040012,Surgeons Scorecard,https://projects.propublica.org/surgeons/,"ID + "".jpg/.png""","Sisi Wei, Olga Pierce, Marshall Allen",医疗,US,"interactive, database",eng,15/07/2015
-4,ProPublica,0040013,Money as a Weapons System,https://projects.propublica.org/cerp/,"ID + "".jpg/.png"""," Megan McCloskey, Mike Tigas, Ryann Grochowski Jones, Sisi Wei, Jeff Larson, Ingrid Burrington",安全,US,"interactive, illustration, database",eng,15/05/2015
-7,Bloomberg,0070001,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,"ID + "".jpg/.png""",,经济,US,"real-time, interactive",eng,2014
-7,Bloomberg,0070002,What's really warming the world,http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,,"Eric Roston, Blacki Migliozzi",环境,US,"line, interactive",eng,24/06/2015
-7,Bloomberg,0070003,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,,"Matthew Leising, Mira Rojanasakul, Adam Pearce",商业,US,interactive,eng,04/09/2015
-7,Bloomberg,0070004,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,,"Toph Tucker, Adam Pearce",商业,US,"interactive, line",eng,2015
-7,Bloomberg,0070005,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,,"Zach Mider, Christopher Cannon, and Adam Pearce",政治,US,"interactive, map",eng,15/09/2015
-7,Bloomberg,0070006,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,,"Alex Tribou, Keith Collins",文化,US,"line, interactive",eng,26/06/2015
-7,Bloomberg,0070007,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",政治,US,map,eng,2015
-7,Bloomberg,0070008,"2015 was the hottest year on record, by a stunning margin",http://www.bloomberg.com/news/features/2016-01-20/2015-was-the-hottest-year-on-record-by-a-stunning-margin,,"Tom Randall, Blacki Migliozzi",环境,US,"line, interactive",eng,20/01/2016
-7,Bloomberg,0070009,The Ungoverned World,http://www.bloomberg.com/graphics/2015-ungoverned-world/,," Alex McIntyre, Dave Merrill, and Blacki Migliozzi",政治,US,"map, interactive",eng,13/10/2015
-5,Wall Street Journal,0050001,Results from the 2014 Midterm Election,http://graphics.wsj.com/midterm-election-results-2014/,0050001.png,,政治,US,"map, interactive",eng,04/11/2014
-5,Wall Street Journal,0050002,TRIALS,http://projects.wsj.com/trials/#chapter=1,0050002.png,Amy Dockser Marcus,生活,US,"multi-media, long-form",eng,19/11/2013
-5,Wall Street Journal,0050003,U.S. Unemployment: A Historical View,http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522,0050003.png,,经济,US,"interactive, map",eng,07/05/2010
-5,Wall Street Journal,0050004,China Econtracker,http://blogs.wsj.com/chinarealtime/2012/01/17/introducing-china-real-times-china-econtracker/,0050004.jpg,,经济,US,"interactive, line",eng,17/01/2012
-5,Wall Street Journal,0050005,Political Moneyball: Mapping Universe of Cash,http://blogs.wsj.com/washwire/2012/07/25/political-moneyball-mapping-the-universe-of-cash/,0050005.png,"Andrew Garcia Phillips, Sarah Slobin, Jovi Juan",政治,US,"interactive, bubble",eng,25/07/2012
-5,Wall Street Journal,0050006,Kowloon Walled City,http://projects.wsj.com/kwc/#chapter=intro,0050006.png,"Henry Williams, MinJung Kim",文化,HK,"long-form, interactive, multi-media",eng,01/04/2014
-5,Wall Street Journal,0050007,European Parliament Elections 2014,http://graphics.wsj.com/european-elections-2014/,0050007.png,"Jovi Juan, Gabriele Steinhauser, Elliot Bentley",政治,EU,"interactive, map",eng,14/05/2014
-5,Wall Street Journal,0050008,"100 Years, 100 Legacies: Tracing the Echoes of World War I",http://online.wsj.com/ww1/,0050008.png,,政治,US,multi-media,eng,10/11/2014
-5,Wall Street Journal,0050009,Map of a Tragedy: How MH17 Came Apart Over Ukraine,http://graphics.wsj.com/mh17-crash-map/,0050009.png,Stuart A. Thompson,安全,Malaysia,"map, multi-media",eng,25/07/2014
-5,Wall Street Journal,0050010,Surveying the Destruction in Gaza,http://graphics.wsj.com/gaza-surveying-destruction/,0050010.png,"Stuart A. Thompson, Renée Rigdon, Asa Fitch, Nicholas Casey, Taylor Umlauf, Erin McCarthy, Mark Fahey",灾害,Gaza,"map, multi-media, bar",eng,14/08/2014
-5,Wall Street Journal,0050011,United Against Islamic State,http://graphics.wsj.com/isis-strange-bedfellows/,0050011.png,"Chris Kaeser, Stuart A. Thompson",政治,US,interactive,eng,17/09/2014
-5,Wall Street Journal,0050012,"Scotland Votes No, Stays in the U.K.",http://graphics.wsj.com/scotland-referendum-results/,0050012.png,,政治,UK,"bar, map, interactive",eng,10/11/2014
-5,Wall Street Journal,0050013,Airstrikes in Iraq and Syria,http://graphics.wsj.com/airstrikes-on-islamic-state/,0050013.png,"Nathaniel Lash, Felicia Schwartz",灾害,"Iraq, Syria","bar, map, interactive",eng,07/11/2014
-5,Wall Street Journal,0050014,Politics and Business in the House of Lords,http://graphics.wsj.com/house-of-lords/,0050014.png,"Elliot Bentley, Jovi Juan, Charles Forelle, Justin Scheck",政治,UK,"interactive, long-form",eng,10/11/2014
-5,Wall Street Journal,0050015,Sochi Olympics Medal Tracker,http://graphicsweb.wsj.com/documents/sochi-medal-count/,0050015.png,"Andrew Garcia Phillips, Chris Canipe",体育,Russia,"map, table",eng,18/02/2014
-5,Wall Street Journal,0050016,Primer: Olympic 500m Speedskating,http://graphics.wsj.com/speed-skating-primer/,0050016.png,Andrew Garcia Phillips,体育,US,interactive,eng,14/08/2014
-5,Wall Street Journal,0050017,World Cup of Everything Else,http://graphics.wsj.com/documents/WORLDCUPTOEE/,0050017.png,,体育,,tree,eng,11/06/2014
-5,Wall Street Journal,0050018,Scoring: National Style Guide,http://graphics.wsj.com/documents/wc-goals/,0050018.png,"Chris Canipe, Geoff Foster, Joshua Robinson",体育,US,interactive,eng,05/06/2014
-5,Wall Street Journal,0050019,No. 1 vs. No. 32,http://graphics.wsj.com/us-open-32/,0050019.png,"Andrew Beaton, Stuart A. Thompson, Steven Kutz",体育,US,bar,eng,25/08/2014
-5,Wall Street Journal,0050020,World Cup Players' Penalty Kick Patterns,http://graphics.wsj.com/wc-penalty-kicks/,0050020.png,"Chris Canipe, Geoff Foster",体育,,interactive,eng,26/06/2014
-5,Wall Street Journal,0050021,HealthCare.gov Explorer,http://graphics.wsj.com/health-care-explorer/,0050021.png,"Martin Burch, Madeline Farbman, Jonathan Keegan, Adam Suharja, Christopher Weaver, Kurt Wilberding",医疗,US,"interactive, map",eng,04/02/2014
-5,Wall Street Journal,0050022,Faces of the Affordable Care Act,http://graphics.wsj.com/HealthProfiles/,0050022.png,Lakshmi Ketineni,医疗,US,"multi-media, long-form",eng,24/12/2014
-5,Wall Street Journal,0050023,Which Cities Get the Most Sleep?,http://graphics.wsj.com/how-we-sleep/,0050023.png,Stuart A. Thompson,医疗,US,map,eng,15/08/2014
-5,Wall Street Journal,0050024,Medical Money,http://graphics.wsj.com/medical-money/,0050024.png,"Martin Burch, Colleen McEnaney",医疗,US,bar,eng,07/10/2014
-5,Wall Street Journal,0050025,Axis of Additives,http://graphics.wsj.com/food-additives-ingredients/,0050025.png,"Ana Becker, Martin Burch, Annie Gasparro",医疗,US,"tree, interactive",eng,30/10/2014
-5,Wall Street Journal,0050026,The People’s House,http://graphics.wsj.com/the-peoples-house/,0050026.png,"Randy Yeip, Casey Miller",政治,US,"map, bar",eng,30/10/2014
-5,Wall Street Journal,0050027,An Animated View of the 2014 Midterm Elections,http://graphics.wsj.com/midterm-election-2014-animations/,0050027.png,,政治,US,"map, animation",eng,05/11/2014
-5,Wall Street Journal,0050028,Best Books of 2014,http://graphics.wsj.com/best-books-2014,0050028.png,,文化,US,multi-media,eng,30/12/2014
-5,Wall Street Journal,0050029,Biopics: A History,http://graphics.wsj.com/biopics/,0050029.png,,文化,US,"multi-media, long-form",eng,30/12/2014
-5,Wall Street Journal,0050030,Libor: The Spider Network,http://graphics.wsj.com/libor-network,0050030.png,"Jovi Juan, David Enrich",商业,US,network,eng,20/05/2015
-5,Wall Street Journal,0050031,Personal 3-D Printer Sales in 3-D,http://graphics.wsj.com/3Dprinting/,0050031.png,"Paul Antonson, Drew Evans, Mike Sudal",技术,US,3D,eng,16/06/2014
-5,Wall Street Journal,0050032,The Ins and Outs of the Dow Jones Industrial Average,http://graphics.wsj.com/djia-components-history/,0050032.png,"Stuart A. Thompson, William Power",商业,US,bar,eng,07/07/2014
-5,Wall Street Journal,0050033,Wages Winners and Losers Since 2004,http://graphics.wsj.com/mapping-wages-income/,0050033.png,"Brian McGill, Dante Chinni",经济,US,map,eng,10/12/2014
-5,Wall Street Journal,0050034,Christmas Sale Tracker,http://graphics.wsj.com/Christmas-Sale-Tracker/,0050034.png,"Shelly Banjo, Lakshmi Ketineni, Colleen McEnaney, Kate Linebaugh",生活,US,line,eng,09/11/2014
-5,Wall Street Journal,0050035,"A Stolen Boy, an Angry Loner, an Underground Bunker",http://graphics.wsj.com/hostage/,0050035.png,Michael M. Phillips,安全,US,"multi-media, long-form",eng,30/09/2015
-5,Wall Street Journal,0050036,Are You Good Enough to Be a Tennis Line Judge?,http://graphics.wsj.com/are-you-good-enough-to-be-a-tennis-line-judge/,0050036.png,Sarah Squire,体育,US,interactive,eng,31/08/2015
-5,Wall Street Journal,0050037,Battling Infectious Diseases in the 20th Century: The Impact of Vaccines,http://graphics.wsj.com/infectious-diseases-and-vaccines/,0050037.png,"Tynan DeBold, Dov Friedman",医疗,US,heatmap,eng,11/02/2015
-5,Wall Street Journal,0050038,Beat the Federal Reserve,http://graphics.wsj.com/beat-the-fed/,0050038.png,"Chris Canipe, Katie Marriner, Stuart A. Thompson, Andrew Van Dam",经济,US,line,eng,14/12/2015
-5,Wall Street Journal,0050039,Demographic Destiny: What Will the World Be Like in 2050?,http://graphics.wsj.com/2050-demographic-destiny/,0050039.png,,经济,US,long-form,eng,20/11/2015
-5,Wall Street Journal,0050040,From Pluto to the Sun: A Field Guide to the Solar System,http://graphics.wsj.com/from-pluto-to-the-sun/,0050040.png,"Jon Keegan, Chris Canipe, Alberto Cervantes",科学,US,"interactive, 3D",eng,02/10/2015
-5,Wall Street Journal,0050041,Is the Nasdaq in Another Bubble?,http://graphics.wsj.com/3d-nasdaq/,0050041.jpg,"Roger Kenny, Ana Asnes Becker",商业,US,"line, 3D",eng,23/04/2015
-5,Wall Street Journal,0050042,Oscars of Everything Else,http://graphics.wsj.com/oscars-of-everything-else/,0050042.png,"Geoff Foster, Stuart A. Thompson, Michael Calia, Jim Chairusmi",媒体,US,long-form,eng,13/02/2015
-5,Wall Street Journal,0050043,The Billion Dollar Startup Club,http://graphics.wsj.com/billion-dollar-club/,0050043.jpg,"Scott Austin, Chris Canipe, Sarah Slobin",商业,US,"interactive, table",eng,18/02/2015
-5,Wall Street Journal,0050044,The Madness Machine: Create Your Own NCAA Tournament Bracket,http://graphics.wsj.com/ncaa-madness-machine/,0050044.png,Geoff Foster,体育,US,"interactive, tree",eng,16/03/2015
-5,Wall Street Journal,0050045,"Track National Unemployment, Job Gains and Job Losses",http://graphics.wsj.com/job-market-tracker/,0050045.png,"Andrew Van Dam, Renee Lightner",经济,US,"interactive, dot, table, line",eng,05/02/2015
-5,Wall Street Journal,0050046,The South China Sea Dispute,http://graphics.wsj.com/south-china-sea-dispute/,0050046.png,,政治,China,"map, bar",eng,29/10/2015
-5,Wall Street Journal,0050047,"America's Jukebox Heroes: Our Favorite Artists, Coast to Coast",http://graphics.wsj.com/americas-jukebox-heroes/,0050047.png,Elliott Ramos,生活,US,"map, interactive",eng,29/09/2015
-5,Wall Street Journal,0050048,Your Guide to Outdoor Entertaining,http://graphics.wsj.com/off-duty-50/guide-to-summer-outdoor-entertaining/,0050048.png,,生活,US,multi-media,eng,19/06/2015
-5,Wall Street Journal,0050049,Search Hillary Clinton’s Emails,http://graphics.wsj.com/hillary-clinton-email-documents/,0050049.png,,政治,US,interactive,eng,31/07/2015
-5,Wall Street Journal,0050050,2016 Election Polls,http://graphics.wsj.com/elections/2016/polls/,0050050.png,,政治,US,line,eng,05/11/2015
-10,National Geographic,0100001,Killing Kennedy,http://kennedyandoswald.com/#!/premiere-screen,0100001.png,,政治,US,"interactive, multi-media",eng,01/08/2013
-10,National Geographic,0100002,What the world eats,http://www.nationalgeographic.com/what-the-world-eats/,0100002.png,,文化,US,"timeline, pie, interactive",eng,22/10/2014
-10,National Geographic,0100003,What Earthquake Maps Should Really Look Like,http://news.nationalgeographic.com/2015/10/151003-datapoints-what-earthquake-maps-should-really-look-like/,0100003.png,"Chiqui Esteban, John Tomanio",灾害,US,map,eng,03/10/2015
+ID,OrgId,Title,URL,Categories,Element tag,Author,Organizationen,Publication Date
+0500001,,Flight Patterns,http://www.aaronkoblin.com/work/flightpatterns/,技术,"3D, interactive",,Aaron Koblin,
+0500002,,"Find out about crime on your block, in your community, along your commute, and more",http://crime.chicagotribune.com/,安全,interactive,,Chicagotribune,
+0500006,,government shutdown 2013,http://labs.enigma.io/shutdown2013/,政治,"tree, interactive, real-time",,Enigma,
+0500007,,"America's Election HQ",http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/,政治,"photo, map, interactive, multi-media",,Fox News,
+0500008,,Small Arms and Ammunition-Imports and Exports,http://armsglobe.chromeexperiments.com/,安全,"timeline, bar, interactive, 3D",,Google,
+0500009,,Codebases: Millions Lines of Code,http://www.informationisbeautiful.net/visualizations/million-lines-of-code/,技术,,,Information is beautiful,
+0500010,,"Audubon's Birds and Climate Change Report
+314 Species on the Brink",http://climate.audubon.org/,环境,map,,National Audubon Society,
+0500011,,Bear 71,http://bear71.nfb.ca/#/bear71,环境,"multi-media, interactive",,NBF,
+0500012,,U.S. Gun Deaths in 2013,http://guns.periscopic.com/?year=2013,安全,,,Periscopic,
+0500013,,"Exploring the Reach, Frequency and Impact of Terrorism Around the World",http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world,安全,"timeline, map, interactive, barchart, sorting",,Periscopic,
+0500014,,"Out of Sight, Out of Mind.",http://drones.pitchinteractive.com/,安全,"timeline, bar",,pitchinc,
+0500015,,THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?,http://www.popsci.com/science/article/2013-05/energy-gap,技术,,,Popular Science,
+0500016,,Poverty Tracker,http://povertytracker.robinhood.org/,经济,"interactive, bubble",,Robin Hood,
+0500017,,"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook",http://techcrunch.com/2014/02/25/the-age-of-acquisitions/,经济,"interactive, bar",,Tech Crunch,
+0500018,,China Global Investment Tracker,http://www.aei.org/china-global-investment-tracker/,经济,"interactive, map",,THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION,
+0500019,,"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001–2012",http://www.thenation.com/afghanistan-database/,安全,"interactive,bar, map",,The Nation,
+0500020,,A Model of Breast Cancer Causation,http://www.cabreastcancer.org/causes/#,生活,interactive,,University of California,
+0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,
+0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,
+0500023,,A Nation Divided,http://www.zeit.de/feature/german-unification-a-nation-divided,政治,"interacitive, map","Lisa Borgenheimer, Paul Blickle, Julian Stahnke, Sascha Venohr",Zeit Online,
+0500024,,令计划关系网,http://121.42.52.51/zt/2015/lingjihua/index.html,政治,network,,The Paper,
+0500025,,三峡,http://121.42.52.51/zt/2015/sanxia/index.html,环境,"multi-media, interactive",,The Paper,
+0500026,,一路向北：15天4000公里，全程记录难民欧洲逃亡路,http://image.thepaper.cn/html/zt/2015/refugee/index.html,政治,"multi-media, interactive",,The Paper,
+0500027,,Histography,http://histography.io/,,"timeline, interactive",Matan Stauber,Matan Stauber,
+0500028,,Weather Radials,http://weather-radials.com/,环境,"bubble, bar",Timm Kekeritz,Timm Kekeritz,
+0500029,,Creative Routines,http://www.informationisbeautifulawards.com/showcase/483-creative-routines,文化,pie,RJ Andrews,RJ Andrews,
+0500030,,Game of Thrones Decoded: Connecting the Dots from Season 3,http://time.com/44106/game-of-thrones-decoder/,艺术,network,Heather Jones,Heather Jones,
+0500031,,The Graphic Continuum,http://www.informationisbeautifulawards.com/showcase/611-the-graphic-continuum,艺术,network,"Jonathan Schwabish, Severino Ribecca","Jonathan Schwabish, Severino Ribecca",
+0500032,,The Refugee Project,http://www.therefugeeproject.org/,政治,"map, timeline, bubble, interactive","Hyperakt, Ekene Ijeoma","Hyperakt, Ekene Ijeoma",
+0500033,,Commonwealth War Dead: First World War Visualised,http://codehesive.com/commonwealthww1/,,"bar, timeline",James Offer,James Offer,
+0500034,,World Food Clock,http://worldfoodclock.com/,,illustration,Luke Twyman,Luke Twyman,
+0500035,,NYC Taxis: A Day in the Life,http://nyctaxi.herokuapp.com/,商业,"map, timeline ",Chris Whong,Chris Whong,
+0500036,,Beyond Bytes,https://vimeo.com/69750203,政治,"illustration, animation","Maral Pourkazemi, Florian Köhne","Maral Pourkazemi, Florian Köhne",
+0500037,,Everything You Need to Know about Planet Earth,https://www.youtube.com/watch?v=JGXi_9A__Vc&list=PLFs4vir_WsTyXrrpFstD64Qj95vpy-yo1&index=1,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith, Steve Taylor, Michael Büker",Kurzgesagt,
+0500038,,Carbon Dioxide Emissions Bury the UN Summit,http://www.carbonvisuals.com/projects/wbcsd,环境,"illustration, 3D, animation",Adam Nieman,Adam Nieman,
+0500039,,Selfiecity,http://selfiecity.net/,生活,interactive,"Dr. Lev Manovich, Moritz Stefaner, Dr. Mehrdad Yazdani, Dr. Dominikus Baur, Jay Chow, Daniel Goddemeyer, Alise Tifentale, Nadav Hochman",Moritz Stefaner,
+0500040,,OECD Regional Well-Being,http://www.oecdregionalwellbeing.org/,生活,interactive,"Moritz Stefaner, Dr. Dominikus Baur, Monica Brezzi and team",Moritz Stefaner,
+0500041,,After Babylon,http://www.puffpuffproject.com/languages.html,文化,"map, bubble","Sofia Girelli, Eleonora Grotto, Pietro Lodi, Daniele Lupatini, Emilio Patuzzo",Puff Puff Team,
+0010001,1,512 Paths to the White House,http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0,政治,,,New York Times,
+0010002,1,The Facebook Offering: How It Compares,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,经济,interactive,,New York Times,
+0010003,1,"How the Recession Reshaped the Economy, in 255 Charts",http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html,经济,interactive,,New York Times,
+0010004,1,Who Will Win The Senate?,http://www.nytimes.com/newsgraphics/2014/senate-model/,政治,interactive,,New York Times,
+0010005,1,The Most Detailed Maps You’ll See From the Midterm Elections,http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html,政治,map,,New York Times,
+0010006,1,Four Ways to Slice Obama’s 2013 Budget Proposal,http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html,政治,"bubble, interactive",,New York Times,
+0010007,1,The Back and Forth Over the Shutdown and Debt Ceiling,http://www.nytimes.com/interactive/2013/09/30/us/politics/the-back-and-forth-over-the-shutdown.html,政治,timeline,,New York Times,
+0010009,1,Snow Fall: The Avalanche at Tunnel Creek,http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek,灾害,"multi-media,map",,New York Times,
+0010010,1,Mapping the Spread of Drought Across the U.S.,http://www.nytimes.com/interactive/2014/upshot/mapping-the-spread-of-drought-across-the-us.html,灾害,"map, timeline",,New York Times,
+0010012,1,Is It Better to Rent or Buy?,http://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html,经济,"bar, interactive",,New York Times,
+0010013,1,Where are the hardest places to live in the U.S.?,http://www.nytimes.com/2014/06/26/upshot/where-are-the-hardest-places-to-live-in-the-us.html,环境,"map, interactive, multi-media",,New York Times,
+0010014,1,The Jobless Rate for People Like You,http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html,经济,interactive,,New York Times,
+0010015,1,How the Chicago Public School District Compares,http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html,教育,,,New York Times,
+0010016,1,How Birth Year Influences Political Views,http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html,政治,"interactive, visualization",,New York Times,
+0010017,1,Which Team Do You Cheer For? An N.B.A. Fan Map,http://www.nytimes.com/interactive/2014/05/12/upshot/12-upshot-nba-basketball.html,体育,"map, interactive",,New York Times,
+0010019,1,"Why Peyton Manning's Record Will Be Hard to Beat",http://www.nytimes.com/interactive/2014/10/19/upshot/peyton-manning-breaks-touchdown-passing-record.html?_r=0&abt=0002&abg=1,体育,interactive,,New York Times,
+0010020,1,Racing Against History,http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html?_r=0,体育,interactive,,New York Times,
+0010021,1,"One Race, Every Medalist Ever",http://www.nytimes.com/interactive/2012/08/05/sports/olympics/the-100-meter-dash-one-race-every-medalist-ever.html,体育,interactive,,New York Times,
+0010022,1,"Lolo Jones, Cleared for takeoff",http://www.nytimes.com/interactive/2012/07/18/sports/olympics/lolo-jones-cleared-for-takeoff.html,体育,interactive,,New York Times,
+0010023,1,Connecting Music and Gesture,http://www.nytimes.com/interactive/2012/04/06/arts/music/the-connection-between-gesture-and-music.html,文化,multi-media,,New York Times,
+0010024,1,Inside the Quartet,http://www.nytimes.com/interactive/2014/09/22/arts/music/kronos-quartet.html?_r=2,文化,multi-media,,New York Times,
+0010025,1,"A Cultrue of Bidding
+Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-fraud/,经济,"multi-media, interactive, map",,New York Times,
+0010026,1,Kepler’s Tally of Planets,http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html,科学,interactive,,New York Times,
+0010027,1,Deepwater Horizon Oil Spill: An Interactive Look at What Happened,http://www.nytimes.com/interactive/us/spill_index.html?ref=us,环境,"multi-media, interactive, map",,New York Times,
+0010028,1,The Dawn Wall: El Capitan’s Most Unwelcoming Route,http://www.nytimes.com/interactive/2015/01/09/sports/the-dawn-wall-el-capitan.html,体育,3D,,New York Times,
+0010029,1,What China Has Been Building in the South China Sea,http://www.nytimes.com/interactive/2015/07/30/world/asia/what-china-has-been-building-in-the-south-china-sea.html,政治,"map, multimedia",,New York Times,
+0010030,1,Desperate crossing,http://www.nytimes.com/interactive/2015/09/03/magazine/migrants.html,政治,multimedia,,New York Times,
+0010031,1,"A gift to New York, in time for the Pope",http://www.nytimes.com/interactive/2015/09/17/nyregion/st-patricks-cathedral-pope-francis-visit.html,宗教,illustration,,New York Times,
+0010032,1,A New Whitney,http://www.nytimes.com/interactive/2015/04/19/arts/artsspecial/new-whitney-museum.html,艺术,3D,,New York Times,
+0010033,1,The Families Funding the 2016 Presidential Election,http://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html,政治,long form,,New York Times,
+0010034,1,Greenland is melting away,http://www.nytimes.com/interactive/2015/10/27/world/greenland-is-melting-away.html,环境,"multi-media, long form",,New York Times,
+0010035,1,"Dear Architects, sound matters",http://www.nytimes.com/interactive/2015/12/29/arts/design/sound-architecture.html,技术,"multi-media, long form",,New York Times,
+0010036,1,Stream of Foreign Wealth Flows to Elite New York Real Estate,http://www.nytimes.com/2015/02/08/nyregion/stream-of-foreign-wealth-flows-to-time-warner-condos.html,商业,"3D, multi-media",,New York Times,
+0010037,1,Ten years after Katrina,http://www.nytimes.com/interactive/2015/08/26/us/ten-years-after-katrina.html,灾害,"map, long form",,New York Times,
+0010038,1,The Best and Worst Places to Grow Up: How Your Area Compares,http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html,政治,"map, interactive",,New York Times,
+0010039,1,Are you receiving a marriage bonus or penalty,http://www.nytimes.com/interactive/2015/04/16/upshot/marriage-penalty-couples-income.html,经济,interactive,,New York Times,
+0010040,1,How gun trafficking gets around state laws,http://www.nytimes.com/interactive/2015/11/12/us/gun-traffickers-smuggling-state-gun-laws.html,政治,map,,New York Times,
+0010041,1,"You draw it: how family income predicts children's college chances",http://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html,经济,game,,New York Times,
+0010042,1,A quick puzzle to test your problem solving,http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html,文化,game,,New York Times,
+0010043,1,"In Other Countries, You’re as Likely to Be Killed by a Falling Object as by a Gun",http://www.nytimes.com/2015/12/05/upshot/in-other-countries-youre-as-likely-to-be-killed-by-a-falling-object-as-a-gun.html,政治,other,,New York Times,
+0010044,1,"Bieber, Diplo & Skrillex Make A Hit",http://www.nytimes.com/interactive/2015/08/25/arts/music/justin-bieber-diplo-skrillex-make-a-hit-song.html,文化,multi-media,,New York Times,
+0010045,1,How we changed our thinking on gay marriage,http://www.nytimes.com/interactive/2015/06/26/us/changed-thinking-on-gay-marriage.html,观点,multi-media,,New York Times,
+0010046,1,The Walk,http://www.nytimes.com/interactive/2015/08/22/world/middleeast/gaza-israel-walk-war-anniversary.html,政治,multi-media,,New York Times,
+0010047,1,"What Happens When the Fed Raises Rates, In One Rube Goldberg Machine",http://www.nytimes.com/interactive/2015/12/16/upshot/fed-interest-rates-rube-goldberg-machine.html,经济,multi-media,,New York Times,
+0010048,1,The yield curve,http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html,经济,3D,,New York Times,
+0010049,1,How the U.S. and OPEC drive Oil Prices,http://www.nytimes.com/interactive/2015/09/30/business/how-the-us-and-opec-drive-oil-prices.html,经济,scatterplot,,New York Times,
+0010050,1,Stacking up the presidential fields,http://www.nytimes.com/interactive/2015/06/04/us/politics/stacking-up-the-presidential-fields.html,政治,other,,New York Times,
+0010051,1,What North Dakota Would Look Like if Its Oil Drilling Lines Were Aboveground,http://www.nytimes.com/interactive/2014/11/24/upshot/nd-oil-well-illustration.html,环境,3D,,New York Times,
+0010052,1,"Where We Came From and Where We Went, State by State",http://www.nytimes.com/interactive/2014/08/13/upshot/where-people-in-each-state-were-born.html,生活,interactive,,New York Times,
+0010053,1,The Changing Nature of Middle-Class Jobs,http://www.nytimes.com/interactive/2015/02/23/business/economy/the-changing-nature-of-middle-class-jobs.html,经济,line,,New York Times,
+0010054,1,A fairer World Cup draw,http://www.nytimes.com/interactive/2014/06/03/upshot/world-cup-draw-simulation.html,体育,simulation,,New York Times,
+0010055,1,The Clubs That Connect The World Cup,http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html,体育,network,,New York Times,
+0130001,13,Flooding & Flood Zones,http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702,灾害,map,,WNYC,
+0130002,13,NYC Hottest Subway Stations Mapped,http://www.wnyc.org/story/hottest-subway-stations-map-nyc/,生活,map,,WNYC,
+0130003,13,NYC Yoga,http://project.wnyc.org/nyc-yoga/,生活,illustration,,WNYC,
+0130004,13,Christieverse,http://project.wnyc.org/christieverse/,政治,"multi-media, tree",,WNYC,
+0130005,13,School Book,http://data.schoolbook.org,教育,"interactive, map",,WNYC,
+0130006,13,Unlimited choices: 7-day vs 30-day MetroCards,http://project.wnyc.org/mta-unlimited/,经济,map,,WNYC,
+0060001,6,A global look at cardiac risk factors,http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/,灾害,timeline,,The Washington Post,
+0060002,6,The Depth of the Problem,http://apps.washingtonpost.com/g/page/world/the-depth-of-the-problem/931/,灾害,illustration,,The Washington Post,
+0060003,6,After the storm,https://www.washingtonpost.com/posttv/afterthestorm/#/something-was-different,灾害,"interactive, map",,The Washington Post,
+0060004,6,‘A new kind of terrorism’ in Israel,https://www.washingtonpost.com/graphics/world/israel-palestine-deaths/#item65date10232015,政治,"interactive, timeline",,The Washington Post,
+0060005,6,2015 police shootings investigation,https://www.washingtonpost.com/graphics/national/police-shootings-year-end/,政治,"interactive, map",,The Washington Post,
+0060006,6,Mapping the census,http://www.washingtonpost.com/wp-srv/special/nation/census/2010/,政治,map,,The Washington Post,
+0060007,6,"State of the Union: Obama's greatest hits",https://www.washingtonpost.com/graphics/politics/2016-sotu/speech/,政治,illustration,,The Washington Post,
+0060008,6,How the growing web of conflict in Syria became a global problem,https://www.washingtonpost.com/graphics/world/explaining-the-syrian-conflict/,政治,"map, illustration",,The Washington Post,
+0060009,6,History through the president’s words,https://www.washingtonpost.com/graphics/politics/2016-sotu/language/,政治,interactive,,The Washington Post,
+0060010,6,What happens to your body during an ultramarathon,https://www.washingtonpost.com/graphics/health/ultramarathon/,生活,illustration,,The Washington Post,
+0060011,6,Will this storm top Snowmageddon?,https://www.washingtonpost.com/graphics/local/2016-snow/how-much-has-it-snowed/,生活,illustration,,The Washington Post,
+0120001,12,Mapping the Dead: Gun Deaths Since Sandy Hook,http://data.huffingtonpost.com/2013/03/gun-deaths,安全,"map, bubble, bar",,Huffington Post,
+0120002,12,Oscar Predictions 2013,http://data.huffingtonpost.com/2013/01/oscar-predictions,文化,bar,,Huffington Post,
+0120003,12,Relatives Of Vets Who Died By Suicide Tell Their Stories (AUDIO),http://www.huffingtonpost.com/2013/09/04/vets-suicide_n_3861728.html,安全按,multi-media,,Huffington Post,
+0120004,12,Dying to be free,http://projects.huffingtonpost.com/dying-to-be-free-heroin-treatment,生活,multi-media,,Huffington Post,
+0120005,12,Evicted and abandoned,http://projects.huffingtonpost.com/worldbank-evicted-abandoned,经济,multi-media,,Huffington Post,
+0120006,12,Prisoners of profit,http://projects.huffingtonpost.com/prisoners-of-profit,经济,"multi-media, timeline",,Huffington Post,
+0120007,12,House forcast,http://elections.huffingtonpost.com/2012/house-outlook,经济,multi-media,,Huffington Post,
+0120008,12,"Hospice, Inc.",http://projects.huffingtonpost.com/hospice-inc,医疗,multi-media,,Huffington Post,
+0030001,3,Election Party!,http://elections.npr.org/#,政治,real-time,,NPR,
+0030002,3,Fire Forecast,http://apps.npr.org/fire-forecast/,灾害,map,,NPR,
+0030003,3,Visualizing How A Population Grows To 7 Billion,http://www.npr.org/2011/10/31/141816460/visualizing-how-a-population-grows-to-7-billion,环境,multi-media,,NPR,
+0030004,3,Playgrounds For Everyone,http://www.playgroundsforeveryone.com/,经济,map,,NPR,
+0030005,3,Poisoned Places Map,http://www.npr.org/news/graphics/2011/10/toxic-air/#4.00/39.00/-84.00,灾害,"map, interactive",,NPR,
+0030006,3,"Explore China's Global Reach",http://www.npr.org/2011/06/10/136930746/explore-chinas-global-reach,经济,interactive,,NPR,
+0030007,3,"The Best Commencement Speeches, Ever",http://apps.npr.org/commencement/,教育,"multi-media, interactive",,NPR,
+0030008,3,Planet Money Makes A T-Shirt,http://apps.npr.org/tshirt/,商业,"multi-media, interactive",,NPR,
+0030009,3,"Demolished: The End Of Chicago's Public Housing",http://apps.npr.org/lookatthis/posts/publichousing/,,"multi-media, interactive",,NPR,
+0030010,3,Lost and Found : The amazing story of Charles Cushman in full color,http://www.npr.org/news/specials/2012/cushman/,艺术,"multi-media, interactive",,NPR,
+0030011,3,Talking While Female,http://www.npr.org/sections/health-shots/2014/10/24/357584372/video-what-women-get-flak-for-when-they-talk,科学,multi-media,,NPR,
+0080001,8,Election Night: Special Coverage: The 2014 Midterms,http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/,政治,"real-time, map",,Five Thirty Eight Live,
+0080002,8,"Searching for Ameirca's Best Burrito",http://fivethirtyeight.com/burrito/#brackets-view,生活,"map, tree, table",,Five Thirty Eight,
+0080003,8,Which Flight Will Get You There Fastest?,http://projects.fivethirtyeight.com/flights/,旅行,"map, table","Ritchie King, Nate Silver",Five Thirty Eight,
+0080004,8,Should You Get Married (Or Divorced) For Tax Reasons?,http://fivethirtyeight.com/interactives/marriage-penalty/,生活,interactive,Ritchie King,Five Thirty Eight,
+0080005,8,The Complete History Of The NBA,http://projects.fivethirtyeight.com/complete-history-of-the-nba/#sixers,体育,"timeline, line","Reuben Fischer-Baum, Nate Silver",Five Thirty Eight,
+0080006,8,2016 Primary Forecasts,http://projects.fivethirtyeight.com/election-2016/primary-forecast/iowa-republican/,政治,line,,Five Thirty Eight,
+0080007,8,What Would It Take To Turn 
+States?,http://projects.fivethirtyeight.com/2016-swing-the-election/,政治,"map, table","Aaron Bycoffe, David Wasserman",Five Thirty Eight,
+0080008,8,2015-16 NBA Predictions,http://projects.fivethirtyeight.com/2016-nba-picks/,体育,table,"Jay Boice, Reuben Fischer-Baum, Nate Silver",Five Thirty Eight,
+0080009,8,The Perfect Republican Stump Speech,http://projects.fivethirtyeight.com/stump-speech/,政治,,,Five Thirty Eight,
+0020001,2,Public spending by UK government department: an interactive guide,http://www.theguardian.com/news/datablog/interactive/2011/oct/26/public-spending-uk-government-department,政治,"bubble, interactive",TK,The Guardian,
+0020002,2,NSA files Decoded: what the relations mean for you,http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1,安全,"interactive, multi-media",TK,The Guardian,
+0020003,2,"The first Guardian data journalism: May 5, 1821",http://www.theguardian.com/news/datablog/2011/sep/26/data-journalism-guardian?INTCMP=SRCH,教育,,TK,The Guardian,
+0020004,2,March Madness: do the tallest teams always win the NCAA championship?,http://www.theguardian.com/sport/interactive/2013/mar/18/ncaa-tournament-team-matchups-height#g=Top%2025,体育,interactive,TK,The Guardian,
+0020005,2,NFL salaries by team and position,http://www.theguardian.com/sport/interactive/2013/jan/30/nfl-salaries-team-position,体育,"interactive, bubble",TK,The Guardian,
+0020006,2,"Gay rights in the US, state by state",http://www.theguardian.com/world/interactive/2012/may/08/gay-rights-united-states,政治,interactive,TK,The Guardian,
+0020007,2,"The state of our union is … dumber:
+How the linguistic standard of the presidential address has declined",http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level,政治,interactive,TK,The Guardian,
+0020008,2,Homan Square — A portrait of Chicago’s detainees,http://www.theguardian.com/us-news/ng-interactive/2015/oct/19/homan-square-chicago-police-detainees,观点,multimedia,TK,The Guardian,
+0020009,2,The Counted
+ — People killed by police in the US,http://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-map-us-police-killings,政治,"map, database",TK,The Guardian,
+0020010,2,"Watch how the measles outbreak spreads when kids get vaccinated – and when they don't",http://www.theguardian.com/society/ng-interactive/2015/feb/05/-sp-watch-how-measles-outbreak-spreads-when-kids-get-vaccinated,医疗,animation,TK,The Guardian,
+0020011,2,Gun deaths in your district: what have your elected representatives done?,http://www.theguardian.com/us-news/ng-interactive/2015/dec/14/gun-control-laws-congress-shooting-deaths-nra-lobby-campaign-donations#06-21,政治,"map, database",TK,The Guardian,
+0020012,2,Battle of the sexes: charting how women in tennis achieved equal pay,http://www.theguardian.com/sport/2015/sep/11/how-women-in-tennis-achieved-equal-pay-us-open,体育,bar,TK,The Guardian,
+0020013,2,"As the Oscars age, so do the nominees",http://www.theguardian.com/film/interactive/2014/mar/02/oscars-award-nominees-age-best-actress-actor,文化,line,TK,The Guardian,
+0020014,2,Live map of flights in the past 24 hours (and 100 years),http://www.theguardian.com/world/ng-interactive/2014/aviation-100-years,旅行,map,TK,The Guardian,
+0020015,2,"America's Climate Refugees",http://www.theguardian.com/environment/interactive/2013/may/14/alaska-villages-frontline-global-warming,环境,multimedia,TK,The Guardian,
+0020016,2,Are you reflected in the new Congress?,http://www.theguardian.com/us-news/ng-interactive/2014/nov/06/-sp-congress-diversity-women-race-lgbt-are-you-represented,政治,map,TK,The Guardian,
+0020017,2,World Cup: which domestic league is best represented?,http://www.theguardian.com/sport/ng-interactive/2015/jan/31/mega-beast-mode-marshawn-lynch-is-this-good,体育,bar,TK,The Guardian,
+0180001,22,Migration of Hollywood moviemaking,http://interactives.ap.org/2015/oscars-migration/,文化,interactive,,Associated Press,
+0180002,22,Seven years in one speech,http://interactives.ap.org/2015/sotu-2015/,政治,interactive,,Associated Press,
+0180003,22,Gulf Oil: five years later,http://interactives.ap.org/2015/gulf-health/,安全,illustration,,Associated Press,
+0180004,22,2016 Candidate tracker,http://interactives.ap.org/2015/2016-candidate-tracker/,政治,bubbles,,Associated Press,
+0180005,22,Where do you stand on issues,http://interactives.ap.org/2015/2016-issue-standings/,政治,game,,Associated Press,
+0040002,4,The Opportunity Gap,http://projects.propublica.org/schools/,教育,"database, map, interactive",TK,ProPublica,
+0040003,4,"Dollars for Docs
+How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdollars/,医疗,"database, map, interactive","Lena Groeger, Charles Ornstein, Mike Tigas, Ryann Grochowski Jones",ProPublica,
+0040004,4,Nursing Home Inspect:Find Nursing Home Problems in Your State,http://projects.propublica.org/nursing-homes/,医疗,"map,  interactive, database","Charles Ornstein, Lena Groeger",ProPublica,
+0040005,4,Treatment Tracker,https://projects.propublica.org/treatment/,医疗,interactive,"Lena Groeger, Charles Ornstein, and Ryann Grochowski Jones",ProPublica,
+0040006,4,Cruise Control,https://projects.propublica.org/cruises/,旅行,"illustration, interactive","Lena Groeger, Michael Grabell",ProPublica,
+0040007,4,"Worker's comp benefits: how much is a limb worth?",http://projects.propublica.org/graphics/workers-compensation-benefits-by-limb,政治,"illustration, interactive",Lena Groeger,ProPublica,
+0040008,4,"Worker's compensation reforms by state",http://projects.propublica.org/graphics/workers-comp-reform-by-state,政治,"map, interactive","Yue Qiu, Michael Grabell",ProPublica,
+0040009,4,Inside the firewall:tracking the news that China blocks,https://projects.propublica.org/firewall/,政治,interactive,Sisi Wei,ProPublica,
+0040010,4,A Disappearing Planet,http://projects.propublica.org/extinctions/,环境,"interactive, bar",Anna Flagg,ProPublica,
+0040011,4,Loosing Ground,http://projects.propublica.org/louisiana/,环境,"map, interactive, satellite imagery","Brain Jacobs, Al Shaw, Bob Marshall",ProPublica,
+0040012,4,Surgeons Scorecard,https://projects.propublica.org/surgeons/,医疗,"interactive, database","Sisi Wei, Olga Pierce, Marshall Allen",ProPublica,
+0040013,4,Money as a Weapons System,https://projects.propublica.org/cerp/,安全,"interactive, illustration, database"," Megan McCloskey, Mike Tigas, Ryann Grochowski Jones, Sisi Wei, Jeff Larson, Ingrid Burrington",ProPublica,
+0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,
+0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,
+0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,
+0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,
+0070005,7,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,政治,"interactive, map","Zach Mider, Christopher Cannon, and Adam Pearce",Bloomberg,
+0070006,7,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,文化,"line, interactive","Alex Tribou, Keith Collins",Bloomberg,
+0070007,7,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,政治,map,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",Bloomberg,
+0070008,7,"2015 was the hottest year on record, by a stunning margin",http://www.bloomberg.com/news/features/2016-01-20/2015-was-the-hottest-year-on-record-by-a-stunning-margin,环境,"line, interactive","Tom Randall, Blacki Migliozzi",Bloomberg,
+0070009,7,The Ungoverned World,http://www.bloomberg.com/graphics/2015-ungoverned-world/,政治,"map, interactive"," Alex McIntyre, Dave Merrill, and Blacki Migliozzi",Bloomberg,
+0070010,7,How Americans Die,http://www.bloomberg.com/graphics/dataview/how-americans-die/,政治,"line, bar","Lisa Strausfeld, Christopher Cannon, Jeremy Diamond, Takaaki Okada",Bloomberg,
+0160001,16,风雨中概股,http://special.caixin.com/2013/zgg/index.html,经济,"interactve, bubble",,Caixin,
+0160002,16,情仇中东,http://datanews.caixin.com/2015/mideast/,政治,network,,Caixin,
+0160003,16,青岛中石化管道爆炸事故——财新记者实拍图集,http://datanews.caixin.com/2013-11-24/100608929.html,灾害,"multi-media, interactive",,Caixin,
+0160004,16,周永康的人与财,http://datanews.caixin.com/2014/zhoushicailu/,政治,network,,Caixin,
+0160005,16,星空彩绘诺贝尔,http://datanews.caixin.com/2013/nobel/index.html,科学,"timeline, bubble",,Caixin,
+0050001,5,Results from the 2014 Midterm Election,http://graphics.wsj.com/midterm-election-results-2014/,政治,"map, interactive",,Wall Street Journal,
+0050002,5,TRIALS,http://projects.wsj.com/trials/#chapter=1,生活,"multi-media, long-form",Amy Dockser Marcus,Wall Street Journal,
+0050003,5,U.S. Unemployment: A Historical View,http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522,经济,"interactive, map",,Wall Street Journal,
+0050004,5,China Econtracker,http://blogs.wsj.com/chinarealtime/2012/01/17/introducing-china-real-times-china-econtracker/,经济,"interactive, line",,Wall Street Journal,
+0050005,5,Political Moneyball: Mapping Universe of Cash,http://blogs.wsj.com/washwire/2012/07/25/political-moneyball-mapping-the-universe-of-cash/,政治,"interactive, bubble","Andrew Garcia Phillips, Sarah Slobin, Jovi Juan",Wall Street Journal,
+0050006,5,Kowloon Walled City,http://projects.wsj.com/kwc/#chapter=intro,文化,"long-form, interactive, multi-media","Henry Williams, MinJung Kim",Wall Street Journal,
+0050007,5,European Parliament Elections 2014,http://graphics.wsj.com/european-elections-2014/,政治,"interactive, map","Jovi Juan, Gabriele Steinhauser, Elliot Bentley",Wall Street Journal,
+0050008,5,"100 Years, 100 Legacies: Tracing the Echoes of World War I",http://online.wsj.com/ww1/,政治,multi-media,,Wall Street Journal,
+0050009,5,Map of a Tragedy: How MH17 Came Apart Over Ukraine,http://graphics.wsj.com/mh17-crash-map/,安全,"map, multi-media",Stuart A. Thompson,Wall Street Journal,
+0050010,5,Surveying the Destruction in Gaza,http://graphics.wsj.com/gaza-surveying-destruction/,灾害,"map, multi-media, bar","Stuart A. Thompson, Renée Rigdon, Asa Fitch, Nicholas Casey, Taylor Umlauf, Erin McCarthy, Mark Fahey",Wall Street Journal,
+0050011,5,United Against Islamic State,http://graphics.wsj.com/isis-strange-bedfellows/,政治,interactive,"Chris Kaeser, Stuart A. Thompson",Wall Street Journal,
+0050012,5,"Scotland Votes No, Stays in the U.K.",http://graphics.wsj.com/scotland-referendum-results/,政治,"bar, map, interactive",,Wall Street Journal,
+0050013,5,Airstrikes in Iraq and Syria,http://graphics.wsj.com/airstrikes-on-islamic-state/,灾害,"bar, map, interactive","Nathaniel Lash, Felicia Schwartz",Wall Street Journal,
+0050014,5,Politics and Business in the House of Lords,http://graphics.wsj.com/house-of-lords/,政治,"interactive, long-form","Elliot Bentley, Jovi Juan, Charles Forelle, Justin Scheck",Wall Street Journal,
+0050015,5,Sochi Olympics Medal Tracker,http://graphicsweb.wsj.com/documents/sochi-medal-count/,体育,"map, table","Andrew Garcia Phillips, Chris Canipe",Wall Street Journal,
+0050016,5,Primer: Olympic 500m Speedskating,http://graphics.wsj.com/speed-skating-primer/,体育,interactive,Andrew Garcia Phillips,Wall Street Journal,
+0050017,5,World Cup of Everything Else,http://graphics.wsj.com/documents/WORLDCUPTOEE/,体育,tree,,Wall Street Journal,
+0050018,5,Scoring: National Style Guide,http://graphics.wsj.com/documents/wc-goals/,体育,interactive,"Chris Canipe, Geoff Foster, Joshua Robinson",Wall Street Journal,
+0050019,5,No. 1 vs. No. 32,http://graphics.wsj.com/us-open-32/,体育,bar,"Andrew Beaton, Stuart A. Thompson, Steven Kutz",Wall Street Journal,
+0050020,5,"World Cup Players' Penalty Kick Patterns",http://graphics.wsj.com/wc-penalty-kicks/,体育,interactive,"Chris Canipe, Geoff Foster",Wall Street Journal,
+0050021,5,HealthCare.gov Explorer,http://graphics.wsj.com/health-care-explorer/,医疗,"interactive, map","Martin Burch, Madeline Farbman, Jonathan Keegan, Adam Suharja, Christopher Weaver, Kurt Wilberding",Wall Street Journal,
+0050022,5,Faces of the Affordable Care Act,http://graphics.wsj.com/HealthProfiles/,医疗,"multi-media, long-form",Lakshmi Ketineni,Wall Street Journal,
+0050023,5,Which Cities Get the Most Sleep?,http://graphics.wsj.com/how-we-sleep/,医疗,map,Stuart A. Thompson,Wall Street Journal,
+0050024,5,Medical Money,http://graphics.wsj.com/medical-money/,医疗,bar,"Martin Burch, Colleen McEnaney",Wall Street Journal,
+0050025,5,Axis of Additives,http://graphics.wsj.com/food-additives-ingredients/,医疗,"tree, interactive","Ana Becker, Martin Burch, Annie Gasparro",Wall Street Journal,
+0050026,5,The People’s House,http://graphics.wsj.com/the-peoples-house/,政治,"map, bar","Randy Yeip, Casey Miller",Wall Street Journal,
+0050027,5,An Animated View of the 2014 Midterm Elections,http://graphics.wsj.com/midterm-election-2014-animations/,政治,"map, animation",,Wall Street Journal,
+0050028,5,Best Books of 2014,http://graphics.wsj.com/best-books-2014,文化,multi-media,,Wall Street Journal,
+0050029,5,Biopics: A History,http://graphics.wsj.com/biopics/,文化,"multi-media, long-form",,Wall Street Journal,
+0050030,5,Libor: The Spider Network,http://graphics.wsj.com/libor-network,商业,network,"Jovi Juan, David Enrich",Wall Street Journal,
+0050031,5,Personal 3-D Printer Sales in 3-D,http://graphics.wsj.com/3Dprinting/,技术,3D,"Paul Antonson, Drew Evans, Mike Sudal",Wall Street Journal,
+0050032,5,The Ins and Outs of the Dow Jones Industrial Average,http://graphics.wsj.com/djia-components-history/,商业,bar,"Stuart A. Thompson, William Power",Wall Street Journal,
+0050033,5,Wages Winners and Losers Since 2004,http://graphics.wsj.com/mapping-wages-income/,经济,map,"Brian McGill, Dante Chinni",Wall Street Journal,
+0050034,5,Christmas Sale Tracker,http://graphics.wsj.com/Christmas-Sale-Tracker/,生活,line,"Shelly Banjo, Lakshmi Ketineni, Colleen McEnaney, Kate Linebaugh",Wall Street Journal,
+0050035,5,"A Stolen Boy, an Angry Loner, an Underground Bunker",http://graphics.wsj.com/hostage/,安全,"multi-media, long-form",Michael M. Phillips,Wall Street Journal,
+0050036,5,Are You Good Enough to Be a Tennis Line Judge?,http://graphics.wsj.com/are-you-good-enough-to-be-a-tennis-line-judge/,体育,interactive,Sarah Squire,Wall Street Journal,
+0050037,5,Battling Infectious Diseases in the 20th Century: The Impact of Vaccines,http://graphics.wsj.com/infectious-diseases-and-vaccines/,医疗,heatmap,"Tynan DeBold, Dov Friedman",Wall Street Journal,
+0050038,5,Beat the Federal Reserve,http://graphics.wsj.com/beat-the-fed/,经济,line,"Chris Canipe, Katie Marriner, Stuart A. Thompson, Andrew Van Dam",Wall Street Journal,
+0050039,5,Demographic Destiny: What Will the World Be Like in 2050?,http://graphics.wsj.com/2050-demographic-destiny/,经济,long-form,,Wall Street Journal,
+0050040,5,From Pluto to the Sun: A Field Guide to the Solar System,http://graphics.wsj.com/from-pluto-to-the-sun/,科学,"interactive, 3D","Jon Keegan, Chris Canipe, Alberto Cervantes",Wall Street Journal,
+0050041,5,Is the Nasdaq in Another Bubble?,http://graphics.wsj.com/3d-nasdaq/,商业,"line, 3D","Roger Kenny, Ana Asnes Becker",Wall Street Journal,
+0050042,5,Oscars of Everything Else,http://graphics.wsj.com/oscars-of-everything-else/,媒体,long-form,"Geoff Foster, Stuart A. Thompson, Michael Calia, Jim Chairusmi",Wall Street Journal,
+0050043,5,The Billion Dollar Startup Club,http://graphics.wsj.com/billion-dollar-club/,商业,"interactive, table","Scott Austin, Chris Canipe, Sarah Slobin",Wall Street Journal,
+0050044,5,The Madness Machine: Create Your Own NCAA Tournament Bracket,http://graphics.wsj.com/ncaa-madness-machine/,体育,"interactive, tree",Geoff Foster,Wall Street Journal,
+0050045,5,"Track National Unemployment, Job Gains and Job Losses",http://graphics.wsj.com/job-market-tracker/,经济,"interactive, dot, table, line","Andrew Van Dam, Renee Lightner",Wall Street Journal,
+0050046,5,The South China Sea Dispute,http://graphics.wsj.com/south-china-sea-dispute/,政治,"map, bar",,Wall Street Journal,
+0050047,5,"America's Jukebox Heroes: Our Favorite Artists, Coast to Coast",http://graphics.wsj.com/americas-jukebox-heroes/,生活,"map, interactive",Elliott Ramos,Wall Street Journal,
+0050048,5,Your Guide to Outdoor Entertaining,http://graphics.wsj.com/off-duty-50/guide-to-summer-outdoor-entertaining/,生活,multi-media,,Wall Street Journal,
+0050049,5,Search Hillary Clinton’s Emails,http://graphics.wsj.com/hillary-clinton-email-documents/,政治,interactive,,Wall Street Journal,
+0050050,5,2016 Election Polls,http://graphics.wsj.com/elections/2016/polls/,政治,line,,Wall Street Journal,
+0100001,10,Killing Kennedy,http://kennedyandoswald.com/#!/premiere-screen,政治,"interactive, multi-media",,National Geographic,
+0100002,10,What the world eats,http://www.nationalgeographic.com/what-the-world-eats/,文化,"timeline, pie, interactive",,National Geographic,
+0100003,10,What Earthquake Maps Should Really Look Like,http://news.nationalgeographic.com/2015/10/151003-datapoints-what-earthquake-maps-should-really-look-like/,灾害,map,"Chiqui Esteban, John Tomanio",National Geographic,
+0090001,9,Connected China,http://china.fathom.info/,政治,"app, multi-media",Fathom,Reuters,
+0090002,9,"Water's Edge",http://www.reuters.com/investigates/special-report/waters-edge-the-crisis-of-rising-sea-levels/,环境,"long-form, multi-media,map","Ryan McNeill, Deborah J. Nelson, Duff Wilson",Reuters,
+0090003,9,The Echo Chamber,http://www.reuters.com/investigates/special-report/scotus/,政治,"long-form, interactive,bar","Joan Biskupic, Janet Roberts, John Shiffman",Reuters,
+0090004,9,Mexico looks the other way as contractors fleece oil giant Pemex,http://www.reuters.com/investigates/special-report/pemex-contracts/,安全,"long-form, infographics","Elinor Comlay, Mica Rosenberg, M.B. Pell",Reuters,
+0170001,17,Behind the sound bite,http://widgets.scmp.com/infographic/20140113/policyaddress/,政治,bar,,South China Morning Post,
+0170002,17,In the long run,http://widgets.scmp.com/infographic/20140217/marathon2014/,体育,dot,"Cedric Sam, Jane Pong, Olivia Rosenman",South China Morning Post,
+0170003,17,World Cup 2014,http://www.scmp.com/infographics/article/1537100/world-cup-2014-visualisation-group-matches-results-and-goals-scored,体育,game,"Cedric Sam, Adolfo Arranz",South China Morning Post,
+0170004,17,"Men's tennis: How big are the Big Four?",http://widgets.scmp.com/infographic/20140704/bigfour/,体育,game,"Cedric Sam, Pearl Law",South China Morning Post,
+0170005,17,Malaysia Airlines flight MH370,http://www.scmp.com/infographics/article/1443975/infographic-malaysia-airlines-flight-mh370,灾害,infographics,,South China Morning Post,
