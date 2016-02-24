@@ -14,7 +14,7 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import {ORGS} from './const';
 import DJTheme from './theme';
 
-injectTapEventPlugin();
+// injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
 

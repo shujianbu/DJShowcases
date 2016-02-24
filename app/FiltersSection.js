@@ -18,7 +18,7 @@ import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 import { TOPICS, ORGS, TYPES } from './const';
 import DJTheme from './theme';
 
-injectTapEventPlugin();
+// injectTapEventPlugin();
 
 class FiltersSection extends React.Component {
 
