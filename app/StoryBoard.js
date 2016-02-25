@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Avatar from 'material-ui/lib/avatar';
 import Card from 'material-ui/lib/card/card';
@@ -14,7 +13,6 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import {ORGS} from './const';
 import DJTheme from './theme';
 
-// injectTapEventPlugin();
 
 class StoryBoard extends React.Component {
 

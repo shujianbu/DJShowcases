@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
@@ -17,8 +16,6 @@ import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 
 import { TOPICS, ORGS, TYPES } from './const';
 import DJTheme from './theme';
-
-// injectTapEventPlugin();
 
 class FiltersSection extends React.Component {
 

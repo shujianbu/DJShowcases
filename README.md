@@ -7,13 +7,13 @@
 ## Install
 ```sh
 npm install
-npm run dev
+npm start
 ```
 
 ## TODO
 
 ### functional
-* state should not rerender
+* sort by pub date
 * add readme
 * data aggreagation, add date and hyperlink
 

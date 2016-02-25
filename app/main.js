@@ -2,9 +2,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import FiltersSection from './FiltersSection';
 import BoardContainer from './BoardContainer';
 import data from './data.csv';
+
+injectTapEventPlugin();
 
 class APP extends React.Component {
   constructor() {
@@ -14,6 +18,11 @@ class APP extends React.Component {
     var autoCompleteData = [];
     data.forEach(function(d) {
       autoCompleteData.push(d['Title']);
+    });
+    data.sort(function(a, b) {
+      var da = new Date(a['Publication Date']);
+      var db = new Date(b['Publication Date']);
+      return (da - db) || 0;
     });
     this.autoCompleteData = autoCompleteData;
   }
