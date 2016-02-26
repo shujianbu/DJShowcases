@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/shujianbu/DJShowcases.svg?branch=master)](https://travis-ci.org/shujianbu/DJShowcases)
+[![Dependency Status](https://david-dm.org/shujianbu/DJShowcases.svg)](https://david-dm.org/shujianbu/DJShowcases)
+
+# [![DJChina Logo](https://raw.githubusercontent.com/shujianbu/DJShowcases/master/build/img/favicon.png)](http://djchina.org/) DJChina Showcases
+
 ![Overview](https://raw.githubusercontent.com/shujianbu/DJShowcases/master/overview.png)
 
 ## About
