@@ -41,7 +41,7 @@ var getGdata = function(sheetID, rowID) {
 		    entry['Element tag'] = data.elementtag;
 		    entry['Author'] = data.author;
 		    entry['Organizationen'] = data.organizationen;
-		    entry["Publication Date"] = data.Publicationdate;
+		    entry["Publication Date"] = data.publicationdate;
 		    outdata.push(entry);
 		    rowID++;
 	    	if(rowID == rowLen ){
