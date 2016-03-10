@@ -7,8 +7,9 @@
   "scripts": {
     "start": "webpack-dev-server --devtool eval --progress --colors",
     "build": "webpack",
-    "validate": "npm ls",
+    "update": "node ./scripts/update.js",
     "deploy": "./deploy.sh",
+    "validate": "npm ls",
     "test": "mocha --compilers js:babel-core/register --require ./test/setup.js"
   },
   "repository": {
