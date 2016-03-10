@@ -38,6 +38,16 @@ ID,OrgId,Title,URL,Categories,Element tag,Author,Organizationen,Publication Date
 0500039,,Selfiecity,http://selfiecity.net/,生活,interactive,"Dr. Lev Manovich, Moritz Stefaner, Dr. Mehrdad Yazdani, Dr. Dominikus Baur, Jay Chow, Daniel Goddemeyer, Alise Tifentale, Nadav Hochman",Moritz Stefaner,
 0500040,,OECD Regional Well-Being,http://www.oecdregionalwellbeing.org/,生活,interactive,"Moritz Stefaner, Dr. Dominikus Baur, Monica Brezzi and team",Moritz Stefaner,
 0500041,,After Babylon,http://www.puffpuffproject.com/languages.html,文化,"map, bubble","Sofia Girelli, Eleonora Grotto, Pietro Lodi, Daniele Lupatini, Emilio Patuzzo",Puff Puff Team,2014
+0500042,,BBC Knowledge DNA Explainer,https://vimeo.com/60747882,科学,"illustration, animation",Territory Studio ,BBC,2/28/2013
+0500043,,The Solar System – our home in space,https://www.youtube.com/watch?v=KsF_hdjWJjo,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith",Kurzgesagt,8/22/2013
+0500044,,"Nobels, no degrees",http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/204/large.jpg?1403777309,科学,"dot, line","Giorgia Lupi, Simone Quadri, Gabriele Rossi, Davide Ciuffi, Federica Fragapane, Francesco Majno",Accurat,2013
+0500045,,Global Warning,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/098/large.jpg?1413040612,环境,"map, line, bar, pie",Derek Kim,Derek Kim,2013
+0500046,,Listen to Wikipedia,http://listen.hatnote.com/,文化,bubble ,"Stephen LaPorte, Mahmoud Hashemi","Stephen LaPorte, Mahmoud Hashemi",2013
+0500047,,New York City carbon emissions,https://www.youtube.com/watch?v=DtqSIplGXOA,环境,"illustration, animation","Adam Nieman, Chris Rabet","Adam Nieman, Chris Rabet",10/19/2012
+0500048,,How to win an Oscar,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/391/large.jpg?1403858126,文化,sankey,Christian Tate,Christian Tate,2013
+0500049,,GED VIZ: Visualizing Global Economic Relations,http://viz.ged-project.de/,经济,,Jan Arpe,Jan Arpe,
+0500050,,U.S. Gun Deaths,http://guns.periscopic.com/?year=2013,灾害,,,Periscopic,
+0500051,,Why Health Care is So Expensive,http://healthland.time.com/2013/02/20/what-makes-health-care-so-expensive/,政治,"illustration, table, bar",Heather Jones,TIME,2/20/2013
 0010001,1,512 Paths to the White House,http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0,政治,,,New York Times,11/2/2012
 0010002,1,The Facebook Offering: How It Compares,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,经济,interactive,,New York Times,5/17/2012
 0010003,1,"How the Recession Reshaped the Economy, in 255 Charts",http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html,经济,interactive,,New York Times,6/4/2014
@@ -153,6 +163,7 @@ How the linguistic standard of the presidential address has declined",http://www
 0020015,2,"America's Climate Refugees",http://www.theguardian.com/environment/interactive/2013/may/14/alaska-villages-frontline-global-warming,环境,multimedia,TK,The Guardian,5/14/2013
 0020016,2,Are you reflected in the new Congress?,http://www.theguardian.com/us-news/ng-interactive/2014/nov/06/-sp-congress-diversity-women-race-lgbt-are-you-represented,政治,map,TK,The Guardian,11/6/2014
 0020017,2,World Cup: which domestic league is best represented?,http://www.theguardian.com/sport/ng-interactive/2015/jan/31/mega-beast-mode-marshawn-lynch-is-this-good,体育,bar,TK,The Guardian,1/31/2015
+0020018,2,"The 39 stats: Alfred Hitchcock's obsessions in numbers",http://www.theguardian.com/film/picture/2013/aug/12/alfred-hitchcock-film-statistics,艺术,"map, illustration","Adam Frost, Zhenia Vasiliev",The Guardian,8/12/2013
 0180001,22,Migration of Hollywood moviemaking,http://interactives.ap.org/2015/oscars-migration/,文化,interactive,,Associated Press,2/13/2015
 0180002,22,Seven years in one speech,http://interactives.ap.org/2015/sotu-2015/,政治,interactive,,Associated Press,1/24/2015
 0180003,22,Gulf Oil: five years later,http://interactives.ap.org/2015/gulf-health/,安全,illustration,,Associated Press,4/17/2015
