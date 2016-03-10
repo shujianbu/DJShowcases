@@ -5,7 +5,10 @@
 .vscode/
 
 ### Node ###
+build/vendors.js
+build/bundle.js
 out/
+
 # Logs
 logs
 *.log
