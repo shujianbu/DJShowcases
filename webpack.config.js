@@ -6,8 +6,7 @@ var config = {
     this.module.noParse.push(new RegExp('^' + name + '$'));
   },
   entry: [
-    './app/main.js',
-    './app/main.css'
+    './app/main.js'
   ],
   resolve: { alias: {} },
   plugins: [

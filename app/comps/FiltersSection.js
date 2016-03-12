@@ -14,25 +14,27 @@ import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
 import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
 import ToolbarTitle from 'material-ui/lib/toolbar/toolbar-title';
 
-import { TOPICS, ORGS, TYPES } from './const';
-import DJTheme from './theme';
+import { TOPICS, ORGS, TYPES } from '../data/const';
+import DJTheme from '../styles/theme';
 
 class FiltersSection extends React.Component {
 
   constructor(props) {
     super(props);
 
+    var populateMenus = (data) => {
+      let ret = [];
+      for(var ind in data) {
+        if ({}.hasOwnProperty.call(data, ind)) {
+          ret.push(<MenuItem value={ind} key={ind} primaryText={data[ind].ch} />);
+        }
+      }
+      return ret;
+    };
+
     this.orgs   = populateMenus(ORGS);
     this.topics = populateMenus(TOPICS);
     this.types  = populateMenus(TYPES);
-
-    function populateMenus(data) {
-      let ret = [];
-      for(var ind in data) {
-        ret.push(<MenuItem value={ind} key={ind} primaryText={data[ind].ch} />);
-      }
-      return ret;
-    }
 
     this.state = {
       topic : '0',
@@ -82,7 +84,7 @@ class FiltersSection extends React.Component {
       );
 
     }
-};
+}
 
 FiltersSection.childContextTypes = {
     muiTheme: React.PropTypes.object

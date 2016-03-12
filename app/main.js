@@ -4,9 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import FiltersSection from './FiltersSection';
-import BoardContainer from './BoardContainer';
-import data from './data.csv';
+import FiltersSection from './comps/FiltersSection';
+import BoardContainer from './comps/BoardContainer';
+
+import css from './styles/main.css';
+import data from './data/data.csv';
 
 injectTapEventPlugin();
 

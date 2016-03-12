@@ -1,7 +1,7 @@
 
 import React from 'react';
 import StoryBoard from './StoryBoard';
-import {TOPICS, ORGS, TYPES} from './const';
+import { TOPICS, ORGS, TYPES } from '../data/const';
 
 class BoardContainer extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class BoardContainer extends React.Component {
     if(JSON.stringify(self.props.filter) !== JSON.stringify(nextProps.filter) || nextProps.search !== self.props.search) {
       var filter = nextProps.filter;
       var temp = [];
-      self.state.storyBoards.forEach(function(sb) {
+      self.state.storyBoards.forEach((sb) => {
         var topic = sb['Categories'];
         var org   = sb['OrgId'];
         var type  = sb['Element tag'];
@@ -31,11 +31,11 @@ class BoardContainer extends React.Component {
         if(flag && filter !== null && filter.org !== '0' && filter.org !== org) {
           flag = false;
         }
-        if(flag && filter !== null && filter.type !== '0' && type.indexOf(TYPES[filter.type].en) == -1) {
+        if(flag && filter !== null && filter.type !== '0' && type.indexOf(TYPES[filter.type].en) === -1) {
           flag = false;
         }
         if(flag && (nextProps.search !== self.props.search || nextProps.search !== '')) {
-          if(title.indexOf(nextProps.search) == -1) {
+          if(title.indexOf(nextProps.search) === -1) {
             flag = false;
           }
         }
@@ -51,7 +51,7 @@ class BoardContainer extends React.Component {
   render() {
     return (
       <div>
-      {this.state.filteredStoryBoards.map(function(story, ind) {
+      {this.state.filteredStoryBoards.map((story, ind) => {
         return <StoryBoard key={ind} data={story} />;
       })}
       </div>

@@ -10,9 +10,8 @@ import CardTitle from 'material-ui/lib/card/card-title';
 import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
-import {ORGS} from './const';
-import DJTheme from './theme';
-
+import { ORGS } from '../data/const';
+import DJTheme from '../styles/theme';
 
 class StoryBoard extends React.Component {
 
@@ -64,7 +63,7 @@ class StoryBoard extends React.Component {
       </Card>
     );
   }
-};
+}
 
 StoryBoard.childContextTypes = {
   muiTheme: React.PropTypes.object
