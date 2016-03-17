@@ -9,6 +9,8 @@ DJShowcases is ...
 ![Overview](https://raw.githubusercontent.com/shujianbu/DJShowcases/master/overview.png)
 
 ## Contribute
+Please submit good data journalism projects you would like us to showcase in this project. 
+[Google Form](http://goo.gl/forms/srbLBtEkP7)
 
 ## Development
 ```sh
