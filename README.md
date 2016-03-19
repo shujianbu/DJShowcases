@@ -25,4 +25,3 @@ npm run update
 * data aggreagation, add date and hyperlink
 * modal -> information
 * Nav bar -> add modal and control logics
-* unidentified logo, use first letter

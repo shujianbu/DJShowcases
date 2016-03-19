@@ -9,9 +9,14 @@ import CardMedia from 'material-ui/lib/card/card-media';
 import CardTitle from 'material-ui/lib/card/card-title';
 import CardText from 'material-ui/lib/card/card-text';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import styles from 'material-ui/lib/styles';
 
 import { ORGS } from '../data/const';
 import DJTheme from '../styles/theme';
+
+const colorsArr = [styles.Colors.amber500, styles.Colors.brown400, styles.Colors.blueGrey500, styles.Colors.pink400, styles.Colors.green500,
+  styles.Colors.teal500, styles.Colors.blue300, styles.Colors.indigo400, styles.Colors.purple500, styles.Colors.red500];
+const greyCol = styles.Colors.grey200;
 
 class StoryBoard extends React.Component {
 
@@ -28,6 +33,16 @@ class StoryBoard extends React.Component {
     };
   }
 
+  getLogo(id, name) {
+    if(ORGS[id]) {
+      return './img/logo/' + id + '.png';
+    } else {
+      var cap = name.charAt(0).toUpperCase();
+      var num = Math.floor(Math.random() * 10);
+      return <Avatar color={greyCol} backgroundColor={colorsArr[num]} size={25}>{cap}</Avatar>;;
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     this.setState({data: this.parseData(nextProps.data)});
   }
@@ -42,7 +57,7 @@ class StoryBoard extends React.Component {
     ret.orgId = data['OrgId'];
     ret.orgen = ORGS[ret.orgId] ? ORGS[ret.orgId]['en'] : data['Organizationen'];
     ret.orgcn = ORGS[ret.orgId] ? ORGS[ret.orgId]['ch'] : '';
-    ret.logo = ORGS[ret.orgId] ? ('./img/logo/' + ret.orgId + '.png') : './img/logo/default.png';
+    ret.logo = this.getLogo(ret.orgId, ret.orgen);
     ret.featureImage = './img/features/' + ret.id + '.png';
     return ret;
   }
