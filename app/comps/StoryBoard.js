@@ -64,6 +64,7 @@ class StoryBoard extends React.Component {
 
   render() {
     return (
+      <a href={this.state.data.url} target="_blank">
       <Card className='story-board'>
         <CardTitle className="card-title" title={this.state.data.title} />
         <CardMedia className="image-overlay" overlay={<CardTitle title={this.state.data.topic} subtitle = {this.state.data.elements}/>}>
@@ -76,6 +77,7 @@ class StoryBoard extends React.Component {
         subtitle = {this.state.data.orgcn}
         avatar = {this.state.data.logo} />
       </Card>
+      </a>
     );
   }
 }
