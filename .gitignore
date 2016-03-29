@@ -19,3 +19,4 @@ node_modules
 pids
 *.pid
 *.seed
+client_secret.json
