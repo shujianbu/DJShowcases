@@ -4,13 +4,11 @@
 
 # <a href="http://djchina.org/"><img src="https://raw.githubusercontent.com/shujianbu/DJShowcases/master/build/img/favicon.png" width="50"></a>  DJChina Showcases
 
-DJShowcases is ...
+DJChina Showcases是配合[数据新闻网 2.0](http://djchina.org/)上线推出的一个小平台，收集数据新闻及相关行业的优秀作品集，以跟踪国外新闻编辑室以及独立工作室为主，希望提供给从业人员一个快速索引学习的平台。
+
+平台开发还在初始阶段，欢迎通过[Issues](https://github.com/shujianbu/DJShowcases/issues)提交建议和[Google Form](http://goo.gl/forms/srbLBtEkP7)补充更多作品，活跃数据新闻社区。<br/>
 
 ![Overview](https://raw.githubusercontent.com/shujianbu/DJShowcases/master/overview.png)
-
-## Contribute
-Feel free to submit great data journalism projects to our showcase repo. <br />
-[Google Form](http://goo.gl/forms/srbLBtEkP7)
 
 ## Development
 ```sh
@@ -23,7 +21,5 @@ npm run update
 
 ## TODO
 * sort by pub date
-* add readme
 * data aggreagation, add date and hyperlink
-* modal -> information
-* Nav bar -> add modal and control logics
+* modal ? -> information
