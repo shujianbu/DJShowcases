@@ -24,7 +24,7 @@ class APP extends React.Component {
     data.sort(function(a, b) {
       var da = new Date(a['Publication Date']);
       var db = new Date(b['Publication Date']);
-      return (da - db) || 0;
+      return (db - da) || 0;
     });
     this.autoCompleteData = autoCompleteData;
   }

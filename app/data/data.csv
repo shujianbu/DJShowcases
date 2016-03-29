@@ -1,53 +1,4 @@
 ID,OrgId,Title,URL,Categories,Element tag,Author,Organizationen,Publication Date
-0500001,,Flight Patterns,http://www.aaronkoblin.com/work/flightpatterns/,技术,"3D, interactive",,Aaron Koblin,tk
-0500002,,"Find out about crime on your block, in your community, along your commute, and more",http://crime.chicagotribune.com/,安全,interactive,,Chicagotribune,tk
-0500006,,government shutdown 2013,http://labs.enigma.io/shutdown2013/,政治,"tree, interactive, real-time",,Enigma,tk
-0500007,,"America's Election HQ",http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/,政治,"photo, map, interactive, multi-media",,Fox News,tk
-0500008,,Small Arms and Ammunition-Imports and Exports,http://armsglobe.chromeexperiments.com/,安全,"timeline, bar, interactive, 3D",,Google,tk
-0500009,,Codebases: Millions Lines of Code,http://www.informationisbeautiful.net/visualizations/million-lines-of-code/,技术,,,Information is beautiful,tk
-0500010,,"Audubon's Birds and Climate Change Report
-314 Species on the Brink",http://climate.audubon.org/,环境,map,,National Audubon Society,tk
-0500011,,Bear 71,http://bear71.nfb.ca/#/bear71,环境,"multi-media, interactive",,NBF,tk
-0500012,,U.S. Gun Deaths in 2013,http://guns.periscopic.com/?year=2013,安全,,,Periscopic,tk
-0500013,,"Exploring the Reach, Frequency and Impact of Terrorism Around the World",http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world,安全,"timeline, map, interactive, barchart, sorting",,Periscopic,tk
-0500014,,"Out of Sight, Out of Mind.",http://drones.pitchinteractive.com/,安全,"timeline, bar",,pitchinc,tk
-0500015,,THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?,http://www.popsci.com/science/article/2013-05/energy-gap,技术,,,Popular Science,tk
-0500016,,Poverty Tracker,http://povertytracker.robinhood.org/,经济,"interactive, bubble",,Robin Hood,tk
-0500017,,"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook",http://techcrunch.com/2014/02/25/the-age-of-acquisitions/,经济,"interactive, bar",,Tech Crunch,tk
-0500018,,China Global Investment Tracker,http://www.aei.org/china-global-investment-tracker/,经济,"interactive, map",,THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION,tk
-0500019,,"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001–2012",http://www.thenation.com/afghanistan-database/,安全,"interactive,bar, map",,The Nation,tk
-0500020,,A Model of Breast Cancer Causation,http://www.cabreastcancer.org/causes/#,生活,interactive,,University of California,tk
-0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,
-0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,
-0500023,,A Nation Divided,http://www.zeit.de/feature/german-unification-a-nation-divided,政治,"interacitive, map","Lisa Borgenheimer, Paul Blickle, Julian Stahnke, Sascha Venohr",Zeit Online,10/29/2014
-0500024,,令计划关系网,http://121.42.52.51/zt/2015/lingjihua/index.html,政治,network,,The Paper,7/18/2015
-0500025,,三峡,http://121.42.52.51/zt/2015/sanxia/index.html,环境,"multi-media, interactive",,The Paper,7/21/2015
-0500026,,一路向北：15天4000公里，全程记录难民欧洲逃亡路,http://image.thepaper.cn/html/zt/2015/refugee/index.html,政治,"multi-media, interactive",,The Paper,12/15/2015
-0500027,,Histography,http://histography.io/,,"timeline, interactive",Matan Stauber,Matan Stauber,10/1/2015
-0500028,,Weather Radials,http://weather-radials.com/,环境,"bubble, bar",Timm Kekeritz,Timm Kekeritz,2013
-0500029,,Creative Routines,http://www.informationisbeautifulawards.com/showcase/483-creative-routines,文化,pie,RJ Andrews,RJ Andrews,
-0500030,,Game of Thrones Decoded: Connecting the Dots from Season 3,http://time.com/44106/game-of-thrones-decoder/,艺术,network,Heather Jones,Heather Jones,4/2/2014
-0500031,,The Graphic Continuum,http://www.informationisbeautifulawards.com/showcase/611-the-graphic-continuum,艺术,network,"Jonathan Schwabish, Severino Ribecca","Jonathan Schwabish, Severino Ribecca",
-0500032,,The Refugee Project,http://www.therefugeeproject.org/,政治,"map, timeline, bubble, interactive","Hyperakt, Ekene Ijeoma","Hyperakt, Ekene Ijeoma",
-0500033,,Commonwealth War Dead: First World War Visualised,http://codehesive.com/commonwealthww1/,,"bar, timeline",James Offer,James Offer,2014
-0500034,,World Food Clock,http://worldfoodclock.com/,,illustration,Luke Twyman,Luke Twyman,
-0500035,,NYC Taxis: A Day in the Life,http://nyctaxi.herokuapp.com/,商业,"map, timeline ",Chris Whong,Chris Whong,
-0500036,,Beyond Bytes,https://vimeo.com/69750203,政治,"illustration, animation","Maral Pourkazemi, Florian Köhne","Maral Pourkazemi, Florian Köhne",2013
-0500037,,Everything You Need to Know about Planet Earth,https://www.youtube.com/watch?v=JGXi_9A__Vc&list=PLFs4vir_WsTyXrrpFstD64Qj95vpy-yo1&index=1,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith, Steve Taylor, Michael Büker",Kurzgesagt,2014
-0500038,,Carbon Dioxide Emissions Bury the UN Summit,http://www.carbonvisuals.com/projects/wbcsd,环境,"illustration, 3D, animation",Adam Nieman,Adam Nieman,2014
-0500039,,Selfiecity,http://selfiecity.net/,生活,interactive,"Dr. Lev Manovich, Moritz Stefaner, Dr. Mehrdad Yazdani, Dr. Dominikus Baur, Jay Chow, Daniel Goddemeyer, Alise Tifentale, Nadav Hochman",Moritz Stefaner,
-0500040,,OECD Regional Well-Being,http://www.oecdregionalwellbeing.org/,生活,interactive,"Moritz Stefaner, Dr. Dominikus Baur, Monica Brezzi and team",Moritz Stefaner,
-0500041,,After Babylon,http://www.puffpuffproject.com/languages.html,文化,"map, bubble","Sofia Girelli, Eleonora Grotto, Pietro Lodi, Daniele Lupatini, Emilio Patuzzo",Puff Puff Team,2014
-0500042,,BBC Knowledge DNA Explainer,https://vimeo.com/60747882,科学,"illustration, animation",Territory Studio ,BBC,2/28/2013
-0500043,,The Solar System – our home in space,https://www.youtube.com/watch?v=KsF_hdjWJjo,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith",Kurzgesagt,8/22/2013
-0500044,,"Nobels, no degrees",http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/204/large.jpg?1403777309,科学,"dot, line","Giorgia Lupi, Simone Quadri, Gabriele Rossi, Davide Ciuffi, Federica Fragapane, Francesco Majno",Accurat,2013
-0500045,,Global Warning,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/098/large.jpg?1413040612,环境,"map, line, bar, pie",Derek Kim,Derek Kim,2013
-0500046,,Listen to Wikipedia,http://listen.hatnote.com/,文化,bubble ,"Stephen LaPorte, Mahmoud Hashemi","Stephen LaPorte, Mahmoud Hashemi",2013
-0500047,,New York City carbon emissions,https://www.youtube.com/watch?v=DtqSIplGXOA,环境,"illustration, animation","Adam Nieman, Chris Rabet","Adam Nieman, Chris Rabet",10/19/2012
-0500048,,How to win an Oscar,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/391/large.jpg?1403858126,文化,sankey,Christian Tate,Christian Tate,2013
-0500049,,GED VIZ: Visualizing Global Economic Relations,http://viz.ged-project.de/,经济,,Jan Arpe,Jan Arpe,
-0500050,,U.S. Gun Deaths,http://guns.periscopic.com/?year=2013,灾害,,,Periscopic,
-0500051,,Why Health Care is So Expensive,http://healthland.time.com/2013/02/20/what-makes-health-care-so-expensive/,政治,"illustration, table, bar",Heather Jones,TIME,2/20/2013
 0010001,1,512 Paths to the White House,http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0,政治,,,New York Times,11/2/2012
 0010002,1,The Facebook Offering: How It Compares,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,经济,interactive,,New York Times,5/17/2012
 0010003,1,"How the Recession Reshaped the Economy, in 255 Charts",http://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html,经济,interactive,,New York Times,6/4/2014
@@ -101,41 +52,27 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0010053,1,The Changing Nature of Middle-Class Jobs,http://www.nytimes.com/interactive/2015/02/23/business/economy/the-changing-nature-of-middle-class-jobs.html,经济,line,,New York Times,02/23/2015
 0010054,1,A fairer World Cup draw,http://www.nytimes.com/interactive/2014/06/03/upshot/world-cup-draw-simulation.html,体育,simulation,,New York Times,06/03/2014
 0010055,1,The Clubs That Connect The World Cup,http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html,体育,network,,New York Times,06/20/2014
-0130001,13,Flooding & Flood Zones,http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702,灾害,map,,WNYC,11/11/2012
-0130002,13,NYC Hottest Subway Stations Mapped,http://www.wnyc.org/story/hottest-subway-stations-map-nyc/,生活,map,,WNYC,7/30/2015
-0130003,13,NYC Yoga,http://project.wnyc.org/nyc-yoga/,生活,illustration,,WNYC,8/1/2015
-0130004,13,Christieverse,http://project.wnyc.org/christieverse/,政治,"multi-media, tree",,WNYC,5/1/2015
-0130005,13,School Book,http://data.schoolbook.org,教育,"interactive, map",,WNYC,9/1/2013
-0130006,13,Unlimited choices: 7-day vs 30-day MetroCards,http://project.wnyc.org/mta-unlimited/,经济,map,,WNYC,1/22/2015
-0060001,6,A global look at cardiac risk factors,http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/,灾害,timeline,,The Washington Post,tk
+0060001,6,A global look at cardiac risk factors,http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/,灾害,timeline,,The Washington Post,1/1/2001
 0060002,6,The Depth of the Problem,http://apps.washingtonpost.com/g/page/world/the-depth-of-the-problem/931/,灾害,illustration,,The Washington Post,3/1/2013
-0060003,6,After the storm,https://www.washingtonpost.com/posttv/afterthestorm/#/something-was-different,灾害,"interactive, map",,The Washington Post,
+0060003,6,After the storm,https://www.washingtonpost.com/posttv/afterthestorm/#/something-was-different,灾害,"interactive, map",,The Washington Post,5/15/2015
 0060004,6,‘A new kind of terrorism’ in Israel,https://www.washingtonpost.com/graphics/world/israel-palestine-deaths/#item65date10232015,政治,"interactive, timeline",,The Washington Post,29/1/2016
 0060005,6,2015 police shootings investigation,https://www.washingtonpost.com/graphics/national/police-shootings-year-end/,政治,"interactive, map",,The Washington Post,26/12/2015
-0060006,6,Mapping the census,http://www.washingtonpost.com/wp-srv/special/nation/census/2010/,政治,map,,The Washington Post,
+0060006,6,Mapping the census,http://www.washingtonpost.com/wp-srv/special/nation/census/2010/,政治,map,,The Washington Post,7/11/2001
 0060007,6,"State of the Union: Obama's greatest hits",https://www.washingtonpost.com/graphics/politics/2016-sotu/speech/,政治,illustration,,The Washington Post,13/1/2016
 0060008,6,How the growing web of conflict in Syria became a global problem,https://www.washingtonpost.com/graphics/world/explaining-the-syrian-conflict/,政治,"map, illustration",,The Washington Post,11/3/2015
-0060009,6,History through the president’s words,https://www.washingtonpost.com/graphics/politics/2016-sotu/language/,政治,interactive,,The Washington Post,
+0060009,6,History through the president’s words,https://www.washingtonpost.com/graphics/politics/2016-sotu/language/,政治,interactive,,The Washington Post,1/12/2016
 0060010,6,What happens to your body during an ultramarathon,https://www.washingtonpost.com/graphics/health/ultramarathon/,生活,illustration,,The Washington Post,11/9/2015
-0060011,6,Will this storm top Snowmageddon?,https://www.washingtonpost.com/graphics/local/2016-snow/how-much-has-it-snowed/,生活,illustration,,The Washington Post,
-0120001,12,Mapping the Dead: Gun Deaths Since Sandy Hook,http://data.huffingtonpost.com/2013/03/gun-deaths,安全,"map, bubble, bar",,Huffington Post, 
-0120002,12,Oscar Predictions 2013,http://data.huffingtonpost.com/2013/01/oscar-predictions,文化,bar,,Huffington Post, 
-0120004,12,Dying to be free,http://projects.huffingtonpost.com/dying-to-be-free-heroin-treatment,生活,multi-media,,Huffington Post,1/28/2016
-0120005,12,Evicted and abandoned,http://projects.huffingtonpost.com/worldbank-evicted-abandoned,经济,multi-media,,Huffington Post,4/15/2015
-0120006,12,Prisoners of profit,http://projects.huffingtonpost.com/prisoners-of-profit,经济,"multi-media, timeline",,Huffington Post,
-0120007,12,House forcast,http://elections.huffingtonpost.com/2012/house-outlook,经济,multi-media,,Huffington Post,
-0120008,12,"Hospice, Inc.",http://projects.huffingtonpost.com/hospice-inc,医疗,multi-media,,Huffington Post,
-0030001,3,Election Party!,http://elections.npr.org/#,政治,real-time,,NPR,11/4/2014
-0030002,3,Fire Forecast,http://apps.npr.org/fire-forecast/,灾害,map,,NPR,8/23/2012
-0030003,3,Visualizing How A Population Grows To 7 Billion,http://www.npr.org/2011/10/31/141816460/visualizing-how-a-population-grows-to-7-billion,环境,multi-media,,NPR,10/31/2011
-0030004,3,Playgrounds For Everyone,http://www.playgroundsforeveryone.com/,经济,map,,NPR,8/27/2013
-0030005,3,Poisoned Places Map,http://www.npr.org/news/graphics/2011/10/toxic-air/#4.00/39.00/-84.00,灾害,"map, interactive",,NPR,10/1/2011
-0030006,3,"Explore China's Global Reach",http://www.npr.org/2011/06/10/136930746/explore-chinas-global-reach,经济,interactive,,NPR,6/7/2011
-0030007,3,"The Best Commencement Speeches, Ever",http://apps.npr.org/commencement/,教育,"multi-media, interactive",,NPR,5/19/2014
-0030008,3,Planet Money Makes A T-Shirt,http://apps.npr.org/tshirt/,商业,"multi-media, interactive",,NPR,12/2/2013
-0030009,3,"Demolished: The End Of Chicago's Public Housing",http://apps.npr.org/lookatthis/posts/publichousing/,,"multi-media, interactive",,NPR,12/23/2014
-0030010,3,Lost and Found : The amazing story of Charles Cushman in full color,http://www.npr.org/news/specials/2012/cushman/,艺术,"multi-media, interactive",,NPR,9/14/2012
-0030011,3,Talking While Female,http://www.npr.org/sections/health-shots/2014/10/24/357584372/video-what-women-get-flak-for-when-they-talk,科学,multi-media,,NPR,10/24/2014
+0060011,6,Will this storm top Snowmageddon?,https://www.washingtonpost.com/graphics/local/2016-snow/how-much-has-it-snowed/,生活,illustration,,The Washington Post,1/22/2016
+0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,1/1/2014
+0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
+0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
+0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,2015
+0070005,7,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,政治,"interactive, map","Zach Mider, Christopher Cannon, and Adam Pearce",Bloomberg,9/15/2015
+0070006,7,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,文化,"line, interactive","Alex Tribou, Keith Collins",Bloomberg,6/26/2015
+0070007,7,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,政治,map,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",Bloomberg,1/1/2015
+0070008,7,"2015 was the hottest year on record, by a stunning margin",http://www.bloomberg.com/news/features/2016-01-20/2015-was-the-hottest-year-on-record-by-a-stunning-margin,环境,"line, interactive","Tom Randall, Blacki Migliozzi",Bloomberg,1/20/2016
+0070009,7,The Ungoverned World,http://www.bloomberg.com/graphics/2015-ungoverned-world/,政治,"map, interactive"," Alex McIntyre, Dave Merrill, and Blacki Migliozzi",Bloomberg,10/13/2015
+0070010,7,How Americans Die,http://www.bloomberg.com/graphics/dataview/how-americans-die/,政治,"line, bar","Lisa Strausfeld, Christopher Cannon, Jeremy Diamond, Takaaki Okada",Bloomberg,4/17/2014
 0080001,8,Election Night: Special Coverage: The 2014 Midterms,http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/,政治,"real-time, map",,Five Thirty Eight Live,11/4/2014
 0080002,8,"Searching for Ameirca's Best Burrito",http://fivethirtyeight.com/burrito/#brackets-view,生活,"map, tree, table",,Five Thirty Eight,9/10/2015
 0080003,8,Which Flight Will Get You There Fastest?,http://projects.fivethirtyeight.com/flights/,旅行,"map, table","Ritchie King, Nate Silver",Five Thirty Eight,11/24/2015
@@ -178,25 +115,27 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0040007,4,"Worker's comp benefits: how much is a limb worth?",http://projects.propublica.org/graphics/workers-compensation-benefits-by-limb,政治,"illustration, interactive",Lena Groeger,ProPublica,3/5/2015
 0040008,4,"Worker's compensation reforms by state",http://projects.propublica.org/graphics/workers-comp-reform-by-state,政治,"map, interactive","Yue Qiu, Michael Grabell",ProPublica,3/4/2015
 0040009,4,Inside the firewall:tracking the news that China blocks,https://projects.propublica.org/firewall/,政治,interactive,Sisi Wei,ProPublica,12/17/2014
-0040010,4,A Disappearing Planet,http://projects.propublica.org/extinctions/,环境,"interactive, bar",Anna Flagg,ProPublica,NA
+0040010,4,A Disappearing Planet,http://projects.propublica.org/extinctions/,环境,"interactive, bar",Anna Flagg,ProPublica,1/1/2014
 0040011,4,Loosing Ground,http://projects.propublica.org/louisiana/,环境,"map, interactive, satellite imagery","Brain Jacobs, Al Shaw, Bob Marshall",ProPublica,8/28/2014
 0040012,4,Surgeons Scorecard,https://projects.propublica.org/surgeons/,医疗,"interactive, database","Sisi Wei, Olga Pierce, Marshall Allen",ProPublica,7/15/2015
 0040013,4,Money as a Weapons System,https://projects.propublica.org/cerp/,安全,"interactive, illustration, database"," Megan McCloskey, Mike Tigas, Ryann Grochowski Jones, Sisi Wei, Jeff Larson, Ingrid Burrington",ProPublica,5/15/2015
-0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,2014
-0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
-0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
-0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,2015
-0070005,7,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,政治,"interactive, map","Zach Mider, Christopher Cannon, and Adam Pearce",Bloomberg,9/15/2015
-0070006,7,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,文化,"line, interactive","Alex Tribou, Keith Collins",Bloomberg,6/26/2015
-0070007,7,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,政治,map,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",Bloomberg,2015
-0070008,7,"2015 was the hottest year on record, by a stunning margin",http://www.bloomberg.com/news/features/2016-01-20/2015-was-the-hottest-year-on-record-by-a-stunning-margin,环境,"line, interactive","Tom Randall, Blacki Migliozzi",Bloomberg,1/20/2016
-0070009,7,The Ungoverned World,http://www.bloomberg.com/graphics/2015-ungoverned-world/,政治,"map, interactive"," Alex McIntyre, Dave Merrill, and Blacki Migliozzi",Bloomberg,10/13/2015
-0070010,7,How Americans Die,http://www.bloomberg.com/graphics/dataview/how-americans-die/,政治,"line, bar","Lisa Strausfeld, Christopher Cannon, Jeremy Diamond, Takaaki Okada",Bloomberg,4/17/2014
-0160001,16,风雨中概股,http://special.caixin.com/2013/zgg/index.html,经济,"interactve, bubble",,Caixin,10/25/2013
-0160002,16,情仇中东,http://datanews.caixin.com/2015/mideast/,政治,network,,Caixin,11/17/2015
-0160003,16,青岛中石化管道爆炸事故——财新记者实拍图集,http://datanews.caixin.com/2013-11-24/100608929.html,灾害,"multi-media, interactive",,Caixin,11/23/2013
-0160004,16,周永康的人与财,http://datanews.caixin.com/2014/zhoushicailu/,政治,network,,Caixin,7/29/2014
-0160005,16,星空彩绘诺贝尔,http://datanews.caixin.com/2013/nobel/index.html,科学,"timeline, bubble",,Caixin,10/6/2014
+0130001,13,Flooding & Flood Zones,http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702,灾害,map,,WNYC,11/11/2012
+0130002,13,NYC Hottest Subway Stations Mapped,http://www.wnyc.org/story/hottest-subway-stations-map-nyc/,生活,map,,WNYC,7/30/2015
+0130003,13,NYC Yoga,http://project.wnyc.org/nyc-yoga/,生活,illustration,,WNYC,8/1/2015
+0130004,13,Christieverse,http://project.wnyc.org/christieverse/,政治,"multi-media, tree",,WNYC,5/1/2015
+0130005,13,School Book,http://data.schoolbook.org,教育,"interactive, map",,WNYC,9/1/2013
+0130006,13,Unlimited choices: 7-day vs 30-day MetroCards,http://project.wnyc.org/mta-unlimited/,经济,map,,WNYC,1/22/2015
+0030001,3,Election Party!,http://elections.npr.org/#,政治,real-time,,NPR,11/4/2014
+0030002,3,Fire Forecast,http://apps.npr.org/fire-forecast/,灾害,map,,NPR,8/23/2012
+0030003,3,Visualizing How A Population Grows To 7 Billion,http://www.npr.org/2011/10/31/141816460/visualizing-how-a-population-grows-to-7-billion,环境,multi-media,,NPR,10/31/2011
+0030004,3,Playgrounds For Everyone,http://www.playgroundsforeveryone.com/,经济,map,,NPR,8/27/2013
+0030005,3,Poisoned Places Map,http://www.npr.org/news/graphics/2011/10/toxic-air/#4.00/39.00/-84.00,灾害,"map, interactive",,NPR,10/1/2011
+0030006,3,"Explore China's Global Reach",http://www.npr.org/2011/06/10/136930746/explore-chinas-global-reach,经济,interactive,,NPR,6/7/2011
+0030007,3,"The Best Commencement Speeches, Ever",http://apps.npr.org/commencement/,教育,"multi-media, interactive",,NPR,5/19/2014
+0030008,3,Planet Money Makes A T-Shirt,http://apps.npr.org/tshirt/,商业,"multi-media, interactive",,NPR,12/2/2013
+0030009,3,"Demolished: The End Of Chicago's Public Housing",http://apps.npr.org/lookatthis/posts/publichousing/,,"multi-media, interactive",,NPR,12/23/2014
+0030010,3,Lost and Found : The amazing story of Charles Cushman in full color,http://www.npr.org/news/specials/2012/cushman/,艺术,"multi-media, interactive",,NPR,9/14/2012
+0030011,3,Talking While Female,http://www.npr.org/sections/health-shots/2014/10/24/357584372/video-what-women-get-flak-for-when-they-talk,科学,multi-media,,NPR,10/24/2014
 0050001,5,Results from the 2014 Midterm Election,http://graphics.wsj.com/midterm-election-results-2014/,政治,"map, interactive",,Wall Street Journal,11/4/2014
 0050002,5,TRIALS,http://projects.wsj.com/trials/#chapter=1,生活,"multi-media, long-form",Amy Dockser Marcus,Wall Street Journal,11/19/2013
 0050003,5,U.S. Unemployment: A Historical View,http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522,经济,"interactive, map",,Wall Street Journal,5/7/2010
@@ -254,8 +193,68 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0090002,9,"Water's Edge",http://www.reuters.com/investigates/special-report/waters-edge-the-crisis-of-rising-sea-levels/,环境,"long-form, multi-media,map","Ryan McNeill, Deborah J. Nelson, Duff Wilson",Reuters,3/3/2015
 0090003,9,The Echo Chamber,http://www.reuters.com/investigates/special-report/scotus/,政治,"long-form, interactive,bar","Joan Biskupic, Janet Roberts, John Shiffman",Reuters,12/8/2014
 0090004,9,Mexico looks the other way as contractors fleece oil giant Pemex,http://www.reuters.com/investigates/special-report/pemex-contracts/,安全,"long-form, infographics","Elinor Comlay, Mica Rosenberg, M.B. Pell",Reuters,1/23/2015
+0120001,12,Mapping the Dead: Gun Deaths Since Sandy Hook,http://data.huffingtonpost.com/2013/03/gun-deaths,安全,"map, bubble, bar",,Huffington Post,3/1/2013
+0120002,12,Oscar Predictions 2013,http://data.huffingtonpost.com/2013/01/oscar-predictions,文化,bar,,Huffington Post,1/1/2013
+0120004,12,Dying to be free,http://projects.huffingtonpost.com/dying-to-be-free-heroin-treatment,生活,multi-media,,Huffington Post,1/28/2015
+0120005,12,Evicted and abandoned,http://projects.huffingtonpost.com/worldbank-evicted-abandoned,经济,multi-media,,Huffington Post,4/15/2015
+0120006,12,Prisoners of profit,http://projects.huffingtonpost.com/prisoners-of-profit,经济,"multi-media, timeline",,Huffington Post,10/22/2013
+0120007,12,House forcast,http://elections.huffingtonpost.com/2012/house-outlook,经济,multi-media,,Huffington Post,1/1/2012
+0120008,12,"Hospice, Inc.",http://projects.huffingtonpost.com/hospice-inc,医疗,multi-media,,Huffington Post,7/19/2014
+0160001,16,风雨中概股,http://special.caixin.com/2013/zgg/index.html,经济,"interactve, bubble",,Caixin,10/25/2013
+0160002,16,情仇中东,http://datanews.caixin.com/2015/mideast/,政治,network,,Caixin,11/17/2015
+0160003,16,青岛中石化管道爆炸事故——财新记者实拍图集,http://datanews.caixin.com/2013-11-24/100608929.html,灾害,"multi-media, interactive",,Caixin,11/23/2013
+0160004,16,周永康的人与财,http://datanews.caixin.com/2014/zhoushicailu/,政治,network,,Caixin,7/29/2014
+0160005,16,星空彩绘诺贝尔,http://datanews.caixin.com/2013/nobel/index.html,科学,"timeline, bubble",,Caixin,10/6/2014
 0170001,17,Behind the sound bite,http://widgets.scmp.com/infographic/20140113/policyaddress/,政治,bar,,South China Morning Post,1/13/2014
 0170002,17,In the long run,http://widgets.scmp.com/infographic/20140217/marathon2014/,体育,dot,"Cedric Sam, Jane Pong, Olivia Rosenman",South China Morning Post,2/17/2014
 0170003,17,World Cup 2014,http://www.scmp.com/infographics/article/1537100/world-cup-2014-visualisation-group-matches-results-and-goals-scored,体育,game,"Cedric Sam, Adolfo Arranz",South China Morning Post,6/20/2014
 0170004,17,"Men's tennis: How big are the Big Four?",http://widgets.scmp.com/infographic/20140704/bigfour/,体育,game,"Cedric Sam, Pearl Law",South China Morning Post,7/4/2014
 0170005,17,Malaysia Airlines flight MH370,http://www.scmp.com/infographics/article/1443975/infographic-malaysia-airlines-flight-mh370,灾害,infographics,,South China Morning Post,3/9/2014
+0500001,,Flight Patterns,http://www.aaronkoblin.com/work/flightpatterns/,技术,"3D, interactive",,Aaron Koblin,tk
+0500002,,"Find out about crime on your block, in your community, along your commute, and more",http://crime.chicagotribune.com/,安全,interactive,,Chicagotribune,1/1/2015
+0500006,,government shutdown 2013,http://labs.enigma.io/shutdown2013/,政治,"tree, interactive, real-time",,Enigma,1/1/2013
+0500007,,"America's Election HQ",http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/,政治,"photo, map, interactive, multi-media",,Fox News,1/1/2014
+0500008,,Small Arms and Ammunition-Imports and Exports,http://armsglobe.chromeexperiments.com/,安全,"timeline, bar, interactive, 3D",,Google,8/14/2012
+0500009,,Codebases: Millions Lines of Code,http://www.informationisbeautiful.net/visualizations/million-lines-of-code/,技术,,,Information is beautiful,10/28/2013
+0500010,,"Audubon's Birds and Climate Change Report 314 Species on the Brink",http://climate.audubon.org/,环境,map,,National Audubon Society,11/12/2014
+0500011,,Bear 71,http://bear71.nfb.ca/#/bear71,环境,"multi-media, interactive",,NBF,1/1/2014
+0500012,,U.S. Gun Deaths in 2013,http://guns.periscopic.com/?year=2013,安全,,,Periscopic,1/1/2013
+0500013,,"Exploring the Reach, Frequency and Impact of Terrorism Around the World",http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world,安全,"timeline, map, interactive, barchart, sorting",,Periscopic,12/10/2015
+0500014,,"Out of Sight, Out of Mind.",http://drones.pitchinteractive.com/,安全,"timeline, bar",,pitchinc,1/1/2013
+0500015,,THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?,http://www.popsci.com/science/article/2013-05/energy-gap,技术,,,Popular Science,tk
+0500016,,Poverty Tracker,http://povertytracker.robinhood.org/,经济,"interactive, bubble",,Robin Hood,tk
+0500017,,"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook",http://techcrunch.com/2014/02/25/the-age-of-acquisitions/,经济,"interactive, bar",,Tech Crunch,tk
+0500018,,China Global Investment Tracker,http://www.aei.org/china-global-investment-tracker/,经济,"interactive, map",,THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION,tk
+0500019,,"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001–2012",http://www.thenation.com/afghanistan-database/,安全,"interactive,bar, map",,The Nation,tk
+0500020,,A Model of Breast Cancer Causation,http://www.cabreastcancer.org/causes/#,生活,interactive,,University of California,tk
+0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,
+0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,
+0500023,,A Nation Divided,http://www.zeit.de/feature/german-unification-a-nation-divided,政治,"interacitive, map","Lisa Borgenheimer, Paul Blickle, Julian Stahnke, Sascha Venohr",Zeit Online,10/29/2014
+0500024,,令计划关系网,http://121.42.52.51/zt/2015/lingjihua/index.html,政治,network,,The Paper,7/18/2015
+0500025,,三峡,http://121.42.52.51/zt/2015/sanxia/index.html,环境,"multi-media, interactive",,The Paper,7/21/2015
+0500026,,一路向北：15天4000公里，全程记录难民欧洲逃亡路,http://image.thepaper.cn/html/zt/2015/refugee/index.html,政治,"multi-media, interactive",,The Paper,12/15/2015
+0500027,,Histography,http://histography.io/,,"timeline, interactive",Matan Stauber,Matan Stauber,10/1/2015
+0500028,,Weather Radials,http://weather-radials.com/,环境,"bubble, bar",Timm Kekeritz,Timm Kekeritz,1/1/2013
+0500029,,Creative Routines,http://www.informationisbeautifulawards.com/showcase/483-creative-routines,文化,pie,RJ Andrews,RJ Andrews,1/1/2014
+0500030,,Game of Thrones Decoded: Connecting the Dots from Season 3,http://time.com/44106/game-of-thrones-decoder/,艺术,network,Heather Jones,Heather Jones,4/2/2014
+0500031,,The Graphic Continuum,http://www.informationisbeautifulawards.com/showcase/611-the-graphic-continuum,艺术,network,"Jonathan Schwabish, Severino Ribecca","Jonathan Schwabish, Severino Ribecca",12/16/2014
+0500032,,The Refugee Project,http://www.therefugeeproject.org/,政治,"map, timeline, bubble, interactive","Hyperakt, Ekene Ijeoma","Hyperakt, Ekene Ijeoma",12/10/2015
+0500033,,Commonwealth War Dead: First World War Visualised,http://codehesive.com/commonwealthww1/,,"bar, timeline",James Offer,James Offer,1/1/2014
+0500034,,World Food Clock,http://worldfoodclock.com/,,illustration,Luke Twyman,Luke Twyman,10/9/2015
+0500035,,NYC Taxis: A Day in the Life,http://nyctaxi.herokuapp.com/,商业,"map, timeline ",Chris Whong,Chris Whong,12/25/2015
+0500036,,Beyond Bytes,https://vimeo.com/69750203,政治,"illustration, animation","Maral Pourkazemi, Florian Köhne","Maral Pourkazemi, Florian Köhne",1/1/2013
+0500037,,Everything You Need to Know about Planet Earth,https://www.youtube.com/watch?v=JGXi_9A__Vc&list=PLFs4vir_WsTyXrrpFstD64Qj95vpy-yo1&index=1,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith, Steve Taylor, Michael Büker",Kurzgesagt,1/1/2014
+0500038,,Carbon Dioxide Emissions Bury the UN Summit,http://www.carbonvisuals.com/projects/wbcsd,环境,"illustration, 3D, animation",Adam Nieman,Adam Nieman,1/1/2014
+0500039,,Selfiecity,http://selfiecity.net/,生活,interactive,"Dr. Lev Manovich, Moritz Stefaner, Dr. Mehrdad Yazdani, Dr. Dominikus Baur, Jay Chow, Daniel Goddemeyer, Alise Tifentale, Nadav Hochman",Moritz Stefaner,1/1/2014
+0500040,,OECD Regional Well-Being,http://www.oecdregionalwellbeing.org/,生活,interactive,"Moritz Stefaner, Dr. Dominikus Baur, Monica Brezzi and team",Moritz Stefaner,7/24/2014
+0500041,,After Babylon,http://www.puffpuffproject.com/languages.html,文化,"map, bubble","Sofia Girelli, Eleonora Grotto, Pietro Lodi, Daniele Lupatini, Emilio Patuzzo",Puff Puff Team,1/1/2014
+0500042,,BBC Knowledge DNA Explainer,https://vimeo.com/60747882,科学,"illustration, animation",Territory Studio ,BBC,2/28/2013
+0500043,,The Solar System – our home in space,https://www.youtube.com/watch?v=KsF_hdjWJjo,科学,"illustration, animation","Philipp Dettmer, Stephan Rether, Thomas Veith",Kurzgesagt,8/22/2013
+0500044,,"Nobels, no degrees",http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/204/large.jpg?1403777309,科学,"dot, line","Giorgia Lupi, Simone Quadri, Gabriele Rossi, Davide Ciuffi, Federica Fragapane, Francesco Majno",Accurat,1/1/2014
+0500045,,Global Warning,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/098/large.jpg?1413040612,环境,"map, line, bar, pie",Derek Kim,Derek Kim,1/1/2013
+0500046,,Listen to Wikipedia,http://listen.hatnote.com/,文化,bubble ,"Stephen LaPorte, Mahmoud Hashemi","Stephen LaPorte, Mahmoud Hashemi",1/1/2013
+0500047,,New York City carbon emissions,https://www.youtube.com/watch?v=DtqSIplGXOA,环境,"illustration, animation","Adam Nieman, Chris Rabet","Adam Nieman, Chris Rabet",10/19/2012
+0500048,,How to win an Oscar,http://iibawards-prod.s3.amazonaws.com/projects/images/000/000/391/large.jpg?1403858126,文化,sankey,Christian Tate,Christian Tate,1/1/2013
+0500049,,GED VIZ: Visualizing Global Economic Relations,http://viz.ged-project.de/,经济,,Jan Arpe,Jan Arpe,8/15/2014
+0500050,,U.S. Gun Deaths,http://guns.periscopic.com/?year=2013,灾害,,,Periscopic,1/1/2013
+0500051,,Why Health Care is So Expensive,http://healthland.time.com/2013/02/20/what-makes-health-care-so-expensive/,政治,"illustration, table, bar",Heather Jones,TIME,2/20/2013
