@@ -18,8 +18,3 @@ npm run build
 npm run deploy
 npm run update
 ```
-
-## TODO
-* sort by pub date
-* data aggreagation, add date and hyperlink
-* modal ? -> information

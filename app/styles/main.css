@@ -34,6 +34,7 @@ body {
   border-top: 1px solid #eee;
   padding:12px !important;
 }
+
 .story-board .card-header img {
   width: 25px !important;
   height: 25px !important;
@@ -76,6 +77,20 @@ body {
 
 .nav-bar {
   overflow-y:hidden;
+}
+
+.aboutCont {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #03A9F4;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #d37324;
 }
 
 /*BREAKPOINTS: 850PX */
