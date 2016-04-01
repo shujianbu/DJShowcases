@@ -1,7 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
-
 body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 
@@ -18,12 +16,12 @@ body {
 .story-board .card-title {
   background:rgba(255,255,255,0.9);
   padding:10px 16px 16px 16px !important;
-  height: 50px !important;
+  height: 55px !important;
 }
 
 .story-board .card-title span {
-  font-size:1.1em !important;
-  line-height: 1.4 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
 }
 
 .story-board .card-header {
@@ -55,7 +53,6 @@ body {
 }
 
 .story-board .image-overlay > div:nth-of-type(2) > div > div {
-  height:30px;
   padding:5px 8px !important;
   background:rgba(120,120,120,0.9)!important;
 }

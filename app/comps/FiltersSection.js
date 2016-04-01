@@ -116,13 +116,13 @@ class FiltersSection extends React.Component {
             </Dialog>
           </ToolbarGroup>
 
-          <ToolbarGroup key={2} float='right' className='searchbar'>
-            <AutoComplete hintText='输入案例名' filter={AutoComplete.caseInsensitiveFilter} dataSource={this.props.autoCompleteData} onNewRequest={this.handleSearch.bind(this)} onUpdateInput={this.clearSearch.bind(this)} />
-          </ToolbarGroup>
-
         </Toolbar>
       );
 
+      // TODO: need to investigate this one
+      // <ToolbarGroup key={2} float='right' className='searchbar'>
+      //   <AutoComplete hintText='输入案例名' filter={AutoComplete.caseInsensitiveFilter} dataSource={this.props.autoCompleteData} onNewRequest={this.handleSearch.bind(this)} onUpdateInput={this.clearSearch.bind(this)} />
+      // </ToolbarGroup>
     }
 }
 
