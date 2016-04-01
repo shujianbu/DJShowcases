@@ -93,6 +93,10 @@ a:hover {
 /*BREAKPOINTS: 850PX */
 
 @media (max-width: 479px) {
+  .nav-bar {
+    max-height: 0px;
+  }
+
   .story-board {
     width: 97%;
   }
