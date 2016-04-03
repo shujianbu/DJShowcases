@@ -66,7 +66,7 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,1/1/2014
 0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
 0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
-0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,2015
+0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,1/12015
 0070005,7,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,政治,"interactive, map","Zach Mider, Christopher Cannon, and Adam Pearce",Bloomberg,9/15/2015
 0070006,7,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,文化,"line, interactive","Alex Tribou, Keith Collins",Bloomberg,6/26/2015
 0070007,7,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,政治,map,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",Bloomberg,1/1/2015
@@ -210,7 +210,7 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0170003,17,World Cup 2014,http://www.scmp.com/infographics/article/1537100/world-cup-2014-visualisation-group-matches-results-and-goals-scored,体育,game,"Cedric Sam, Adolfo Arranz",South China Morning Post,6/20/2014
 0170004,17,"Men's tennis: How big are the Big Four?",http://widgets.scmp.com/infographic/20140704/bigfour/,体育,game,"Cedric Sam, Pearl Law",South China Morning Post,7/4/2014
 0170005,17,Malaysia Airlines flight MH370,http://www.scmp.com/infographics/article/1443975/infographic-malaysia-airlines-flight-mh370,灾害,infographics,,South China Morning Post,3/9/2014
-0500001,,Flight Patterns,http://www.aaronkoblin.com/work/flightpatterns/,技术,"3D, interactive",,Aaron Koblin,tk
+0500001,,Flight Patterns,http://www.aaronkoblin.com/work/flightpatterns/,技术,"3D, interactive",,Aaron Koblin,9/4/2015
 0500002,,"Find out about crime on your block, in your community, along your commute, and more",http://crime.chicagotribune.com/,安全,interactive,,Chicagotribune,1/1/2015
 0500006,,government shutdown 2013,http://labs.enigma.io/shutdown2013/,政治,"tree, interactive, real-time",,Enigma,1/1/2013
 0500007,,"America's Election HQ",http://www.foxnews.com/politics/elections/2014/2014-midterm-elections/,政治,"photo, map, interactive, multi-media",,Fox News,1/1/2014
@@ -221,14 +221,14 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0500012,,U.S. Gun Deaths in 2013,http://guns.periscopic.com/?year=2013,安全,,,Periscopic,1/1/2013
 0500013,,"Exploring the Reach, Frequency and Impact of Terrorism Around the World",http://www.periscopic.com/our-work/exploring-the-reach-frequency-and-impact-of-terrorism-around-the-world,安全,"timeline, map, interactive, barchart, sorting",,Periscopic,12/10/2015
 0500014,,"Out of Sight, Out of Mind.",http://drones.pitchinteractive.com/,安全,"timeline, bar",,pitchinc,1/1/2013
-0500015,,THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?,http://www.popsci.com/science/article/2013-05/energy-gap,技术,,,Popular Science,tk
-0500016,,Poverty Tracker,http://povertytracker.robinhood.org/,经济,"interactive, bubble",,Robin Hood,tk
-0500017,,"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook",http://techcrunch.com/2014/02/25/the-age-of-acquisitions/,经济,"interactive, bar",,Tech Crunch,tk
-0500018,,China Global Investment Tracker,http://www.aei.org/china-global-investment-tracker/,经济,"interactive, map",,THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION,tk
-0500019,,"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001–2012",http://www.thenation.com/afghanistan-database/,安全,"interactive,bar, map",,The Nation,tk
-0500020,,A Model of Breast Cancer Causation,http://www.cabreastcancer.org/causes/#,生活,interactive,,University of California,tk
-0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,
-0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,
+0500015,,THE ENERGY FIX: WHEN WILL THE U.S. REACH ENERGY INDEPENDENCE?,http://www.popsci.com/science/article/2013-05/energy-gap,技术,,,Popular Science,5/1/2013
+0500016,,Poverty Tracker,http://povertytracker.robinhood.org/,经济,"interactive, bubble",,Robin Hood,1/1/2013
+0500017,,"Visualizing 15 Years Of Acquisitions By Apple, Google, Yahoo, Amazon, And Facebook",http://techcrunch.com/2014/02/25/the-age-of-acquisitions/,经济,"interactive, bar",,Tech Crunch,2/25/2014
+0500018,,China Global Investment Tracker,http://www.aei.org/china-global-investment-tracker/,经济,"interactive, map",,THE AMERICAN ENTERPRISE INSTITUTE AND THE HERITAGE FOUNDATION,7/9/2015
+0500019,,"The Deaths of Afghans: Civilian Fatalities in Afghanistan, 2001–2012",http://www.thenation.com/afghanistan-database/,安全,"interactive,bar, map",,The Nation,9/13/2013
+0500020,,A Model of Breast Cancer Causation,http://www.cabreastcancer.org/causes/#,生活,interactive,,University of California,8/21/2014
+0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,1/4/2016
+0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,12/22/2015
 0500023,,A Nation Divided,http://www.zeit.de/feature/german-unification-a-nation-divided,政治,"interacitive, map","Lisa Borgenheimer, Paul Blickle, Julian Stahnke, Sascha Venohr",Zeit Online,10/29/2014
 0500024,,令计划关系网,http://121.42.52.51/zt/2015/lingjihua/index.html,政治,network,,The Paper,7/18/2015
 0500025,,三峡,http://121.42.52.51/zt/2015/sanxia/index.html,环境,"multi-media, interactive",,The Paper,7/21/2015
