@@ -16,7 +16,7 @@ var init = function () {
 var numSheet, rowLen;
 var getGdata = function(sheetID, rowID) {
 
-  if(sheetID === numSheet) {
+  if(sheetID === numSheet - 1) { // skip the last "hide" sheet
     save();
     return;
   }

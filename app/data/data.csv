@@ -63,6 +63,7 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0060009,6,History through the president’s words,https://www.washingtonpost.com/graphics/politics/2016-sotu/language/,政治,interactive,,The Washington Post,1/12/2016
 0060010,6,What happens to your body during an ultramarathon,https://www.washingtonpost.com/graphics/health/ultramarathon/,生活,illustration,,The Washington Post,11/9/2015
 0060011,6,Will this storm top Snowmageddon?,https://www.washingtonpost.com/graphics/local/2016-snow/how-much-has-it-snowed/,生活,illustration,,The Washington Post,1/22/2016
+0060012,6,America’s great housing divide,https://www.washingtonpost.com/graphics/business/wonk/housing/overview,生活,map,,The Washington Post,4/28/2016
 0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,1/1/2014
 0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
 0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
@@ -101,6 +102,7 @@ How the linguistic standard of the presidential address has declined",http://www
 0020016,2,Are you reflected in the new Congress?,http://www.theguardian.com/us-news/ng-interactive/2014/nov/06/-sp-congress-diversity-women-race-lgbt-are-you-represented,政治,map,TK,The Guardian,11/6/2014
 0020017,2,World Cup: which domestic league is best represented?,http://www.theguardian.com/sport/ng-interactive/2015/jan/31/mega-beast-mode-marshawn-lynch-is-this-good,体育,bar,TK,The Guardian,1/31/2015
 0020018,2,"The 39 stats: Alfred Hitchcock's obsessions in numbers",http://www.theguardian.com/film/picture/2013/aug/12/alfred-hitchcock-film-statistics,艺术,"map, illustration","Adam Frost, Zhenia Vasiliev",The Guardian,8/12/2013
+0020019,2,Homan SquareA portrait of Chicago’s detainees,http://www.theguardian.com/us-news/ng-interactive/2015/oct/19/homan-square-chicago-police-detainees,文化,"3D, weggl",TK,The Guardian,10/19/2016
 0180001,22,Migration of Hollywood moviemaking,http://interactives.ap.org/2015/oscars-migration/,文化,interactive,,Associated Press,2/13/2015
 0180002,22,Seven years in one speech,http://interactives.ap.org/2015/sotu-2015/,政治,interactive,,Associated Press,1/24/2015
 0180003,22,Gulf Oil: five years later,http://interactives.ap.org/2015/gulf-health/,安全,illustration,,Associated Press,4/17/2015
@@ -119,6 +121,7 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0040011,4,Loosing Ground,http://projects.propublica.org/louisiana/,环境,"map, interactive, satellite imagery","Brain Jacobs, Al Shaw, Bob Marshall",ProPublica,8/28/2014
 0040012,4,Surgeons Scorecard,https://projects.propublica.org/surgeons/,医疗,"interactive, database","Sisi Wei, Olga Pierce, Marshall Allen",ProPublica,7/15/2015
 0040013,4,Money as a Weapons System,https://projects.propublica.org/cerp/,安全,"interactive, illustration, database"," Megan McCloskey, Mike Tigas, Ryann Grochowski Jones, Sisi Wei, Jeff Larson, Ingrid Burrington",ProPublica,5/15/2015
+0040014,4,"Represent - Find lawmakers, votes and bills",https://projects.propublica.org/represent/,政治,interactive,Derek Willis,ProPublica,5/1/2015
 0130001,13,Flooding & Flood Zones,http://project.wnyc.org/flooding-sandy-new/#12.00/40.7378/-74.0702,灾害,map,,WNYC,11/11/2012
 0130002,13,NYC Hottest Subway Stations Mapped,http://www.wnyc.org/story/hottest-subway-stations-map-nyc/,生活,map,,WNYC,7/30/2015
 0130003,13,NYC Yoga,http://project.wnyc.org/nyc-yoga/,生活,illustration,,WNYC,8/1/2015
@@ -136,6 +139,8 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0030009,3,"Demolished: The End Of Chicago's Public Housing",http://apps.npr.org/lookatthis/posts/publichousing/,,"multi-media, interactive",,NPR,12/23/2014
 0030010,3,Lost and Found : The amazing story of Charles Cushman in full color,http://www.npr.org/news/specials/2012/cushman/,艺术,"multi-media, interactive",,NPR,9/14/2012
 0030011,3,Talking While Female,http://www.npr.org/sections/health-shots/2014/10/24/357584372/video-what-women-get-flak-for-when-they-talk,科学,multi-media,,NPR,10/24/2014
+0030012,3,"Is There A Better Way To Pay For America's Schools?",http://www.npr.org/2016/05/01/476224759/is-there-a-better-way-to-pay-for-americas-schools,教育,"interactive, dots",,NPR,5/1/2016
+0030013,3,"Why America's Schools Have A Money Problem",http://www.npr.org/2016/04/18/474256366/why-americas-schools-have-a-money-problem,教育,map,,NPR,4/18/2016
 0050001,5,Results from the 2014 Midterm Election,http://graphics.wsj.com/midterm-election-results-2014/,政治,"map, interactive",,Wall Street Journal,11/4/2014
 0050002,5,TRIALS,http://projects.wsj.com/trials/#chapter=1,生活,"multi-media, long-form",Amy Dockser Marcus,Wall Street Journal,11/19/2013
 0050003,5,U.S. Unemployment: A Historical View,http://www.wsj.com/news/articles/SB10001424052748703338004575230041742556522,经济,"interactive, map",,Wall Street Journal,5/7/2010
@@ -230,8 +235,6 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0500021,,Watch how immigration in America has changed since 1820,http://www.vox.com/2016/1/4/10709366/immigration-america-200-years,文化,,Alvin Chang,Vox,1/4/2016
 0500022,,Why infectious bacteria are winning,http://qz.com/576057/why-infectious-bacteria-are-winning/,医疗,,Keith Collins,Quartz,12/22/2015
 0500023,,A Nation Divided,http://www.zeit.de/feature/german-unification-a-nation-divided,政治,"interacitive, map","Lisa Borgenheimer, Paul Blickle, Julian Stahnke, Sascha Venohr",Zeit Online,10/29/2014
-0500024,,令计划关系网,http://121.42.52.51/zt/2015/lingjihua/index.html,政治,network,,The Paper,7/18/2015
-0500025,,三峡,http://121.42.52.51/zt/2015/sanxia/index.html,环境,"multi-media, interactive",,The Paper,7/21/2015
 0500026,,一路向北：15天4000公里，全程记录难民欧洲逃亡路,http://image.thepaper.cn/html/zt/2015/refugee/index.html,政治,"multi-media, interactive",,The Paper,12/15/2015
 0500027,,Histography,http://histography.io/,,"timeline, interactive",Matan Stauber,Matan Stauber,10/1/2015
 0500028,,Weather Radials,http://weather-radials.com/,环境,"bubble, bar",Timm Kekeritz,Timm Kekeritz,1/1/2013
@@ -258,3 +261,4 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0500049,,GED VIZ: Visualizing Global Economic Relations,http://viz.ged-project.de/,经济,,Jan Arpe,Jan Arpe,8/15/2014
 0500050,,U.S. Gun Deaths,http://guns.periscopic.com/?year=2013,灾害,,,Periscopic,1/1/2013
 0500051,,Why Health Care is So Expensive,http://healthland.time.com/2013/02/20/what-makes-health-care-so-expensive/,政治,"illustration, table, bar",Heather Jones,TIME,2/20/2013
+0500052,,Why Pinellas county is the worst place in Florida to be blakc and go to public school,http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/chart-failing-black-students/,教育,"line, map",Nathaniel Lash,Tampa Bay Times,8/1/2015
