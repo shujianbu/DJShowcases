@@ -52,6 +52,9 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0010053,1,The Changing Nature of Middle-Class Jobs,http://www.nytimes.com/interactive/2015/02/23/business/economy/the-changing-nature-of-middle-class-jobs.html,经济,line,,New York Times,02/23/2015
 0010054,1,A fairer World Cup draw,http://www.nytimes.com/interactive/2014/06/03/upshot/world-cup-draw-simulation.html,体育,simulation,,New York Times,06/03/2014
 0010055,1,The Clubs That Connect The World Cup,http://www.nytimes.com/interactive/2014/06/20/sports/worldcup/how-world-cup-players-are-connected.html,体育,network,,New York Times,06/20/2014
+0010056,1,"The Rise of Men Who Don’t Work, and What They Do Instead",http://www.nytimes.com/2014/12/12/upshot/the-rise-of-men-who-dont-work-and-what-they-do-instead.html?_r=0,经济,interactive,,New York Times,12/11/2014
+0010057,1,How Nonemployed Americans Spend Their Weekdays: Men vs. Women,http://www.nytimes.com/interactive/2015/01/06/upshot/how-nonemployed-americans-spend-their-weekdays-men-vs-women.html,经济,interactive,,New York Times,1/6/2015
+0010058,1,What I saw in Syria,http://www.nytimes.com/interactive/2016/06/10/world/middleeast/syria-road-trip.html,政治,multi-media,,New York Times,6/17/2016
 0060001,6,A global look at cardiac risk factors,http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/,灾害,timeline,,The Washington Post,1/1/2001
 0060002,6,The Depth of the Problem,http://apps.washingtonpost.com/g/page/world/the-depth-of-the-problem/931/,灾害,illustration,,The Washington Post,3/1/2013
 0060003,6,After the storm,https://www.washingtonpost.com/posttv/afterthestorm/#/something-was-different,灾害,"interactive, map",,The Washington Post,5/15/2015
@@ -64,16 +67,19 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0060010,6,What happens to your body during an ultramarathon,https://www.washingtonpost.com/graphics/health/ultramarathon/,生活,illustration,,The Washington Post,11/9/2015
 0060011,6,Will this storm top Snowmageddon?,https://www.washingtonpost.com/graphics/local/2016-snow/how-much-has-it-snowed/,生活,illustration,,The Washington Post,1/22/2016
 0060012,6,America’s great housing divide,https://www.washingtonpost.com/graphics/business/wonk/housing/overview,生活,map,,The Washington Post,4/28/2016
+0060013,6,America’s great housing divide: Are you a winner or loser?,https://www.washingtonpost.com/graphics/business/wonk/housing/overview/?%3Ftid%3D=sm_pg,经济,map,,The Washington Post,5/1/2016
+0060014,6,How lawmakers respond to a mass shooting,https://www.washingtonpost.com/graphics/national/how-lawmakers-responded-to-the-orlando-mass-shooting/,政治,text analysis,,The Washington Post,6/16/2016
 0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,1/1/2014
 0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
 0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
-0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,1/12015
+0070004,7,How do people play the trade game?,http://www.bloomberg.com/features/2015-stock-chart-trading-game/analysis/,商业,"interactive, line","Toph Tucker, Adam Pearce",Bloomberg,1/1/12015
 0070005,7,Here’s Exactly Where the Candidates’ Cash Came From,http://www.bloomberg.com/politics/graphics/2015-presidential-money-map/,政治,"interactive, map","Zach Mider, Christopher Cannon, and Adam Pearce",Bloomberg,9/15/2015
 0070006,7,This Is How Fast America Changes Its Mind,http://www.bloomberg.com/graphics/2015-pace-of-social-change/,文化,"line, interactive","Alex Tribou, Keith Collins",Bloomberg,6/26/2015
 0070007,7,The U.K. Election 2015,http://www.bloomberg.com/graphics/2015-uk-election/,政治,map,"Julian Burgess, Blacki Migliozzi, Adam Pearce and Christopher Cannon",Bloomberg,1/1/2015
 0070008,7,"2015 was the hottest year on record, by a stunning margin",http://www.bloomberg.com/news/features/2016-01-20/2015-was-the-hottest-year-on-record-by-a-stunning-margin,环境,"line, interactive","Tom Randall, Blacki Migliozzi",Bloomberg,1/20/2016
 0070009,7,The Ungoverned World,http://www.bloomberg.com/graphics/2015-ungoverned-world/,政治,"map, interactive"," Alex McIntyre, Dave Merrill, and Blacki Migliozzi",Bloomberg,10/13/2015
 0070010,7,How Americans Die,http://www.bloomberg.com/graphics/dataview/how-americans-die/,政治,"line, bar","Lisa Strausfeld, Christopher Cannon, Jeremy Diamond, Takaaki Okada",Bloomberg,4/17/2014
+0070011,7,Amazon Doesn’t Consider the Race of Its Customers. Should It?,http://www.bloomberg.com/graphics/2016-amazon-same-day/,经济,map,"David Ingold, Spencer Soper",Bloomberg,4/21/2016
 0080001,8,Election Night: Special Coverage: The 2014 Midterms,http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/,政治,"real-time, map",,Five Thirty Eight Live,11/4/2014
 0080002,8,"Searching for Ameirca's Best Burrito",http://fivethirtyeight.com/burrito/#brackets-view,生活,"map, tree, table",,Five Thirty Eight,9/10/2015
 0080003,8,Which Flight Will Get You There Fastest?,http://projects.fivethirtyeight.com/flights/,旅行,"map, table","Ritchie King, Nate Silver",Five Thirty Eight,11/24/2015
@@ -102,12 +108,14 @@ How the linguistic standard of the presidential address has declined",http://www
 0020016,2,Are you reflected in the new Congress?,http://www.theguardian.com/us-news/ng-interactive/2014/nov/06/-sp-congress-diversity-women-race-lgbt-are-you-represented,政治,map,TK,The Guardian,11/6/2014
 0020017,2,World Cup: which domestic league is best represented?,http://www.theguardian.com/sport/ng-interactive/2015/jan/31/mega-beast-mode-marshawn-lynch-is-this-good,体育,bar,TK,The Guardian,1/31/2015
 0020018,2,"The 39 stats: Alfred Hitchcock's obsessions in numbers",http://www.theguardian.com/film/picture/2013/aug/12/alfred-hitchcock-film-statistics,艺术,"map, illustration","Adam Frost, Zhenia Vasiliev",The Guardian,8/12/2013
-0020019,2,Homan SquareA portrait of Chicago’s detainees,http://www.theguardian.com/us-news/ng-interactive/2015/oct/19/homan-square-chicago-police-detainees,文化,"3D, weggl",TK,The Guardian,10/19/2016
+0020019,2,Homan Square: A portrait of Chicago’s detainees,http://www.theguardian.com/us-news/ng-interactive/2015/oct/19/homan-square-chicago-police-detainees,文化,"3D, weggl",TK,The Guardian,10/19/2016
+0020020,2,"A deadly crisis: mapping the spread of America's drug overdose epidemic",http://www.theguardian.com/society/ng-interactive/2016/may/25/opioid-epidemic-overdose-deaths-map,政治,map,Nadja Popovich,The Guardian,5/25/2016
 0180001,22,Migration of Hollywood moviemaking,http://interactives.ap.org/2015/oscars-migration/,文化,interactive,,Associated Press,2/13/2015
 0180002,22,Seven years in one speech,http://interactives.ap.org/2015/sotu-2015/,政治,interactive,,Associated Press,1/24/2015
 0180003,22,Gulf Oil: five years later,http://interactives.ap.org/2015/gulf-health/,安全,illustration,,Associated Press,4/17/2015
 0180004,22,2016 Candidate tracker,http://interactives.ap.org/2015/2016-candidate-tracker/,政治,bubbles,,Associated Press,3/19/2015
 0180005,22,Where do you stand on issues,http://interactives.ap.org/2015/2016-issue-standings/,政治,game,,Associated Press,1/18/2015
+0180006,22,Divided America,http://interactives.ap.org/2016/divided-america/,政治,multimedia,,Associated Press,6/8/2016
 0040002,4,The Opportunity Gap,http://projects.propublica.org/schools/,教育,"database, map, interactive",TK,ProPublica,1/24/2013
 0040003,4,"Dollars for Docs
 How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdollars/,医疗,"database, map, interactive","Lena Groeger, Charles Ornstein, Mike Tigas, Ryann Grochowski Jones",ProPublica,7/1/2015
@@ -191,6 +199,8 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0050048,5,Your Guide to Outdoor Entertaining,http://graphics.wsj.com/off-duty-50/guide-to-summer-outdoor-entertaining/,生活,multi-media,,Wall Street Journal,6/19/2015
 0050049,5,Search Hillary Clinton’s Emails,http://graphics.wsj.com/hillary-clinton-email-documents/,政治,interactive,,Wall Street Journal,7/31/2015
 0050050,5,2016 Election Polls,http://graphics.wsj.com/elections/2016/polls/,政治,line,,Wall Street Journal,11/5/2015
+0050051,5,"What's Your Pay Gap?",http://graphics.wsj.com/gender-pay-gap/,经济,line,,Wall Street Journal,5/17/2016
+0050052,5,"Blue Feed, Red Feed",http://graphics.wsj.com/blue-feed-red-feed/,媒体,interactive,Jon Keegan,Wall Street Journal,5/18/2016
 0100001,10,Killing Kennedy,http://kennedyandoswald.com/#!/premiere-screen,政治,"interactive, multi-media",,National Geographic,8/1/2013
 0100002,10,What the world eats,http://www.nationalgeographic.com/what-the-world-eats/,文化,"timeline, pie, interactive",,National Geographic,10/22/2014
 0100003,10,What Earthquake Maps Should Really Look Like,http://news.nationalgeographic.com/2015/10/151003-datapoints-what-earthquake-maps-should-really-look-like/,灾害,map,"Chiqui Esteban, John Tomanio",National Geographic,10/3/2015
@@ -262,3 +272,5 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0500050,,U.S. Gun Deaths,http://guns.periscopic.com/?year=2013,灾害,,,Periscopic,1/1/2013
 0500051,,Why Health Care is So Expensive,http://healthland.time.com/2013/02/20/what-makes-health-care-so-expensive/,政治,"illustration, table, bar",Heather Jones,TIME,2/20/2013
 0500052,,Why Pinellas county is the worst place in Florida to be blakc and go to public school,http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/chart-failing-black-students/,教育,"line, map",Nathaniel Lash,Tampa Bay Times,8/1/2015
+0500053,,A day in the life of Americans,http://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/,生活,"dot,line",,FlowingData,12/15/2015
+0500054,,Choice and chance,http://www.tampabay.com/projects/2016/breaking-news/orlando-nightclub-shooting/choice-chance-3d-map/,灾害,"animation,multi-media",,Tampa Bay Times,6/20/2016
