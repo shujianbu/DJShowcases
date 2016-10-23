@@ -57,6 +57,7 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0010058,1,What I saw in Syria,http://www.nytimes.com/interactive/2016/06/10/world/middleeast/syria-road-trip.html,政治,multi-media,,New York Times,6/17/2016
 0010059,1,Who Will Be President?,http://www.nytimes.com/interactive/2016/upshot/presidential-polls-forecast.html,政治,interactive,JOSH KATZ,New York Times,08/05/2016
 0010060,1,"How the Nominees' Convention Speeches Compare",http://www.nytimes.com/interactive/2016/07/29/us/elections/trump-clinton-pence-kaine-speeches.html,政治,"interactive,text analysis",,New York Times,07/29/2016
+0010061,1,The Keith Scott Shooting: A 3-D Reconstruction,http://www.nytimes.com/interactive/2016/09/25/us/charlotte-scott-shooting-video.html,安全,illustration,JOSH WILLIAMS,New York Times,10/13/2016
 0060001,6,A global look at cardiac risk factors,http://www.washingtonpost.com/wp-srv/special/health/weight-of-the-world-bmi/,灾害,timeline,,The Washington Post,1/1/2001
 0060002,6,The Depth of the Problem,http://apps.washingtonpost.com/g/page/world/the-depth-of-the-problem/931/,灾害,illustration,,The Washington Post,3/1/2013
 0060003,6,After the storm,https://www.washingtonpost.com/posttv/afterthestorm/#/something-was-different,灾害,"interactive, map",,The Washington Post,5/15/2015
@@ -73,6 +74,8 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0060014,6,How lawmakers respond to a mass shooting,https://www.washingtonpost.com/graphics/national/how-lawmakers-responded-to-the-orlando-mass-shooting/,政治,text analysis,,The Washington Post,6/16/2016
 0060015,6,How terrorism in the West compares to terrorism everywhere else,https://www.washingtonpost.com/graphics/world/the-scale-of-terrorist-attacks-around-the-world/,安全,"timeline, map",,The Washington Post,7/16/2016
 0060016,6,Clinton’s and Trump’s very different Americas,https://www.washingtonpost.com/graphics/politics/2016-election/trump-clinton-convention-speeches/,政治,text analysis,,The Washington Post,7/29/2016
+0060017,6,If you want to rig an election,https://www.washingtonpost.com/graphics/politics/2016-election/how-to-rig-an-election/,政治,illustration,,The Washington Post,10/3/2016
+0060018,6,"Most of Trump's skew the data",https://www.washingtonpost.com/graphics/politics/2016-election/trump-charts/,政治,bar,,The Washington Post,10/21/2016
 0070001,7,Bloomberg Billionaires,http://www.bloomberg.com/billionaires/2013-11-08/cya,经济,"real-time, interactive",,Bloomberg,1/1/2014
 0070002,7,"What's really warming the world",http://www.bloomberg.com/graphics/2015-whats-warming-the-world/,环境,"line, interactive","Eric Roston, Blacki Migliozzi",Bloomberg,6/24/2015
 0070003,7,How to catch a spoofer,http://www.bloomberg.com/graphics/2015-spoofing/,商业,interactive,"Matthew Leising, Mira Rojanasakul, Adam Pearce",Bloomberg,9/4/2015
@@ -85,6 +88,7 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0070010,7,How Americans Die,http://www.bloomberg.com/graphics/dataview/how-americans-die/,政治,"line, bar","Lisa Strausfeld, Christopher Cannon, Jeremy Diamond, Takaaki Okada",Bloomberg,4/17/2014
 0070011,7,Amazon Doesn’t Consider the Race of Its Customers. Should It?,http://www.bloomberg.com/graphics/2016-amazon-same-day/,经济,map,"David Ingold, Spencer Soper",Bloomberg,4/21/2016
 0070012,7,Bus to November,http://www.bloomberg.com/politics/graphics/2016-bus-to-november/,政治,"map, line",,Bloomberg,8/5/2016
+0070013,7,"Time Warner: 25 years of aquisitions, sales, and spinoffs",https://www.bloomberg.com/graphics/infographics/time-warner-evolution.html,商业,timeline,,Bloomberg,7/24/2016
 0080001,8,Election Night: Special Coverage: The 2014 Midterms,http://fivethirtyeight.com/live-blog/special-coverage-the-2014-midterms/,政治,"real-time, map",,Five Thirty Eight Live,11/4/2014
 0080002,8,"Searching for Ameirca's Best Burrito",http://fivethirtyeight.com/burrito/#brackets-view,生活,"map, tree, table",,Five Thirty Eight,9/10/2015
 0080003,8,Which Flight Will Get You There Fastest?,http://projects.fivethirtyeight.com/flights/,旅行,"map, table","Ritchie King, Nate Silver",Five Thirty Eight,11/24/2015
@@ -94,6 +98,7 @@ Forging an Art Market in China",http://www.nytimes.com/projects/2013/china-art-f
 0080007,8,What Would It Take To Turn States?,http://projects.fivethirtyeight.com/2016-swing-the-election/,政治,"map, table","Aaron Bycoffe, David Wasserman",Five Thirty Eight,12/3/2015
 0080008,8,2015-16 NBA Predictions,http://projects.fivethirtyeight.com/2016-nba-picks/,体育,table,"Jay Boice, Reuben Fischer-Baum, Nate Silver",Five Thirty Eight,10/27/2015
 0080009,8,The Perfect Republican Stump Speech,http://projects.fivethirtyeight.com/stump-speech/,政治,,,Five Thirty Eight,11/23/2015
+0080010,8,2016 Election Forecast,http://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo,政治,"map, table",,Five Thirty Eight,10/01/2016
 0020001,2,Public spending by UK government department: an interactive guide,http://www.theguardian.com/news/datablog/interactive/2011/oct/26/public-spending-uk-government-department,政治,"bubble, interactive",TK,The Guardian,10/26/2011
 0020002,2,NSA files Decoded: what the relations mean for you,http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/1,安全,"interactive, multi-media",TK,The Guardian,11/1/2013
 0020003,2,"The first Guardian data journalism: May 5, 1821",http://www.theguardian.com/news/datablog/2011/sep/26/data-journalism-guardian?INTCMP=SRCH,教育,,TK,The Guardian,9/26/2011
@@ -207,6 +212,8 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0050050,5,2016 Election Polls,http://graphics.wsj.com/elections/2016/polls/,政治,line,,Wall Street Journal,11/5/2015
 0050051,5,"What's Your Pay Gap?",http://graphics.wsj.com/gender-pay-gap/,经济,line,,Wall Street Journal,5/17/2016
 0050052,5,"Blue Feed, Red Feed",http://graphics.wsj.com/blue-feed-red-feed/,媒体,interactive,Jon Keegan,Wall Street Journal,5/18/2016
+0050053,5,Trade after Brexit,http://graphics.wsj.com/trade-after-brexit/,经济,interactive,"Jason French, Jovi Juan, Jason Douglas",Wall Street Journal,6/24/2016
+0050054,,Polling the Election,http://graphics.wsj.com/elections/2016/polls/,政治,,,,7/24/2016
 0100001,10,Killing Kennedy,http://kennedyandoswald.com/#!/premiere-screen,政治,"interactive, multi-media",,National Geographic,8/1/2013
 0100002,10,What the world eats,http://www.nationalgeographic.com/what-the-world-eats/,文化,"timeline, pie, interactive",,National Geographic,10/22/2014
 0100003,10,What Earthquake Maps Should Really Look Like,http://news.nationalgeographic.com/2015/10/151003-datapoints-what-earthquake-maps-should-really-look-like/,灾害,map,"Chiqui Esteban, John Tomanio",National Geographic,10/3/2015
@@ -287,3 +294,5 @@ How Industry Dollars Reach Your Doctors",https://projects.propublica.org/docdoll
 0500059,,中国最棒的30个运动城市在这里,http://dtcj.com/news/5795d87367157b6d7708b66c,体育,chart,,新一线城市研究室,8/4/2016
 0500060,,寻找中国最棒的运动城市,http://www.therisinglab.com/interactive/reportfiles/2016report-sportcities.pdf,体育,"chart, line, dot",,新一线城市研究室,8/6/2016
 0500061,,10万条挂号大数据显示：互联网也救不了看病难,http://dtcj.com/news/5795d87367157b6d7708b66c,生活,"chart, map",,DT财经,7/26/2016
+0500062,,Road to 270,http://www.cnn.com/election/interactive-electoral-college-map,政治,interactive,,CNN,10/1/2016
+0500063,,The debate in search,http://newslab.pitchinteractive.com/ws/5723088213770240/index.html#/5679128418189312/issues/ww-US/horserace?_k=ozwjbl,政治,interactive,,Pitch Interactive,9/13/2016
